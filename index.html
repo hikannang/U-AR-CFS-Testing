@@ -1,62 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>AR.js A-Frame Location-based</title>
+        <title>Car-Free Suunday AR Experience</title>
         <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
         <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js'></script>
         <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
-        <style>
-            .compass {
-              position: relative;
-              width: 20vw;
-              height: 20vw;
-              border-radius: 50%;
-              box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-              /* margin: auto; */
-              z-index: 2;
-              position: relative;
-              background-color: white;
-
-            }
-      
-            .arrow {
-              position: absolute;
-              width: 14vw; /* Adjust the width and height as needed */
-              height: 14vw;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              background: url(https://purepng.com/public/uploads/large/upload-icon-in-red-color-gxm.png)
-                center no-repeat;
-              background-size: contain;
-              z-index: 2;
-              position: relative;
-            }
-
-            #compassDiv{
-                display: flex;
-                flex-direction: column;
-                align-items: end;
-                margin-right: 4vw;
-            }
-          </style>
+        <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
     </head>
     <body>
-        <button style="z-index: 2;position: relative;" onclick="selectRed()">Select Red</button>
-        <button style="z-index: 2;position: relative;" onclick="selectGreen()">Select Green</button>
-        <button style="z-index: 2;position: relative;" onclick="selectYellow()">Select Yellow</button>
-        <!-- <button style="z-index: 2;position: relative;" onclick="littleIndie()">Little India</button> -->
+        <button class="uiDisplay" onclick="selectRed()">Select Red</button>
+        <button class="uiDisplay" onclick="selectGreen()">Select Green</button>
+        <button class="uiDisplay" onclick="selectYellow()">Select Yellow</button>
+        <!-- <button class="uiDisplay" onclick="littleIndie()">Little India</button> -->
         <div id="compassDiv">
             <div class="compass">
                 <div class="arrow"></div>
             </div>
-            <p style="z-index: 2;position: relative; color: white; font-size: 1.5em;" id="distanceFromTarget"></p>
+            <p id="distanceFromTarget" class="uiDisplay">0.00m</p>
         </div>
         <!-- <button style="z-index: 2;position: relative;" onclick="distanceRed()">Red distance</button> -->
         <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
             <a-camera gps-projected-camera far='40' rotation-reader></a-camera>
-            
-            <!-- <a-entity id="red" material="color: red" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3532594138677987; longitude: 103.87900627512992" scale="10 10 10"></a-entity> -->
             <a-entity id="redOff"></a-entity>
             <a-entity id="greenOff"></a-entity>
             <a-entity id="yellowOff"></a-entity>
