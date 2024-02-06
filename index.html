@@ -8,8 +8,8 @@
         <style>
             .compass {
               position: relative;
-              width: 10vw;
-              height: 10vw;
+              width: 20vw;
+              height: 20vw;
               border-radius: 50%;
               box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
               /* margin: auto; */
@@ -21,8 +21,8 @@
       
             .arrow {
               position: absolute;
-              width: 5vw; /* Adjust the width and height as needed */
-              height: 5vw;
+              width: 14vw; /* Adjust the width and height as needed */
+              height: 14vw;
               top: 50%;
               left: 50%;
               transform: translate(-50%, -50%);
@@ -50,7 +50,7 @@
             <div class="compass">
                 <div class="arrow"></div>
             </div>
-            <p style="z-index: 2;position: relative; color: white;" id="distanceFromTarget"></p>
+            <p style="z-index: 2;position: relative; color: white; font-size: 1.5em;" id="distanceFromTarget"></p>
         </div>
         <!-- <button style="z-index: 2;position: relative;" onclick="distanceRed()">Red distance</button> -->
         <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
@@ -235,9 +235,9 @@
             }
 
             // function littleIndie() {
-            //    startCompass()
-            //    target.latitude = 1.3068866777147514;
-            //    target.longitude = 103.84940595788129;
+            //     startCompass()
+            //     target.latitude = 1.3068866777147514;
+            //     target.longitude = 103.84940595788129;
             // };
             init();
         </script>
