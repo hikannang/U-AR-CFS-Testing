@@ -9,9 +9,9 @@
         <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
     </head>
     <body>
-        <button class="uiDisplay" onclick="selectRed()">Select Red</button>
-        <button class="uiDisplay" onclick="selectGreen()">Select Green</button>
-        <button class="uiDisplay" onclick="selectYellow()">Select Yellow</button>
+        <button class="uiDisplay" onclick="selectRed()">MRT</button>
+        <button class="uiDisplay" onclick="selectGreen()">My House</button>
+        <button class="uiDisplay" onclick="selectYellow()">MiniMart</button>
         <!-- <button class="uiDisplay" onclick="littleIndie()">Little India</button> -->
         <div id="compassDiv">
             <div class="compass">
@@ -21,7 +21,7 @@
         </div>
         <!-- <button style="z-index: 2;position: relative;" onclick="distanceRed()">Red distance</button> -->
         <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
-            <a-camera gps-projected-camera far='40' rotation-reader></a-camera>
+            <a-camera gps-projected-camera far='0' rotation-reader></a-camera>
 
             <a-entity id="redOff"></a-entity>
             <a-entity id="greenOff"></a-entity>
