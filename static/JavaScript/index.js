@@ -1,15 +1,15 @@
 function selectRed(){
-    //Yew Tee MRT
+    //658
     startCompass()
-    target.latitude = 1.3977903;
-    target.longitude = 103.7471869;
+    target.latitude = 1.4006938;
+    target.longitude = 103.7487905;
 
     if (document.getElementById('redOff')){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red')
         // content.innerHTML = '<a-entity id="red" material="color: red" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3068866777147514; longitude: 103.84940595788129" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-entity id="red" gltf-model="./static/3D-file/Assets from Users/BicycleCrossing.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.3977903; longitude: 103.7471869" animation-mixer/>'
+        content.innerHTML = '<a-entity id="red" gltf-model="./static/3D-file/Assets from Users/BicycleCrossing.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.4006938; longitude: 103.7487905" animation-mixer/>'
     }
 
     if(document.getElementById('green')){
@@ -53,7 +53,7 @@ function selectGreen(){
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
         // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-entity id="green" gltf-model="./static/3D-file/Assets from Users/CyclingPath.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.4009471; longitude: 103.7474082" animation-mixer/>'
+        content.innerHTML = '<a-entity id="green" gltf-model="./static/3D-file/Assets from Users/CyclingPath.glb" scale="1.5 1.5 1.5" gps-projected-entity-place="latitude: 1.4009471; longitude: 103.7474082" animation-mixer/>'
     }
 
     if(document.getElementById('red')){
@@ -95,7 +95,7 @@ function selectYellow(){
         // Turning Yellow On
         document.getElementById('yellowOff').id = 'yellow';
         var content = document.getElementById('yellow')
-        content.innerHTML = '<a-entity id="yellow" gltf-model="./static/3D-file/Assets from Users/FootPath.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.4012957; longitude: 103.7478212" animation-mixer/>'
+        content.innerHTML = '<a-entity id="yellow" gltf-model="./static/3D-file/Assets from Users/FootPath.glb" scale="1.5 1.5 1.5" gps-projected-entity-place="latitude: 1.4012957; longitude: 103.7478212" animation-mixer/>'
     }
 
     if(document.getElementById('red')){
@@ -137,7 +137,7 @@ function selectBlue(){
         // Turning Yellow On
         document.getElementById('blueOff').id = 'blue';
         var content = document.getElementById('blue')
-        content.innerHTML = '<a-entity id="blue" gltf-model="./static/3D-file/Assets from Users/Wayfinding.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.4020492; longitude: 103.7479795" animation-mixer/>'
+        content.innerHTML = '<a-entity id="blue" gltf-model="./static/3D-file/Assets from Users/Wayfinding.glb" scale="1.5 1.5 1.5" gps-projected-entity-place="latitude: 1.4020492; longitude: 103.7479795" animation-mixer/>'
     }
 
     if(document.getElementById('red')){
@@ -177,10 +177,10 @@ function selectOrange(){
     target.longitude = 103.7493179;
 
     if (document.getElementById('orangeOff')){
-        // Turning Yellow On
+        // Turning orange On
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange')
-        content.innerHTML = '<a-entity id="orange" gltf-model="./static/3D-file/Assets from Users/YellowBox.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.4029823; longitude: 103.7493179" animation-mixer/>'
+        content.innerHTML = '<a-entity id="orange" gltf-model="./static/3D-file/Assets from Users/YellowBox.glb" scale="1.5 1.5 1.5" gps-projected-entity-place="latitude: 1.4029823; longitude: 103.7493179" animation-mixer/>'
     }
 
     if(document.getElementById('red')){
