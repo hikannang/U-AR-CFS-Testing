@@ -1,14 +1,15 @@
 function selectRed(){
+    //Yew Tee MRT
     startCompass()
-    target.latitude = 1.3976;
-    target.longitude = 103.7475;
+    target.latitude = 1.3977903;
+    target.longitude = 103.7471869;
 
     if (document.getElementById('redOff')){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red')
         // content.innerHTML = '<a-entity id="red" material="color: red" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3068866777147514; longitude: 103.84940595788129" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-entity id="red" gltf-model="./static/3D-file/Assets from Users/BicycleCrossing.glb" scale="0.1 0.1 0.1" gps-projected-entity-place="latitude: 1.3976; longitude: 103.7475" animation-mixer/>'
+        content.innerHTML = '<a-entity id="red" gltf-model="./static/3D-file/Assets from Users/BicycleCrossing.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.3977903; longitude: 103.7471869" animation-mixer/>'
     }
 
     if(document.getElementById('green')){
@@ -24,19 +25,35 @@ function selectRed(){
         var content = document.getElementById('yellowOff')
         content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
     }
+
+    if(document.getElementById('blue')){
+        // Turning blue Off
+        document.getElementById('blue').id = 'blueOff';
+        var content = document.getElementById('blueOff')
+        content.innerHTML = '<a-entity id="blueOff"></a-entity>'
+    }
+
+    if(document.getElementById('orange')){
+        // Turning orange Off
+        document.getElementById('orange').id = 'orangeOff';
+        var content = document.getElementById('orangeOff')
+        content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
+    }
 }
 
 function selectGreen(){
+    //Blk 673B
+    
     startCompass()
-    target.latitude = 1.4009458;
-    target.longitude = 103.6655532;
+    target.latitude = 1.4009471;
+    target.longitude = 103.7474082;
 
     if (document.getElementById('greenOff')){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
         // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-entity id="green" gltf-model="./static/3D-file/Assets from Users/CyclingPath.glb" scale="0.2 0.2 0.2" gps-projected-entity-place="latitude: 1.4009458; longitude: 103.6655532" animation-mixer/>'
+        content.innerHTML = '<a-entity id="green" gltf-model="./static/3D-file/Assets from Users/CyclingPath.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.4009471; longitude: 103.7474082" animation-mixer/>'
     }
 
     if(document.getElementById('red')){
@@ -52,18 +69,33 @@ function selectGreen(){
         var content = document.getElementById('yellowOff')
         content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
     }
+
+    if(document.getElementById('blue')){
+        // Turning blue Off
+        document.getElementById('blue').id = 'blueOff';
+        var content = document.getElementById('blueOff')
+        content.innerHTML = '<a-entity id="blueOff"></a-entity>'
+    }
+
+    if(document.getElementById('orange')){
+        // Turning orange Off
+        document.getElementById('orange').id = 'orangeOff';
+        var content = document.getElementById('orangeOff')
+        content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
+    }
 }
 
 function selectYellow(){
+    // Blk 673
     startCompass()
-    target.latitude = 1.4021563;
-    target.longitude = 103.7475754;
+    target.latitude = 1.4012957;
+    target.longitude = 103.7478212;
 
     if (document.getElementById('yellowOff')){
         // Turning Yellow On
         document.getElementById('yellowOff').id = 'yellow';
         var content = document.getElementById('yellow')
-        content.innerHTML = '<a-entity id="green" gltf-model="./static/3D-file/Assets from Users/FootPath.glb" scale="0.2 0.2 0.2" gps-projected-entity-place="latitude: 1.4021563; longitude: 103.7475754" animation-mixer/>'
+        content.innerHTML = '<a-entity id="yellow" gltf-model="./static/3D-file/Assets from Users/FootPath.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.4012957; longitude: 103.7478212" animation-mixer/>'
     }
 
     if(document.getElementById('red')){
@@ -79,6 +111,106 @@ function selectYellow(){
         var content = document.getElementById('greenOff')
         content.innerHTML = '<a-entity id="greenOff"></a-entity>'
     }
+
+    if(document.getElementById('blue')){
+        // Turning blue Off
+        document.getElementById('blue').id = 'blueOff';
+        var content = document.getElementById('blueOff')
+        content.innerHTML = '<a-entity id="blueOff"></a-entity>'
+    }
+
+    if(document.getElementById('orange')){
+        // Turning orange Off
+        document.getElementById('orange').id = 'orangeOff';
+        var content = document.getElementById('orangeOff')
+        content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
+    }
+}
+
+function selectBlue(){
+    // Carpark
+    startCompass()
+    target.latitude = 1.4020492;
+    target.longitude = 103.7479795;
+
+    if (document.getElementById('blueOff')){
+        // Turning Yellow On
+        document.getElementById('blueOff').id = 'blue';
+        var content = document.getElementById('blue')
+        content.innerHTML = '<a-entity id="blue" gltf-model="./static/3D-file/Assets from Users/Wayfinding.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.4020492; longitude: 103.7479795" animation-mixer/>'
+    }
+
+    if(document.getElementById('red')){
+        // Turning Red Off
+        document.getElementById('red').id = 'redOff';
+        var content = document.getElementById('redOff')
+        content.innerHTML = '<a-entity id="redOff"></a-entity>'
+    }
+
+    if(document.getElementById('green')){
+        // Turning Green Off
+        document.getElementById('green').id = 'greenOff';
+        var content = document.getElementById('greenOff')
+        content.innerHTML = '<a-entity id="greenOff"></a-entity>'
+    }
+
+    if(document.getElementById('yellow')){
+        // Turning yellow Off
+        document.getElementById('yellow').id = 'yellowOff';
+        var content = document.getElementById('yellowOff')
+        content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
+    }
+
+    if(document.getElementById('orange')){
+        // Turning orange Off
+        document.getElementById('orange').id = 'orangeOff';
+        var content = document.getElementById('orangeOff')
+        content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
+    }
+
+}
+
+function selectOrange(){
+    //7-11
+    startCompass()
+    target.latitude = 1.4029823;
+    target.longitude = 103.7493179;
+
+    if (document.getElementById('orangeOff')){
+        // Turning Yellow On
+        document.getElementById('orangeOff').id = 'orange';
+        var content = document.getElementById('orange')
+        content.innerHTML = '<a-entity id="orange" gltf-model="./static/3D-file/Assets from Users/YellowBox.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.4029823; longitude: 103.7493179" animation-mixer/>'
+    }
+
+    if(document.getElementById('red')){
+        // Turning Red Off
+        document.getElementById('red').id = 'redOff';
+        var content = document.getElementById('redOff')
+        content.innerHTML = '<a-entity id="redOff"></a-entity>'
+    }
+
+    if(document.getElementById('green')){
+        // Turning Green Off
+        document.getElementById('green').id = 'greenOff';
+        var content = document.getElementById('greenOff')
+        content.innerHTML = '<a-entity id="greenOff"></a-entity>'
+    }
+
+    if(document.getElementById('yellow')){
+        // Turning yellow Off
+        document.getElementById('yellow').id = 'yellowOff';
+        var content = document.getElementById('yellowOff')
+        content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
+    }
+
+    if(document.getElementById('blue')){
+        // Turning blue Off
+        document.getElementById('blue').id = 'blueOff';
+        var content = document.getElementById('blueOff')
+        content.innerHTML = '<a-entity id="blueOff"></a-entity>'
+    }
+
 }
 
 // ##################################################################################################
