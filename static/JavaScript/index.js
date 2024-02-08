@@ -2,14 +2,14 @@ function selectRed(){
     //658
     startCompass()
     target.latitude = 1.4006938;
-    target.longitude = 103.7487905;
+    target.longitude = 103.7388678;
 
     if (document.getElementById('redOff')){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red')
         // content.innerHTML = '<a-entity id="red" material="color: red" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3068866777147514; longitude: 103.84940595788129" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-entity id="red" gltf-model="./static/3D-file/Assets from Users/BicycleCrossing.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.4006938; longitude: 103.7487905" animation-mixer/>'
+        content.innerHTML = '<a-entity id="red" gltf-model="./static/3D-file/Assets from Users/BicycleCrossing.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.4006938; longitude:103.7388678" animation-mixer/>'
     }
 
     if(document.getElementById('green')){
