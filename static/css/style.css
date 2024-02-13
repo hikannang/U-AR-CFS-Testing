@@ -97,32 +97,6 @@ html{
     cursor: pointer;
 }
 
-.bicycleCrossing {
-    background: url('/static/images/picture_Buttons/bicycleCrossings_edited.png') center no-repeat;
-    background-size: 55%;
-}
-
-.cyclingPath {
-    background: url('/static/images/picture_Buttons/cyclingPath_edited.png') center no-repeat;
-    background-size: 60%;
-}
-
-.footPath {
-    background: url('/static/images/picture_Buttons/footPath_edited.png') center no-repeat;
-    background-size: 90%;
-}
-
-.wayfindingSignage {
-    background: url('/static/images/picture_Buttons/wayfindingSignage_edited.png') center no-repeat;
-    background-size: 80%;
-}
-
-.yellowBox {
-    background: url('/static/images/picture_Buttons/yellowBox_edited.png') center no-repeat;
-    background-size:cover;
-}
-
-
 #distanceFromTarget{
     color: yellow;
     font-size: 1.5em;
