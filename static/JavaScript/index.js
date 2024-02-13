@@ -300,11 +300,11 @@ function toggleCircles() {
 
     if (additionalCircles.style.display === "none") {
         additionalCircles.style.display = "flex";
-        threeLines.style.background = "url(https://c0.klipartz.com/pngpicture/843/867/gratis-png-marca-x-marca-de-verificacion-signo-de-multiplicacion-cruzada-simbolo-rmb.png) center no-repeat";
+        threeLines.style.background = "url('./static/images/icons/cross.png') center no-repeat";
         threeLines.style.backgroundSize = "contain";
     } else {
         additionalCircles.style.display = "none";
-        threeLines.style.background = "url(https://static.thenounproject.com/png/4572821-200.png) center no-repeat";
+        threeLines.style.background = "url('./static/images/icons/menu.png') center no-repeat";
         threeLines.style.backgroundSize = "contain";
     }
 }

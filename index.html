@@ -25,13 +25,13 @@
 
         <div id="moreOptionsDiv" class="moreOptionsDiv">
             <div class="moreOptions" onclick="toggleCircles()">
-                <div class="threeLines" id="threeLines"></div>
+                <div class="threeLines" id="threeLines" style="background: url('.//static/images/icons/menu.png') center no-repeat; background-size: contain;"></div>
                 <div id="additionalCircles" class="additionalCircles">
-                    <div class="circle bicycleCrossing"></div>
-                    <div class="circle cyclingPath"></div>
-                    <div class="circle footPath"></div>
-                    <div class="circle wayfindingSignage"></div>
-                    <div class="circle yellowBox"></div>
+                    <div class="circle bicycleCrossing" onclick="selectRed()"></div>
+                    <div class="circle cyclingPath" onclick="selectGreen()"></div>
+                    <div class="circle footPath" onclick="selectYellow()"></div>
+                    <div class="circle wayfindingSignage" onclick="selectBlue()"></div>
+                    <div class="circle yellowBsox" onclick="selectOrange()"></div>
                 </div>
         </div>
         <!-- <button style="z-index: 2;position: relative;" onclick="distanceRed()">Red distance</button> -->
