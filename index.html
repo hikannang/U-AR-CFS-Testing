@@ -9,11 +9,11 @@
         <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
     </head>
     <body>
-        <button class="uiDisplay" onclick="selectRed()">658</button>
+        <!-- <button class="uiDisplay" onclick="selectRed()">658</button>
         <button class="uiDisplay" onclick="selectGreen()">673B</button>
         <button class="uiDisplay" onclick="selectYellow()">673</button>
         <button class="uiDisplay" onclick="selectBlue()">Carpark</button>
-        <button class="uiDisplay" onclick="selectOrange()">7-11</button>
+        <button class="uiDisplay" onclick="selectOrange()">7-11</button> -->
 
         <!-- <button class="uiDisplay" onclick="littleIndie()">Little India</button> -->
         <div id="compassDiv">
@@ -21,6 +21,17 @@
                 <div class="arrow"></div>
             </div>
             <p id="distanceFromTarget" class="uiDisplay"></p>
+        </div>
+
+        <div id="moreOptionsDiv" class="moreOptionsDiv">
+            <div class="moreOptions" onclick="toggleCircles()">
+                <div class="threeLines" id=""threeLines></div>
+                <div id="additionalCircles" class="additionalCircles">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
         </div>
         <!-- <button style="z-index: 2;position: relative;" onclick="distanceRed()">Red distance</button> -->
         <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
