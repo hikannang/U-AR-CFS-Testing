@@ -61,7 +61,7 @@ html{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: url("/static/images/icons/menu.png")
+    background: url("./static/images/icons/menu.png")
         center no-repeat;
     background-size: contain;
     z-index: 2;
@@ -98,27 +98,27 @@ html{
 }
 
 .bicycleCrossing {
-    background: url('/static/images/bicycleCrossings_edited.png') center no-repeat;
+    background: url('./static/images/bicycleCrossings_edited.png') center no-repeat;
     background-size: 55%;
 }
 
 .cyclingPath {
-    background: url('/static/images/cyclingPath_edited.png') center no-repeat;
+    background: url('./static/images/cyclingPath_edited.png') center no-repeat;
     background-size: 60%;
 }
 
 .footPath {
-    background: url('/static/images/footPath_edited.png') center no-repeat;
+    background: url('./static/images/footPath_edited.png') center no-repeat;
     background-size: 90%;
 }
 
 .wayfindingSignage {
-    background: url('/static/images/wayfindingSignage_edited.png') center no-repeat;
+    background: url('./static/images/wayfindingSignage_edited.png') center no-repeat;
     background-size: 80%;
 }
 
 .yellowBox {
-    background: url('/static/images/yellowBox_edited.png') center no-repeat;
+    background: url('./static/images/yellowBox_edited.png') center no-repeat;
     background-size: 110%;
 }
 
