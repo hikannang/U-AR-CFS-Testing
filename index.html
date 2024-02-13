@@ -1,66 +1,67 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>AR.js A-Frame Location-based</title>
-        <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-        <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js'></script>
-        <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
-        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    </head>
-    <body>
-        <div id="compassDiv" class="d-flex flex-column align-items-end mr-4">
-            <!-- Compass -->
-            <div class="compass">
-                <div class="arrow"></div>
-            </div>
-        
-            <p id="distanceFromTarget" class="uiDisplay"></p>
-        
-            <!-- Button to show minimap -->
-            <button id="showMinimapButton" class="btn btn-primary" data-toggle="modal" data-target="#minimapModal">Show Minimap</button>
-        
-            <!-- Minimap modal -->
-            <div class="modal fade" id="minimapModal" tabindex="-1" role="dialog" aria-labelledby="minimapModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <h4 class="modal-title" id="minimapModalLabel">Minimap</h4>
-                        </div>
-                        <div class="modal-body">
-                            <!-- Content of your minimap, replace with your image or content -->
-                            <img src="./static/images/Minimap/updatedMinimap.png" alt="Minimap Image" class="img-responsive">
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
+<html lang="en">
+
+<head>
+    <title>AR.js A-Frame Location-based</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js'></script>
+    <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+    <script src="static/JavaScript/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
+</head>
+
+<body>
+    <div id="compassDiv" class="d-flex flex-column align-items-end mr-4">
+        <!-- Compass -->
+        <div class="compass">
+            <div class="arrow"></div>
+        </div>
+
+        <p id="distanceFromTarget" class="uiDisplay"></p>
+
+        <!-- Button to show minimap -->
+        <button id="showMinimapButton" class="btn btn-primary" data-toggle="modal" data-target="#minimapModal">Show Minimap</button>
+
+        <!-- Minimap modal -->
+        <div class="modal fade" id="minimapModal" tabindex="-1" role="dialog" aria-labelledby="minimapModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="minimapModalLabel">Minimap</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Content of your minimap, replace with your image or content -->
+                        <img src="./static/images/Minimap/updatedMinimap.png" alt="Minimap Image" class="img-responsive">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
-    
+        </div>
 
         <div id="moreOptionsDiv" class="moreOptionsDiv">
             <div class="moreOptions" onclick="toggleCircles()">
                 <div class="threeLines" id="threeLines" style="background: url('./static/images/icons/menu.png') center no-repeat; background-size: contain;"></div>
                 <div id="additionalCircles" class="additionalCircles">
-                    <div class="circle bicycleCrossing" onclick="selectRed()" style = "background: url('./static/images/picture_Buttons/bicycleCrossings_edited.png') center no-repeat; background-size: 55%;"></div>
-                    <div class="circle cyclingPath" onclick="selectGreen()" style = "background: url('./static/images/picture_Buttons/cyclingPath_edited.png') center no-repeat; background-size: 60%;"></div>
-                    <div class="circle footPath" onclick="selectYellow()" style = "background: url('./static/images/picture_Buttons/footPath_edited.png') center no-repeat; background-size: 90%;"></div>
-                    <div class="circle wayfindingSignage" onclick="selectBlue()" style = "background: url('./static/images/picture_Buttons/wayfindingSignage_edited.png') center no-repeat; background-size: 80%;"></div>
-                    <div class="circle yellowBox" onclick="selectOrange()" style = "background: url('./static/images/picture_Buttons/yellowBox_edited.png') center no-repeat; background-size: cover;"></div>
+                    <div class="circle bicycleCrossing" onclick="selectRed()" style="background: url('./static/images/picture_Buttons/bicycleCrossings_edited.png') center no-repeat; background-size: 55%;"></div>
+                    <div class="circle cyclingPath" onclick="selectGreen()" style="background: url('./static/images/picture_Buttons/cyclingPath_edited.png') center no-repeat; background-size: 60%;"></div>
+                    <div class="circle footPath" onclick="selectYellow()" style="background: url('./static/images/picture_Buttons/footPath_edited.png') center no-repeat; background-size: 90%;"></div>
+                    <div class="circle wayfindingSignage" onclick="selectBlue()" style="background: url('./static/images/picture_Buttons/wayfindingSignage_edited.png') center no-repeat; background-size: 80%;"></div>
+                    <div class="circle yellowBox" onclick="selectOrange()" style="background: url('./static/images/picture_Buttons/yellowBox_edited.png') center no-repeat; background-size: cover;"></div>
                 </div>
             </div>
         </div>
 
-            
-
-        <!-- <button style="z-index: 2;position: relative;" onclick="distanceRed()">Red distance</button> -->
         <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
             <a-camera gps-projected-camera far='0' rotation-reader></a-camera>
 
@@ -69,8 +70,8 @@
             <a-entity id="yellowOff"></a-entity>
             <a-entity id="blueOff"></a-entity>
             <a-entity id="orangeOff"></a-entity>
-
         </a-scene>
-        <script src="static/JavaScript/index.js"></script>
-    </body>
+    </div>
+</body>
+
 </html>
