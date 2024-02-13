@@ -57,7 +57,7 @@ html{
 .threeLines {
     position: absolute;
     width: 8vw; /* Adjust the width and height as needed */
-    height: 8vw;
+    height: 8vh;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -66,6 +66,7 @@ html{
     background-size: contain;
     z-index: 2;
     position: relative;
+    cursor: pointer; /* Add cursor pointer for better UX */
 }
 
 #moreOptionsDiv{
@@ -74,6 +75,29 @@ html{
     align-items: start;
     margin-left: 4vw;
     margin-top: 6vw;
+}
+
+/* More Circles */
+.additionalCircles {
+    display: none; /* Initially hide the additional circles */
+    flex-direction: column; /* Align circles in a column */
+    justify-content: space-between; /* Add space between circles */
+    margin-top: 1vh; /* Adjust margin as needed */
+}
+
+.circle {
+    width: 10vw; /* Adjust the width of each circle as needed */
+    height: 10vw; /* Adjust the height of each circle as needed */
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    /* Add any additional styles for your circles */
+    margin-top: 1.25vh;
+}
+
+.bicycleCrossing {
+    background: url('./static/images/bicycleCrossings_edited.png') center no-repeat;
+    background-size: cover;
 }
 
 

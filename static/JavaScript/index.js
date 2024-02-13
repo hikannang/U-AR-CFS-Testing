@@ -298,12 +298,14 @@ function toggleCircles() {
     var additionalCircles = document.getElementById("additionalCircles");
     var threeLines = document.getElementById("threeLines");
 
-    if (additionalCircles.style.display === "none" || additionalCircles.style.display === "") {
+    if (additionalCircles.style.display === "none") {
         additionalCircles.style.display = "flex";
-        threeLines.style.background = "url(https://w7.pngwing.com/pngs/629/162/png-transparent-computer-icons-x-mark-symbol-miscellaneous-angle-desktop-wallpaper-thumbnail.png) center no-repeat";
+        threeLines.style.background = "url(https://c0.klipartz.com/pngpicture/843/867/gratis-png-marca-x-marca-de-verificacion-signo-de-multiplicacion-cruzada-simbolo-rmb.png) center no-repeat";
+        threeLines.style.backgroundSize = "contain";
     } else {
         additionalCircles.style.display = "none";
         threeLines.style.background = "url(https://static.thenounproject.com/png/4572821-200.png) center no-repeat";
+        threeLines.style.backgroundSize = "contain";
     }
 }
 
