@@ -224,18 +224,6 @@ const isIOS =
 // const startBtn = document.querySelector(".start-btn");
 const geolocationOptions = { enableHighAccuracy: true };
 
-// Function to show the map modal
-function showMap() {
-    var modal = document.getElementById("compassModal");
-    modal.style.display = "block";
-}
-
-// Function to hide the map modal
-function hideCompassImage() {
-    var modal = document.getElementById("compassModal");
-    modal.style.display = "none";
-}
-
 
 // function to initialize geolocation and device oroentation. runs automatically
 function init() {
@@ -244,15 +232,6 @@ function init() {
     if (!isIOS) {
         window.addEventListener("deviceorientationabsolute", runCalculation);
     }
-
-     // Add event listener for the map icon click
-     var mapIcon = document.getElementById("mapIconCircle");
-     mapIcon.addEventListener("click", showMap);
- 
-     // Add event listener for the close icon in the map modal
-     var closeIcon = document.getElementById("closeIcon");
-     closeIcon.addEventListener("click", hideCompassImage);
- 
 
     // Start the UI updates
     updateUI();
@@ -329,6 +308,14 @@ function toggleCircles() {
         threeLines.style.background = "url('./static/images/icons/menu.png') center no-repeat";
         threeLines.style.backgroundSize = "contain";
     }
+}
+
+function showCustomImage() {
+    $('#customModal').modal('show');
+}
+
+function hideCustomImage() {
+    $('#customModal').modal('hide');
 }
 
 // starts updating the UI.

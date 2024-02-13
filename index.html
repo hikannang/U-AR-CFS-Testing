@@ -6,7 +6,10 @@
         <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js'></script>
         <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
         <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     </head>
     <body>
         <div id="compassDiv">
@@ -15,16 +18,24 @@
             </div>
             <p id="distanceFromTarget" class="uiDisplay"></p>
 
-            <!-- Circle with Map Icon --> 
-            <div id="mapIconCircle" class="circle" onclick="showMap()">
-                <img src="./static/images/icons/map-icon.png" alt="Map Icon">
-            </div>
+            <!-- Button to show custom image -->
+            <button id="customImageButton" class="btn btn-primary" onclick="showCustomImage()">Show Image</button>
         </div>
 
-        <!-- Modal for displaying the PNG image -->
-        <div id="compassModal" class="modal">
-            <span class="close" onclick="hideCompassImage()">&times;</span>
-            <img id="compassImage" class="modal-content" src="./static/images/Minimap/updatedMinimap.png" alt="Map Image">
+          <!-- Custom Modal -->
+          <div id="customModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Add your custom image source here -->
+                        <img src="./static/images/Minimap/updatedMinimap.png" alt="Custom Image" class="img-responsive">
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div id="moreOptionsDiv" class="moreOptionsDiv">
@@ -38,8 +49,10 @@
                     <div class="circle yellowBox" onclick="selectOrange()" style = "background: url('./static/images/picture_Buttons/yellowBox_edited.png') center no-repeat; background-size: cover;"></div>
                 </div>
             </div>
-            
         </div>
+
+            
+
         <!-- <button style="z-index: 2;position: relative;" onclick="distanceRed()">Red distance</button> -->
         <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
             <a-camera gps-projected-camera far='0' rotation-reader></a-camera>
@@ -51,6 +64,23 @@
             <a-entity id="orangeOff"></a-entity>
 
         </a-scene>
+
+        <!-- Custom Modal -->
+        <div id="customModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Add your custom image source here -->
+                        <img src="./static/images/Minimap/updatedMinimap.png" alt="Custom Image" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <script src="static/JavaScript/index.js"></script>
     </body>
 </html>
