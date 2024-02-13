@@ -12,31 +12,38 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     </head>
     <body>
-        <div id="compassDiv">
+        <div id="compassDiv" class="d-flex flex-column align-items-end mr-4">
+            <!-- Compass -->
             <div class="compass">
                 <div class="arrow"></div>
             </div>
+        
             <p id="distanceFromTarget" class="uiDisplay"></p>
-
-            <!-- Button to show custom image -->
-            <button id="customImageButton" class="btn btn-primary" onclick="showCustomImage()">Show Image</button>
-        </div>
-
-          <!-- Custom Modal -->
-          <div id="customModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- Add your custom image source here -->
-                        <img src="./static/images/Minimap/updatedMinimap.png" alt="Custom Image" class="img-responsive">
+        
+            <!-- Button to show minimap -->
+            <button id="showMinimapButton" class="btn btn-primary" data-toggle="modal" data-target="#minimapModal">Show Minimap</button>
+        
+            <!-- Minimap modal -->
+            <div class="modal fade" id="minimapModal" tabindex="-1" role="dialog" aria-labelledby="minimapModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="minimapModalLabel">Minimap</h4>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Content of your minimap, replace with your image or content -->
+                            <img src="./static/images/Minimap/updatedMinimap.png" alt="Minimap Image" class="img-responsive">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+    
 
         <div id="moreOptionsDiv" class="moreOptionsDiv">
             <div class="moreOptions" onclick="toggleCircles()">
@@ -64,23 +71,6 @@
             <a-entity id="orangeOff"></a-entity>
 
         </a-scene>
-
-        <!-- Custom Modal -->
-        <div id="customModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- Add your custom image source here -->
-                        <img src="./static/images/Minimap/updatedMinimap.png" alt="Custom Image" class="img-responsive">
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <script src="static/JavaScript/index.js"></script>
     </body>
 </html>
