@@ -9,19 +9,12 @@
         <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
     </head>
     <body>
-        <div class="container">
-            <input type="checkbox" id="moreOptionsCheckbox" onchange="toggleDropdowns()">
-            <label for="moreOptionsCheckbox"></label>
-            <div class="menu-content">
-                <ul>
-                    <li onclick="selectRed()">658</li>
-                    <li onclick="selectGreen()">673B</li>
-                    <li onclick="selectYellow()">673</li>
-                    <li onclick="selectBlue()">Carpark</li>
-                    <li onclick="selectOrange()">7-11</li>
-                </ul>
-            </div>
-        </div>
+        <button class="uiDisplay" onclick="selectRed()">658</button>
+        <button class="uiDisplay" onclick="selectGreen()">673B</button>
+        <button class="uiDisplay" onclick="selectYellow()">673</button>
+        <button class="uiDisplay" onclick="selectBlue()">Carpark</button>
+        <button class="uiDisplay" onclick="selectOrange()">7-11</button>
+
         <!-- <button class="uiDisplay" onclick="littleIndie()">Little India</button> -->
         <div id="compassDiv">
             <div class="compass">
