@@ -9,18 +9,22 @@
         <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
     </head>
     <body>
-        <!-- <button class="uiDisplay" onclick="selectRed()">658</button>
-        <button class="uiDisplay" onclick="selectGreen()">673B</button>
-        <button class="uiDisplay" onclick="selectYellow()">673</button>
-        <button class="uiDisplay" onclick="selectBlue()">Carpark</button>
-        <button class="uiDisplay" onclick="selectOrange()">7-11</button> -->
-
-        <!-- <button class="uiDisplay" onclick="littleIndie()">Little India</button> -->
         <div id="compassDiv">
             <div class="compass">
                 <div class="arrow"></div>
             </div>
             <p id="distanceFromTarget" class="uiDisplay"></p>
+
+            <!-- Circle with Map Icon --> 
+            <div id="mapIconCircle" class="circle" onclick="showMap()">
+                <img src="./static/images/icons/map-icon.png" alt="Map Icon">
+            </div>
+        </div>
+
+        <!-- Modal for displaying the PNG image -->
+        <div id="compassModal" class="modal">
+            <span class="close" onclick="hideCompassImage()">&times;</span>
+            <img id="compassImage" class="modal-content" src="./static/images/Minimap/updatedMinimap.png" alt="Map Image">
         </div>
 
         <div id="moreOptionsDiv" class="moreOptionsDiv">
@@ -33,6 +37,8 @@
                     <div class="circle wayfindingSignage" onclick="selectBlue()" style = "background: url('./static/images/picture_Buttons/wayfindingSignage_edited.png') center no-repeat; background-size: 80%;"></div>
                     <div class="circle yellowBox" onclick="selectOrange()" style = "background: url('./static/images/picture_Buttons/yellowBox_edited.png') center no-repeat; background-size: cover;"></div>
                 </div>
+            </div>
+            
         </div>
         <!-- <button style="z-index: 2;position: relative;" onclick="distanceRed()">Red distance</button> -->
         <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
