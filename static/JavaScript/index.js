@@ -295,6 +295,21 @@ function runCalculation(event) {
     }
 }
 
+function toggleDropdowns() {
+    const dropdowns = document.querySelectorAll('.menu-content');
+    const checkbox = document.querySelector('#moreOptionsCheckbox');
+  
+    if (checkbox.checked) {
+      dropdowns.forEach((dropdown) => {
+        dropdown.style.height = '15em';
+      });
+    } else {
+      dropdowns.forEach((dropdown) => {
+        dropdown.style.height = '0';
+      });
+    }
+  }
+
 // starts updating the UI.
 function updateUI() {
     // Update arrow rotation

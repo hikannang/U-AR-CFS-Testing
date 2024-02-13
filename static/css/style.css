@@ -1,4 +1,4 @@
-html{
+html {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
@@ -12,37 +12,128 @@ html{
     z-index: 2;
     position: relative;
     background-color: white;
-
 }
 
 .arrow {
     position: absolute;
-    width: 14vw; /* Adjust the width and height as needed */
+    width: 14vw;
     height: 14vw;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: url(https://purepng.com/public/uploads/large/upload-icon-in-red-color-gxm.png)
-        center no-repeat;
+    background: url(https://purepng.com/public/uploads/large/upload-icon-in-red-color-gxm.png) center no-repeat;
     background-size: contain;
     z-index: 2;
     position: relative;
 }
 
-#compassDiv{
+#compassDiv {
     display: flex;
     flex-direction: column;
     align-items: end;
     margin-right: 4vw;
 }
 
-#distanceFromTarget{
+#distanceFromTarget {
     color: white;
     font-size: 1.5em;
     margin-top: 1vh;
 }
 
-.uiDisplay{
+.uiDisplay {
     z-index: 2;
     position: relative;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+label {
+    width: 40px;
+    height: 35px;
+    display: flex;
+    background: #fff;
+    transition: 0.2s linear;
+    position: relative;
+}
+
+label:after {
+    margin-left: 9px;
+    position: absolute;
+    content: '';
+    background: #8253D7;
+    width: 20px;
+    height: 2px;
+    box-shadow: 0 6px 0px #8253D7;
+    top: 15px;
+}
+
+label:before {
+    margin-left: 9px;
+    position: absolute;
+    content: '';
+    background: #8253D7;
+    width: 20px;
+    height: 2px;
+    top: 9px;
+    left: 0;
+}
+
+label:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+label:active {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.menu-content {
+    line-height: 2em;
+    font-family: Arial, san-serif;
+    background: white;
+    max-width: 200px;
+    box-shadow: 0 8px 20px -10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: opacity 1s linear;
+    color: #6F6F6F;
+    opacity: 0;
+    height: 0;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 5px 14px;
+    cursor: default;
+    transition: 0.2s ease-in-out;
+    border-left: 3px solid transparent;
+    font-weight: 300;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.035);
+}
+
+.menu-list li:last-child {
+    border-bottom: 0;
+}
+
+.menu-list li:hover {
+    font-weight: 400;
+    color: #8253D7;
+    background: rgba(0, 0, 0, 0.05);
+    border-left: 3px solid #8253D7;
+}
+
+/* Show dropdown when checkbox is checked */
+input[type="checkbox"]:checked ~ .menu-content {
+    opacity: 1;
+    height: auto;
+}
+
+/* Arrow styling for the dropdown */
+input[type="checkbox"]:checked ~ .menu-content .arrow {
+    margin-top: 10px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #8253D7;
 }
