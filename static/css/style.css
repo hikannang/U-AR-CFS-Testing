@@ -143,7 +143,6 @@ html{
     flex-direction: column; /* Align circles in a column */
     justify-content: space-between; /* Add space between circles */
     margin-top: 1.75vh; /* Adjust margin as needed */
-    background-color: white;
 }
 
 .circle {
