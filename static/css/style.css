@@ -160,3 +160,14 @@ html{
     align-items: center;
 }
 
+#distanceFromTarget{
+    color: yellow;
+    font-size: 1.5em;
+    margin-top: 1vh;
+}
+
+.uiDisplay{
+    z-index: 2;
+    position: relative;
+}
+
