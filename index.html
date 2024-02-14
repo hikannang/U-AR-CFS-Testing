@@ -12,7 +12,7 @@
     <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js'></script>
     <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
-    <script src="static/JavaScript/index.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
 </head>
 
@@ -22,17 +22,31 @@
         <div class="compass">
             <div class="arrow"></div>
         </div>
-
         <p id="distanceFromTarget" class="uiDisplay"></p>
-        <button onclick="showModal()">Show Modal</button>
-            <div id="customModal" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="hideModal()">&times;</span>
-                    <h2>Modal Title</h2>
-                    <p>This is the modal content.</p>
-                </div>
+        
+        <div class="wrap">
+            
+            <a href="#modal-one" class="btn btn-big">Modal!</a>
+            
+          </div>
+           
+          <!-- Modal -->
+          <div class="modal" id="modal-one" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-header">
+                <h2>Modal in CSS?</h2>
+                <a href="#" class="btn-close" aria-hidden="true">×</a>
+              </div>
+              <div class="modal-body">
+                <p>One modal example here! :D</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn">Nice!</a>
+              </div>
             </div>
-        </div>
+          </div>
+          <!-- /Modal -->
+    </div>
 
         <div id="moreOptionsDiv" class="moreOptionsDiv">
             <div class="moreOptions" onclick="toggleCircles()">
@@ -57,6 +71,7 @@
             <a-entity id="orangeOff"></a-entity>
         </a-scene>
     </div>
+    <script src="static/JavaScript/index.js"></script>
 </body>
 
 </html>

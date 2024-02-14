@@ -309,25 +309,26 @@ function toggleCircles() {
         threeLines.style.backgroundSize = "contain";
     }
 }
-
 function showModal() {
-    var modal = document.getElementById("customModal");
-    modal.style.display = "block";
-}
-
-function hideModal() {
-    var modal = document.getElementById("customModal");
-    modal.style.display = "none";
-}
-
-// Close the modal if the user clicks outside of it
-window.onclick = function(event) {
-    var modal = document.getElementById("customModal");
-    if (event.target === modal) {
-        modal.style.display = "none";
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+  
+    btn.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = "/static/images/Minimap/updatedMinimap.png";
+      captionText.innerHTML = "Your Image";
     }
-};
-
+  
+    var span = document.getElementsByClassName("close")[0];
+  
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+}
+  
+  window.onload = showModal;
 // starts updating the UI.
 function updateUI() {
     // Update arrow rotation
