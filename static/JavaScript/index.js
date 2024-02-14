@@ -309,37 +309,25 @@ function toggleCircles() {
         threeLines.style.backgroundSize = "contain";
     }
 }
-function showModal() {
-    var modal = document.getElementById("myModal");
-    var btn = document.getElementById("myBtn");
-    var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
-  
-    btn.onclick = function(){
-      modal.style.display = "block";
-      modalImg.src = "/static/images/Minimap/updatedMinimap.png";
-      captionText.innerHTML = "Your Image";
-    }
-  
-    var span = document.getElementsByClassName("close")[0];
-  
-    span.onclick = function() { 
-      modal.style.display = "none";
-    }
-}
-  
-  window.onload = showModal;
-// starts updating the UI.
-function updateUI() {
-    // Update arrow rotation
-    const arrow = document.querySelector(".arrow");
-    arrow.style.transform = `translate(-50%, -50%) rotate(${direction}deg)`;
-    requestAnimationFrame(updateUI);
+
+//Get the modal
+var modal = document.getElementById("myModal");
+
+//Getting the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+function toggleModal(){
+    modal.style.display="block";
 }
 
-// function littleIndie() {
-//     startCompass()
-//     target.latitude = 1.3068866777147514;
-//     target.longitude = 103.84940595788129;
-// };
+span.onclick = function (){
+    modal.style.display = "none";
+}
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
 init();

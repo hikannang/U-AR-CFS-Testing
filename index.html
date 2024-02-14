@@ -17,35 +17,28 @@
 </head>
 
 <body>
-    <div id="compassDiv" class="d-flex flex-column align-items-end mr-4">
+    <div id="compassDiv">
         <!-- Compass -->
         <div class="compass">
             <div class="arrow"></div>
         </div>
         <p id="distanceFromTarget" class="uiDisplay"></p>
-        
-        <div class="wrap">
-            
-            <a href="#modal-one" class="btn btn-big">Modal!</a>
-            
-          </div>
-           
-          <!-- Modal -->
-          <div class="modal" id="modal-one" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-header">
-                <h2>Modal in CSS?</h2>
-                <a href="#" class="btn-close" aria-hidden="true">×</a>
-              </div>
-              <div class="modal-body">
-                <p>One modal example here! :D</p>
-              </div>
-              <div class="modal-footer">
-                <a href="#" class="btn">Nice!</a>
-              </div>
+
+        <div id="mapsDiv" class="mapsDiv">
+            <div class="maps" onclick="toggleModal()">
+                <div class="mapDot" id="mapDot" style="background: url('./static/images/icons/mapIcon.png') center no-repeat; background-size: contain;">
+                </div>
             </div>
-          </div>
-          <!-- /Modal -->
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class ="modal-content">
+            <<span class="close" style="position: absolute; top: 10px; right: 10px;">&times;</span>
+            <img src="./static/images/Minimap/updatedMinimap.png" alt="Big Image">
+        </div>
     </div>
 
         <div id="moreOptionsDiv" class="moreOptionsDiv">

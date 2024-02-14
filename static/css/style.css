@@ -67,7 +67,6 @@ html{
     z-index: 2;
     position: relative;
     cursor: pointer; /* Add cursor pointer for better UX */
-
 }
 
 #moreOptionsDiv{
@@ -77,6 +76,66 @@ html{
     margin-left: 5vw;
     margin-top: 6vw;
 }
+
+/* Modal */
+#mapsDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-right: 5vw;
+    margin-top: 6vw;
+}
+
+.maps {
+    position: fixed;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    top: 20vh;
+    right: 2vh;
+    /* margin: auto; */
+    z-index: 2;
+    
+    background-color: white;
+}
+
+.mapDot {
+    position: absolute;
+    width: 8vw; /* Adjust the width and height as needed */
+    height: 8vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url("./static/images/icons/mapIcon.png")
+        center no-repeat;
+    background-size: contain;
+    z-index: 2;
+    position: relative;
+    cursor: pointer; /* Add cursor pointer for better UX */
+}
+
+.modal-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
 
 /* More Circles */
 .additionalCircles {
@@ -97,159 +156,3 @@ html{
     cursor: pointer;
 }
 
-/* Modal */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.9);
-  }
-  
-  .modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-  }
-  
-  .close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-
-#distanceFromTarget{
-    color: yellow;
-    font-size: 1.5em;
-    margin-top: 1vh;
-}
-
-.uiDisplay{
-    z-index: 2;
-    position: relative;
-}
-
-.wrap {
-    padding: 40px;
-    text-align: center;
-  }
-  hr {
-    clear: both;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border: 0;
-    border-top: 1px solid #aaa;
-  }
-  h1 {
-    font-size: 30px;
-    margin-bottom: 40px;
-  }
-  p {
-    margin-bottom: 20px;
-  }
-  .btn {
-    background: #428bca;
-    border: #357ebd solid 1px;
-    border-radius: 3px;
-    color: #fff;
-    display: inline-block;
-    font-size: 14px;
-    padding: 8px 15px;
-    text-decoration: none;
-    text-align: center;
-    min-width: 60px;
-    position: relative;
-    transition: color 0.1s ease;
-  }
-  .btn:hover {
-    background: #357ebd;
-  }
-  .btn.btn-big {
-    font-size: 18px;
-    padding: 15px 20px;
-    min-width: 100px;
-  }
-  .btn-close {
-    color: #aaa;
-    font-size: 30px;
-    text-decoration: none;
-    position: absolute;
-    right: 5px;
-    top: 0;
-  }
-  .btn-close:hover {
-    color: #919191;
-  }
-  .modal:before {
-    content: "";
-    display: none;
-    background: rgba(0, 0, 0, 0.6);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 10;
-  }
-  .modal:target:before {
-    display: block;
-  }
-  .modal:target .modal-dialog {
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    transform: translate(0, 0);
-    top: 20%;
-  }
-  .modal-dialog {
-    background: #fefefe;
-    border: #333 solid 1px;
-    border-radius: 5px;
-    margin-left: -200px;
-    position: fixed;
-    left: 50%;
-    top: -100%;
-    z-index: 11;
-    width: 360px;
-    -webkit-transform: translate(0, -500%);
-    -ms-transform: translate(0, -500%);
-    transform: translate(0, -500%);
-    -webkit-transition: -webkit-transform 0.3s ease-out;
-    -moz-transition: -moz-transform 0.3s ease-out;
-    -o-transition: -o-transform 0.3s ease-out;
-    transition: transform 0.3s ease-out;
-  }
-  .modal-body {
-    padding: 20px;
-  }
-  .modal-header,
-  .modal-footer {
-    padding: 10px 20px;
-  }
-  .modal-header {
-    border-bottom: #eee solid 1px;
-  }
-  .modal-header h2 {
-    font-size: 20px;
-  }
-  .modal-footer {
-    border-top: #eee solid 1px;
-    text-align: right;
-  }
