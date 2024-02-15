@@ -155,17 +155,17 @@ html{
     display: none; /* Initially hide the additional circles */
     flex-direction: column; /* Align circles in a column */
     justify-content: space-between; /* Add space between circles */
-    margin-top: 1.75vh; /* Adjust margin as needed */
+    margin-top: 2.5vh; /*Adjust margin as needed*/
     background-color: transparent;
-    box-shadow: none;
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); */
 }
 
 .circle {
-    width: 14vw; /* Adjust the width of each circle as needed */
-    height: 14vw; /* Adjust the height of each circle as needed */
+    width: 13vw; /* Adjust the width of each circle as needed */
+    height: 13vw; /* Adjust the height of each circle as needed */
     border-radius: 50%;
     background-color: white;
-    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     /* Add any additional styles for your circles */
     margin-top: 1.25vh;
     margin-bottom: 1.25vh;
