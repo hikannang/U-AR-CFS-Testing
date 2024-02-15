@@ -48,15 +48,15 @@ function selectGreen(){
 
    //Civic Centre
     startCompass()
-    target.latitude = 1.4349145;
-    target.longitude = 103.7865106;
+    target.latitude = 1.4349107;
+    target.longitude = 103.7842051;
 
     if (document.getElementById('greenOff')){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
         // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-entity id="green" gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb" scale="10 10 10" gps-projected-entity-place="latitude: 1.4349145; longitude: 103.7865106" animation-mixer/>'
+        content.innerHTML = '<a-entity id="green" gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb" scale="10 10 10" gps-projected-entity-place="latitude: 1.4349107; longitude: 103.7842051" animation-mixer/>'
     }
 
     if(document.getElementById('red')){
