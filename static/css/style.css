@@ -13,7 +13,6 @@ html{
     right: 2vw;
     /* margin: auto; */
     z-index: 2;
-    position: relative;
     background-color: white;
 
 }
@@ -39,8 +38,9 @@ html{
     margin-right: 4vw;
 }
 
-/* moreoptions */
+/* <moreOptions> */
 .moreOptions {
+    /* Button */
     position: fixed;
     width: 13vw;
     height: 13vw;
@@ -50,11 +50,11 @@ html{
     left: 2vh;
     /* margin: auto; */
     z-index: 2;
-    
     background-color: white;
 }
 
 .threeLines {
+    /* Icon */
     position: absolute;
     width: 10vw; /* Adjust the width and height as needed */
     height: 10vw;
@@ -76,34 +76,31 @@ html{
     margin-left: 10vw;
     margin-top: 10vw;
 }
+/* </moreOptions> */
 
-/* Modal */
-#mapsDiv{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    margin-right: 5vw;
-    margin-top: 6vw;
-}
+/* <mapIcon> */
 
 .maps {
+    /* Button */
     position: fixed;
-    width: 11vh;
-    height: 11vh;
+    width: 16vw;
+    height: 16vw;
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     top: 20vh;
-    right: 2vh;
+    right: 2vw;
     /* margin: auto; */
     z-index: 2;
+    /* position: relative; */
     
-    background-color: grey;
+    background-color: white;
 }
 
 .mapDot {
+    /* Icon */
     position: absolute;
-    width: 8vw; /* Adjust the width and height as needed */
-    height: 8vw;
+    width: 10vw; /* Adjust the width and height as needed */
+    height: 10vw;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -111,10 +108,19 @@ html{
         center no-repeat;
     background-size: contain;
     z-index: 2;
-    position: relative;
     cursor: pointer; /* Add cursor pointer for better UX */
 }
 
+#mapsDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-right: 10vw;
+    margin-top: 10vw;
+}
+/* </mapIcon> */
+
+/* <Modal> */
 .modal-content {
     width: 100%;
     height: 100%;
@@ -123,7 +129,7 @@ html{
     left: 0;
     background-color: white;
     overflow: auto;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -140,6 +146,7 @@ html{
 .modal-content img {
     max-width: 110%;
     max-height: 110%;
+    object-fit: contain;
 }
 
 
@@ -155,13 +162,14 @@ html{
 }
 
 .circle {
-    width: 12vh; /* Adjust the width of each circle as needed */
-    height: 12vh; /* Adjust the height of each circle as needed */
+    width: 14vw; /* Adjust the width of each circle as needed */
+    height: 14vw; /* Adjust the height of each circle as needed */
     border-radius: 50%;
-    background-color: black;
+    background-color: white;
     /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); */
     /* Add any additional styles for your circles */
-    margin-top: 2;
+    margin-top: 1.25vh;
+    margin-bottom: 1.25vh;
     cursor: pointer;
     display: flex;
     justify-content: center;
