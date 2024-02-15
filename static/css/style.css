@@ -136,15 +136,23 @@ html{
 }
 
 .modal-content span.close {
-    font-size: 50px; /* Adjust the font size as needed */
+    /* Adjust the size of the span */
+    width: 30px; /* Set the desired width */
+    height: 30px; /* Set the desired height */
     position: absolute;
-    top: 10vh;
+    top: 5vh;
     right: 10vw;
+}
+
+.modal-content span.close img {
+    /* Adjust the size of the image within the span */
+    width: 100%; /* Set the desired width */
+    height: 100%; /* Set the desired height */
 }
 
 .modal-content img {
     max-width: 110%;
-    max-height: 110%;
+    max-height: 100%;
     object-fit: contain;
 }
 

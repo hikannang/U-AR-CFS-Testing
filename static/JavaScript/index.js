@@ -406,7 +406,6 @@ function runCalculation(event) {
 }
 
 
-
 }
 function toggleCircles() {
     var additionalCircles = document.getElementById("additionalCircles");
