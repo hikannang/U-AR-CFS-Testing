@@ -4,7 +4,7 @@ html{
 
 /* Compass */
 .compass {
-    position: fixed;
+    position: relative;
     width: 20vw;
     height: 20vw;
     border-radius: 50%;
@@ -12,6 +12,7 @@ html{
     top: 2vw;
     right: 2vw;
     /* margin: auto; */
+    position: relative;
     z-index: 2;
     background-color: white;
 
