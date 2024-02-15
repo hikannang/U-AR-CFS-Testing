@@ -397,6 +397,15 @@ function runCalculation(event) {
         distanceElement.innerHTML = '0.00m';
     }
 }
+
+// starts updating the UI.
+function updateUI() {
+    // Update arrow rotation
+    const arrow = document.querySelector(".arrow");
+    arrow.style.transform = `translate(-50%, -50%) rotate(${direction}deg)`;
+    requestAnimationFrame(updateUI);
+}
+
 }
 function toggleCircles() {
     var additionalCircles = document.getElementById("additionalCircles");
