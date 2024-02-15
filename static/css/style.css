@@ -179,7 +179,10 @@ html{
 #distanceFromTarget{
     color: yellow;
     font-size: 1.5em;
-    margin-top: 13vh;
+    margin-top: 15vh;
+    /* border: 2px solid yellow;
+    padding: 10px;
+    display: inline-block; */
 }
 
 .uiDisplay{
