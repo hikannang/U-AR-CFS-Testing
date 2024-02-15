@@ -137,17 +137,19 @@ html{
 
 .modal-content span.close {
     /* Adjust the size of the span */
-    width: 30px; /* Set the desired width */
-    height: 30px; /* Set the desired height */
+    width: 10%; /* Set the desired width */
+    height: 10%; /* Set the desired height */
     position: absolute;
     top: 5vh;
     right: 10vw;
+    z-index: 3;
 }
 
 .modal-content span.close img {
     /* Adjust the size of the image within the span */
     width: 100%; /* Set the desired width */
     height: 100%; /* Set the desired height */
+    z-index: 3;
 }
 
 .modal-content img {
