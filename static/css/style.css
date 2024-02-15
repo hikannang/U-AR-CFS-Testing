@@ -143,6 +143,8 @@ html{
     top: 5vh;
     right: 10vw;
     z-index: 3;
+    cursor: pointer;
+    color: white;
 }
 
 .modal-content span.close img {
