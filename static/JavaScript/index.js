@@ -54,8 +54,15 @@ function selectGreen(){
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
         // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-image id="green" src="./static/images/2D assets from users/CyclingPath_4k.png" scale="10 10 10" gps-projected-entity-place="latitude: 1.308538; longitude: 103.849886"></a-image>';
-    }
+        content.innerHTML = `
+        <a-image
+          id="green"
+          src="./static/images/2D assets from users/CyclingPath_4k.png"
+          scale="10 10 10"
+          gps-projected-entity-place="latitude: 1.308538; longitude: 103.849886"
+          look-at="[gps-camera]"
+        ></a-image>
+      `;    }
 
     if(document.getElementById('red')){
         // Turning Red Off
@@ -98,8 +105,17 @@ function selectYellow(){
         // Turning Yellow On
         document.getElementById('yellowOff').id = 'yellow';
         var content = document.getElementById('yellow')
-        content.innerHTML = '<a-image id="yellow" src="./static/images/2D assets from users/CyclingPath_4k.png" scale="10 10 10" gps-projected-entity-place="latitude: 1.401492; longitude: 103.749418" look-at="[camera]"></a-image>';
-    }
+        content.innerHTML = `
+        <a-entity
+          id="yellow"
+          gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb"
+          scale="10 10 10"
+          gps-projected-entity-place="latitude: 1.401492; longitude: 103.749418"
+          animation-mixer
+          look-at="[gps-camera]"
+        ></a-entity>
+      `;
+}
 
     if(document.getElementById('red')){
         // Turning Red Off
@@ -142,7 +158,15 @@ function selectBlue(){
         // Turning Yellow On
         document.getElementById('blueOff').id = 'blue';
         var content = document.getElementById('blue')
-        content.innerHTML = '<a-entity id="blue" gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb" scale="10 10 10" gps-projected-entity-place="latitude: 1.401492; longitude: 103.749418" look-at="[camera]" animation-mixer/>'
+        content.innerHTML = `
+        <a-image
+          id="blue"
+          src="./static/images/2D assets from users/CyclingPath_4k.png"
+          scale="10 10 10"
+          gps-projected-entity-place="latitude: 1.308538; longitude: 103.849886"
+          look-at="[gps-camera]"
+        ></a-image>
+      `;
     }
     
 
