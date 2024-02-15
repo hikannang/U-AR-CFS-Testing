@@ -11,7 +11,7 @@ function selectRed(){
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red')
         // content.innerHTML = '<a-entity id="red" material="color: red" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3068866777147514; longitude: 103.84940595788129" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-entity id="red" gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb" scale="1.5 1.5 1.5" gps-projected-entity-place="latitude: 1.308608; longitude: 103.849900" animation-mixer/>'
+        content.innerHTML = '<a-entity id="red" gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb" scale="10 10 10" gps-projected-entity-place="latitude: 1.308608; longitude: 103.849900" animation-mixer/>'
     }
 
     if(document.getElementById('green')){
@@ -56,7 +56,7 @@ function selectGreen(){
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
         // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-entity id="green" gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb" scale="1.5 1.5 1.5" gps-projected-entity-place="latitude: 1.434200; longitude: 103.787520" animation-mixer/>'
+        content.innerHTML = '<a-entity id="green" gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb" scale="10 10 10" gps-projected-entity-place="latitude: 1.4349145; longitude: 103.7865106" animation-mixer/>'
     }
 
     if(document.getElementById('red')){
