@@ -387,9 +387,16 @@ function runCalculation(event) {
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     var distance = R * c; // Distance in km
     distance = distance * 1000; // Convert to meters
-    document.getElementById("distanceFromTarget").innerHTML =
-        distance.toFixed(2) + "m";
+    var distanceElement = document.getElementById("distanceFromTarget");
+
+    if (distance <= 20000) {
+        // Display the actual distance
+        distanceElement.innerHTML = distance.toFixed(2) + "m";
+    } else {
+        // Display '0.00m' for distances above 20,000 meters
+        distanceElement.innerHTML = '0.00m';
     }
+}
 }
 function toggleCircles() {
     var additionalCircles = document.getElementById("additionalCircles");
@@ -406,24 +413,24 @@ function toggleCircles() {
     }
 }
 
-//Get the modal
-var modal = document.getElementById("myModal");
+    //Get the modal
+    var modal = document.getElementById("myModal");
 
-//Getting the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+    //Getting the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
 
-function toggleModal(){
-    modal.style.display="block";
-}
+    function toggleModal(){
+        modal.style.display="block";
+    }
 
-span.onclick = function (){
-    modal.style.display = "none";
-}
-
-window.onclick = function (event) {
-    if (event.target == modal) {
+    span.onclick = function (){
         modal.style.display = "none";
     }
-}
+
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 
 init();
