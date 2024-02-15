@@ -398,13 +398,7 @@ function runCalculation(event) {
     }
 }
 
-// starts updating the UI.
-function updateUI() {
-    // Update arrow rotation
-    const arrow = document.querySelector(".arrow");
-    arrow.style.transform = `translate(-50%, -50%) rotate(${direction}deg)`;
-    requestAnimationFrame(updateUI);
-}
+
 
 }
 function toggleCircles() {
@@ -441,5 +435,13 @@ function toggleCircles() {
             modal.style.display = "none";
         }
     }
+
+    // starts updating the UI.
+function updateUI() {
+    // Update arrow rotation
+    const arrow = document.querySelector(".arrow");
+    arrow.style.transform = `translate(-50%, -50%) rotate(${direction}deg)`;
+    requestAnimationFrame(updateUI);
+}
 
 init();
