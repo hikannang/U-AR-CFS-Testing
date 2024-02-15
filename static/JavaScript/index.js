@@ -1,4 +1,6 @@
 function selectRed(){
+    //Bicycle Crossing
+    
     //Civic Centre
     startCompass()
     target.latitude = 1.4349145;
@@ -9,7 +11,7 @@ function selectRed(){
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red')
         // content.innerHTML = '<a-entity id="red" material="color: red" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3068866777147514; longitude: 103.84940595788129" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-entity id="red" gltf-model="./static/3D-file/Assets from Users/BicycleCrossing.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.4020492; longitude: 103.7479795" animation-mixer/>'
+        content.innerHTML = '<a-entity id="red" gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.4349145; longitude: 103.7865106" animation-mixer/>'
     }
 
     if(document.getElementById('green')){
@@ -42,6 +44,8 @@ function selectRed(){
 }
 
 function selectGreen(){
+    //Cycling Path
+
     //Blk 365
     startCompass()
     target.latitude = 1.434200;
@@ -52,7 +56,7 @@ function selectGreen(){
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
         // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-entity id="green" gltf-model="./static/3D-file/Assets from Users/CyclingPath.glb" scale="1.5 1.5 1.5" gps-projected-entity-place="latitude: 1.4009471; longitude: 103.7474082" animation-mixer/>'
+        content.innerHTML = '<a-entity id="green" gltf-model="./static/3D-file/Updated Assets from users/cyclingPath_textured.glb" scale="1.5 1.5 1.5" gps-projected-entity-place="latitude: 1.434200; longitude: 103.787520" animation-mixer/>'
     }
 
     if(document.getElementById('red')){
@@ -85,6 +89,8 @@ function selectGreen(){
 }
 
 function selectYellow(){
+    //Foot Path
+
     //Blk 364
     startCompass()
     target.latitude = 1.4340948;
@@ -94,7 +100,7 @@ function selectYellow(){
         // Turning Yellow On
         document.getElementById('yellowOff').id = 'yellow';
         var content = document.getElementById('yellow')
-        content.innerHTML = '<a-entity id="yellow" gltf-model="./static/3D-file/Assets from Users/FootPath.glb" scale="1.5 1.5 1.5" gps-projected-entity-place="latitude: 1.4012957; longitude: 103.7478212" animation-mixer/>'
+        content.innerHTML = '<a-entity id="yellow" gltf-model="./static/3D-file/Updated Assets from users/foodPath_textured.glb" scale="1.5 1.5 1.5" gps-projected-entity-place="latitude: 1.4012957; longitude: 103.7478212" animation-mixer/>'
     }
 
     if(document.getElementById('red')){
@@ -127,6 +133,8 @@ function selectYellow(){
 }
 
 function selectBlue(){
+    //Wayfinding
+    
     //912 Bus stop
     startCompass()
     target.latitude = 1.4345781;
@@ -136,7 +144,7 @@ function selectBlue(){
         // Turning Yellow On
         document.getElementById('blueOff').id = 'blue';
         var content = document.getElementById('blue')
-        content.innerHTML = '<a-entity id="blue" gltf-model="./static/3D-file/Assets from Users/Wayfinding.glb" scale="1.5 1.5 1.5" gps-projected-entity-place="latitude: 1.4020492; longitude: 103.7479795" animation-mixer/>'
+        content.innerHTML = '<a-entity id="blue" gltf-model="./static/3D-file/Updated Assets from users/wayFinding_textured.glb" scale="1.5 1.5 1.5" gps-projected-entity-place="latitude: 1.4020492; longitude: 103.7479795" animation-mixer/>'
     }
 
     if(document.getElementById('red')){
@@ -179,7 +187,7 @@ function selectOrange(){
         // Turning orange On
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange')
-        content.innerHTML = '<a-entity id="orange" gltf-model="./static/3D-file/Assets from Users/YellowBox.glb" scale="1.5 1.5 1.5" gps-projected-entity-place="latitude: 1.4029823; longitude: 103.7493179" animation-mixer/>'
+        content.innerHTML = '<a-entity id="orange" gltf-model="static/3D-file/Updated Assets from users/yellowBox_textured.glb" scale="1.5 1.5 1.5" gps-projected-entity-place="latitude: 1.4029823; longitude: 103.7493179" animation-mixer/>'
     }
 
     if(document.getElementById('red')){
@@ -319,7 +327,6 @@ const isIOS =
     navigator.userAgent.match(/AppleWebKit/);
 // const startBtn = document.querySelector(".start-btn");
 const geolocationOptions = { enableHighAccuracy: true };
-
 
 // function to initialize geolocation and device oroentation. runs automatically
 function init() {
