@@ -89,16 +89,16 @@ function selectGreen(){
 function selectYellow(){
     //Foot Path
     
-    //Woodlands Lib
+    //My House
     startCompass()
-    target.latitude = 1.434903;
-    target.longitude = 103.787336;
+    target.latitude = 1.401492;
+    target.longitude = 103.749418;
 
     if (document.getElementById('yellowOff')){
         // Turning Yellow On
         document.getElementById('yellowOff').id = 'yellow';
         var content = document.getElementById('yellow')
-        content.innerHTML = '<a-image id="yellow" src="./static/images/2D assets from users/CyclingPath_4k.png" scale="10 10 10" gps-projected-entity-place="latitude: 1.434903; longitude: 103.787336"></a-image>';
+        content.innerHTML = '<a-image id="yellow" src="./static/images/2D assets from users/CyclingPath_4k.png" scale="10 10 10" gps-projected-entity-place="latitude: 1.401492; longitude: 103.749418"></a-image>';
     }
 
     if(document.getElementById('red')){
@@ -133,16 +133,16 @@ function selectYellow(){
 function selectBlue(){
     //Wayfinding
     
-    //Woodlands Lib
+    //My House
     startCompass()
-    target.latitude = 1.434903;
-    target.longitude = 103.787336;
+    target.latitude = 1.401492;
+    target.longitude = 103.749418;
 
     if (document.getElementById('blueOff')){
         // Turning Yellow On
         document.getElementById('blueOff').id = 'blue';
         var content = document.getElementById('blue')
-        content.innerHTML = '<a-entity id="blue" gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb" scale="10 10 10" gps-projected-entity-place="latitude: 1.434903; longitude: 103.787336" rotation="0 90 0" animation-mixer/>'
+        content.innerHTML = '<a-entity id="blue" gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb" scale="10 10 10" gps-projected-entity-place="latitude: 1.401492; longitude: 103.749418" rotation="0 90 0" animation-mixer/>'
     }
     
 
@@ -278,10 +278,10 @@ function selectOrange(){
     
 
 
-//Civic Centre
+ //Woodlands Lib
     startCompass()
-    target.latitude = 1.4349145;
-    target.longitude = 103.7865106;
+    target.latitude = 1.434903;
+    target.longitude = 103.787336;
 
 
 //Blk 365
