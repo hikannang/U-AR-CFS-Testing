@@ -165,7 +165,7 @@ html{
     width: 14vw; /* Adjust the width of each circle as needed */
     height: 14vw; /* Adjust the height of each circle as needed */
     border-radius: 50%;
-    background-color: white;
+    background-color: black;
     /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); */
     /* Add any additional styles for your circles */
     margin-top: 1.25vh;

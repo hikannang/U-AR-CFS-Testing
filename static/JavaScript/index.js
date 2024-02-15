@@ -1,8 +1,8 @@
 function selectRed(){
-    //659
+    //Civic Centre
     startCompass()
-    target.latitude = 1.4020492;
-    target.longitude = 103.7479795;
+    target.latitude = 1.4349145;
+    target.longitude = 103.7865106;
 
     if (document.getElementById('redOff')){
         // Turning Red On
@@ -42,11 +42,10 @@ function selectRed(){
 }
 
 function selectGreen(){
-    //Blk 673B
-    
+    //Blk 365
     startCompass()
-    target.latitude = 1.4009471;
-    target.longitude = 103.7474082;
+    target.latitude = 1.434200;
+    target.longitude = 103.787520;
 
     if (document.getElementById('greenOff')){
         // Turning Green On
@@ -86,10 +85,10 @@ function selectGreen(){
 }
 
 function selectYellow(){
-    // Blk 673
+    //Blk 364
     startCompass()
-    target.latitude = 1.4012957;
-    target.longitude = 103.7478212;
+    target.latitude = 1.4340948;
+    target.longitude = 103.786403;
 
     if (document.getElementById('yellowOff')){
         // Turning Yellow On
@@ -128,10 +127,10 @@ function selectYellow(){
 }
 
 function selectBlue(){
-    // Carpark
+    //912 Bus stop
     startCompass()
-    target.latitude = 1.4020492;
-    target.longitude = 103.7479795;
+    target.latitude = 1.4345781;
+    target.longitude = 103.7860129;
 
     if (document.getElementById('blueOff')){
         // Turning Yellow On
@@ -171,10 +170,10 @@ function selectBlue(){
 }
 
 function selectOrange(){
-    //7-11
+    //Woodlands MRT
     startCompass()
-    target.latitude = 1.4029823;
-    target.longitude = 103.7493179;
+    target.latitude = 1.4365677;
+    target.longitude = 103.7862248;
 
     if (document.getElementById('orangeOff')){
         // Turning orange On
@@ -212,6 +211,103 @@ function selectOrange(){
     }
 
 }
+
+/* All Locations
+
+//659
+    startCompass()
+    target.latitude = 1.4020492;
+    target.longitude = 103.7479795;
+
+//Blk 673B
+    startCompass()
+    target.latitude = 1.4009471;
+    target.longitude = 103.7474082;
+
+// Blk 673
+    startCompass()
+    target.latitude = 1.4012957;
+    target.longitude = 103.7478212;
+
+// Carpark
+    startCompass()
+    target.latitude = 1.4020492;
+    target.longitude = 103.7479795;
+
+//7-11
+    startCompass()
+    target.latitude = 1.4029823;
+    target.longitude = 103.7493179;
+
+
+//Little India MRT
+    startCompass()
+    target.latitude = 1.306710; 
+    target.longitude = 103.849284;
+    
+
+//Mobility Gallery
+    startCompass()
+    target.latitude = 1.308234;
+    target.longitude = 103.849569;
+    
+
+/Block 6
+    startCompass()
+    target.latitude = 1.308608;
+    target.longitude = 103.849900;
+    
+
+Blk 5A
+    startCompass()
+    target.latitude = 1.308838;
+    target.longitude = 103.849601;
+    
+
+LTA Auditorium
+    startCompass()
+    target.latitude = 1.308685;
+    target.longitude = 103.849421;
+    
+
+
+//Civic Centre
+    startCompass()
+    target.latitude = 1.4349145;
+    target.longitude = 103.7865106;
+
+
+//Blk 365
+    startCompass()
+    target.latitude = 1.434200;
+    target.longitude = 103.787520;
+
+
+//Blk 364
+    startCompass()
+    target.latitude = 1.4340948;
+    target.longitude = 103.786403;
+
+
+//912 Bus stop
+    startCompass()
+    target.latitude = 1.4345781;
+    target.longitude = 103.7860129;
+
+
+//Woodlands MRT
+    startCompass()
+    target.latitude = 1.4365677;
+    target.longitude = 103.7862248;
+
+
+
+Template
+    startCompass()
+    target.latitude = ;
+    target.longitude = ;
+
+*/
 
 // ##################################################################################################
 var current = { latitude: null, longitude: null };
