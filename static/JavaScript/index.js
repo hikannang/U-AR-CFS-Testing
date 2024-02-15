@@ -11,7 +11,7 @@ function selectRed(){
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red')
         // content.innerHTML = '<a-entity id="red" material="color: red" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3068866777147514; longitude: 103.84940595788129" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-entity id="red" gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb" scale="10 10 10" gps-projected-entity-place="latitude: 1.308664; longitude: 103.849736" animation-mixer/>'
+        content.innerHTML = '<a-entity id="red" gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb" scale="10 10 10" gps-projected-entity-place="latitude: 1.308664; longitude: 103.849736" rotation="0 90 0" animation-mixer/>'
     }
 
     if(document.getElementById('green')){
@@ -98,7 +98,7 @@ function selectYellow(){
         // Turning Yellow On
         document.getElementById('yellowOff').id = 'yellow';
         var content = document.getElementById('yellow')
-        content.innerHTML = '<a-image id="yellow" src="./static/images/2D assets from users/CyclingPath_4k.png" scale="3 3 3" gps-projected-entity-place="latitude: 1.434903; longitude: 103.787336"></a-image>';
+        content.innerHTML = '<a-image id="yellow" src="./static/images/2D assets from users/CyclingPath_4k.png" scale="10 10 10" gps-projected-entity-place="latitude: 1.434903; longitude: 103.787336"></a-image>';
     }
 
     if(document.getElementById('red')){
