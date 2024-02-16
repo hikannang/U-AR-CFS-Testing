@@ -103,8 +103,8 @@ function selectYellow(){
         <a-entity id="yellow" gps-projected-entity-place="latitude: 1.434887; longitude: 103.787359" look-at="[gps-projected-camera]">
             <a-image
                 src="./static/images/2D assets from users/CyclingPath_4k.png"
-                scale="10 10 20"
-                rotation="0 0 0"
+                scale="5 5 5"
+                rotation="90 0 0"
             ></a-image>         
         </a-entity>
     `;
@@ -156,7 +156,7 @@ function selectBlue(){
         <a-entity
             gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb"
             animation-mixer
-            scale="10 10 10"
+            scale="1 1 1"
             rotation="0 0 0"
         ></a-entity>
         </a-entity>
