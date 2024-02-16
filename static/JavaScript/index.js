@@ -1,64 +1,3 @@
-// Function to initialize geolocation and device orientation. Runs automatically.
-function init() {
-    // Add your initialization code here
-    navigator.geolocation.watchPosition(setCurrentPosition, null, geolocationOptions);
-    if (!isIOS) {
-        window.addEventListener("deviceorientationabsolute", runCalculation);
-    }
-
-    // Start the UI updates
-    updateUI();
-}
-
-// Function to update the rotation of an entity to always face the camera
-function updateEntityLookAt(entityId) {
-    const camera = document.querySelector("[gps-projected-camera]");
-    const entity = document.getElementById(entityId);
-
-    if (camera && entity) {
-        const entityPosition = entity.object3D.position.clone();
-        const cameraPosition = camera.object3D.position.clone();
-
-        const direction = new THREE.Vector3();
-        direction.subVectors(cameraPosition, entityPosition).normalize();
-
-        const rotationY = Math.atan2(direction.x, direction.z);
-        const rotationX = Math.atan2(Math.sqrt(direction.x * direction.x + direction.z * direction.z), direction.y);
-
-        entity.setAttribute("rotation", { x: THREE.Math.radToDeg(rotationX), y: THREE.Math.radToDeg(rotationY), z: 0 });
-    }
-}
-
-// Function to create or update an entity
-function createOrUpdateEntity(id, attributes) {
-    let entity = document.getElementById(id);
-    if (!entity) {
-        entity = document.createElement('a-entity');
-        entity.setAttribute('id', id);
-        document.querySelector('a-scene').appendChild(entity);
-    }
-
-    for (const [key, value] of Object.entries(attributes)) {
-        entity.setAttribute(key, value);
-    }
-
-    // Add look-at attribute if present
-    if (attributes.lookAt) {
-        entity.setAttribute('look-at', attributes.lookAt);
-    }
-}
-
-// Function to turn off specified entities
-function turnOffEntities(ids) {
-    ids.forEach(id => {
-        const entity = document.getElementById(id);
-        if (entity) {
-            entity.id = `${id}Off`;
-            entity.innerHTML = '';
-        }
-    });
-}
-
 function selectRed(){
     //Bicycle Crossing
     
@@ -67,16 +6,41 @@ function selectRed(){
     target.latitude = 1.308664;
     target.longitude = 103.849736;
 
-    createOrUpdateEntity('red', {
-        'gltf-model': './static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb',
-        'scale': '10 10 10',
-        'gps-projected-entity-place': 'latitude: 1.308664; longitude: 103.849736',
-        'rotation': '0 90 0',
-        'animation-mixer': '',
-        'lookAt': '[gps-projected-camera]'
-    });
+    if (document.getElementById('redOff')){
+        // Turning Red On
+        document.getElementById('redOff').id = 'red';
+        var content = document.getElementById('red')
+        // content.innerHTML = '<a-entity id="red" material="color: red" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3068866777147514; longitude: 103.84940595788129" scale="10 10 10"></a-entity>'
+        content.innerHTML = '<a-entity id="red" gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb" scale="10 10 10" gps-projected-entity-place="latitude: 1.308664; longitude: 103.849736" rotation="0 90 0" animation-mixer/>'
+    }
 
-    turnOffEntities(['green', 'yellow', 'blue', 'orange']);
+    if(document.getElementById('green')){
+        // Turning Green Off
+        document.getElementById('green').id = 'greenOff';
+        var content = document.getElementById('greenOff')
+        content.innerHTML = '<a-entity id="greenOff"></a-entity>'
+    }
+
+    if(document.getElementById('yellow')){
+        // Turning Yellow Off
+        document.getElementById('yellow').id = 'yellowOff';
+        var content = document.getElementById('yellowOff')
+        content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
+    }
+
+    if(document.getElementById('blue')){
+        // Turning blue Off
+        document.getElementById('blue').id = 'blueOff';
+        var content = document.getElementById('blueOff')
+        content.innerHTML = '<a-entity id="blueOff"></a-entity>'
+    }
+
+    if(document.getElementById('orange')){
+        // Turning orange Off
+        document.getElementById('orange').id = 'orangeOff';
+        var content = document.getElementById('orangeOff')
+        content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
+    }
 }
 
 function selectGreen(){
@@ -85,55 +49,140 @@ function selectGreen(){
     target.latitude = 1.308538;
     target.longitude = 103.849886;
 
-    createOrUpdateEntity('green', {
-        'src': './static/images/2D assets from users/CyclingPath_4k.png',
-        'look-at': '[gps-projected-camera]',
-        'scale': '10 10 10',
-        'gps-projected-entity-place': 'latitude: 1.308664; longitude: 103.849736',
-    });
+    if (document.getElementById('greenOff')){
+        // Turning Green On
+        document.getElementById('greenOff').id = 'green';
+        var content = document.getElementById('green')
+        // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
+        content.innerHTML = '<a-image id="green" src="./static/images/2D assets from users/CyclingPath_4k.png" look-at="[camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.308538; longitude: 103.849886"></a-image>';
+    }
 
-    turnOffEntities(['red', 'yellow', 'blue', 'orange']);
+    if(document.getElementById('red')){
+        // Turning Red Off
+        document.getElementById('red').id = 'redOff';
+        var content = document.getElementById('redOff')
+        content.innerHTML = '<a-entity id="redOff"></a-entity>'
+    }
 
+    if(document.getElementById('yellow')){
+        // Turning Yellow Off
+        document.getElementById('yellow').id = 'yellowOff';
+        var content = document.getElementById('yellowOff')
+        content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
+    }
+
+    if(document.getElementById('blue')){
+        // Turning blue Off
+        document.getElementById('blue').id = 'blueOff';
+        var content = document.getElementById('blueOff')
+        content.innerHTML = '<a-entity id="blueOff"></a-entity>'
+    }
+
+    if(document.getElementById('orange')){
+        // Turning orange Off
+        document.getElementById('orange').id = 'orangeOff';
+        var content = document.getElementById('orangeOff')
+        content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
+    }
 }
 
 function selectYellow(){
     //Foot Path
     
-    //Woodlands Lib
+    
+    //Woodlands Library
     startCompass()
-    target.latitude = 1.434888;
+    target.latitude = 1.434887;
     target.longitude = 103.787359;
 
-    createOrUpdateEntity('yellow', {
-        'gltf-model': './static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb',
-        'scale': '10 10 10',
-        'gps-projected-entity-place': 'latitude: 1.434888; longitude: 103.787359',
-        'lookAt': '[gps-projected-camera]',
-        'rotation': '0 90 0',
-        'animation-mixer': ''
-    });
+    if (document.getElementById('yellowOff')){
+        // Turning Yellow On
+        document.getElementById('yellowOff').id = 'yellow';
+        var content = document.getElementById('yellow')
+        content.innerHTML = `
+        <a-entity id="yellow" gps-projected-entity-place="latitude: 1.434887; longitude: 103.787359" look-at="[gps-projected-camera]">
+            <a-image src="./static/images/2D assets from users/CyclingPath_4k.png" scale="10 10 10"></a-image>
+        </a-entity>
+    `;
+    }
 
-    turnOffEntities(['red', 'green', 'blue', 'orange']);
+    if(document.getElementById('red')){
+        // Turning Red Off
+        document.getElementById('red').id = 'redOff';
+        var content = document.getElementById('redOff')
+        content.innerHTML = '<a-entity id="redOff"></a-entity>'
+    }
+
+    if(document.getElementById('green')){
+        // Turning Green Off
+        document.getElementById('green').id = 'greenOff';
+        var content = document.getElementById('greenOff')
+        content.innerHTML = '<a-entity id="greenOff"></a-entity>'
+    }
+
+    if(document.getElementById('blue')){
+        // Turning blue Off
+        document.getElementById('blue').id = 'blueOff';
+        var content = document.getElementById('blueOff')
+        content.innerHTML = '<a-entity id="blueOff"></a-entity>'
+    }
+
+    if(document.getElementById('orange')){
+        // Turning orange Off
+        document.getElementById('orange').id = 'orangeOff';
+        var content = document.getElementById('orangeOff')
+        content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
+    }
 }
 
 function selectBlue(){
     //Wayfinding
     
-    //Woodlands Lib
+    //Woodlands Library
     startCompass()
-    target.latitude = 1.434888;
+    target.latitude = 1.434887;
     target.longitude = 103.787359;
 
-    createOrUpdateEntity('blue', {
-        'src': './static/images/2D assets from users/CyclingPath_4k.png',
-        'look-at': '[gps-projected-camera]',
-        'scale': '10 10 10',
-        'gps-projected-entity-place': 'latitude: 1.434888; longitude: 103.787359',
-    });
-
-    turnOffEntities(['red', 'green', 'yellow', 'orange']);
-
+    if (document.getElementById('blueOff')){
+        // Turning Yellow On
+        document.getElementById('blueOff').id = 'blue';
+        var content = document.getElementById('blue')
+        content.innerHTML = `
+        <a-entity id="blue" gps-projected-entity-place="latitude: 1.434887; longitude: 103.787359" look-at="[gps-projected-camera]">
+            <a-entity gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb" scale="10 10 10" animation-mixer></a-entity>
+        </a-entity>
+    `;
+    }
     
+
+    if(document.getElementById('red')){
+        // Turning Red Off
+        document.getElementById('red').id = 'redOff';
+        var content = document.getElementById('redOff')
+        content.innerHTML = '<a-entity id="redOff"></a-entity>'
+    }
+
+    if(document.getElementById('green')){
+        // Turning Green Off
+        document.getElementById('green').id = 'greenOff';
+        var content = document.getElementById('greenOff')
+        content.innerHTML = '<a-entity id="greenOff"></a-entity>'
+    }
+
+    if(document.getElementById('yellow')){
+        // Turning yellow Off
+        document.getElementById('yellow').id = 'yellowOff';
+        var content = document.getElementById('yellowOff')
+        content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
+    }
+
+    if(document.getElementById('orange')){
+        // Turning orange Off
+        document.getElementById('orange').id = 'orangeOff';
+        var content = document.getElementById('orangeOff')
+        content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
+    }
+
 }
 
 function selectOrange(){
@@ -181,10 +230,10 @@ function selectOrange(){
 
 /* All Locations
 
-//My House
+//659
     startCompass()
-    target.latitude = 1.401492;
-    target.longitude = 103.749418;
+    target.latitude = 1.4020492;
+    target.longitude = 103.7479795;
 
 //Blk 673B
     startCompass()
@@ -240,8 +289,8 @@ function selectOrange(){
 
  //Woodlands Lib
     startCompass()
-    target.latitude = 1.434888;
-    target.longitude = 103.787359;
+    target.latitude = 1.434903;
+    target.longitude = 103.787336;
 
 
 //Blk 365
@@ -297,25 +346,6 @@ function init() {
 
     // Start the UI updates
     updateUI();
-}
-
-// Function to update the rotation of an entity to always face the camera
-function updateEntityLookAt(entityId) {
-    const camera = document.querySelector("[gps-projected-camera]");
-    const entity = document.getElementById(entityId);
-
-    if (camera && entity) {
-        const entityPosition = entity.object3D.position.clone();
-        const cameraPosition = camera.object3D.position.clone();
-
-        const direction = new THREE.Vector3();
-        direction.subVectors(cameraPosition, entityPosition).normalize();
-
-        const rotationY = Math.atan2(direction.x, direction.z);
-        const rotationX = Math.atan2(Math.sqrt(direction.x * direction.x + direction.z * direction.z), direction.y);
-
-        entity.setAttribute("rotation", { x: THREE.Math.radToDeg(rotationX), y: THREE.Math.radToDeg(rotationY), z: 0 });
-    }
 }
 
 // on clicking the start compass button, request permission to use device orientation.
