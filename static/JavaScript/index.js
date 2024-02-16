@@ -100,10 +100,9 @@ function selectYellow(){
         document.getElementById('yellowOff').id = 'yellow';
         var content = document.getElementById('yellow')
         content.innerHTML = `
-        <a-entity id="yellow" gps-projected-entity-place="latitude: 1.434887; longitude: 103.787359" rotation="90 90 90">
+        <a-entity id="yellow" gps-projected-entity-place="latitude: 1.434887; longitude: 103.787359" look-at="[gps-projected-camera]">
             <a-image
             src="./static/images/2D assets from users/CyclingPath_4k.png"
-            scale="10 10 10"
             ></a-image>         
         </a-entity>
     `;
@@ -151,12 +150,10 @@ function selectBlue(){
         document.getElementById('blueOff').id = 'blue';
         var content = document.getElementById('blue')
         content.innerHTML = `
-        <a-entity id="blue" gps-projected-entity-place="latitude: 1.434887; longitude: 103.787359" rotation="90 90 90">
+        <a-entity id="blue" gps-projected-entity-place="latitude: 1.434887; longitude: 103.787359" look-at="[gps-projected-camera]">
         <a-entity
             gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb"
-            scale="10 10 10"
             animation-mixer
-            position="0 0 0"
         ></a-entity>
         </a-entity>
     `;
