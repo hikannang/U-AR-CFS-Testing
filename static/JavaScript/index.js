@@ -358,6 +358,7 @@ function updateEntityLookAt(entityId) {
 
         entity.setAttribute("rotation", { x: THREE.Math.radToDeg(rotationX), y: THREE.Math.radToDeg(rotationY), z: 0 });
     }
+}
 
 // on clicking the start compass button, request permission to use device orientation.
 // only IOS devices need to click the button
