@@ -151,7 +151,7 @@ function selectBlue(){
         document.getElementById('blueOff').id = 'blue';
         var content = document.getElementById('blue')
         content.innerHTML = `
-        <a-entity id="blue" gps-projected-entity-place="latitude: 1.434887; longitude: 103.787359" look-at="[gps-projected-camera]">
+        <a-entity id="blue" gps-projected-entity-place="latitude: 1.434887; longitude: 103.787359" rotation="90 90 90">
         <a-entity
             gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb"
             scale="10 10 10"
