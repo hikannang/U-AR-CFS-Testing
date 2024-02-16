@@ -103,8 +103,8 @@ function selectYellow(){
         <a-entity id="yellow" gps-projected-entity-place="latitude: 1.434887; longitude: 103.787359" look-at="[gps-projected-camera]">
             <a-image
                 src="./static/images/2D assets from users/CyclingPath_4k.png"
-                scale="10 10 10"
-                rotation="0 0 90"
+                scale="10 10 20"
+                rotation="0 0 0"
             ></a-image>         
         </a-entity>
     `;
