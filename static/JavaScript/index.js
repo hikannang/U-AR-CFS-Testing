@@ -98,8 +98,9 @@ function selectYellow(){
         // Turning Yellow On
         document.getElementById('yellowOff').id = 'yellow';
         var content = document.getElementById('yellow')
-        content.innerHTML = '<a-image  id="yellow" src="./static/images/2D assets from users/CyclingPath_4k.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.401492; longitude: 103.749418"></a-image>';
-}
+        content.innerHTML = '<a-image  id="yellow" src="./static/images/2D assets from users/CyclingPath_4k.png" scale="10 10 10" gps-projected-entity-place="latitude: 1.401492; longitude: 103.749418"></a-image>';
+        updateEntityLookAt("yellow");
+    }
 
     if(document.getElementById('red')){
         // Turning Red Off
@@ -143,7 +144,8 @@ function selectBlue(){
         document.getElementById('blueOff').id = 'blue';
         var content = document.getElementById('blue')
         content.innerHTML = '<a-entity id="blue" gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.401492; longitude: 103.749418" animation-mixer></a-entity>';
-}
+        updateEntityLookAt("blue");
+    }
     
 
     if(document.getElementById('red')){
@@ -338,6 +340,24 @@ function init() {
     // Start the UI updates
     updateUI();
 }
+
+// Function to update the rotation of an entity to always face the camera
+function updateEntityLookAt(entityId) {
+    const camera = document.querySelector("[gps-projected-camera]");
+    const entity = document.getElementById(entityId);
+
+    if (camera && entity) {
+        const entityPosition = entity.object3D.position.clone();
+        const cameraPosition = camera.object3D.position.clone();
+
+        const direction = new THREE.Vector3();
+        direction.subVectors(cameraPosition, entityPosition).normalize();
+
+        const rotationY = Math.atan2(direction.x, direction.z);
+        const rotationX = Math.atan2(Math.sqrt(direction.x * direction.x + direction.z * direction.z), direction.y);
+
+        entity.setAttribute("rotation", { x: THREE.Math.radToDeg(rotationX), y: THREE.Math.radToDeg(rotationY), z: 0 });
+    }
 
 // on clicking the start compass button, request permission to use device orientation.
 // only IOS devices need to click the button
