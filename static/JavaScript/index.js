@@ -1,18 +1,18 @@
 function selectRed(){
     //Bicycle Crossing
     
-    //Boss's Car Park
+    //Stamford Road x Esplanade Drive
     startCompass()
-    target.latitude = 1.308664;
-    target.longitude = 103.849736;
+    target.latitude = 1.291461;
+    target.longitude = 103.854836;
 
     if (document.getElementById('redOff')){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red')
         // content.innerHTML = '<a-entity id="red" material="color: red" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3068866777147514; longitude: 103.84940595788129" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-entity id="red" gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb" scale="10 10 10" gps-projected-entity-place="latitude: 1.308664; longitude: 103.849736" rotation="0 90 0" animation-mixer/>'
-    }
+        content.innerHTML = '<a-entity id="red" gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.291461; longitude: 103.854836" animation-mixer></a-entity>';
+        }
 
     if(document.getElementById('green')){
         // Turning Green Off
@@ -44,17 +44,19 @@ function selectRed(){
 }
 
 function selectGreen(){
-    //Where Boss Seats
+    //Cycling Path
+
+    //In front of lao pa sat ,
     startCompass()
-    target.latitude = 1.308538;
-    target.longitude = 103.849886;
+    target.latitude = 1.281238;
+    target.longitude = 103.850447;
 
     if (document.getElementById('greenOff')){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
         // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-image id="green" src="./static/images/2D assets from users/CyclingPath_4k.png" look-at="[camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.308538; longitude: 103.849886"></a-image>';
+        content.innerHTML = '<a-image id="green" src="./static/images/2D assets from users/CyclingPath_4k.png" look-at="[camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.281238; longitude: 103.850447"></a-image>';
     }
 
     if(document.getElementById('red')){
@@ -88,18 +90,17 @@ function selectGreen(){
 
 function selectYellow(){
     //Foot Path
-    
-    
-    //Woodlands Library
+
+    //In front of clifford centre
     startCompass()
-    target.latitude = 1.434887;
-    target.longitude = 103.787359;
+    target.latitude = 1.284529;
+    target.longitude = 103.852975;
 
     if (document.getElementById('yellowOff')){
         // Turning Yellow On
         document.getElementById('yellowOff').id = 'yellow';
         var content = document.getElementById('yellow')
-        content.innerHTML = '<a-image  id="yellow" src="./static/images/2D assets from users/CyclingPath_4k.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.434887; longitude: 103.787359"></a-image>';
+        content.innerHTML = '<a-image  id="yellow" src="./static/images/2D assets from users/FootPath_sitting_4k.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.284529; longitude: 103.852975"></a-image>';
 }
 
     if(document.getElementById('red')){
@@ -134,16 +135,16 @@ function selectYellow(){
 function selectBlue(){
     //Wayfinding
     
-    //Woodlands Library
+    //St Andrew's Road (Padang)
     startCompass()
-    target.latitude = 1.434887;
-    target.longitude = 103.787359;
+    target.latitude = 1.289253;
+    target.longitude = 103.851488;
 
     if (document.getElementById('blueOff')){
         // Turning Yellow On
         document.getElementById('blueOff').id = 'blue';
         var content = document.getElementById('blue')
-        content.innerHTML = '<a-entity id="blue" gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.434887; longitude: 103.787359" animation-mixer></a-entity>';
+        content.innerHTML = '<a-image  id="blue" src="./static/images/2D assets from users/Wayfinding_grabbing_4k.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.289253; longitude: 103.851488"></a-image>';
     }
     
 
@@ -178,16 +179,18 @@ function selectBlue(){
 }
 
 function selectOrange(){
-    //Woodlands MRT
+    //YellowBox
+
+    //Near Capitol Tower
     startCompass()
-    target.latitude = 1.4365677;
-    target.longitude = 103.7862248;
+    target.latitude = 1.277589;
+    target.longitude = 103.847113;
 
     if (document.getElementById('orangeOff')){
         // Turning orange On
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange')
-        content.innerHTML = '<a-entity id="orange" gltf-model="static/3D-file/Updated Assets from users/yellowBox_textured.glb" scale="1.5 1.5 1.5" gps-projected-entity-place="latitude: 1.4029823; longitude: 103.7493179" animation-mixer/>'
+        content.innerHTML = '<a-image  id="orange" src="./static/images/2D assets from users/YellowBox_sitting_4k.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.277589; longitude: 103.847113"></a-image>';
     }
 
     if(document.getElementById('red')){
