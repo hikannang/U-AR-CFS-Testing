@@ -8,7 +8,7 @@ function showLoadingScreen() {
     // Set a timeout to hide the loading screen after 2 seconds
     loadingTimeout = setTimeout(function () {
         hideLoadingScreen();
-    }, 2000);
+    }, 3000);
 }
 
 function hideLoadingScreen() {
