@@ -1,14 +1,23 @@
 var modelIsLoading = false;
+var loadingTimeout;
 
 // Add this function at the beginning of your script
 function showLoadingScreen() {
     var loadingScreen = document.getElementById('loadingScreen');
     loadingScreen.style.display = 'flex';
+
+    // Set a timeout to hide the loading screen after 5 seconds
+    loadingTimeout = setTimeout(function() {
+        hideLoadingScreen();
+    }, 5000);
 }
 
 function hideLoadingScreen() {
     var loadingScreen = document.getElementById('loadingScreen');
     loadingScreen.style.display = 'none';
+
+    // Clear the timeout if it hasn't been triggered yet
+    clearTimeout(loadingTimeout);
 }
 
 // Call this function when you start loading your models
