@@ -497,17 +497,22 @@ function toggleCircles() {
     }
 
     // starts updating the UI.
-function updateUI() {
-    // Update arrow rotation
-    const arrow = document.querySelector(".arrow");
-    arrow.style.transform = `translate(-50%, -50%) rotate(${direction}deg)`;
-
-    //check if the models are still loading
-    if (modelIsLoading){
-        requestAnimationFrame(updateUI);
-    } else{
-        hideLoadingScreen();
+    function updateUI() {
+        // Update arrow rotation
+        const arrow = document.querySelector(".arrow");
+        arrow.style.transform = `translate(-50%, -50%) rotate(${direction}deg)`;
+    
+        // Check if the models are still loading
+        if (modelIsLoading) {
+            // Continue updating UI while models are loading
+            requestAnimationFrame(updateUI);
+        } else {
+            // Models are loaded, hide loading screen
+            hideLoadingScreen();
+    
+            // Continue updating UI even when models are not loading
+            requestAnimationFrame(updateUI);
+        }
     }
-}
 
 init();
