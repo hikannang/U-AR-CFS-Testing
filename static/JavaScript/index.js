@@ -1,4 +1,5 @@
 var loadingTimeout;
+var distance; //Declaring this as a global Variable instead
 
 // Add this function at the beginning of your script
 function showLoadingScreen() {
@@ -18,7 +19,19 @@ function hideLoadingScreen() {
     // Clear the timeout if it hasn't been triggered yet
     clearTimeout(loadingTimeout);
 }
-
+// Function to calculate distance
+function calculateDistance(lat1, lon1, lat2, lon2) {
+    var R = 6371; // Radius of the earth in km
+    var dLat = (lat2 - lat1) * (Math.PI / 180);
+    var dLon = (lon2 - lon1) * (Math.PI / 180);
+    var a =
+        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(lat1 * (Math.PI / 180)) * Math.cos(lat2 * (Math.PI / 180)) *
+        Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    var distance = R * c; // Distance in km
+    return distance * 1000; // Convert to meters
+}
 
 function selectRed(){
     //Bicycle Crossing
@@ -29,6 +42,13 @@ function selectRed(){
     target.longitude = 103.849942;
 
     showLoadingScreen();
+
+    // Call calculateDistance with the appropriate coordinates
+    distance = calculateDistance(current.latitude, current.longitude, target.latitude, target.longitude);
+
+    if (distance <= 40) {
+        openModalRed();
+    }
 
     if (document.getElementById('redOff')) {
         
@@ -75,8 +95,16 @@ function selectGreen(){
     target.latitude = 1.308544;
     target.longitude = 103.849942;
 
+    showLoadingScreen();
+
+    // Call calculateDistance with the appropriate coordinates
+    distance = calculateDistance(current.latitude, current.longitude, target.latitude, target.longitude);
+
+    if (distance <= 40) {
+        openModalGreen();
+    }
+
     if (document.getElementById('greenOff')){
-        showLoadingScreen();
         
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
@@ -123,8 +151,16 @@ function selectYellow(){
     target.latitude = 1.308544;
     target.longitude = 103.849942;
 
+    showLoadingScreen();
+
+    // Call calculateDistance with the appropriate coordinates
+    distance = calculateDistance(current.latitude, current.longitude, target.latitude, target.longitude);
+
+    if (distance <= 40) {
+        openModalYellow();
+    }
+
     if (document.getElementById('yellowOff')){
-        showLoadingScreen();
         // Turning Yellow On
         document.getElementById('yellowOff').id = 'yellow';
         var content = document.getElementById('yellow')
@@ -168,10 +204,17 @@ function selectBlue(){
     target.latitude = 1.308544;
     target.longitude = 103.849942;
 
+    showLoadingScreen();
+
+    // Call calculateDistance with the appropriate coordinates
+    distance = calculateDistance(current.latitude, current.longitude, target.latitude, target.longitude);
+
+    if (distance <= 40) {
+        openModalBlue();
+    }
+    
     if (document.getElementById('blueOff')){
-        showLoadingScreen();
-        modelIsLoading = true;
-        // Turning Yellow On
+        // Turning Blue On
         document.getElementById('blueOff').id = 'blue';
         var content = document.getElementById('blue')
         content.innerHTML = '<a-image  id="blue" src="./static/images/2D_Assets_low_res/Wayfinding_grabbing.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942"></a-image>';
@@ -216,9 +259,16 @@ function selectOrange(){
     target.latitude = 1.308544;
     target.longitude = 103.849942;
 
+    showLoadingScreen();
+
+    // Call calculateDistance with the appropriate coordinates
+    distance = calculateDistance(current.latitude, current.longitude, target.latitude, target.longitude);
+
+    if (distance <= 40) {
+        openModalOrange();
+    }
+    
     if (document.getElementById('orangeOff')){
-        showLoadingScreen();
-        modelIsLoading = true;
         // Turning orange On
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange')
@@ -439,6 +489,114 @@ function runCalculation(event) {
         distanceElement.innerHTML = '0m';
     }
     }}
+
+// Modals
+
+    //Function to open Red Modal
+    function openModalRed(){
+    // Create the modal element
+        var modal = document.createElement('div');
+        modal.className = 'modal';
+        modal.id = 'myModalRed';
+
+        // Create the modal content
+        var modalContent = document.createElement('div');
+        modalContent.className = 'modal-content';
+
+        // Create the title
+        var title = document.createElement('h2');
+        title.textContent = 'Modal Title';
+        title.style.color = 'blue'; // Change color dynamically
+        modalContent.appendChild(title);
+
+        // Create the small picture
+        var picture = document.createElement('img');
+        picture.src = './path/to/small_picture.jpg'; // Replace with the actual path to your image
+        picture.alt = 'Small Picture';
+        modalContent.appendChild(picture);
+
+        // Create the text below the picture
+        var description = document.createElement('p');
+        description.textContent = 'Some words below the small picture.';
+        description.style.color = 'green'; // Change color dynamically
+        modalContent.appendChild(description);
+
+        // Create the close button (x)
+        var closeButton = document.createElement('span');
+        closeButton.className = 'close';
+        closeButton.textContent = '×';
+        closeButton.style.color = 'red'; // Change color dynamically
+        closeButton.onclick = function () {
+            closeModalRed();
+        };
+        modalContent.appendChild(closeButton);
+
+        // Append the modal content to the modal element
+        modal.appendChild(modalContent);
+
+        // Append the modal to the modal container
+        modalContainer.appendChild(modal);
+
+        // Display the modal
+        modal.style.display = 'block';
+        
+    }
+
+    //Function ot close Red Modal
+    function closeModalRed(){
+        var modal = document.getElementById('modalRed');
+        modal.style.display='none';
+    }
+
+    //Function to open Green Modal
+    function openModalGreen(){
+        var modal = document.getElementById('modalGreen');
+        modal.style.display='block';
+        }
+    
+    //Function ot close Red Modal
+    function closeModalGreen(){
+        var modal = document.getElementById('modalGreen');
+        modal.style.display='none';
+    }
+
+    //Function to open Yellow Modal
+    function openModalYellow(){
+        var modal = document.getElementById('modalYellow');
+        modal.style.display='block';
+        }
+
+    //Function ot close Yellow Modal
+    function closeModalYellow(){
+        var modal = document.getElementById('modalYellow');
+        modal.style.display='none';
+    }
+
+    //Function to open Blue Modal
+    function openModalBlue(){
+        var modal = document.getElementById('modalBlue');
+        modal.style.display='block';
+    }
+    
+    //Function ot close Blue Modal
+    function closeModalRed(){
+        var modal = document.getElementById('modalBlue');
+        modal.style.display='none';
+    }
+
+    //Function to open Orange Modal
+    function openModalOrange(){
+        var modal = document.getElementById('modalOrange');
+        modal.style.display='block';
+    }
+    
+    //Function ot close Orange Modal
+    function closeModalOrange(){
+        var modal = document.getElementById('modalOrage');
+        modal.style.display='none';
+    }
+
+
 
 function toggleCircles() {
     var additionalCircles = document.getElementById("additionalCircles");
