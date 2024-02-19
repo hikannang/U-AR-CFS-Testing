@@ -1,4 +1,3 @@
-var modelIsLoading = false;
 var loadingTimeout;
 
 // Add this function at the beginning of your script
@@ -6,10 +5,10 @@ function showLoadingScreen() {
     var loadingScreen = document.getElementById('loadingScreen');
     loadingScreen.style.display = 'flex';
 
-    // Set a timeout to hide the loading screen after 5 seconds
-    loadingTimeout = setTimeout(function() {
+    // Set a timeout to hide the loading screen after 2 seconds
+    loadingTimeout = setTimeout(function () {
         hideLoadingScreen();
-    }, 5000);
+    }, 2000);
 }
 
 function hideLoadingScreen() {
@@ -20,25 +19,8 @@ function hideLoadingScreen() {
     clearTimeout(loadingTimeout);
 }
 
-// Call this function when you start loading your models
-function startLoadingModels(callback) {
-    modelIsLoading = true;
-    showLoadingScreen();
-
-    // Assuming your model loading code provides a callback when models are loaded
-    // Replace 'loadModels' with the actual function for loading models.
-    loadModels(function () {
-        modelIsLoading = false;
-        hideLoadingScreen();
-        // Call the provided callback to signal that the models are loaded
-        if (callback) {
-            callback();
-        }
-    });
-}
 
 function selectRed(){
-    
     //Bicycle Crossing
     
     //Outside office 
@@ -46,21 +28,20 @@ function selectRed(){
     target.latitude = 1.308544;
     target.longitude = 103.849942;
 
-    if (document.getElementById('redOff')){
-        
-        //Show the Loading Screen and set modelIsLoading flag to true
+    showLoadingScreen();
+
+    if (document.getElementById('redOff')) {
+        // Show the loading screen
         showLoadingScreen();
-        modelIsLoading = true;
 
         // Turning Red On
         document.getElementById('redOff').id = 'red';
-        var content = document.getElementById('red')
-        // content.innerHTML = '<a-entity id="red" material="color: red" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3068866777147514; longitude: 103.84940595788129" scale="10 10 10"></a-entity>'
+        var content = document.getElementById('red');
         content.innerHTML = '<a-entity id="red" gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942" animation-mixer></a-entity>';
-        
-        //Hide Loading Screen only when the red model is loaded
-        hideLoadingScreen();
-        }
+
+        // Hide the loading screen after 2 seconds
+        setTimeout(hideLoadingScreen, 2000);
+    }
 
     if(document.getElementById('green')){
         // Turning Green Off
@@ -107,7 +88,10 @@ function selectGreen(){
         var content = document.getElementById('green')
         // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
         content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942"></a-image>';
-        hideLoadingScreen();
+        // Hide Loading Screen after 2 seconds
+        setTimeout(function() {
+            hideLoadingScreen();
+        }, 2000);
     }
 
     if(document.getElementById('red')){
