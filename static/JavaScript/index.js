@@ -1,17 +1,56 @@
-function selectRed(){
-    //Bicycle Crossing
+var modelIsLoading = false;
 
-    //My house 1.401414,103.749372
+// Add this function at the beginning of your script
+function showLoadingScreen() {
+    var loadingScreen = document.getElementById('loadingScreen');
+    loadingScreen.style.display = 'flex';
+}
+
+function hideLoadingScreen() {
+    var loadingScreen = document.getElementById('loadingScreen');
+    loadingScreen.style.display = 'none';
+}
+
+// Call this function when you start loading your models
+function startLoadingModels(callback) {
+    modelIsLoading = true;
+    showLoadingScreen();
+
+    // Assuming your model loading code provides a callback when models are loaded
+    // Replace 'loadModels' with the actual function for loading models.
+    loadModels(function () {
+        modelIsLoading = false;
+        hideLoadingScreen();
+        // Call the provided callback to signal that the models are loaded
+        if (callback) {
+            callback();
+        }
+    });
+}
+
+function selectRed(){
+    
+    //Bicycle Crossing
+    
+    //Outside office 
     startCompass()
-    target.latitude = 1.401414;
-    target.longitude = 103.749372;
+    target.latitude = 1.308544;
+    target.longitude = 103.849942;
 
     if (document.getElementById('redOff')){
+        
+        //Show the Loading Screen and set modelIsLoading flag to true
+        showLoadingScreen();
+        modelIsLoading = true;
+
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red')
         // content.innerHTML = '<a-entity id="red" material="color: red" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3068866777147514; longitude: 103.84940595788129" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-entity id="red" gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.401414; longitude: 103.749372" animation-mixer></a-entity>';
+        content.innerHTML = '<a-entity id="red" gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942" animation-mixer></a-entity>';
+        
+        //Hide Loading Screen only when the red model is loaded
+        hideLoadingScreen();
         }
 
     if(document.getElementById('green')){
@@ -46,17 +85,20 @@ function selectRed(){
 function selectGreen(){
     //Cycling Path
 
-    //My house 1.401414,103.749372
+    //Outside office 
     startCompass()
-    target.latitude = 1.401414;
-    target.longitude = 103.749372;
+    target.latitude = 1.308544;
+    target.longitude = 103.849942;
 
     if (document.getElementById('greenOff')){
+        showLoadingScreen();
+        modelIsLoading = true;
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
         // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.401414; longitude: 103.749372"></a-image>';
+        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942"></a-image>';
+        hideLoadingScreen();
     }
 
     if(document.getElementById('red')){
@@ -91,17 +133,20 @@ function selectGreen(){
 function selectYellow(){
     //Foot Path
 
-    //My house 1.401414,103.749372
+    //Outside office 
     startCompass()
-    target.latitude = 1.401414;
-    target.longitude = 103.749372;
+    target.latitude = 1.308544;
+    target.longitude = 103.849942;
 
     if (document.getElementById('yellowOff')){
+        showLoadingScreen();
+        modelIsLoading = true;
         // Turning Yellow On
         document.getElementById('yellowOff').id = 'yellow';
         var content = document.getElementById('yellow')
-        content.innerHTML = '<a-image  id="yellow" src="./static/images/2D_Assets_low_res/FootPath.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.401414; longitude: 103.749372"></a-image>';
-}
+        content.innerHTML = '<a-image  id="yellow" src="./static/images/2D_Assets_low_res/FootPath.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942"></a-image>';
+        hideLoadingScreen();
+    }   
 
     if(document.getElementById('red')){
         // Turning Red Off
@@ -135,16 +180,19 @@ function selectYellow(){
 function selectBlue(){
     //Wayfinding
     
-    //My house 1.401414,103.749372
+    //Outside office 
     startCompass()
-    target.latitude = 1.401414;
-    target.longitude = 103.749372;
+    target.latitude = 1.308544;
+    target.longitude = 103.849942;
 
     if (document.getElementById('blueOff')){
+        showLoadingScreen();
+        modelIsLoading = true;
         // Turning Yellow On
         document.getElementById('blueOff').id = 'blue';
         var content = document.getElementById('blue')
-        content.innerHTML = '<a-image  id="blue" src="./static/images/2D_Assets_low_res/Wayfinding_grabbing.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.401414; longitude: 103.749372"></a-image>';
+        content.innerHTML = '<a-image  id="blue" src="./static/images/2D_Assets_low_res/Wayfinding_grabbing.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942"></a-image>';
+        hideLoadingScreen();
     }
     
 
@@ -181,16 +229,19 @@ function selectBlue(){
 function selectOrange(){
     //YellowBox
 
-    //My house 1.401414,103.749372
+    //Outside office 
     startCompass()
-    target.latitude = 1.401414;
-    target.longitude = 103.749372;
+    target.latitude = 1.308544;
+    target.longitude = 103.849942;
 
     if (document.getElementById('orangeOff')){
+        showLoadingScreen();
+        modelIsLoading = true;
         // Turning orange On
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange')
-        content.innerHTML = '<a-image  id="orange" src="./static/images/2D_Assets_low_res/YellowBox_sitting.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.401414; longitude: 103.749372"></a-image>';
+        content.innerHTML = '<a-image  id="orange" src="./static/images/2D_Assets_low_res/YellowBox_sitting.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942"></a-image>';
+        hideLoadingScreen();
     }
 
     if(document.getElementById('red')){
@@ -423,6 +474,8 @@ function toggleCircles() {
     }
 }
 
+
+
     //Get the modal
     var modal = document.getElementById("myModal");
 
@@ -448,7 +501,13 @@ function updateUI() {
     // Update arrow rotation
     const arrow = document.querySelector(".arrow");
     arrow.style.transform = `translate(-50%, -50%) rotate(${direction}deg)`;
-    requestAnimationFrame(updateUI);
+
+    //check if the models are still loading
+    if (modelIsLoading){
+        requestAnimationFrame(updateUI);
+    } else{
+        hideLoadingScreen();
+    }
 }
 
 init();
