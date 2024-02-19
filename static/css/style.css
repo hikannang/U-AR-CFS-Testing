@@ -98,9 +98,9 @@ html{
 .mapDot {
     /* Icon */
     position: absolute;
-    width: 10vw; /* Adjust the width and height as needed */
-    height: 10vw;
-    top: 50%;
+    width: 12vw; /* Adjust the width and height as needed */
+    height: 12vw;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: url("./static/images/icons/mapIcon.png")
