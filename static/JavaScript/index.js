@@ -159,6 +159,7 @@ function selectYellow(){
     if (distance <= 40) {
         openModalYellow();
     }
+    
 
     if (document.getElementById('yellowOff')){
         // Turning Yellow On
@@ -265,7 +266,7 @@ function selectOrange(){
     distance = calculateDistance(current.latitude, current.longitude, target.latitude, target.longitude);
 
     if (distance <= 40) {
-        openModalOrange();
+        openModalYellow();
     }
     
     if (document.getElementById('orangeOff')){
@@ -492,109 +493,36 @@ function runCalculation(event) {
 
 // Modals
 
-    //Function to open Red Modal
-    function openModalRed(){
-    // Create the modal element
-        var modal = document.createElement('div');
-        modal.className = 'modal';
-        modal.id = 'myModalRed';
+    // Function to open the red modal
+function openModalRed() {
+    var modalRed = document.getElementById('modalRed');
+    modalRed.style.display = 'block';
+}
 
-        // Create the modal content
-        var modalContent = document.createElement('div');
-        modalContent.className = 'modal-content';
+// Function to open the green modal
+function openModalGreen() {
+    var modalGreen = document.getElementById('modalGreen');
+    modalGreen.style.display = 'block';
+}
 
-        // Create the title
-        var title = document.createElement('h2');
-        title.textContent = 'Modal Title';
-        title.style.color = 'blue'; // Change color dynamically
-        modalContent.appendChild(title);
+// Function to open the yellow modal
+function openModalYellow() {
+    var modalYellow = document.getElementById('modalYellow');
+    modalYellow.style.display = 'block';
+}
 
-        // Create the small picture
-        var picture = document.createElement('img');
-        picture.src = './path/to/small_picture.jpg'; // Replace with the actual path to your image
-        picture.alt = 'Small Picture';
-        modalContent.appendChild(picture);
+// Function to open the blue modal
+function openModalBlue() {
+    var modalBlue = document.getElementById('modalBlue');
+    modalBlue.style.display = 'block';
+}
 
-        // Create the text below the picture
-        var description = document.createElement('p');
-        description.textContent = 'Some words below the small picture.';
-        description.style.color = 'green'; // Change color dynamically
-        modalContent.appendChild(description);
+// Function to open the orange modal
+function openModalOrange() {
+    var modalOrange = document.getElementById('modalOrange');
+    modalOrange.style.display = 'block';
+}
 
-        // Create the close button (x)
-        var closeButton = document.createElement('span');
-        closeButton.className = 'close';
-        closeButton.textContent = '×';
-        closeButton.style.color = 'red'; // Change color dynamically
-        closeButton.onclick = function () {
-            closeModalRed();
-        };
-        modalContent.appendChild(closeButton);
-
-        // Append the modal content to the modal element
-        modal.appendChild(modalContent);
-
-        // Append the modal to the modal container
-        modalContainer.appendChild(modal);
-
-        // Display the modal
-        modal.style.display = 'block';
-        
-    }
-
-    //Function ot close Red Modal
-    function closeModalRed(){
-        var modal = document.getElementById('modalRed');
-        modal.style.display='none';
-    }
-
-    //Function to open Green Modal
-    function openModalGreen(){
-        var modal = document.getElementById('modalGreen');
-        modal.style.display='block';
-        }
-    
-    //Function ot close Red Modal
-    function closeModalGreen(){
-        var modal = document.getElementById('modalGreen');
-        modal.style.display='none';
-    }
-
-    //Function to open Yellow Modal
-    function openModalYellow(){
-        var modal = document.getElementById('modalYellow');
-        modal.style.display='block';
-        }
-
-    //Function ot close Yellow Modal
-    function closeModalYellow(){
-        var modal = document.getElementById('modalYellow');
-        modal.style.display='none';
-    }
-
-    //Function to open Blue Modal
-    function openModalBlue(){
-        var modal = document.getElementById('modalBlue');
-        modal.style.display='block';
-    }
-    
-    //Function ot close Blue Modal
-    function closeModalRed(){
-        var modal = document.getElementById('modalBlue');
-        modal.style.display='none';
-    }
-
-    //Function to open Orange Modal
-    function openModalOrange(){
-        var modal = document.getElementById('modalOrange');
-        modal.style.display='block';
-    }
-    
-    //Function ot close Orange Modal
-    function closeModalOrange(){
-        var modal = document.getElementById('modalOrage');
-        modal.style.display='none';
-    }
 
 
 
@@ -616,7 +544,7 @@ function toggleCircles() {
 
 
     //Get the modal
-    var modal = document.getElementById("myModal");
+    var modal = document.getElementById("modalMap");
 
     //Getting the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
