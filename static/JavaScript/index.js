@@ -2,11 +2,7 @@ var loadingTimeout;
 var distance; //Declaring this as a global Variable instead
 var modal;
 var colour = 'black';
-var modalRed = document.getElementById('modalRed');
-var modalGreen = document.getElementById('modalGreen');
-var modalYellow = document.getElementById('modalYellow');
-var modalBlue = document.getElementById('modalBlue');
-var modalOrange = document.getElementById('modalOrange');
+var span = document.getElementsByClassName("close")[0];
 
 // Add this function at the beginning of your script
 function showLoadingScreen() {
@@ -450,9 +446,6 @@ function toggleCircles() {
         threeLines.style.backgroundSize = "contain";
     }
 }
-
-    //Getting the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
 
     function toggleModal(){
         //Get the modal
