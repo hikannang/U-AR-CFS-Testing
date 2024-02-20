@@ -1,7 +1,7 @@
 var loadingTimeout;
 var distance; //Declaring this as a global Variable instead
 var modal;
-var colour;
+var colour = 'black';
 
 // Add this function at the beginning of your script
 function showLoadingScreen() {
@@ -32,7 +32,7 @@ function selectRed(){
 
     showLoadingScreen();
 
-    colour = red;
+    colour = 'red';
 
     if (document.getElementById('redOff')) {
         
@@ -81,7 +81,7 @@ function selectGreen(){
 
     showLoadingScreen();
 
-    colour = green;
+    colour = 'green';
 
     if (document.getElementById('greenOff')){
         
@@ -132,7 +132,7 @@ function selectYellow(){
 
     showLoadingScreen();
 
-    colour = yellow;
+    colour = 'yellow';
 
     if (document.getElementById('yellowOff')){
         // Turning Yellow On
@@ -180,7 +180,7 @@ function selectBlue(){
 
     showLoadingScreen();
 
-    colour = blue;
+    colour = 'blue';
     
     if (document.getElementById('blueOff')){
         // Turning Blue On
@@ -231,7 +231,7 @@ function selectOrange(){
     showLoadingScreen();
 
 
-    colour = yellow;
+    colour = 'orange';
     
     if (document.getElementById('orangeOff')){
         // Turning orange On
