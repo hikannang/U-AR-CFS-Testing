@@ -30,7 +30,7 @@
         <p id="distanceFromTarget" class="uiDisplay"></p>
 
         <div id="mapsDiv" class="mapsDiv">
-            <div class="maps" onclick="openModalRed()">
+            <div class="maps" onclick="toggleModal()">
                 <div class="mapDot" id="mapDot" style="background: url('./static/images/icons/mapIcon2.png') center no-repeat; background-size: contain;">
                 </div>
             </div>
@@ -39,7 +39,6 @@
 
     <!-- modalMap -->
     <div id="modalMap" class="modal">
-
         <!-- Modal content -->
         <div class ="modal-content">
             <span class="close" style="position: absolute; top: 10v; right: 10px; z-index: 5;">
@@ -79,110 +78,63 @@
 
     <!-- Modals for each colour -->
 
-        <!-- Template for another Modal -->
-        <div id="redModal" class="another-modal">
-            <!-- Modal Content -->
-            <div class="another-modal-content">
-                <!-- Left Section with Image -->
-                <div class="left-section">
-                    <img src="your-image.jpg" alt="Left Section Image">
-                </div>
-                <!-- Right Section with Text -->
-                <div class="right-section">
-                    <!-- Close Button -->
-                    <span class="close">&times;</span>
-                    <!-- Header -->
-                    <h2>Your Header</h2>
-                    <!-- Paragraph -->
-                    <p>Your paragraph text goes here.</p>
-                    <!-- Additional lines of text -->
-                    <p>Another line of text.</p>
-                    <!-- Add more lines as needed -->
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal Red -->
-        <div id="redModal" class="another-modal">
-            <!-- Modal Content -->
-            <div class="another-modal-content">
-                <!-- Left Section with Image -->
-                <div class="left-section">
-                    <img src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" alt="Red Image">
-                </div>
-                <!-- Right Section with Text -->
-                <div class="right-section">
-                    <!-- Close Button -->
-                    <span class="close">&times;</span>
-                    <!-- Header -->
-                    <h2>Oh, you found me! I was hoping you would. I was getting a bit worried about you. Are you okay? Did you hurt yourself while looking for me?</h2>
-                    <!-- Paragraph -->
-                    <p>I'm so happy to see you. You're such a brave and adventurous seeker. You always have the courage to face the unknown and explore new places. You're full of life and joy, and I love that. Let's go see what else we can find, shall we? But first, let me give you a hug. You deserve it.</p>
-                    <!-- Additional lines of text -->
-                    <p>Another line of text.</p>
-                    <!-- Add more lines as needed -->
-                </div>
+        <!-- modalRed -->
+        <div id="modalRed" class="modal">
+            <!-- Modal content -->
+            <div class ="modal-content">
+                <span class="close" style="position: absolute; top: 10v; right: 10px; z-index: 5;">
+                    <img src="./static/images/icons/whiteCross.png" alt="Close Button">
+                </span>
+                <img src="./static/images/character Modals/BicycleCrossingModal.png" alt="RedModal">
             </div>
         </div>
         
-        <!-- Modal Green -->
-        <div id="modalGreen" class="popup">
-            <div class="popup-inner">
-            <div class="popup__photo">
-                <img src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" alt="Green Image">
-            </div>
-            <div class="popup__text">
-                <h1>Wow, you're really good at finding people. I thought I had the perfect spot, but you still managed to track me down. </h1>
-                <p>I'm glad you did, though. I was getting a bit bored of hiding, and I wanted to join you on your adventure. You're always ready for the next challenge, and you inspire me to do the same. Let's go see what else we can discover, shall we? </p>
-            </div>
-            <a class="popup__close" href="#">X</a>
-            </div>
-        </div>
-  
-
-       <!-- Modal Yellow -->
-       <div id="modalYellow" class="popup">
-            <div class="popup-inner">
-            <div class="popup__photo">
-                <img src="./static/images/2D_Assets_low_res/FootPath.png" alt="Yellow Image">
-            </div>
-            <div class="popup__text">
-                <h1>You did it! You found me! I knew you would. You're such a persistent and determined seeker.</h1>
-                <p>You're always ready for the next task, and you help me to do the same. But please, don't forget to have fun. You deserve it. You're awesome. 👍 Let's go see what else we can do, shall we? But first, let me give you a high five. You earned it.</p>
-            </div>
-            <a class="popup__close" href="#">X</a>
+        <!-- modalGreen -->
+        <div id="modalGreen" class="modal">
+            <!-- Modal content -->
+            <div class ="modal-content">
+                <span class="close" style="position: absolute; top: 10v; right: 10px; z-index: 5;">
+                    <img src="./static/images/icons/whiteCross.png" alt="Close Button">
+                </span>
+                <img src="./static/images/character Modals/cyclingPathModal.png" alt="greenModal">
             </div>
         </div>
 
-        <!-- Modal Blue -->
-        <div id="modalBlue" class="popup">
-            <div class="popup-inner">
-            <div class="popup__photo">
-                <img src="./static/images/2D_Assets_low_res/Wayfinding_grabbing.png" alt="Blue Image">
-            </div>
-            <div class="popup__text">
-                <h1>Hey, you found me! I'm so proud of you. You're such a smart and skillful seeker</h1>
-                <p>You're always ready for the next adventure, and you guide me to do the same. But please, don't forget to enjoy yourself. You deserve it. You're amazing. 😍
-                    Let's go see what else we can learn, shall we? But first, let me give you a hug. You earned it. 🤗</p>
-            </div>
-            <a class="popup__close" href="#">X</a>
+         <!-- modalYellow -->
+         <div id="modalYellow" class="modal">
+            <!-- Modal content -->
+            <div class ="modal-content">
+                <span class="close" style="position: absolute; top: 10v; right: 10px; z-index: 5;">
+                    <img src="./static/images/icons/whiteCross.png" alt="Close Button">
+                </span>
+                <img src="./static/images/character Modals/footPathModal.png" alt="yellowModal">
             </div>
         </div>
 
-        <!-- Modal Orange -->
-        <div id="modalOrange" class="popup">
-            <div class="popup-inner">
-            <div class="popup__photo">
-                <img src="./static/images/2D_Assets_low_res/YellowBox_sitting.png" alt="Orange Image">
-            </div>
-            <div class="popup__text">
-                <h1>Yay, you found me! I'm so happy for you. You're such a talented and cooperative seeker.</h1>
-                <p>You're always ready for the next goal, and you encourage me to do the same. But please, don't forget to have fun. You deserve it. You're awesome. 😍
-                    Let's go see what else we can achieve, shall we? But first, let me give you a high five. You earned it. 🙌</p>
-            </div>
-            <a class="popup__close" href="#">X</a>
+        <!-- modalBlue -->
+        <div id="modalBlue" class="modal">
+            <!-- Modal content -->
+            <div class ="modal-content">
+                <span class="close" style="position: absolute; top: 10v; right: 10px; z-index: 5;">
+                    <img src="./static/images/icons/whiteCross.png" alt="Close Button">
+                </span>
+                <img src="./static/images/character Modals/wayFindingModal.png" alt="blueModal">
             </div>
         </div>
+
+        <!-- modalOrange -->
+        <div id="modalOrange" class="modal">
+            <!-- Modal content -->
+            <div class ="modal-content">
+                <span class="close" style="position: absolute; top: 10v; right: 10px; z-index: 5;">
+                    <img src="./static/images/icons/whiteCross.png" alt="Close Button">
+                </span>
+                <img src="./static/images/character Modals/yellowBoxModal.png" alt="orangeModal">
+            </div>
+        </div>
+
+    
+        
 
         <a-scene 
             vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>

@@ -230,7 +230,6 @@ function selectOrange(){
 
     showLoadingScreen();
 
-
     colour = 'orange';
     
     if (document.getElementById('orangeOff')){
@@ -352,34 +351,33 @@ function runCalculation(event) {
     distance = R * c; // Distance in km
     distance = distance * 1000; // Convert to meters
 
-    console.log('Colour:', colour);
-    console.log('Distance:', distance);
-
+    updateUI();
+    
     if (colour != 'black') {
         switch (colour) {
             case 'red':
                 if (distance <= 40){ 
-                    openModalRed();
+                    toggleModalRed();
                     colour = 'black';}
                 break;
             case 'green':
                 if (distance <= 40){
-                openModalGreen();
-                colour = 'black';}
+                    toggleModalGreen();
+                    colour = 'black';}
                 break;
             case 'yellow':
                 if (distance <= 40){ 
-                openModalYellow();
+                toggleModalYellow();
                 colour = 'black';}
                 break;
             case 'blue':
                 if (distance <= 40){ 
-                openModalBlue();
+                toggleModalBlue();
                 colour = 'black';}
                 break;
             case 'orange':
                 if (distance <= 40){
-                openModalOrange();
+                toggleModalOrange();
                 colour = 'black';}
                 break;
             default:
@@ -403,33 +401,33 @@ function runCalculation(event) {
 // Modals
 
     // Function to open the red modal
-function openModalRed() {
+function toggleModalRed() {
     console.log("Modal Red Toggled")
     var modalRed = document.getElementById('modalRed');
     modalRed.style.display = 'block';
 }
 
 // Function to open the green modal
-function openModalGreen() {
+function toggleModalGreen() {
     console.log("Modal Green Toggled")
     var modalGreen = document.getElementById('modalGreen');
     modalGreen.style.display = 'block';
 }
 
 // Function to open the yellow modal
-function openModalYellow() {
+function toggleModalYellow() {
     var modalYellow = document.getElementById('modalYellow');
     modalYellow.style.display = 'block';
 }
 
 // Function to open the blue modal
-function openModalBlue() {
+function toggleModalBlue() {
     var modalBlue = document.getElementById('modalBlue');
     modalBlue.style.display = 'block';
 }
 
 // Function to open the orange modal
-function openModalOrange() {
+function toggleModalOrange() {
     var modalOrange = document.getElementById('modalOrange');
     modalOrange.style.display = 'block';
 }

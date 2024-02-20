@@ -160,48 +160,7 @@ html{
     object-fit: contain;
 }
 
-/* Another Modal Styles */
-.another-modal-content {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #222; /* Change the background color as needed */
-    overflow: auto;
-    box-sizing: border-box;
-    display: flex;
-}
-
-.left-section {
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.left-section img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the entire left section */
-}
-
-.right-section {
-    width: 50%;
-    padding: 20px;
-    color: white; /* Set the text color for the right section */
-    box-sizing: border-box;
-}
-
-.right-section h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.right-section p {
-    font-size: 1em;
-    margin-bottom: 8px;
-}
-/* </Another Modal Styles> */
+/* Individual Modals */
 
 
 /* More Circles */
