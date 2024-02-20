@@ -2,6 +2,11 @@ var loadingTimeout;
 var distance; //Declaring this as a global Variable instead
 var modal;
 var colour = 'black';
+var modalRed = document.getElementById('modalRed');
+var modalGreen = document.getElementById('modalGreen');
+var modalYellow = document.getElementById('modalYellow');
+var modalBlue = document.getElementById('modalBlue');
+var modalOrange = document.getElementById('modalOrange');
 
 // Add this function at the beginning of your script
 function showLoadingScreen() {
@@ -402,33 +407,26 @@ function runCalculation(event) {
 
     // Function to open the red modal
 function toggleModalRed() {
-    console.log("Modal Red Toggled")
-    var modalRed = document.getElementById('modalRed');
     modalRed.style.display = 'block';
 }
 
 // Function to open the green modal
 function toggleModalGreen() {
-    console.log("Modal Green Toggled")
-    var modalGreen = document.getElementById('modalGreen');
     modalGreen.style.display = 'block';
 }
 
 // Function to open the yellow modal
 function toggleModalYellow() {
-    var modalYellow = document.getElementById('modalYellow');
     modalYellow.style.display = 'block';
 }
 
 // Function to open the blue modal
 function toggleModalBlue() {
-    var modalBlue = document.getElementById('modalBlue');
     modalBlue.style.display = 'block';
 }
 
 // Function to open the orange modal
 function toggleModalOrange() {
-    var modalOrange = document.getElementById('modalOrange');
     modalOrange.style.display = 'block';
 }
 
