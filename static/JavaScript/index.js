@@ -359,7 +359,7 @@ function runCalculation(event) {
         switch (colour) {
             case 'red':
                 if (distance <= 40){ 
-                    toggleModal();
+                    openModalRed();
                     colour = 'black';}
                 break;
             case 'green':
@@ -463,10 +463,15 @@ function toggleCircles() {
 
     span.onclick = function (){
         modal.style.display = "none";
+        modalRed.style.display = "none";
+        modalGreen.style.display = "none";
+        modalYellow.style.display = "none";
+        modalBlue.style.display = "none";
+        modalOrange.style.display = "none";
     }
 
     window.onclick = function (event) {
-        if (event.target == modal) {
+        if (event.target == modal||event.target == modalRed||event.target == modalGreen||event.target == modalYellow||event.target == modalBlue||event.target == modalOrange) {
             modal.style.display = "none";
             modalRed.style.display = "none";
             modalGreen.style.display = "none";
