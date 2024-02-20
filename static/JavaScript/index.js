@@ -70,6 +70,8 @@ function runCalculation(event) {
     }
 }
 
+
+
 function selectRed(){
     //Bicycle Crossing
     
@@ -79,8 +81,6 @@ function selectRed(){
     target.longitude = 103.849942;
 
     showLoadingScreen();
-
-    distance = distance;
 
     console.log('Distance to Red:', distance); // Add this line
 
@@ -135,9 +135,6 @@ function selectGreen(){
     target.longitude = 103.849942;
 
     showLoadingScreen();
-
-    // Call calculateDistance with the appropriate coordinates
-    distance = distance;
 
     console.log('Distance to Green:', distance); // Add this line
 
@@ -195,9 +192,6 @@ function selectYellow(){
 
     showLoadingScreen();
 
-    // Call calculateDistance with the appropriate coordinates
-    distance = distance;
-
     if (distance <= 40) {
         openModalYellow();
     }
@@ -249,8 +243,6 @@ function selectBlue(){
 
     showLoadingScreen();
 
-    // Call calculateDistance with the appropriate coordinates
-    distance = distance;
 
     if (distance <= 40) {
         openModalBlue();
@@ -304,8 +296,6 @@ function selectOrange(){
 
     showLoadingScreen();
 
-    // Call calculateDistance with the appropriate coordinates
-    distance = distance;
 
     if (distance <= 40) {
         openModalYellow();
@@ -395,6 +385,8 @@ function startCompass() {
             .catch(() => alert("not supported"));
     }
 }
+
+
 
 // Modals
 
