@@ -352,7 +352,7 @@ function runCalculation(event) {
     distance = distance * 1000; // Convert to meters
 
     updateUI();
-    
+
     if (colour != 'black') {
         switch (colour) {
             case 'red':
@@ -459,7 +459,7 @@ function toggleCircles() {
         modal.style.display="block";
     }
 
-    span.onclick = function (){
+    function closeAllModals() {
         modal.style.display = "none";
         modalRed.style.display = "none";
         modalGreen.style.display = "none";
@@ -468,14 +468,18 @@ function toggleCircles() {
         modalOrange.style.display = "none";
     }
 
+    span.onclick = closeAllModals;
+
     window.onclick = function (event) {
-        if (event.target == modal||event.target == modalRed||event.target == modalGreen||event.target == modalYellow||event.target == modalBlue||event.target == modalOrange) {
-            modal.style.display = "none";
-            modalRed.style.display = "none";
-            modalGreen.style.display = "none";
-            modalYellow.style.display = "none";
-            modalBlue.style.display = "none";
-            modalOrange.style.display = "none";
+        if (
+            event.target == modal ||
+            event.target == modalRed ||
+            event.target == modalGreen ||
+            event.target == modalYellow ||
+            event.target == modalBlue ||
+            event.target == modalOrange
+        ) {
+            closeAllModals();
         }
     }
 
