@@ -362,16 +362,23 @@ const isIOS =
 const geolocationOptions = { enableHighAccuracy: true };
 
 // function to initialize geolocation and device oroentation. runs automatically
+// function to initialize geolocation and device orientation. runs automatically
 function init() {
     // startBtn.addEventListener("click", startCompass);
-    navigator.geolocation.watchPosition(setCurrentPosition,null,geolocationOptions);
+    navigator.geolocation.watchPosition(setCurrentPosition, null, geolocationOptions);
     if (!isIOS) {
         window.addEventListener("deviceorientationabsolute", runCalculation);
     }
 
     // Start the UI updates
     updateUI();
+
+    // Update the distance every second
+    setInterval(function () {
+        runCalculation();
+    }, 1000);
 }
+
 
 // on clicking the start compass button, request permission to use device orientation.
 // only IOS devices need to click the button
