@@ -19,19 +19,6 @@ function hideLoadingScreen() {
     // Clear the timeout if it hasn't been triggered yet
     clearTimeout(loadingTimeout);
 }
-// Function to calculate distance
-function calculateDistance(lat1, lon1, lat2, lon2) {
-    var R = 6371; // Radius of the earth in km
-    var dLat = (lat2 - lat1) * (Math.PI / 180);
-    var dLon = (lon2 - lon1) * (Math.PI / 180);
-    var a =
-        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-        Math.cos(lat1 * (Math.PI / 180)) * Math.cos(lat2 * (Math.PI / 180)) *
-        Math.sin(dLon / 2) * Math.sin(dLon / 2);
-    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    var distance = R * c; // Distance in km
-    return distance * 1000; // Convert to meters
-}
 
 function selectRed(){
     //Bicycle Crossing
@@ -43,8 +30,7 @@ function selectRed(){
 
     showLoadingScreen();
 
-    // Call calculateDistance with the appropriate coordinates
-    distance = calculateDistance(current.latitude, current.longitude, target.latitude, target.longitude);
+    distance = distance;
 
     console.log('Distance to Red:', distance); // Add this line
 
@@ -101,7 +87,7 @@ function selectGreen(){
     showLoadingScreen();
 
     // Call calculateDistance with the appropriate coordinates
-    distance = calculateDistance(current.latitude, current.longitude, target.latitude, target.longitude);
+    distance = distance;
 
     console.log('Distance to Green:', distance); // Add this line
 
@@ -160,7 +146,7 @@ function selectYellow(){
     showLoadingScreen();
 
     // Call calculateDistance with the appropriate coordinates
-    distance = calculateDistance(current.latitude, current.longitude, target.latitude, target.longitude);
+    distance = distance;
 
     if (distance <= 40) {
         openModalYellow();
@@ -214,7 +200,7 @@ function selectBlue(){
     showLoadingScreen();
 
     // Call calculateDistance with the appropriate coordinates
-    distance = calculateDistance(current.latitude, current.longitude, target.latitude, target.longitude);
+    distance = distance;
 
     if (distance <= 40) {
         openModalBlue();
@@ -269,7 +255,7 @@ function selectOrange(){
     showLoadingScreen();
 
     // Call calculateDistance with the appropriate coordinates
-    distance = calculateDistance(current.latitude, current.longitude, target.latitude, target.longitude);
+    distance = distance;
 
     if (distance <= 40) {
         openModalYellow();
@@ -389,7 +375,7 @@ function runCalculation(event) {
         Math.sin(dLat / 2) * Math.sin(dLat / 2) +
         Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    var distance = R * c; // Distance in km
+    distance = R * c; // Distance in km
     distance = distance * 1000; // Convert to meters
     var distanceElement = document.getElementById("distanceFromTarget");
 
