@@ -2,7 +2,7 @@ var loadingTimeout;
 var distance; //Declaring this as a global Variable instead
 var modal;
 var colour = 'black';
-var span = document.getElementsByClassName("close")[0];
+
 
 // Add this function at the beginning of your script
 function showLoadingScreen() {
@@ -401,33 +401,91 @@ function runCalculation(event) {
 
     // Function to open the red modal
 function toggleModalRed() {
-    modal = document.getElementById("modalRed");
-    modal.style.display = 'block';
+    var modalRed = document.getElementById("modalRed");
+    modalRed.style.display = 'block';
 }
+
+// Function to close the red modal
+function closeRedModal() {
+    var modalRed = document.getElementById("modalRed");
+    modalRed.style.display = 'none';
+}
+
+// span.onclick for the red modal
+document.getElementById("modalRedClose").onclick = function () {
+    closeRedModal();
+};
+
 
 // Function to open the green modal
 function toggleModalGreen() {
-    modal = document.getElementById("modalGreen");
-    modal.style.display = 'block';
+    var modalGreen = document.getElementById("modalGreen");
+    modalGreen.style.display = 'block';
 }
+
+// Function to close the Green modal
+function closeGreenModal() {
+    var modalGreen = document.getElementById("modalGreen");
+    modalGreen.style.display = 'none';
+}
+
+// span.onclick for the Green modal
+document.getElementById("modalGreenClose").onclick = function () {
+    closeGreenModal();
+};
+
 
 // Function to open the yellow modal
 function toggleModalYellow() {
-    modal = document.getElementById("modalYellow");
-    modal.style.display = 'block';
+    var modalYellow = document.getElementById("modalYellow");
+    modalYellow.style.display = 'block';
 }
+
+// Function to close the Yellow modal
+function closeYellowModal() {
+    var modalYellow = document.getElementById("modalYellow");
+    modalYellow.style.display = 'none';
+}
+
+// span.onclick for the Yellow modal
+document.getElementById("modalYellowClose").onclick = function () {
+    closeYellowModal();
+};
+
 
 // Function to open the blue modal
 function toggleModalBlue() {
-    modal = document.getElementById("modalBlue");
-    modal.style.display = 'block';
+    var modalBlue = document.getElementById("modalBlue");
+    modalBlue.style.display = 'block';
 }
+
+// Function to close the Blue modal
+function closeBlueModal() {
+    var modalBlue = document.getElementById("modalBlue");
+    modalBlue.style.display = 'none';
+}
+
+// span.onclick for the Blue modal
+document.getElementById("modalBlueClose").onclick = function () {
+    closeBlueModal();
+};
+
 
 // Function to open the orange modal
 function toggleModalOrange() {
-    modal = document.getElementById("modalOrange");
-    modal.style.display = 'block';
+    var modalOrange = document.getElementById("modalOrange");
+    modalOrange.style.display = 'block';
 }
+// Function to close the Yellow modal
+function closeOrangeModal() {
+    var modalOrange = document.getElementById("modalOrange");
+    modalOrange.style.display = 'none';
+}
+
+// span.onclick for the Yellow modal
+document.getElementById("modalOrangeClose").onclick = function () {
+    closeOrangeModal();
+};
 
 
 
@@ -451,6 +509,12 @@ function toggleCircles() {
         //Get the modal
         modal = document.getElementById("modalMap");
         modal.style.display="block";
+    }
+
+    var span = document.getElementsByClassName("close")[0];
+
+    function closeModal(){
+        modal.style.display='none';
     }
 
     span.onclick = function (){
