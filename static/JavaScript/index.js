@@ -356,6 +356,8 @@ function runCalculation(event) {
     distance = R * c; // Distance in km
     distance = distance * 1000; // Convert to meters
 
+    updateUI();
+
     if (colour != 'black') {
         switch (colour) {
             case 'red':
@@ -456,15 +458,17 @@ function toggleCircles() {
     }
 
     function closeAllModals() {
-        modal.style.display = "none";
-        modalRed.style.display = "none";
-        modalGreen.style.display = "none";
-        modalYellow.style.display = "none";
-        modalBlue.style.display = "none";
-        modalOrange.style.display = "none";
+        closeModal(modal);
+        closeModal(modalRed);
+        closeModal(modalGreen);
+        closeModal(modalYellow);
+        closeModal(modalBlue);
+        closeModal(modalOrange);
     }
 
-    span.onclick = closeAllModals;
+    span.onclick = function() {
+        closeAllModals();
+    };
 
     window.onclick = function (event) {
         if (
