@@ -1,5 +1,7 @@
 var loadingTimeout;
 var distance; //Declaring this as a global Variable instead
+var modal;
+var colour = black;
 
 // Add this function at the beginning of your script
 function showLoadingScreen() {
@@ -20,58 +22,6 @@ function hideLoadingScreen() {
     clearTimeout(loadingTimeout);
 }
 
-// takes values retrieved from th geolocation API and stores them in the current object
-// for use in calculating compass direction and distance
-function setCurrentPosition(position) {
-    current.latitude = position.coords.latitude;
-    current.longitude = position.coords.longitude;
-}
-
-// runs the calculation for getting the direction which the arrow needs to point
-function runCalculation(event) {
-    var alpha = Math.abs(360 - event.webkitCompassHeading) || event.alpha;
-
-    if (alpha == null || Math.abs(alpha - lastAlpha) > 1) {
-    var lat1 = current.latitude * (Math.PI / 180);
-    var lon1 = current.longitude * (Math.PI / 180);
-    var lat2 = target.latitude * (Math.PI / 180);
-    var lon2 = target.longitude * (Math.PI / 180);
-
-    // calculate compass direction
-    var y = Math.sin(lon2 - lon1) * Math.cos(lat2);
-    var x =
-        Math.cos(lat1) * Math.sin(lat2) -
-        Math.sin(lat1) * Math.cos(lat2) * Math.cos(lon2 - lon1);
-    var bearing = Math.atan2(y, x) * (180 / Math.PI);
-
-    direction = (alpha + bearing + 360) % 360;
-    direction = direction.toFixed(0);
-
-    lastAlpha = alpha;
-
-    var R = 6371; // Radius of the earth in km
-    var dLat = lat2 - lat1; // below
-    var dLon = lon2 - lon1;
-    var a =
-        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-        Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
-    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    distance = R * c; // Distance in km
-    distance = distance * 1000; // Convert to meters
-    var distanceElement = document.getElementById("distanceFromTarget");
-
-    if (distance <= 20000) {
-        // Display the actual distance
-        distanceElement.innerHTML = Math.floor(distance) + "m";
-    } else {
-        // Display '0.00m' for distances above 20,000 meters
-        distanceElement.innerHTML = '0m';
-    }
-    }
-}
-
-
-
 function selectRed(){
     //Bicycle Crossing
     
@@ -82,12 +32,7 @@ function selectRed(){
 
     showLoadingScreen();
 
-    console.log('Distance to Red:', distance); // Add this line
-
-
-    if (distance <= 40) {
-        openModalRed();
-    }
+    colour = red;
 
     if (document.getElementById('redOff')) {
         
@@ -136,12 +81,7 @@ function selectGreen(){
 
     showLoadingScreen();
 
-    console.log('Distance to Green:', distance); // Add this line
-
-
-    if (distance <= 40) {
-        openModalGreen();
-    }
+    colour = green;
 
     if (document.getElementById('greenOff')){
         
@@ -192,10 +132,7 @@ function selectYellow(){
 
     showLoadingScreen();
 
-    if (distance <= 40) {
-        openModalYellow();
-    }
-    
+    colour = yellow;
 
     if (document.getElementById('yellowOff')){
         // Turning Yellow On
@@ -243,10 +180,7 @@ function selectBlue(){
 
     showLoadingScreen();
 
-
-    if (distance <= 40) {
-        openModalBlue();
-    }
+    colour = blue;
     
     if (document.getElementById('blueOff')){
         // Turning Blue On
@@ -297,9 +231,7 @@ function selectOrange(){
     showLoadingScreen();
 
 
-    if (distance <= 40) {
-        openModalYellow();
-    }
+    colour = yellow;
     
     if (document.getElementById('orangeOff')){
         // Turning orange On
@@ -362,11 +294,6 @@ function init() {
 
     // Start the UI updates
     updateUI();
-
-    // Update the distance every second
-    setInterval(function () {
-        runCalculation();
-    }, 1000);
 }
 
 
@@ -386,7 +313,84 @@ function startCompass() {
     }
 }
 
+// takes values retrieved from th geolocation API and stores them in the current object
+// for use in calculating compass direction and distance
+function setCurrentPosition(position) {
+    current.latitude = position.coords.latitude;
+    current.longitude = position.coords.longitude;
+}
 
+// runs the calculation for getting the direction which the arrow needs to point
+function runCalculation(event) {
+    var alpha = Math.abs(360 - event.webkitCompassHeading) || event.alpha;
+
+    if (alpha == null || Math.abs(alpha - lastAlpha) > 1) {
+    var lat1 = current.latitude * (Math.PI / 180);
+    var lon1 = current.longitude * (Math.PI / 180);
+    var lat2 = target.latitude * (Math.PI / 180);
+    var lon2 = target.longitude * (Math.PI / 180);
+
+    // calculate compass direction
+    var y = Math.sin(lon2 - lon1) * Math.cos(lat2);
+    var x =
+        Math.cos(lat1) * Math.sin(lat2) -
+        Math.sin(lat1) * Math.cos(lat2) * Math.cos(lon2 - lon1);
+    var bearing = Math.atan2(y, x) * (180 / Math.PI);
+
+    direction = (alpha + bearing + 360) % 360;
+    direction = direction.toFixed(0);
+
+    lastAlpha = alpha;
+
+    var R = 6371; // Radius of the earth in km
+    var dLat = lat2 - lat1; // below
+    var dLon = lon2 - lon1;
+    var a =
+        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    distance = R * c; // Distance in km
+    distance = distance * 1000; // Convert to meters
+
+    if (colour != 'black') {
+        switch (colour) {
+            case 'red':
+                if (distance <= 40) toggleModal();
+                colour = 'black';
+                break;
+            case 'green':
+                if (distance <= 40) openModalGreen();
+                colour = 'black';
+                break;
+            case 'yellow':
+                if (distance <= 40) openModalYellow();
+                colour = 'black';
+                break;
+            case 'blue':
+                if (distance <= 40) openModalBlue();
+                colour = 'black';
+                break;
+            case 'orange':
+                if (distance <= 40) openModalOrange();
+                colour = 'black';
+                break;
+            default:
+                break;
+        }
+    }
+    
+
+    var distanceElement = document.getElementById("distanceFromTarget");
+
+        if (distance <= 20000) {
+            // Display the actual distance
+            distanceElement.innerHTML = Math.floor(distance) + "m";
+        } else {
+            // Display '0.00m' for distances above 20,000 meters
+            distanceElement.innerHTML = '0m';
+        }
+    }
+}
 
 // Modals
 
@@ -440,15 +444,12 @@ function toggleCircles() {
     }
 }
 
-
-
-    //Get the modal
-    var modal = document.getElementById("modalMap");
-
     //Getting the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
 
     function toggleModal(){
+        //Get the modal
+        modal = document.getElementById("modalMap");
         modal.style.display="block";
     }
 
