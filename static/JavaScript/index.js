@@ -356,8 +356,6 @@ function runCalculation(event) {
     distance = R * c; // Distance in km
     distance = distance * 1000; // Convert to meters
 
-    updateUI();
-
     if (colour != 'black') {
         switch (colour) {
             case 'red':
@@ -407,27 +405,32 @@ function runCalculation(event) {
 
     // Function to open the red modal
 function toggleModalRed() {
-    modalRed.style.display = 'block';
+    modal = document.getElementById("modalRed");
+    modal.style.display = 'block';
 }
 
 // Function to open the green modal
 function toggleModalGreen() {
-    modalGreen.style.display = 'block';
+    modal = document.getElementById("modalGreen");
+    modal.style.display = 'block';
 }
 
 // Function to open the yellow modal
 function toggleModalYellow() {
-    modalYellow.style.display = 'block';
+    modal = document.getElementById("modalYellow");
+    modal.style.display = 'block';
 }
 
 // Function to open the blue modal
 function toggleModalBlue() {
-    modalBlue.style.display = 'block';
+    modal = document.getElementById("modalBlue");
+    modal.style.display = 'block';
 }
 
 // Function to open the orange modal
 function toggleModalOrange() {
-    modalOrange.style.display = 'block';
+    modal = document.getElementById("modalOrange");
+    modal.style.display = 'block';
 }
 
 
@@ -457,29 +460,13 @@ function toggleCircles() {
         modal.style.display="block";
     }
 
-    function closeAllModals() {
-        closeModal(modal);
-        closeModal(modalRed);
-        closeModal(modalGreen);
-        closeModal(modalYellow);
-        closeModal(modalBlue);
-        closeModal(modalOrange);
+    span.onclick = function (){
+        modal.style.display = "none";
     }
 
-    span.onclick = function() {
-        closeAllModals();
-    };
-
     window.onclick = function (event) {
-        if (
-            event.target == modal ||
-            event.target == modalRed ||
-            event.target == modalGreen ||
-            event.target == modalYellow ||
-            event.target == modalBlue ||
-            event.target == modalOrange
-        ) {
-            closeAllModals();
+        if (event.target == modal) {
+            modal.style.display = "none";
         }
     }
 
