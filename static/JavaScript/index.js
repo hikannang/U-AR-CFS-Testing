@@ -352,27 +352,35 @@ function runCalculation(event) {
     distance = R * c; // Distance in km
     distance = distance * 1000; // Convert to meters
 
+    console.log('Colour:', colour);
+    console.log('Distance:', distance);
+
     if (colour != 'black') {
         switch (colour) {
             case 'red':
-                if (distance <= 40) toggleModal();
-                colour = 'black';
+                if (distance <= 40){ 
+                    toggleModal();
+                    colour = 'black';}
                 break;
             case 'green':
-                if (distance <= 40) openModalGreen();
-                colour = 'black';
+                if (distance <= 40){
+                openModalGreen();
+                colour = 'black';}
                 break;
             case 'yellow':
-                if (distance <= 40) openModalYellow();
-                colour = 'black';
+                if (distance <= 40){ 
+                openModalYellow();
+                colour = 'black';}
                 break;
             case 'blue':
-                if (distance <= 40) openModalBlue();
-                colour = 'black';
+                if (distance <= 40){ 
+                openModalBlue();
+                colour = 'black';}
                 break;
             case 'orange':
-                if (distance <= 40) openModalOrange();
-                colour = 'black';
+                if (distance <= 40){
+                openModalOrange();
+                colour = 'black';}
                 break;
             default:
                 break;
