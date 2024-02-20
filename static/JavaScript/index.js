@@ -356,8 +356,6 @@ function runCalculation(event) {
     distance = R * c; // Distance in km
     distance = distance * 1000; // Convert to meters
 
-    updateUI();
-
     if (colour != 'black') {
         switch (colour) {
             case 'red':
