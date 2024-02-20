@@ -46,6 +46,9 @@ function selectRed(){
     // Call calculateDistance with the appropriate coordinates
     distance = calculateDistance(current.latitude, current.longitude, target.latitude, target.longitude);
 
+    console.log('Distance to Red:', distance); // Add this line
+
+
     if (distance <= 40) {
         openModalRed();
     }
@@ -99,6 +102,9 @@ function selectGreen(){
 
     // Call calculateDistance with the appropriate coordinates
     distance = calculateDistance(current.latitude, current.longitude, target.latitude, target.longitude);
+
+    console.log('Distance to Green:', distance); // Add this line
+
 
     if (distance <= 40) {
         openModalGreen();
