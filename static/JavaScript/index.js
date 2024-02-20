@@ -1,7 +1,7 @@
 var loadingTimeout;
 var distance; //Declaring this as a global Variable instead
 var modal;
-var colour = black;
+var colour;
 
 // Add this function at the beginning of your script
 function showLoadingScreen() {
