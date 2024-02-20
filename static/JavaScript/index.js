@@ -306,102 +306,7 @@ function selectOrange(){
 
 }
 
-/* All Locations
 
-//659
-    startCompass()
-    target.latitude = 1.4020492;
-    target.longitude = 103.7479795;
-
-//Blk 673B
-    startCompass()
-    target.latitude = 1.4009471;
-    target.longitude = 103.7474082;
-
-// Blk 673
-    startCompass()
-    target.latitude = 1.4012957;
-    target.longitude = 103.7478212;
-
-// Carpark
-    startCompass()
-    target.latitude = 1.4020492;
-    target.longitude = 103.7479795;
-
-//7-11
-    startCompass()
-    target.latitude = 1.4029823;
-    target.longitude = 103.7493179;
-
-
-//Little India MRT
-    startCompass()
-    target.latitude = 1.306710; 
-    target.longitude = 103.849284;
-    
-
-//Mobility Gallery
-    startCompass()
-    target.latitude = 1.308234;
-    target.longitude = 103.849569;
-    
-
-//Block 6
-    startCompass()
-    target.latitude = 1.308608;
-    target.longitude = 103.849900;
-    
-
-//Blk 5A
-    startCompass()
-    target.latitude = 1.308838;
-    target.longitude = 103.849601;
-    
-
-//LTA Auditorium
-    startCompass()
-    target.latitude = 1.308685;
-    target.longitude = 103.849421;
-    
-
-
- //Woodlands Lib
-    startCompass()
-    target.latitude = 1.434903;
-    target.longitude = 103.787336;
-
-
-//Blk 365
-    startCompass()
-    target.latitude = 1.434200;
-    target.longitude = 103.787520;
-
-
-//Blk 364
-    startCompass()
-    target.latitude = 1.4340948;
-    target.longitude = 103.786403;
-
-
-//912 Bus stop
-    startCompass()
-    target.latitude = 1.4345781;
-    target.longitude = 103.7860129;
-
-
-//Woodlands MRT
-    startCompass()
-    target.latitude = 1.4365677;
-    target.longitude = 103.7862248;
-
-
-
-Template
-    startCompass()
-    target.latitude = ;
-    target.longitude = ;
-
-*/
 
 // ##################################################################################################
 var current = { latitude: null, longitude: null };
@@ -495,12 +400,14 @@ function runCalculation(event) {
 
     // Function to open the red modal
 function openModalRed() {
+    console.log("Modal Red Toggled")
     var modalRed = document.getElementById('modalRed');
     modalRed.style.display = 'block';
 }
 
 // Function to open the green modal
 function openModalGreen() {
+    console.log("Modal Green Toggled")
     var modalGreen = document.getElementById('modalGreen');
     modalGreen.style.display = 'block';
 }
@@ -560,6 +467,11 @@ function toggleCircles() {
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
+            modalRed.style.display = "none";
+            modalGreen.style.display = "none";
+            modalYellow.style.display = "none";
+            modalBlue.style.display = "none";
+            modalOrange.style.display = "none";
         }
     }
 
