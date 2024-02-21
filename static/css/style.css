@@ -222,6 +222,48 @@ html{
     margin-top: 20px;
 }
 
+/* Translucent Box */
+.translucent-box {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust the alpha value for transparency */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    max-height: 20vh; /* Adjust the maximum height as needed */
+}
+
+.text-container {
+    color: white;
+    text-align: center;
+    margin-bottom: 5px; /* Adjust the margin between text and images as needed */
+}
+
+.red-text {
+    color: red;
+    font-size: 1 em;
+    margin-bottom: 5px; /* Adjust the margin between red and black text as needed */
+}
+
+.black-text {
+    color: black;
+    font-size: 0.6em;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-container img {
+    width: px; /* Adjust the width of the images as needed */
+    height: 45px; /* Adjust the height of the images as needed */
+    margin-right: 10px; /* Adjust the margin between images as needed */
+}
+
 
 #distanceFromTarget{
     color: yellow;
