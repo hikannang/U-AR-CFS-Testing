@@ -371,6 +371,7 @@ function runCalculation(event) {
                     toggleModalRed40();
                     colour = 'black';
                 }
+                break;
             case 'green':
                 if (distance <= 40){
                     toggleModalGreen();
@@ -410,32 +411,54 @@ function runCalculation(event) {
 }
 
 // Modals
-
+    // Start Red Models
     // Function to open the red modal
 function toggleModalRed120() {
-    var modalRed = document.getElementById("modalRed120");
-    modalRed.style.display = 'block';
+    var modalRed120 = document.getElementById("modalRed120");
+    modalRed120.style.display = 'block';
 }
 
 function toggleModalRed80() {
-    var modalRed = document.getElementById("modalRed80");
-    modalRed.style.display = 'block';
+    var modalRed80 = document.getElementById("modalRed80");
+    modalRed80.style.display = 'block';
 }
 
 function toggleModalRed40() {
-    var modalRed = document.getElementById("modalRed40");
-    modalRed.style.display = 'block';
+    var modalRed40 = document.getElementById("modalRed40");
+    modalRed40.style.display = 'block';
 }
-
+//Functions to close the red modals
 // Function to close the red modal
-function closeRedModal() {
-    var modalRed = document.getElementById("modalRed");
-    modalRed.style.display = 'none';
+function closeRedModal120() {
+    var modalRed120 = document.getElementById("modalRed120");
+    modalRed120.style.display = 'none';
 }
 
 // span.onclick for the red modal
-document.getElementById("modalRedClose").onclick = function () {
-    closeRedModal();
+document.getElementById("modalRedClose120").onclick = function () {
+    closeRedModal120();
+};
+
+// Function to close the red modal
+function closeRedModal80() {
+    var modalRed80 = document.getElementById("modalRed80");
+    modalRed80.style.display = 'none';
+}
+
+// span.onclick for the red modal
+document.getElementById("modalRedClose80").onclick = function () {
+    closeRedModal80();
+};
+
+// Function to close the red modal
+function closeRedModal40() {
+    var modalRed40 = document.getElementById("modalRed40");
+    modalRed40.style.display = 'none';
+}
+
+// span.onclick for the red modal
+document.getElementById("modalRedClose40").onclick = function () {
+    closeRedModal40();
 };
 
 
