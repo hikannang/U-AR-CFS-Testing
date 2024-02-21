@@ -234,6 +234,7 @@ html{
     padding: 10px;
     box-sizing: border-box;
     max-height: 20vh; /* Adjust the maximum height as needed */
+    z-index: 1001;
 }
 
 .text-container {
@@ -249,7 +250,7 @@ html{
 }
 
 .black-text {
-    color: black;
+    color: White;
     font-size: 0.6em;
 }
 
@@ -259,7 +260,7 @@ html{
 }
 
 .image-container img {
-    width: px; /* Adjust the width of the images as needed */
+    
     height: 45px; /* Adjust the height of the images as needed */
     margin-right: 10px; /* Adjust the margin between images as needed */
 }
