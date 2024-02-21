@@ -245,7 +245,7 @@ html{
 
 .red-text {
     color: red;
-    font-size: 1 em;
+    font-size: 1em;
     margin-bottom: 5px; /* Adjust the margin between red and black text as needed */
 }
 
@@ -260,9 +260,8 @@ html{
 }
 
 .image-container img {
-    width: 50%;
+    width: 48%; /* Adjust the width of the images as needed */
     height: auto; /* Adjust the height of the images as needed */
-    margin-right: px; /* Adjust the margin between images as needed */
 }
 
 
