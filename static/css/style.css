@@ -260,9 +260,9 @@ html{
 }
 
 .image-container img {
-    
-    height: 45px; /* Adjust the height of the images as needed */
-    margin-right: 10px; /* Adjust the margin between images as needed */
+    width: 50%;
+    height: auto; /* Adjust the height of the images as needed */
+    margin-right: px; /* Adjust the margin between images as needed */
 }
 
 

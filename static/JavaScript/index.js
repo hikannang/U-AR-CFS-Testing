@@ -355,7 +355,7 @@ function runCalculation(event) {
     if (colour != 'black') {
         switch (colour) {
             case 'red':
-                if (distance <= 40){ 
+                if (distance <= 10){ 
                     toggleModalRed();
                     colour = 'black';}
                 break;
