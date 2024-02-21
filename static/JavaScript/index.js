@@ -355,10 +355,22 @@ function runCalculation(event) {
     if (colour != 'black') {
         switch (colour) {
             case 'red':
-                if (distance <= 10){ 
-                    toggleModalRed();
-                    colour = 'black';}
+                if (distance < 20000){ 
+                    toggleModalRed120();
+                    colour = 'red2';
+                }
                 break;
+            case 'red2':
+                if (distance <= 80){ 
+                    toggleModalRed80();
+                    colour = 'red3';
+                }
+                break;
+            case 'red3':
+                if (distance <= 40){ 
+                    toggleModalRed40();
+                    colour = 'black';
+                }
             case 'green':
                 if (distance <= 40){
                     toggleModalGreen();
@@ -400,8 +412,18 @@ function runCalculation(event) {
 // Modals
 
     // Function to open the red modal
-function toggleModalRed() {
-    var modalRed = document.getElementById("modalRed");
+function toggleModalRed120() {
+    var modalRed = document.getElementById("modalRed120");
+    modalRed.style.display = 'block';
+}
+
+function toggleModalRed80() {
+    var modalRed = document.getElementById("modalRed80");
+    modalRed.style.display = 'block';
+}
+
+function toggleModalRed40() {
+    var modalRed = document.getElementById("modalRed40");
     modalRed.style.display = 'block';
 }
 

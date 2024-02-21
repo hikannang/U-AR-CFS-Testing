@@ -227,7 +227,7 @@ html{
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Adjust the alpha value for transparency */
+    background-color: rgba(246, 246, 246, 0.512); /* Adjust the alpha value for transparency */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -238,7 +238,7 @@ html{
 }
 
 .text-container {
-    color: white;
+    color: black;
     text-align: center;
     margin-bottom: 5px; /* Adjust the margin between text and images as needed */
 }
@@ -250,7 +250,7 @@ html{
 }
 
 .black-text {
-    color: White;
+    color: black;
     font-size: 0.6em;
 }
 
