@@ -224,20 +224,20 @@ function selectBlue(){
 function selectOrange(){
     //YellowBox
 
-    //Outside office 
+    //Near Capitol Tower
     startCompass()
-    target.latitude = 1.308544;
-    target.longitude = 103.849942;
+    target.latitude = 1.277589;
+    target.longitude = 103.847113;
 
     showLoadingScreen();
 
     colour = 'orange';
-    
+
     if (document.getElementById('orangeOff')){
         // Turning orange On
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange')
-        content.innerHTML = '<a-image  id="orange" src="./static/images/2D_Assets_low_res/YellowBox_sitting.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942"></a-image>';
+        content.innerHTML = '<a-image  id="orange" src="./static/images/2D_Assets_low_res/YellowBox_sitting.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.277589; longitude: 103.847113"></a-image>';
     }
 
     if(document.getElementById('red')){
