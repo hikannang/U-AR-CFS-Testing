@@ -40,7 +40,7 @@ function selectRed(){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red');
-        content.innerHTML = '<a-image id="red" src="./static/images/removedBackgroundModals/bicycleCrossingModalT_40-removebg-preview.png" look-at="[camera]" scale="20 20 20" gps-projected-entity-place="latitude: 1.401372; longitude: 103.749333"></a-image>';
+        content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="20 20 20" gps-projected-entity-place="latitude: 1.401372; longitude: 103.749333"></a-image>';
     }
 
     if(document.getElementById('green')){
