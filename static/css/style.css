@@ -244,9 +244,9 @@ html{
 /* 40M Speech Modal */
 .near-modal-content {
     width: 100%;
-    height: 0;
+    height: auto;
     position: fixed;
-    top: 60vh;
+    top: 65vh;
     left: 0;
     background-color: transparent;
     overflow: auto;
@@ -258,10 +258,6 @@ html{
     transition: height 0.5s ease-in-out;
 }
 
-.near-modal-content.open {
-    height: 15vh;
-    top: 60vh; /* Adjust the initial position when the modal is open */
-}
 
 .near-modal-content span.close {
     width: 10%;
