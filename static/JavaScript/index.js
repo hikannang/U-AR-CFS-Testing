@@ -40,7 +40,7 @@ function selectRed(){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red');
-        content.innerHTML = '<a-image id="red" src="./static/images/removedBackgroundModals/bicycleCrossingModalT_40-removebg-preview.png" look-at="[camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.401372; longitude: 103.749333"></a-image>';
+        content.innerHTML = '<a-image id="red" src="./static/images/removedBackgroundModals/bicycleCrossingModalT_40-removebg-preview.png" look-at="[camera]" scale="20 20 20" gps-projected-entity-place="latitude: 1.401372; longitude: 103.749333"></a-image>';
     }
 
     if(document.getElementById('green')){
@@ -402,10 +402,10 @@ function runCalculation(event) {
 
         if (distance <= 20000) {
             // Display the actual distance
-            distanceElement.innerHTML = Math.floor(distance) + "m";
+            distanceElement.innerHTML = Math.floor(distance) + "m to destination!";
         } else {
             // Display '0.00m' for distances above 20,000 meters
-            distanceElement.innerHTML = '0m';
+            distanceElement.innerHTML = 'Please Select Destination!';
         }
     }
 }
