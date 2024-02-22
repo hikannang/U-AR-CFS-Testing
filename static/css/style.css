@@ -23,7 +23,7 @@ html{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: url(https://www.pngitem.com/pimgs/m/74-741119_arrow-up-icon-png-transparent-png.png)
+    background: url(https://seekicon.com/free-icon-download/arrow-up_21.svg)
         center no-repeat;
     background-size: contain;
     z-index: 2;
@@ -159,9 +159,47 @@ html{
     max-height: 100%;
     object-fit: contain;
 }
+/* End of Map Modal */
 
 /* Individual Modals */
+.base-modal-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    overflow: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.base-modal-content span.close {
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    top: 5vh;
+    right: 10vw;
+    z-index: 3;
+    cursor: pointer;
+    color: red;
+}
+
+.base-modal-content span.close img {
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.base-modal-content img {
+    max-width: 110%;
+    max-height: 100%;
+    object-fit: contain;
+}
+/* End of Individual Modal */
 
 /* More Circles */
 .additionalCircles {

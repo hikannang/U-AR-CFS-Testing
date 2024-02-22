@@ -26,10 +26,10 @@ function hideLoadingScreen() {
 function selectRed(){
     //Bicycle Crossing
     
-    //Outside office 
+    //My House,
     startCompass()
-    target.latitude = 1.308544;
-    target.longitude = 103.849942;
+    target.latitude = 1.401372;
+    target.longitude = 103.749333;
 
     showLoadingScreen();
 
@@ -40,7 +40,7 @@ function selectRed(){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red');
-        content.innerHTML = '<a-entity id="red" gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942" animation-mixer></a-entity>';
+        content.innerHTML = '<a-entity id="red" gltf-model="./static/3D-file/Updated Assets from users/bicycleCrossing_textured.glb" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.401372; longitude: 103.749333" animation-mixer></a-entity>';
     }
 
     if(document.getElementById('green')){
@@ -419,16 +419,21 @@ function toggleModalRed120() {
 }
 
 function toggleModalRed80() {
+    var modalRed120 = document.getElementById("modalRed120");
+    modalRed120.style.display = 'none';
     var modalRed80 = document.getElementById("modalRed80");
     modalRed80.style.display = 'block';
 }
 
 function toggleModalRed40() {
+    var modalRed120 = document.getElementById("modalRed120");
+    modalRed120.style.display = 'none';
+    var modalRed80 = document.getElementById("modalRed80");
+    modalRed80.style.display = 'none';
     var modalRed40 = document.getElementById("modalRed40");
     modalRed40.style.display = 'block';
 }
 //Functions to close the red modals
-// Function to close the red modal
 function closeRedModal120() {
     var modalRed120 = document.getElementById("modalRed120");
     modalRed120.style.display = 'none';
@@ -461,6 +466,7 @@ document.getElementById("modalRedClose40").onclick = function () {
     closeRedModal40();
 };
 
+//Red Modal End
 
 // Function to open the green modal
 function toggleModalGreen() {
