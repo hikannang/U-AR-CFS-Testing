@@ -458,7 +458,7 @@ function runCalculation(event) {
                 break;
             case 'black':
                 {
-                toggleModalInstruction();
+                // toggleModalInstruction();
                 colour = 'black2'
                 }
                 break;
