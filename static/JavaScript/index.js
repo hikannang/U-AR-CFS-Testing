@@ -353,7 +353,7 @@ function runCalculation(event) {
     distance = R * c; // Distance in km
     distance = distance * 1000; // Convert to meters
 
-    if (colour != 'black2') {
+    if (colour != 'black') {
         switch (colour) {
             case 'red':
                 if (distance < 20000){ 
@@ -370,7 +370,7 @@ function runCalculation(event) {
             case 'red3':
                 if (distance <= 40){ 
                     toggleModalRed40();
-                    colour = 'black2';
+                    colour = 'black';
                 }
                 break;
             case 'green':
@@ -388,7 +388,7 @@ function runCalculation(event) {
             case 'green3':
                 if (distance <= 40){ 
                     toggleModalGreen40();
-                    colour = 'black2';
+                    colour = 'black';
                 }
                 break;
             case 'yellow':
@@ -406,7 +406,7 @@ function runCalculation(event) {
             case 'yellow3':
                 if (distance <= 40){ 
                     toggleModalYellow40();
-                    colour = 'black2';
+                    colour = 'black';
                 }
                 break;
             case 'blue':
@@ -424,7 +424,7 @@ function runCalculation(event) {
             case 'blue3':
                 if (distance <= 40){ 
                     toggleModalBlue40();
-                    colour = 'black2';
+                    colour = 'black';
                 }
                 break;
             case 'orange':
@@ -442,7 +442,7 @@ function runCalculation(event) {
             case 'orange3':
                 if (distance <= 40){ 
                     toggleModalOrange40();
-                    colour = 'black2';
+                    colour = 'black';
                 }
                 break;
             case 'black':
@@ -450,6 +450,8 @@ function runCalculation(event) {
                 // toggleModalInstruction();
                 colour = 'black2'
                 }
+                break;
+            default:
                 break;
         }
     }
