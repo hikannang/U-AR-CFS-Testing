@@ -353,7 +353,18 @@ function runCalculation(event) {
     distance = R * c; // Distance in km
     distance = distance * 1000; // Convert to meters
 
-    if (colour != 'black') {
+    var distanceElement = document.getElementById("distanceFromTarget");
+
+        if (distance <= 20000) {
+            // Display the actual distance
+            distanceElement.innerHTML = Math.floor(distance) + "m to destination!";
+        } else {
+            // Display '0.00m' for distances above 20,000 meters
+            distanceElement.innerHTML = 'Please Select Destination!';
+        }
+    }
+
+    if (colour != 'black2') {
         switch (colour) {
             case 'red':
                 if (distance < 20000){ 
@@ -449,18 +460,6 @@ function runCalculation(event) {
                 toggleModalInstruction();
                 colour = 'black2'
                 break;
-        }
-    }
-    
-
-    var distanceElement = document.getElementById("distanceFromTarget");
-
-        if (distance <= 20000) {
-            // Display the actual distance
-            distanceElement.innerHTML = Math.floor(distance) + "m to destination!";
-        } else {
-            // Display '0.00m' for distances above 20,000 meters
-            distanceElement.innerHTML = 'Please Select Destination!';
         }
     }
 }
