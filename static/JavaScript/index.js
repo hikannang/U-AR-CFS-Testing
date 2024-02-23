@@ -375,7 +375,7 @@ function runCalculation(event) {
                 break;
             case 'green':
                 if (distance < 20000){ 
-                    toggleModalGreen20();
+                    toggleModalGreen120();
                     colour = 'green2';
                 }
                 break;
