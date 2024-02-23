@@ -457,8 +457,10 @@ function runCalculation(event) {
                 }
                 break;
             case 'black':
+                {
                 toggleModalInstruction();
                 colour = 'black2'
+                }
                 break;
         }
     }
