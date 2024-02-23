@@ -353,17 +353,6 @@ function runCalculation(event) {
     distance = R * c; // Distance in km
     distance = distance * 1000; // Convert to meters
 
-    var distanceElement = document.getElementById("distanceFromTarget");
-
-        if (distance <= 20000) {
-            // Display the actual distance
-            distanceElement.innerHTML = Math.floor(distance) + "m to destination!";
-        } else {
-            // Display '0.00m' for distances above 20,000 meters
-            distanceElement.innerHTML = 'Please Select Destination!';
-        }
-    }
-
     if (colour != 'black2') {
         switch (colour) {
             case 'red':
@@ -464,26 +453,18 @@ function runCalculation(event) {
                 break;
         }
     }
-}
+    var distanceElement = document.getElementById("distanceFromTarget");
 
-//Instruction modal
-/// Function to open the Instruction modal
-function toggleModalInstruction() {
-    var modalInstruction = document.getElementById("modalInstruction");
-    modalInstruction.style.display = 'block';
-}
+        if (distance <= 20000) {
+            // Display the actual distance
+            distanceElement.innerHTML = Math.floor(distance) + "m to destination!";
+        } else {
+            // Display '0.00m' for distances above 20,000 meters
+            distanceElement.innerHTML = 'Please Select Destination!';
+        }
+    }
+}   
 
-// Function to close the Instruction modal
-function closeInstructionModal() {
-    var modalInstruction = document.getElementById("modalInstruction");
-    modalInstruction.style.display = 'none';
-}
-
-// span.onclick for the Green modal
-document.getElementById("modalInstructionClose").onclick = function () {
-    closeInstructionModal();
-};
-//End of Instruction Modal
 
 // Modals
     // Start Red Models
@@ -769,10 +750,6 @@ document.getElementById("modalRedClose40").onclick = function () {
     };
     
     //Orange Modal End
-
-
-
-
 
 function toggleCircles() {
     var additionalCircles = document.getElementById("additionalCircles");
