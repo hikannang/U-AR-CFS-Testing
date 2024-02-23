@@ -2,6 +2,7 @@ var loadingTimeout;
 var distance; //Declaring this as a global Variable instead
 var modal;
 var colour = 'black';
+var modalDisplayed = false;
 
 
 // Add this function at the beginning of your script
@@ -369,7 +370,7 @@ function runCalculation(event) {
             case 'red3':
                 if (distance <= 40){ 
                     toggleModalRed40();
-                    colour = 'black';
+                    colour = 'black2';
                 }
                 break;
             case 'green':
@@ -392,7 +393,9 @@ function runCalculation(event) {
                 toggleModalOrange();
                 colour = 'black';}
                 break;
-            default:
+            case 'black':
+                toggleModalInstruction();
+                colour = 'black2'
                 break;
         }
     }
@@ -409,6 +412,25 @@ function runCalculation(event) {
         }
     }
 }
+
+//Instruction modal
+/// Function to open the Instruction modal
+function toggleModalInstruction() {
+    var modalInstruction = document.getElementById("modalInstruction");
+    modalInstruction.style.display = 'block';
+}
+
+// Function to close the Instruction modal
+function closeInstructionModal() {
+    var modalInstruction = document.getElementById("modalInstruction");
+    modalInstruction.style.display = 'none';
+}
+
+// span.onclick for the Green modal
+document.getElementById("modalInstructionClose").onclick = function () {
+    closeInstructionModal();
+};
+//End of Instruction Modal
 
 // Modals
     // Start Red Models
