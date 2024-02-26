@@ -37,6 +37,55 @@ html{
     padding-top: 2vh;
 }
 
+/* Common Modal Content */
+.common-modal-content {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    overflow: auto;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Common Modal Close Button Styles */
+.common-close-btn {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 2vh;
+    right: 2vh;
+    z-index: 5;
+    cursor: pointer;
+}
+
+/* Common Modal Close Image Styles */
+.common-close-img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Common Modal Image Styles */
+.common-modal-content img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Black Modal Content Styles */
+.black-modal-content {
+    background-color: black;
+}
+
+/* Near Modal Content Styles */
+.near-modal-content {
+    background-color: #66FF66;
+}
+
 /* <moreOptions> */
 .moreOptions {
     /* Button */
@@ -219,6 +268,23 @@ html{
     max-width: 110%;
     max-height: 100%;
     object-fit: contain;
+}
+
+#modalMap {
+    position: fixed;
+    /* Add other necessary styles for your modal */
+}
+
+.closeMap {
+    position: absolute;
+    top: 10px; /* Adjust the top distance as needed */
+    right: 10px; /* Adjust the right distance as needed */
+    z-index: 5;
+}
+
+.closeMap img {
+    width: 20px; /* Adjust the width as needed to scale it down */
+    height: 20px; /* Adjust the height as needed to scale it down */
 }
 /* End of Map Modal */
 
