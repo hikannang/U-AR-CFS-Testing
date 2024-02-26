@@ -1,7 +1,7 @@
 var loadingTimeout;
 var distance; //Declaring this as a global Variable instead
 var modal;
-var colour = 'black';
+var colour = 'black2';
 var modalDisplayed = false;
 
 
@@ -355,6 +355,12 @@ function runCalculation(event) {
 
     if (colour != 'black') {
         switch (colour) {
+            case 'black2':
+                { 
+                    toggleModalI();
+                    colour = 'black';
+                }
+                break;            
             case 'red':
                 if (distance < 20000){ 
                     toggleModalRed120();
@@ -369,7 +375,13 @@ function runCalculation(event) {
                 break;
             case 'red3':
                 if (distance <= 40){ 
-                    toggleModalRed40();
+                    toggleModalRed40(); //Photoframe
+                    colour = 'red4';
+                }
+                break;
+            case 'red4':
+                if (distance <= 15){ 
+                    toggleModalRed15();
                     colour = 'black';
                 }
                 break;
@@ -466,6 +478,23 @@ function runCalculation(event) {
         }
     }
 }   
+
+//Toggle Modal Instructions
+    function toggleModalI() {
+        var modalI = document.getElementById("modalI");
+        modalI.style.display = 'block';
+    }
+
+//Functions to close the red modals
+    function closeIModal() {
+        var modalI = document.getElementById("modalI");
+        modalI.style.display = 'none';
+    }
+
+    // span.onclick for the red modal
+    document.getElementById("modalIClose").onclick = function () {
+        closeIModal();
+    };
 
 
 // Modals

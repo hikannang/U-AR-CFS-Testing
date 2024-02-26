@@ -143,8 +143,7 @@ html{
     top: 5vh;
     right: 10vw;
     z-index: 1000;
-    cursor: pointer;
-    color: white;
+    opacity: 1;
 }
 
 .modal-content span.close img {
@@ -185,7 +184,7 @@ html{
     right: 10vw;
     z-index: 3;
     cursor: pointer;
-    color: red;
+    opacity: 1;
 }
 
 .base-modal-content span.close img {
@@ -225,7 +224,7 @@ html{
     right: 10vw;
     z-index: 3;
     cursor: pointer;
-    color: red;
+    opacity: 1;
 }
 
 .base-modal-content span.close img {
@@ -267,7 +266,7 @@ html{
     right: 10vw;
     z-index: 3;
     cursor: pointer;
-    color: red;
+    opacity: 1;
 }
 
 .near-modal-content span.close img {
@@ -365,9 +364,10 @@ html{
 }
 
 .red-text {
-    color: red;
+    color: orangered;
     font-size: 1em;
     margin-bottom: 5px; /* Adjust the margin between red and black text as needed */
+    background-color: black;
 }
 
 .black-text {
