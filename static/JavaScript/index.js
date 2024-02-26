@@ -418,25 +418,28 @@ function runCalculation(event) {
                 }
                 break;
             case 'red2':
-                if (distance > 40 && distance < 80){ 
+                if (distance < 80){ 
                     toggleModalRed80();
                     colour = 'red3';
                 }
                 break;
             case 'red3':
-                if (distance > 15 && distance < 40){ 
+                if (distance < 40){ 
                     showRed();
                     hideAllElements();
                     toggleModalRed40(); //Picture Frame
                     colour = 'red4';
                 }
-                break;
+                break; 
             case 'red4':
-                if (distance < 15){ 
+                if (distance <= 15){ 
                     hideRed();
                     toggleModalRed15();
                     showAllElements();
-                    colour = 'red3';
+                }else if(distance > 15){
+                    showRed();
+                    hideAllElements();
+                    toggleModalRed40(); //Picture Frame
                 }
                 break;
             case 'green':
