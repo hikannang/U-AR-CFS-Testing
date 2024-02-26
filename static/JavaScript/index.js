@@ -2,6 +2,10 @@ var loadingTimeout;
 var distance; //Declaring this as a global Variable instead
 var modal;
 var colour = 'white';
+var target = {
+    latitude: 0,
+    longitude: 0
+};
 
 
 // Add this function at the beginning of your script
@@ -272,6 +276,10 @@ function selectOrange(){
 
 function selectWhite(){
 
+    startCompass()
+    target.latitude = target.latitude;
+    target.longitude = target.longitude;
+
     if(document.getElementById('red')){
         // Turning Red Off
         document.getElementById('red').id = 'redOff';
@@ -390,6 +398,16 @@ function runCalculation(event) {
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     distance = R * c; // Distance in km
     distance = distance * 1000; // Convert to meters
+
+    var distanceElement = document.getElementById("distanceFromTarget");
+
+        if (distance <= 20000) {
+            // Display the actual distance
+            distanceElement.innerHTML = Math.floor(distance) + "m to destination!";
+        } else {
+            // Display '0.00m' for distances above 20,000 meters
+            distanceElement.innerHTML = 'Please Select Destination!';
+        }
 
     if (colour != 'black') {
         switch (colour) {
@@ -515,15 +533,6 @@ function runCalculation(event) {
                 break;
         }
     }
-    var distanceElement = document.getElementById("distanceFromTarget");
-
-        if (distance <= 20000) {
-            // Display the actual distance
-            distanceElement.innerHTML = Math.floor(distance) + "m to destination!";
-        } else {
-            // Display '0.00m' for distances above 20,000 meters
-            distanceElement.innerHTML = 'Please Select Destination!';
-        }
     }
 }   
 
