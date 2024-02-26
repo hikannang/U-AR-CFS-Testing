@@ -31,11 +31,12 @@ function hideLoadingScreen() {
 function selectRed(){
     //Bicycle Crossing
     
-     //My Office
+     //My Office,
+
 
      startCompass()
-     target.latitude = 1.401326;
-     target.longitude = 103.749466;
+     target.latitude = 1.401304;
+     target.longitude = 103.749401;
 
     showLoadingScreen();
 
@@ -45,7 +46,7 @@ function selectRed(){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red');
-        content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="15 15 15" gps-projected-entity-place="latitude: 1.401326; longitude: 103.749466"></a-image>';
+        content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="15 15 15" gps-projected-entity-place="latitude: 1.401304; longitude: 103.749401"></a-image>';
     }
 
     if(document.getElementById('green')){
