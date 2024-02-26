@@ -570,6 +570,18 @@ function toggleModalRed40() {
     var modalRed40 = document.getElementById("modalRed40");
     modalRed40.style.display = 'block';
 }
+
+function toggleModalRed40() {
+    var modalRed120 = document.getElementById("modalRed120");
+    modalRed120.style.display = 'none';
+    var modalRed80 = document.getElementById("modalRed80");
+    modalRed80.style.display = 'none';
+    var modalRed40 = document.getElementById("modalRed40");
+    modalRed40.style.display = 'none';
+    var modalRed15 = document.getElementById("modalRed15");
+    modalRed15.style.display = 'block';
+}
+
 //Functions to close the red modals
 function closeRedModal120() {
     var modalRed120 = document.getElementById("modalRed120");
@@ -602,6 +614,17 @@ function closeRedModal40() {
 document.getElementById("modalRedClose40").onclick = function () {
     closeRedModal40();
 };
+
+// Function to close the red modal
+function closeRedModal15() {
+    var modalRed15 = document.getElementById("modalRed40");
+    modalRed15.style.display = 'none';
+}
+
+// span.onclick for the red modal
+document.getElementById("modalRedClose15").onclick = function () {
+    closeRedModal15();
+};
 //Red Modal End
 
 // Start Green Models
@@ -626,6 +649,18 @@ document.getElementById("modalRedClose40").onclick = function () {
         var modalGreen40 = document.getElementById("modalGreen40");
         modalGreen40.style.display = 'block';
     }
+
+    function toggleModalGreen15() {
+        var modalGreen120 = document.getElementById("modalGreen120");
+        modalGreen120.style.display = 'none';
+        var modalGreen80 = document.getElementById("modalGreen80");
+        modalGreen80.style.display = 'none';
+        var modalGreen40 = document.getElementById("modalGreen40");
+        modalGreen40.style.display = 'none';
+        var modalGreen15 = document.getElementById("modalGreen15");
+        modalGreen40.style.display = 'block';
+    }
+
     //Functions to close the Green modals
     function closeGreenModal120() {
         var modalGreen120 = document.getElementById("modalGreen120");
@@ -657,6 +692,16 @@ document.getElementById("modalRedClose40").onclick = function () {
     // span.onclick for the Green modal
     document.getElementById("modalGreenClose40").onclick = function () {
         closeGreenModal40();
+    };
+
+    function closeGreenModal15() {
+        var modalGreen40 = document.getElementById("modalGreen40");
+        modalGreen15.style.display = 'none';
+    }
+    
+    // span.onclick for the Green modal
+    document.getElementById("modalGreenClose15").onclick = function () {
+        closeGreenModal15();
     };
     
     //Green Modal End
