@@ -41,7 +41,6 @@ function selectRed(){
     colour = 'red';
 
     if (document.getElementById('redOff')) {
-        
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red');
@@ -274,48 +273,6 @@ function selectOrange(){
 
 }
 
-function selectWhite(){
-
-    startCompass()
-    target.latitude = target.latitude;
-    target.longitude = target.longitude;
-
-    if(document.getElementById('red')){
-        // Turning Red Off
-        document.getElementById('red').id = 'redOff';
-        var content = document.getElementById('redOff')
-        content.innerHTML = '<a-entity id="redOff"></a-entity>'
-    }
-
-    if(document.getElementById('green')){
-        // Turning Green Off
-        document.getElementById('green').id = 'greenOff';
-        var content = document.getElementById('greenOff')
-        content.innerHTML = '<a-entity id="greenOff"></a-entity>'
-    }
-
-    if(document.getElementById('yellow')){
-        // Turning yellow Off
-        document.getElementById('yellow').id = 'yellowOff';
-        var content = document.getElementById('yellowOff')
-        content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
-    }
-
-    if(document.getElementById('blue')){
-        // Turning blue Off
-        document.getElementById('blue').id = 'blueOff';
-        var content = document.getElementById('blueOff')
-        content.innerHTML = '<a-entity id="blueOff"></a-entity>'
-    }
-
-    if(document.getElementById('orange')){
-        // Turning orange Off
-        document.getElementById('orange').id = 'orangeOff';
-        var content = document.getElementById('orangeOff')
-        content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
-    }
-
-}
 
 
 
