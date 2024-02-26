@@ -32,9 +32,10 @@ function selectRed(){
     //Bicycle Crossing
     
      //My Office
+
      startCompass()
-     target.latitude = 1.308544;
-     target.longitude = 103.849942;
+     target.latitude = 1.401326;
+     target.longitude = 103.749466;
 
     showLoadingScreen();
 
@@ -44,7 +45,7 @@ function selectRed(){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red');
-        content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942"></a-image>';
+        content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="15 15 15" gps-projected-entity-place="latitude: 1.401326; longitude: 103.749466"></a-image>';
     }
 
     if(document.getElementById('green')){
@@ -399,13 +400,7 @@ function runCalculation(event) {
 
     var distanceElement = document.getElementById("distanceFromTarget");
 
-        if (distance <= 20000) {
-            // Display the actual distance
-            distanceElement.innerHTML = Math.floor(distance) + "m to destination!";
-        } else {
-            // Display '0.00m' for distances above 20,000 meters
-            distanceElement.innerHTML = 'Please Select Destination!';
-        }
+        
 
     if (colour != 'black') {
         switch (colour) {
@@ -417,14 +412,12 @@ function runCalculation(event) {
                 break;
             case 'red':
                 if (distance < 15000){
-                    showCompassAndTranslucentBox(); 
                     toggleModalRed120();
                     colour = 'red2';
                 }
                 break;
             case 'red2':
-                if (distance <= 80){
-                    showCompassAndTranslucentBox(); 
+                if (distance > 40 && distance <= 80){ 
                     toggleModalRed80();
                     colour = 'red3';
                 }
@@ -432,8 +425,8 @@ function runCalculation(event) {
             case 'red3':
                 if (distance > 15 && distance <= 40){ 
                     showRed();
-                    toggleModalRed40(); //Picture Frame
                     hideAllElements();
+                    toggleModalRed40(); //Picture Frame
                     colour = 'red4';
                 }
                 break;
@@ -530,6 +523,13 @@ function runCalculation(event) {
             default:
                 break;
         }
+    }
+    if (distance <= 20000) {
+        // Display the actual distance
+        distanceElement.innerHTML = Math.floor(distance) + "m to destination!";
+    } else {
+        // Display '0.00m' for distances above 20,000 meters
+        distanceElement.innerHTML = 'Please Select Destination!';
     }
     }
 }   
