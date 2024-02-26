@@ -24,9 +24,9 @@ html{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: url(./static/images/icons/arrow.png)
+    background: url("https://www.iconpacks.net/icons/2/free-north-arrow-icon-2235-thumb.png")
         center no-repeat;
-    background-size: 200% 200%;
+    background-size: 100% 100%;
     z-index: 2000;
     position: relative;
 }
@@ -404,21 +404,20 @@ html{
     max-width: 30%; /* Adjust the maximum width of images as needed */
 }
 
-
-#distanceFromTarget{
-    color: yellow;
-    font-size: 1.5em;
-    margin-top: 4vh;
-    background-color: black;
-    /* border: 2px solid yellow;
-    padding: 10px;
-    display: inline-block; */
-}
-
 .additional-text {
     text-align: center; /* or any other desired alignment */
     font-size: 10px;    /* adjust the font size as needed */
     margin-top: 9.5vh;     /* adjust the top margin as needed */
+}
+
+#distanceFromTarget{
+    color: black;
+    font-size: 1.5em;
+    margin-top: 6vh;
+    background-color: rgba(0, 255, 0, 0.512);
+    /* border: 2px solid yellow;
+    padding: 10px;
+    display: inline-block; */
 }
 
 .uiDisplay{

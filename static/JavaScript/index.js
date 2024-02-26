@@ -2,7 +2,6 @@ var loadingTimeout;
 var distance; //Declaring this as a global Variable instead
 var modal;
 var colour = 'white';
-var modalDisplayed = false;
 
 
 // Add this function at the beginning of your script
@@ -272,12 +271,6 @@ function selectOrange(){
 }
 
 function selectWhite(){
-    //YellowBox
-
-    //Near Capitol Tower
-    startCompass()
-    target.latitude = target.latitude;
-    target.longitude = target.longitude;
 
     if(document.getElementById('red')){
         // Turning Red Off
@@ -424,7 +417,7 @@ function runCalculation(event) {
                 if (distance > 15 && distance <= 40){ 
                     selectRed();
                     toggleModalRed40(); //Picture Frame
-                    hideCompassAndTranslucentBox();
+                    closeElements();
                     colour = 'red4';
                 }
                 break;
@@ -432,7 +425,7 @@ function runCalculation(event) {
                 if (distance <= 15){ 
                     selectWhite();
                     toggleModalRed15();
-                    showCompassDivAndChildren();
+                    openElements();
                     colour = 'red3';
                 }
                 break;
@@ -449,9 +442,19 @@ function runCalculation(event) {
                 }
                 break;
             case 'green3':
-                if (distance <= 40){ 
-                    toggleModalGreen40();
-                    colour = 'black';
+                if (distance > 15 && distance <= 40){ 
+                    selectGreen();
+                    toggleModalGreen40(); //Picture Frame
+                    closeElements();
+                    colour = 'green4';
+                }
+                break;
+            case 'green4':
+                if (distance <= 15){ 
+                    selectWhite();
+                    toggleModalGreen15();
+                    openElements();
+                    colour = 'green3';
                 }
                 break;
             case 'yellow':
@@ -539,13 +542,20 @@ document.getElementsByClassName("closeI")[0].onclick = function () {
     modalI.style.display = "none";
 };
 
-// starts updating the UI.
-function updateUI() {
-    // Update arrow rotation
-    const arrow = document.querySelector(".arrow");
-    arrow.style.transform = `translate(-50%, -50%) rotate(${direction}deg)`;
-    requestAnimationFrame(updateUI);
+function toggleModal(){
+    //Get the modal
+    modalMap = document.getElementById("modalMap");
+    modalMap.style.display="block";
 }
+
+function closeModal(){
+    modalMap = document.getElementById("modalMap");
+    modalMap.style.display='none';
+}
+
+document.getElementsByClassName("close")[0].onclick = function () {
+    modalMap.style.display = "none";
+};
 
 // Modals
     // Start Red Models
@@ -571,7 +581,7 @@ function toggleModalRed40() {
     modalRed40.style.display = 'block';
 }
 
-function toggleModalRed40() {
+function toggleModalRed15() {
     var modalRed120 = document.getElementById("modalRed120");
     modalRed120.style.display = 'none';
     var modalRed80 = document.getElementById("modalRed80");
@@ -617,7 +627,7 @@ document.getElementById("modalRedClose40").onclick = function () {
 
 // Function to close the red modal
 function closeRedModal15() {
-    var modalRed15 = document.getElementById("modalRed40");
+    var modalRed15 = document.getElementById("modalRed15");
     modalRed15.style.display = 'none';
 }
 
@@ -658,7 +668,7 @@ document.getElementById("modalRedClose15").onclick = function () {
         var modalGreen40 = document.getElementById("modalGreen40");
         modalGreen40.style.display = 'none';
         var modalGreen15 = document.getElementById("modalGreen15");
-        modalGreen40.style.display = 'block';
+        modalGreen15.style.display = 'block';
     }
 
     //Functions to close the Green modals
@@ -695,7 +705,7 @@ document.getElementById("modalRedClose15").onclick = function () {
     };
 
     function closeGreenModal15() {
-        var modalGreen40 = document.getElementById("modalGreen40");
+        var modalGreen15 = document.getElementById("modalGreen15");
         modalGreen15.style.display = 'none';
     }
     
@@ -876,31 +886,50 @@ document.getElementById("modalRedClose15").onclick = function () {
     };
     //Orange Modal End
 
-    function hideCompassAndTranslucentBox() {
-        var compassDiv = document.getElementById('compassDiv');
-        var translucentBox = document.querySelector('.translucent-box');
-        
-        if (compassDiv) {
-            compassDiv.style.display = 'none';
-        }
-        
-        if (translucentBox) {
-            translucentBox.style.display = 'none';
+    function showElementAndDescendants(element) {
+        element.style.display = ''; // Revert to default display style, or you can set it to 'block', 'flex', etc.
+    
+        // Show all child elements
+        var children = element.children;
+        for (var i = 0; i < children.length; i++) {
+            showElementAndDescendants(children[i]);
         }
     }
     
-    // Function to show compassDiv and translucent-box and their children
-    function showCompassAndTranslucentBox() {
-        var compassDiv = document.getElementById('compassDiv');
-        var translucentBox = document.querySelector('.translucent-box');
-        
-        if (compassDiv) {
-            compassDiv.style.display = 'block';
+    function hideElementAndDescendants(element) {
+        element.style.display = 'none';
+    
+        // Hide all child elements
+        var children = element.children;
+        for (var i = 0; i < children.length; i++) {
+            hideElementAndDescendants(children[i]);
         }
-        
-        if (translucentBox) {
-            translucentBox.style.display = 'block';
-        }
+    }
+    
+    function openElements() {
+        // Show top-box and its descendants
+        showElementAndDescendants(document.querySelector('.top-box'));
+    
+        // Show bottom-box and its descendants
+        showElementAndDescendants(document.querySelector('.bottom-box'));
+    
+        // Show compassDiv and its descendants
+        showElementAndDescendants(document.getElementById('compassDiv'));
+    
+        // Additional elements can be opened here if needed
+    }
+    
+    function closeElements() {
+        // Hide top-box and its descendants
+        hideElementAndDescendants(document.querySelector('.top-box'));
+    
+        // Hide bottom-box and its descendants
+        hideElementAndDescendants(document.querySelector('.bottom-box'));
+    
+        // Hide compassDiv and its descendants
+        hideElementAndDescendants(document.getElementById('compassDiv'));
+    
+        // Additional elements can be closed here if needed
     }
 
 function toggleCircles() {
@@ -918,19 +947,12 @@ function toggleCircles() {
     }
 }
 
-    function toggleModal(){
-        //Get the modal
-        modalMap = document.getElementById("modalMap");
-        modalMap.style.display="block";
-    }
-
-    function closeModal(){
-        modalMap = document.getElementById("modalMap");
-        modalMap.style.display='none';
-    }
-
-    document.getElementsByClassName("close")[0].onclick = function () {
-        modalMap.style.display = "none";
-    };
+// starts updating the UI.
+function updateUI() {
+    // Update arrow rotation
+    const arrow = document.querySelector(".arrow");
+    arrow.style.transform = `translate(-50%, -50%) rotate(${direction}deg)`;
+    requestAnimationFrame(updateUI);
+}
 
 init();
