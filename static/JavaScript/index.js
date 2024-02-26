@@ -354,6 +354,12 @@ function runCalculation(event) {
 
     if (colour != 'black') {
         switch (colour) {
+            case 'white':
+                {
+                    toggleIModal();
+                    colour = 'black';
+                }
+                break;
             case 'red':
                 if (distance < 20000){ 
                     toggleModalRed120();
@@ -442,12 +448,6 @@ function runCalculation(event) {
                 if (distance <= 40){ 
                     toggleModalOrange40();
                     colour = 'black';
-                }
-                break;
-            case 'black':
-                {
-                // toggleModalInstruction();
-                colour = 'black2'
                 }
                 break;
             default:
@@ -769,25 +769,33 @@ function toggleCircles() {
 
     function toggleModal(){
         //Get the modal
-        modal = document.getElementById("modalMap");
-        modal.style.display="block";
+        modalMap = document.getElementById("modalMap");
+        modalMap.style.display="block";
     }
-
-    var span = document.getElementsByClassName("close")[0];
 
     function closeModal(){
-        modal.style.display='none';
+        modalMap = document.getElementById("modalMap");
+        modalMap.style.display='none';
     }
 
-    span.onclick = function (){
-        modal.style.display = "none";
+    document.getElementsByClassName("close")[0].onclick = function () {
+        modalMap.style.display = "none";
+    };
+
+    function toggleIModal(){
+        //Get the modal
+        modalI = document.getElementById("modalI");
+        modalI.style.display="block";
     }
 
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
+    function closeModalI(){
+        modalI = document.getElementById("modalI");
+        modalI.style.display='none';
     }
+
+    document.getElementsByClassName("closeI")[0].onclick = function () {
+        modalI.style.display = "none";
+    };
 
     // starts updating the UI.
     function updateUI() {
