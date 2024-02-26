@@ -78,7 +78,6 @@ html{
 /* </moreOptions> */
 
 /* <mapIcon> */
-
 .maps {
     /* Button */
     position: fixed;
@@ -119,6 +118,62 @@ html{
 }
 /* </mapIcon> */
 
+/* <helpIcon> */
+.help {
+    /* Button */
+    position: fixed;
+    width: 16vw;
+    height: 16vw;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    top: 12vh;
+    right: 2vw;
+    /* margin: auto; */
+    z-index: 2;
+    /* position: relative; */
+    
+    background-color: white;
+}
+
+.helpDot {
+    /* Icon */
+    position: absolute;
+    width: 12vw; /* Adjust the width and height as needed */
+    height: 12vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: contain;
+    z-index: 2;
+    cursor: pointer; /* Add cursor pointer for better UX */
+}
+
+#helpDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-right: 10vw;
+    margin-top: 10vw;
+}
+
+#modalI {
+    position: fixed;
+    /* Add other necessary styles for your modal */
+}
+
+.closeI {
+    position: absolute;
+    top: 10px; /* Adjust the top distance as needed */
+    right: 10px; /* Adjust the right distance as needed */
+    z-index: 5;
+}
+
+.closeI img {
+    width: 20px; /* Adjust the width as needed to scale it down */
+    height: 20px; /* Adjust the height as needed to scale it down */
+}
+/* </mapIcon> */
+
 /* <Map Modal> */
 .modal-content {
     width: 100%;
@@ -149,10 +204,15 @@ html{
 }
 
 .modal-content span.close img {
-    /* Adjust the size of the image within the span */
-    width: 100%; /* Set the desired width */
-    height: 100%; /* Set the desired height */
-    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 5vh;
+    right: 10vw;
+    z-index: 3;
+    cursor: pointer;
+    color: red;
+    
 }
 
 .modal-content img {

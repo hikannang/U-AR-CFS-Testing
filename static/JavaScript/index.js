@@ -24,6 +24,7 @@ function hideLoadingScreen() {
     clearTimeout(loadingTimeout);
 }
 
+
 function selectRed(){
     //Bicycle Crossing
     
@@ -466,6 +467,28 @@ function runCalculation(event) {
     }
 }   
 
+function toggleIModal(){
+    //Get the modal
+    modalI = document.getElementById("modalI");
+    modalI.style.display="block";
+}
+
+function closeModalI(){
+    modalI = document.getElementById("modalI");
+    modalI.style.display='none';
+}
+
+document.getElementsByClassName("closeI")[0].onclick = function () {
+    modalI.style.display = "none";
+};
+
+// starts updating the UI.
+function updateUI() {
+    // Update arrow rotation
+    const arrow = document.querySelector(".arrow");
+    arrow.style.transform = `translate(-50%, -50%) rotate(${direction}deg)`;
+    requestAnimationFrame(updateUI);
+}
 
 // Modals
     // Start Red Models
@@ -781,28 +804,5 @@ function toggleCircles() {
     document.getElementsByClassName("close")[0].onclick = function () {
         modalMap.style.display = "none";
     };
-
-    function toggleIModal(){
-        //Get the modal
-        modalI = document.getElementById("modalI");
-        modalI.style.display="block";
-    }
-
-    function closeModalI(){
-        modalI = document.getElementById("modalI");
-        modalI.style.display='none';
-    }
-
-    document.getElementsByClassName("closeI")[0].onclick = function () {
-        modalI.style.display = "none";
-    };
-
-    // starts updating the UI.
-    function updateUI() {
-        // Update arrow rotation
-        const arrow = document.querySelector(".arrow");
-        arrow.style.transform = `translate(-50%, -50%) rotate(${direction}deg)`;
-        requestAnimationFrame(updateUI);
-    }
 
 init();
