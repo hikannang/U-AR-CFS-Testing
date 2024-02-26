@@ -142,7 +142,7 @@ html{
     position: absolute;
     top: 5vh;
     right: 10vw;
-    z-index: 1000;
+    z-index: 5;
     opacity: 1;
 }
 
@@ -150,7 +150,8 @@ html{
     /* Adjust the size of the image within the span */
     width: 100%; /* Set the desired width */
     height: 100%; /* Set the desired height */
-    z-index: 1000;
+    z-index: 5;
+
 }
 
 .modal-content img {
