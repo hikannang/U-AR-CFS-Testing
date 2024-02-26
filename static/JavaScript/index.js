@@ -76,6 +76,24 @@ function selectRed(){
     }
 }
 
+function hideRed(){
+    if(document.getElementById('red')){
+        // Turning Red Off
+        document.getElementById('red').id = 'redOff';
+        var content = document.getElementById('redOff')
+        content.innerHTML = '<a-entity id="redOff"></a-entity>'
+    }
+}
+
+function showRed(){
+    if (document.getElementById('redOff')) {
+        // Turning Red On
+        document.getElementById('redOff').id = 'red';
+        var content = document.getElementById('red');
+        content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942"></a-image>';
+    }
+}
+
 function selectGreen(){
     
     //In front of lao pa sat ,
@@ -125,6 +143,28 @@ function selectGreen(){
         content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
     }
 }
+
+function showGreen(){
+    if (document.getElementById('greenOff')){
+        // Turning Green On
+        document.getElementById('greenOff').id = 'green';
+        var content = document.getElementById('green')
+        // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
+        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="12 12 12" gps-projected-entity-place="latitude: 1.281238; longitude: 103.850447"></a-image>';
+        // Hide Loading Screen after 2 seconds
+    }
+}
+
+function hideGreen(){
+    if(document.getElementById('green')){
+        // Turning Green Off
+        document.getElementById('green').id = 'greenOff';
+        var content = document.getElementById('greenOff')
+        content.innerHTML = '<a-entity id="greenOff"></a-entity>'
+    }
+}
+
+
 
 function selectYellow(){
     //Foot Path
@@ -271,6 +311,7 @@ function selectOrange(){
         content.innerHTML = '<a-entity id="blueOff"></a-entity>'
     }
 
+
 }
 
 
@@ -390,17 +431,17 @@ function runCalculation(event) {
                 break;
             case 'red3':
                 if (distance > 15 && distance <= 40){ 
-                    selectRed();
+                    showRed();
                     toggleModalRed40(); //Picture Frame
-                    closeElements();
+                    hideAllElements();
                     colour = 'red4';
                 }
                 break;
             case 'red4':
                 if (distance <= 15){ 
-                    selectWhite();
+                    hideRed();
                     toggleModalRed15();
-                    openElements();
+                    showAllElements();
                     colour = 'red3';
                 }
                 break;
@@ -418,17 +459,17 @@ function runCalculation(event) {
                 break;
             case 'green3':
                 if (distance > 15 && distance <= 40){ 
-                    selectGreen();
+                    showGreen();
                     toggleModalGreen40(); //Picture Frame
-                    closeElements();
+                    hideAllElements();
                     colour = 'green4';
                 }
                 break;
             case 'green4':
                 if (distance <= 15){ 
-                    selectWhite();
+                    hideGreen();
                     toggleModalGreen15();
-                    openElements();
+                    showAllElements();
                     colour = 'green3';
                 }
                 break;
@@ -852,50 +893,24 @@ document.getElementById("modalRedClose15").onclick = function () {
     };
     //Orange Modal End
 
-    function showElementAndDescendants(element) {
-        element.style.display = ''; // Revert to default display style, or you can set it to 'block', 'flex', etc.
+    function showAllElements() {
+        var compassDiv = document.getElementById('compassDiv');
+        var topBox = document.querySelector('.translucent-box.top-box');
+        var bottomBox = document.querySelector('.translucent-box.bottom-box');
     
-        // Show all child elements
-        var children = element.children;
-        for (var i = 0; i < children.length; i++) {
-            showElementAndDescendants(children[i]);
-        }
+        compassDiv.style.display = 'block';
+        topBox.style.display = 'block';
+        bottomBox.style.display = 'block';
     }
     
-    function hideElementAndDescendants(element) {
-        element.style.display = 'none';
+    function hideAllElements() {
+        var compassDiv = document.getElementById('compassDiv');
+        var topBox = document.querySelector('.translucent-box.top-box');
+        var bottomBox = document.querySelector('.translucent-box.bottom-box');
     
-        // Hide all child elements
-        var children = element.children;
-        for (var i = 0; i < children.length; i++) {
-            hideElementAndDescendants(children[i]);
-        }
-    }
-    
-    function openElements() {
-        // Show top-box and its descendants
-        showElementAndDescendants(document.querySelector('.top-box'));
-    
-        // Show bottom-box and its descendants
-        showElementAndDescendants(document.querySelector('.bottom-box'));
-    
-        // Show compassDiv and its descendants
-        showElementAndDescendants(document.getElementById('compassDiv'));
-    
-        // Additional elements can be opened here if needed
-    }
-    
-    function closeElements() {
-        // Hide top-box and its descendants
-        hideElementAndDescendants(document.querySelector('.top-box'));
-    
-        // Hide bottom-box and its descendants
-        hideElementAndDescendants(document.querySelector('.bottom-box'));
-    
-        // Hide compassDiv and its descendants
-        hideElementAndDescendants(document.getElementById('compassDiv'));
-    
-        // Additional elements can be closed here if needed
+        compassDiv.style.display = 'none';
+        topBox.style.display = 'none';
+        bottomBox.style.display = 'none';
     }
 
 function toggleCircles() {
