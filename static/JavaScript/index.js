@@ -1,7 +1,7 @@
 var loadingTimeout;
 var distance; //Declaring this as a global Variable instead
 var modal;
-var colour = 'black';
+var colour = 'white';
 var modalDisplayed = false;
 
 
