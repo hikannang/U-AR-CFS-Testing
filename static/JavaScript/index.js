@@ -1,7 +1,7 @@
 var loadingTimeout;
 var distance; //Declaring this as a global Variable instead
 var modal;
-var colour = 'black2';
+var colour = 'black';
 var modalDisplayed = false;
 
 
@@ -27,10 +27,10 @@ function hideLoadingScreen() {
 function selectRed(){
     //Bicycle Crossing
     
-    //My Office
+    //Stamford Road x Esplanade Drive
     startCompass()
-    target.latitude = 1.308544;
-    target.longitude = 103.849942;
+    target.latitude = 1.291461;
+    target.longitude = 103.854836;
 
     showLoadingScreen();
 
@@ -41,7 +41,7 @@ function selectRed(){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red');
-        content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="20 20 20" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942"></a-image>';
+        content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.291461; longitude: 103.854836"></a-image>';
     }
 
     if(document.getElementById('green')){
@@ -74,12 +74,11 @@ function selectRed(){
 }
 
 function selectGreen(){
-    //Cycling Path
-
-    //Outside office 
+    
+    //In front of lao pa sat ,
     startCompass()
-    target.latitude = 1.308544;
-    target.longitude = 103.849942;
+    target.latitude = 1.281238;
+    target.longitude = 103.850447;
 
     showLoadingScreen();
 
@@ -91,7 +90,7 @@ function selectGreen(){
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
         // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942"></a-image>';
+        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="12 12 12" gps-projected-entity-place="latitude: 1.281238; longitude: 103.850447"></a-image>';
         // Hide Loading Screen after 2 seconds
     }
 
@@ -127,10 +126,10 @@ function selectGreen(){
 function selectYellow(){
     //Foot Path
 
-    //Outside office 
+    //In front of clifford centre
     startCompass()
-    target.latitude = 1.308544;
-    target.longitude = 103.849942;
+    target.latitude = 1.284529;
+    target.longitude = 103.852975;
 
     showLoadingScreen();
 
@@ -140,7 +139,7 @@ function selectYellow(){
         // Turning Yellow On
         document.getElementById('yellowOff').id = 'yellow';
         var content = document.getElementById('yellow')
-        content.innerHTML = '<a-image  id="yellow" src="./static/images/2D_Assets_low_res/FootPath.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942"></a-image>';
+        content.innerHTML = '<a-image  id="yellow" src="./static/images/2D_Assets_low_res/FootPath.png" look-at="[gps-projected-camera]" scale="14 14 14" gps-projected-entity-place="latitude: 1.284529; longitude: 103.852975"></a-image>';
     }   
 
     if(document.getElementById('red')){
@@ -175,10 +174,10 @@ function selectYellow(){
 function selectBlue(){
     //Wayfinding
     
-    //Outside office 
+    //St Andrew's Road (Padang)
     startCompass()
-    target.latitude = 1.308544;
-    target.longitude = 103.849942;
+    target.latitude = 1.289253;
+    target.longitude = 103.851488;
 
     showLoadingScreen();
 
@@ -188,7 +187,7 @@ function selectBlue(){
         // Turning Blue On
         document.getElementById('blueOff').id = 'blue';
         var content = document.getElementById('blue')
-        content.innerHTML = '<a-image  id="blue" src="./static/images/2D_Assets_low_res/Wayfinding_grabbing.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942"></a-image>';
+        content.innerHTML = '<a-image  id="blue" src="./static/images/2D_Assets_low_res/Wayfinding_grabbing.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.289253; longitude: 103.851488"></a-image>';
     }
     
 
@@ -225,10 +224,10 @@ function selectBlue(){
 function selectOrange(){
     //YellowBox
 
-    //My Office
+    //Near Capitol Tower
     startCompass()
-    target.latitude = 1.308524;
-    target.longitude = 103.849888;
+    target.latitude = 1.277589;
+    target.longitude = 103.847113;
 
     showLoadingScreen();
 
@@ -238,7 +237,7 @@ function selectOrange(){
         // Turning orange On
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange')
-        content.innerHTML = '<a-image  id="orange" src="./static/images/2D_Assets_low_res/YellowBox_sitting.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942"></a-image>';
+        content.innerHTML = '<a-image  id="orange" src="./static/images/2D_Assets_low_res/YellowBox_sitting.png" look-at="[gps-projected-camera]" scale="20 20 20" gps-projected-entity-place="atitude: 1.277589; longitude: 103.847113"></a-image>';
     }
 
     if(document.getElementById('red')){
@@ -355,12 +354,6 @@ function runCalculation(event) {
 
     if (colour != 'black') {
         switch (colour) {
-            case 'black2':
-                if (distance > 20000){
-                    toggleModalI120();
-                    colour = 'black';
-                }
-                break;            
             case 'red':
                 if (distance < 20000){ 
                     toggleModalRed120();
@@ -375,13 +368,7 @@ function runCalculation(event) {
                 break;
             case 'red3':
                 if (distance <= 40){ 
-                    toggleModalRed40(); //Photoframe
-                    colour = 'red4';
-                }
-                break;
-            case 'red4':
-                if (distance <= 15){ 
-                    toggleModalRed15();
+                    toggleModalRed40();
                     colour = 'black';
                 }
                 break;
@@ -457,6 +444,12 @@ function runCalculation(event) {
                     colour = 'black';
                 }
                 break;
+            case 'black':
+                {
+                // toggleModalInstruction();
+                colour = 'black2'
+                }
+                break;
             default:
                 break;
         }
@@ -472,23 +465,6 @@ function runCalculation(event) {
         }
     }
 }   
-
-// Modals
-    function toggleModalI120() {
-        var modalI120 = document.getElementById("modalI120");
-        modalI120.style.display = 'block';
-    }
-
-//Functions to close the I modals
-function closeIModal120() {
-    var modalI120 = document.getElementById("modalI120");
-    modalI120.style.display = 'none';
-}
-
-// span.onclick for the I modal
-document.getElementById("modalIClose120").onclick = function () {
-    closeIModal120();
-}
 
 
 // Modals
@@ -810,28 +786,6 @@ function toggleCircles() {
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
-        }
-    }
-
-    function toggleIModal(){
-        //Get the modal
-        modalI = document.getElementById("modalI");
-        modalI.style.display="block";
-    }
-
-    var span = document.getElementsByClassName("close")[0];
-
-    function closeIModal(){
-        modalI.style.display='none';
-    }
-
-    span.onclick = function (){
-        modalI.style.display = "none";
-    }
-
-    window.onclick = function (event) {
-        if (event.target == modalI) {
-            modalI.style.display = "none";
         }
     }
 

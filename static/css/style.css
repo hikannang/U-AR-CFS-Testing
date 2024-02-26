@@ -91,6 +91,7 @@ html{
     /* margin: auto; */
     z-index: 2;
     /* position: relative; */
+    
     background-color: white;
 }
 
@@ -118,7 +119,7 @@ html{
 }
 /* </mapIcon> */
 
-/* Opaque Modals */
+/* <Map Modal> */
 .modal-content {
     width: 100%;
     height: 100%;
@@ -135,19 +136,22 @@ html{
 }
 
 .modal-content span.close {
-    width: 10%;
-    height: 10%;
+    /* Adjust the size of the span */
+    width: 10%; /* Set the desired width */
+    height: 10%; /* Set the desired height */
     position: absolute;
     top: 5vh;
     right: 10vw;
-    z-index: 3;
+    z-index: 1000;
     cursor: pointer;
+    color: white;
     opacity: 1;
 }
 
 .modal-content span.close img {
-    width: 100%;
-    height: 100%;
+    /* Adjust the size of the image within the span */
+    width: 100%; /* Set the desired width */
+    height: 100%; /* Set the desired height */
     z-index: 1000;
 }
 
@@ -156,7 +160,7 @@ html{
     max-height: 100%;
     object-fit: contain;
 }
-/* End of Opaque Modal */
+/* End of Map Modal */
 
 /* Individual Modals */
 .base-modal-content {
@@ -182,7 +186,7 @@ html{
     right: 10vw;
     z-index: 3;
     cursor: pointer;
-    opacity: 1;
+    color: red;
 }
 
 .base-modal-content span.close img {
@@ -222,7 +226,7 @@ html{
     right: 10vw;
     z-index: 3;
     cursor: pointer;
-    opacity: 1;
+    color: red;
 }
 
 .base-modal-content span.close img {
@@ -264,7 +268,7 @@ html{
     right: 10vw;
     z-index: 3;
     cursor: pointer;
-    opacity: 1;
+    color: red;
 }
 
 .near-modal-content span.close img {
@@ -362,10 +366,9 @@ html{
 }
 
 .red-text {
-    color: orangered;
+    color: red;
     font-size: 1em;
     margin-bottom: 5px; /* Adjust the margin between red and black text as needed */
-    background-color: black;
 }
 
 .black-text {
