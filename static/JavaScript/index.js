@@ -473,22 +473,22 @@ function runCalculation(event) {
     }
 }   
 
-//Toggle Modal Instructions
-    function toggleModalI() {
-        var modalI = document.getElementById("modalI");
-        modalI.style.display = 'block';
+// Modals
+    function toggleModalI120() {
+        var modalI120 = document.getElementById("modalI120");
+        modalI120.style.display = 'block';
     }
 
-//Functions to close the red modals
-    function closeIModal() {
-        var modalI = document.getElementById("modalI");
-        modalI.style.display = 'none';
-    }
+//Functions to close the I modals
+function closeIModal120() {
+    var modalI120 = document.getElementById("modalI120");
+    modalI120.style.display = 'none';
+}
 
-    // span.onclick for the red modal
-    document.getElementById("modalIClose").onclick = function () {
-        closeIModal();
-    };
+// span.onclick for the I modal
+document.getElementById("modalIClose120").onclick = function () {
+    closeIModal120();
+}
 
 
 // Modals
@@ -810,6 +810,28 @@ function toggleCircles() {
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
+        }
+    }
+
+    function toggleIModal(){
+        //Get the modal
+        modalI = document.getElementById("modalI");
+        modalI.style.display="block";
+    }
+
+    var span = document.getElementsByClassName("close")[0];
+
+    function closeIModal(){
+        modalI.style.display='none';
+    }
+
+    span.onclick = function (){
+        modalI.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+        if (event.target == modalI) {
+            modalI.style.display = "none";
         }
     }
 
