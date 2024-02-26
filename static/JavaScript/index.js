@@ -28,10 +28,10 @@ function hideLoadingScreen() {
 function selectRed(){
     //Bicycle Crossing
     
-    //Stamford Road x Esplanade Drive
-    startCompass()
-    target.latitude = 1.291461;
-    target.longitude = 103.854836;
+     //My Office
+     startCompass()
+     target.latitude = 1.308544;
+     target.longitude = 103.849942;
 
     showLoadingScreen();
 
@@ -42,7 +42,7 @@ function selectRed(){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red');
-        content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.291461; longitude: 103.854836"></a-image>';
+        content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942"></a-image>';
     }
 
     if(document.getElementById('green')){
