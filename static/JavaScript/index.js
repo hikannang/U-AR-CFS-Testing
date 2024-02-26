@@ -356,8 +356,8 @@ function runCalculation(event) {
     if (colour != 'black') {
         switch (colour) {
             case 'black2':
-                { 
-                    toggleModalI();
+                if (distance > 20000){
+                    toggleModalI120();
                     colour = 'black';
                 }
                 break;            
