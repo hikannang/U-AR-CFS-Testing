@@ -271,6 +271,51 @@ function selectOrange(){
 
 }
 
+function selectWhite(){
+    //YellowBox
+
+    //Near Capitol Tower
+    startCompass()
+    target.latitude = target.latitude;
+    target.longitude = target.longitude;
+
+    if(document.getElementById('red')){
+        // Turning Red Off
+        document.getElementById('red').id = 'redOff';
+        var content = document.getElementById('redOff')
+        content.innerHTML = '<a-entity id="redOff"></a-entity>'
+    }
+
+    if(document.getElementById('green')){
+        // Turning Green Off
+        document.getElementById('green').id = 'greenOff';
+        var content = document.getElementById('greenOff')
+        content.innerHTML = '<a-entity id="greenOff"></a-entity>'
+    }
+
+    if(document.getElementById('yellow')){
+        // Turning yellow Off
+        document.getElementById('yellow').id = 'yellowOff';
+        var content = document.getElementById('yellowOff')
+        content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
+    }
+
+    if(document.getElementById('blue')){
+        // Turning blue Off
+        document.getElementById('blue').id = 'blueOff';
+        var content = document.getElementById('blueOff')
+        content.innerHTML = '<a-entity id="blueOff"></a-entity>'
+    }
+
+    if(document.getElementById('orange')){
+        // Turning orange Off
+        document.getElementById('orange').id = 'orangeOff';
+        var content = document.getElementById('orangeOff')
+        content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
+    }
+
+}
+
 
 
 // ##################################################################################################
@@ -362,21 +407,33 @@ function runCalculation(event) {
                 }
                 break;
             case 'red':
-                if (distance < 20000){ 
+                if (distance < 15000){
+                    showCompassAndTranslucentBox(); 
                     toggleModalRed120();
                     colour = 'red2';
                 }
                 break;
             case 'red2':
-                if (distance <= 80){ 
+                if (distance <= 80){
+                    showCompassAndTranslucentBox(); 
                     toggleModalRed80();
                     colour = 'red3';
                 }
                 break;
             case 'red3':
-                if (distance <= 40){ 
-                    toggleModalRed40();
-                    colour = 'black';
+                if (distance > 15 && distance <= 40){ 
+                    selectRed();
+                    toggleModalRed40(); //Picture Frame
+                    hideCompassAndTranslucentBox();
+                    colour = 'red4';
+                }
+                break;
+            case 'red4':
+                if (distance <= 15){ 
+                    selectWhite();
+                    toggleModalRed15();
+                    showCompassDivAndChildren();
+                    colour = 'red3';
                 }
                 break;
             case 'green':
@@ -772,8 +829,34 @@ document.getElementById("modalRedClose40").onclick = function () {
     document.getElementById("modalOrangeClose40").onclick = function () {
         closeOrangeModal40();
     };
-    
     //Orange Modal End
+
+    function hideCompassAndTranslucentBox() {
+        var compassDiv = document.getElementById('compassDiv');
+        var translucentBox = document.querySelector('.translucent-box');
+        
+        if (compassDiv) {
+            compassDiv.style.display = 'none';
+        }
+        
+        if (translucentBox) {
+            translucentBox.style.display = 'none';
+        }
+    }
+    
+    // Function to show compassDiv and translucent-box and their children
+    function showCompassAndTranslucentBox() {
+        var compassDiv = document.getElementById('compassDiv');
+        var translucentBox = document.querySelector('.translucent-box');
+        
+        if (compassDiv) {
+            compassDiv.style.display = 'block';
+        }
+        
+        if (translucentBox) {
+            translucentBox.style.display = 'block';
+        }
+    }
 
 function toggleCircles() {
     var additionalCircles = document.getElementById("additionalCircles");

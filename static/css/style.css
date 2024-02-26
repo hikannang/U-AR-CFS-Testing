@@ -12,8 +12,9 @@ html{
     /* margin: auto; */
     z-index: 2;
     position: relative;
-    background-color: white;
-
+    top: 4vh;
+    background-color: rgba(0, 255, 0, 0.507);
+    border: 2px solid #000
 }
 
 .arrow {
@@ -23,10 +24,10 @@ html{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: url(https://seekicon.com/free-icon-download/arrow-up_21.svg)
+    background: url(./static/images/icons/arrow.png)
         center no-repeat;
-    background-size: contain;
-    z-index: 2;
+    background-size: 200% 200%;
+    z-index: 2000;
     position: relative;
 }
 
@@ -95,11 +96,12 @@ html{
     height: 13vw;
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    top: 2vh;
+    top: 6vh;
     left: 2vh;
     /* margin: auto; */
     z-index: 2;
-    background-color: white;
+    background-color: rgba(255, 255, 0, 0.508);
+    border: 2px solid #000;
 }
 
 .threeLines {
@@ -110,12 +112,13 @@ html{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: url("./static/images/icons/menu.png")
+    background: url("./static/images/icons/character.png")
         center no-repeat;
     background-size: contain;
     z-index: 2;
     position: relative;
     cursor: pointer; /* Add cursor pointer for better UX */
+    
 }
 
 #moreOptionsDiv{
@@ -135,13 +138,13 @@ html{
     height: 16vw;
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    top: 2vh;
+    top: 6vh;
     right: 2vw;
     /* margin: auto; */
     z-index: 2;
     /* position: relative; */
-    
-    background-color: white;
+    background-color: rgba(255, 0, 0, 0.497);
+    border: 2px solid #000;
 }
 
 .mapDot {
@@ -149,10 +152,10 @@ html{
     position: absolute;
     width: 12vw; /* Adjust the width and height as needed */
     height: 12vw;
-    top: 40%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: url("./static/images/icons/mapIcon.png")
+    background: url("./static/images/icons/map.png")
         center no-repeat;
     background-size: contain;
     z-index: 2;
@@ -176,12 +179,11 @@ html{
     height: 16vw;
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    top: 12vh;
+    top: 18vh;
     right: 2vw;
     /* margin: auto; */
     z-index: 2;
     /* position: relative; */
-    
     background-color: white;
 }
 
@@ -289,128 +291,6 @@ html{
 }
 /* End of Map Modal */
 
-/* Individual Modals */
-.base-modal-content {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: transparent;
-    overflow: auto;
-    padding: 10px;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.base-modal-content span.close {
-    width: 10%;
-    height: 10%;
-    position: absolute;
-    top: 5vh;
-    right: 10vw;
-    z-index: 3;
-    cursor: pointer;
-    color: red;
-}
-
-.base-modal-content span.close img {
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-}
-
-.base-modal-content img {
-    max-width: 110%;
-    max-height: 100%;
-    object-fit: contain;
-}
-/* End of Individual Modal */
-
-/* 40M Speech Modals */
-.base-modal-content {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: transparent;
-    overflow: auto;
-    padding: 10px;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.base-modal-content span.close {
-    width: 10%;
-    height: 10%;
-    position: absolute;
-    top: 5vh;
-    right: 10vw;
-    z-index: 3;
-    cursor: pointer;
-    color: red;
-}
-
-.base-modal-content span.close img {
-    width: 100%;
-    height: 100%;
-    z-index: 3;
-}
-
-.base-modal-content img {
-    max-width: 110%;
-    max-height: 100%;
-    object-fit: contain;
-}
-/* End of Individual Modal */
-
-/* 40M Speech Modal */
-.near-modal-content {
-    width: 100%;
-    height: auto;
-    position: fixed;
-    top: 60vh;
-    left: 0;
-    background-color: transparent;
-    overflow: auto;
-    padding: 10px;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: height 0.5s ease-in-out;
-}
-
-
-.near-modal-content span.close {
-    width: 40%;
-    height: 40%;
-    position: absolute;
-    top: 0;
-    right: 10vw;
-    z-index: 3;
-    cursor: pointer;
-    color: red;
-}
-
-.near-modal-content span.close img {
-    width: 100%;
-    height: 100%;
-    z-index: 3;
-}
-
-.near-modal-content img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-/* 40m speech modal */
-
 /* More Circles */
 .additionalCircles {
     display: none; /* Initially hide the additional circles */
@@ -474,43 +354,54 @@ html{
 /* Translucent Box */
 .translucent-box {
     position: fixed;
-    bottom: 0;
     width: 100%;
-    background-color: rgba(246, 246, 246, 0.512); /* Adjust the alpha value for transparency */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5); /* White with 50% transparency */
     padding: 10px;
     box-sizing: border-box;
-    max-height: 20vh; /* Adjust the maximum height as needed */
     z-index: 1001;
 }
 
+.top-box {
+    top: 0;
+    bottom: auto;
+    max-height: 5vh; /* Adjust the maximum height as needed */
+    display: flex;
+    justify-content: center;
+}
+
+.bottom-box {
+    top: auto;
+    bottom: 0;
+    max-height: 10vh; /* Adjust the maximum height as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .text-container {
-    color: black;
     text-align: center;
-    margin-bottom: 5px; /* Adjust the margin between text and images as needed */
 }
 
 .red-text {
     color: red;
     font-size: 1em;
-    margin-bottom: 5px; /* Adjust the margin between red and black text as needed */
+    /* margin-bottom: 5px; Adjust the margin between red and black text as needed */
 }
 
 .black-text {
     color: black;
-    font-size: 0.6em;
+    font-size: 0.75em;
 }
 
 .image-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Distribute images evenly */
+    margin-top: 10px; /* Adjust the margin between text and images as needed */
 }
 
 .image-container img {
-    width: 48%; /* Adjust the width of the images as needed */
-    height: auto; /* Adjust the height of the images as needed */
+    max-width: 30%; /* Adjust the maximum width of images as needed */
 }
 
 
