@@ -407,6 +407,7 @@ function runCalculation(event) {
         switch (colour) {
             case 'white':
                 {
+                    
                     toggleIModal();
                     colour = 'black';
                 }

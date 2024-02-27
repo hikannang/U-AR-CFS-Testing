@@ -12,9 +12,9 @@ html{
     /* margin: auto; */
     z-index: 2;
     position: relative;
-    top: 4vh;
+    top: 2vh;
     background-color: rgba(0, 255, 0, 0.507);
-    border: 2px solid #000
+    border: 4px solid #000;
 }
 
 .arrow {
@@ -24,7 +24,7 @@ html{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: url("https://www.iconpacks.net/icons/2/free-north-arrow-icon-2235-thumb.png")
+    background: url("https://freesvg.org/img/Soeb-Plain-Arrows-6.png")
         center no-repeat;
     background-size: 100% 100%;
     z-index: 2000;
@@ -100,12 +100,12 @@ html{
     height: 13vw;
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    top: 6vh;
+    top: 4vh;
     left: 2vh;
     /* margin: auto; */
     z-index: 2;
     background-color: rgba(255, 255, 0, 0.508);
-    border: 2px solid #000;
+    border: 4px solid #000;
 }
 
 .threeLines {
@@ -142,13 +142,13 @@ html{
     height: 16vw;
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    top: 6vh;
+    top: 4vh;
     right: 2vw;
     /* margin: auto; */
     z-index: 2;
     /* position: relative; */
     background-color: rgba(255, 0, 0, 0.497);
-    border: 2px solid #000;
+    border: 4px solid #000;
 }
 
 .mapDot {
@@ -183,12 +183,13 @@ html{
     height: 16vw;
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    top: 18vh;
+    top: 16vh;
     right: 2vw;
     /* margin: auto; */
     z-index: 2;
     /* position: relative; */
     background-color: white;
+    border: 4px solid #000;
 }
 
 .helpDot {
@@ -365,14 +366,6 @@ html{
     z-index: 1001;
 }
 
-.top-box {
-    top: 0;
-    bottom: auto;
-    max-height: 5vh; /* Adjust the maximum height as needed */
-    display: flex;
-    justify-content: center;
-}
-
 .bottom-box {
     top: auto;
     bottom: 0;
@@ -401,11 +394,13 @@ html{
 .image-container {
     display: flex;
     justify-content: space-between; /* Distribute images evenly */
-    margin-top: 10px; /* Adjust the margin between text and images as needed */
+    margin-top: 5px; /* Adjust the margin between text and images as needed */
 }
 
 .image-container img {
-    max-width: 30%; /* Adjust the maximum width of images as needed */
+    width: 34%;
+    height: auto;
+    object-fit: contain; /* Maintain the original aspect ratio while fitting within the container */
 }
 
 .additional-text {
