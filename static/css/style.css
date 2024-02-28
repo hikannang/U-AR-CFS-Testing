@@ -362,8 +362,6 @@ html{
 .translucent-box {
     position: fixed;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.5); /* White with 50% transparency */
-    padding: 10px;
     box-sizing: border-box;
     z-index: 1001;
 }
@@ -380,6 +378,9 @@ html{
 
 .text-container {
     text-align: center;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* White with 50% transparency */
+
 }
 
 .red-text {
@@ -396,6 +397,8 @@ html{
 .image-container {
     display: flex;
     justify-content: space-between; /* Distribute images evenly */
+    background-color: rgba(255, 255, 255, 0.5); /* White with 50% transparency */
+
     
 }
 
