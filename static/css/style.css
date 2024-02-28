@@ -13,15 +13,15 @@ html{
     z-index: 2;
     position: relative;
     top: 0.5vh;
-    background-color: rgba(0, 255, 0, 0.507);
+    background-color: rgba(87, 255, 149, 0.993);
     border: 4px solid #000;
 }
 
 .arrow {
     position: absolute;
-    width: 14vw; /* Adjust the width and height as needed */
-    height: 14vw;
-    top: 50%;
+    width: 13.5vw; /* Adjust the width and height as needed */
+    height: 13.5vw;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: url("https://freesvg.org/img/Soeb-Plain-Arrows-6.png")
@@ -58,7 +58,7 @@ html{
     width: 30px;
     height: 30px;
     position: absolute;
-    top: 2vh;
+    top: 10vh;
     right: 2vh;
     z-index: 5;
     cursor: pointer;
@@ -104,7 +104,7 @@ html{
     left: 2vh;
     /* margin: auto; */
     z-index: 2;
-    background-color: rgba(255, 255, 0, 0.508);
+    background-color: rgb(255, 200, 0);
     border: 4px solid #000;
 }
 
@@ -147,7 +147,7 @@ html{
     /* margin: auto; */
     z-index: 2;
     /* position: relative; */
-    background-color: rgba(255, 0, 0, 0.497);
+    background-color: rgb(81, 184, 248);
     border: 4px solid #000;
 }
 
@@ -156,7 +156,7 @@ html{
     position: absolute;
     width: 12vw; /* Adjust the width and height as needed */
     height: 12vw;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: url("./static/images/icons/map.png")
@@ -362,8 +362,9 @@ html{
 .translucent-box {
     position: fixed;
     width: 100%;
-    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.5); /* White with 50% transparency */
     padding: 10px;
+    box-sizing: border-box;
     z-index: 1001;
 }
 
@@ -379,27 +380,23 @@ html{
 
 .text-container {
     text-align: center;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.5); /* White with 50% transparency */
 }
 
 .red-text {
     color: red;
     font-size: 1em;
-    z-index: 5;
     /* margin-bottom: 5px; Adjust the margin between red and black text as needed */
 }
 
 .black-text {
     color: black;
     font-size: 0.75em;
-    z-index: 5;
 }
 
 .image-container {
     display: flex;
     justify-content: space-between; /* Distribute images evenly */
-    background-color: rgba(255, 255, 255, 0.5); /* White with 50% transparency */
+    
 }
 
 .image-container img {
