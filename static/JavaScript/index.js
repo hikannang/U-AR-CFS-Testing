@@ -564,7 +564,7 @@ function runCalculation(event) {
     distance = distance * 1000; // Convert to meters
 
     var distanceElement = document.getElementById("distanceFromTarget");
-    if (distance > 10000) {
+    if (distance > 20000) {
         distanceElement.innerHTML = 'Please Select Destination!';
     } else {
     // Display the actual distance
@@ -768,6 +768,21 @@ function closeModalE(){
 
 document.getElementsByClassName("closeE")[0].onclick = function () {
     modalE.style.display = "none";
+};
+
+function toggleOModal(){
+    //Get the modal
+    modalO = document.getElementById("modalO");
+    modalO.style.display="block";
+}
+
+function closeModalO(){
+    modalO = document.getElementById("modalE");
+    modalO.style.display='none';
+}
+
+document.getElementsByClassName("closeO")[0].onclick = function () {
+    modalO.style.display = "none";
 };
 
 function toggleIModal(){
