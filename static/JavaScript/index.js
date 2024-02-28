@@ -124,24 +124,24 @@ function selectGreen(){
     }
 }
 
-function showGreen(){
-    if (document.getElementById('greenOff')){
-        // Turning Green On
-        document.getElementById('greenOff').id = 'green';
-        var content = document.getElementById('green')
-        // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="12 12 12" gps-projected-entity-place="latitude: 1.281238; longitude: 103.850447"></a-image>';
-    }
-}
+// function showGreen(){
+//     if (document.getElementById('greenOff')){
+//         // Turning Green On
+//         document.getElementById('greenOff').id = 'green';
+//         var content = document.getElementById('green')
+//         // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
+//         content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="12 12 12" gps-projected-entity-place="latitude: 1.281238; longitude: 103.850447"></a-image>';
+//     }
+// }
 
-function hideGreen(){
-    if(document.getElementById('green')){
-        // Turning Green Off
-        document.getElementById('green').id = 'greenOff';
-        var content = document.getElementById('greenOff')
-        content.innerHTML = '<a-entity id="greenOff"></a-entity>'
-    }
-}
+// function hideGreen(){
+//     if(document.getElementById('green')){
+//         // Turning Green Off
+//         document.getElementById('green').id = 'greenOff';
+//         var content = document.getElementById('greenOff')
+//         content.innerHTML = '<a-entity id="greenOff"></a-entity>'
+//     }
+// }
 
 
 
