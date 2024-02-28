@@ -541,7 +541,7 @@ document.getElementsByClassName("closeI")[0].onclick = function () {
     modalI.style.display = "none";
 };
 
-function toggleModal(){
+function toggleMModal(){
     //Get the modal
     modalMap = document.getElementById("modalMap");
     modalMap.style.display="block";
@@ -552,7 +552,7 @@ function closeModal(){
     modalMap.style.display='none';
 }
 
-document.getElementsByClassName("close")[0].onclick = function () {
+document.getElementsByClassName("closeM")[0].onclick = function () {
     modalMap.style.display = "none";
 };
 
