@@ -707,6 +707,24 @@ function showRed(){
     document.getElementById("modalGreenClose15").onclick = function () {
         closeGreenModal15();
     };
+
+    function hideGreen(){
+        if(document.getElementById('green')){
+            // Turning Green Off
+            document.getElementById('green').id = 'greenOff';
+            var content = document.getElementById('greenOff')
+            content.innerHTML = '<a-entity id="greenOff"></a-entity>'
+        }
+    }
+    
+    function showGreen(){
+        if (document.getElementById('greenOff')) {
+            // Turning Green On
+            document.getElementById('greenOff').id = 'green';
+            var content = document.getElementById('green');
+            content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942"></a-image>';
+        }
+    }
     
     //Green Modal End
 
