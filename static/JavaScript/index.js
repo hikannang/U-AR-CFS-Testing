@@ -76,13 +76,6 @@ function selectRed(){
         var content = document.getElementById('orangeOff')
         content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
     }
-    
-    if(document.getElementById('purple')){
-        // Turning purple Off
-        document.getElementById('purple').id = 'purpleOff';
-        var content = document.getElementById('purpleOff')
-        content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
-    }
 }
 
 function hideRed(){
@@ -151,13 +144,6 @@ function selectGreen(){
         var content = document.getElementById('orangeOff')
         content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
     }
-
-    if(document.getElementById('purple')){
-        // Turning purple Off
-        document.getElementById('purple').id = 'purpleOff';
-        var content = document.getElementById('purpleOff')
-        content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
-    }
 }
 
 function showGreen(){
@@ -179,6 +165,8 @@ function hideGreen(){
         content.innerHTML = '<a-entity id="greenOff"></a-entity>'
     }
 }
+
+
 
 function selectYellow(){
     //Foot Path
@@ -225,13 +213,6 @@ function selectYellow(){
         document.getElementById('orange').id = 'orangeOff';
         var content = document.getElementById('orangeOff')
         content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
-    }
-    
-    if(document.getElementById('purple')){
-        // Turning purple Off
-        document.getElementById('purple').id = 'purpleOff';
-        var content = document.getElementById('purpleOff')
-        content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
     }
 }
 
@@ -283,17 +264,10 @@ function selectBlue(){
         content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
     }
 
-    if(document.getElementById('purple')){
-        // Turning purple Off
-        document.getElementById('purple').id = 'purpleOff';
-        var content = document.getElementById('purpleOff')
-        content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
-    }
-
 }
 
 function selectOrange(){
-    //YellowBoxSitting
+    //YellowBox
 
     //Near Capitol Tower
     startCompass()
@@ -339,69 +313,7 @@ function selectOrange(){
         content.innerHTML = '<a-entity id="blueOff"></a-entity>'
     }
 
-    if(document.getElementById('purple')){
-        // Turning purple Off
-        document.getElementById('purple').id = 'purpleOff';
-        var content = document.getElementById('purpleOff')
-        content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
-    }
 
-
-}
-
-function selectPurple(){
-    //YellowBoxStanding
-
-    //Near Capitol Tower
-    startCompass()
-    target.latitude = 1.277589;
-    target.longitude = 103.847113;
-
-    showLoadingScreen();
-
-    colour = 'purple';
-
-    if (document.getElementById('purpleOff')){
-        // Turning purple On
-        document.getElementById('purpleOff').id = 'purple';
-        var content = document.getElementById('purple')
-        content.innerHTML = '<a-image  id="purple" src="./static/images/2D_Assets_low_res/yellowBox_standing.png" look-at="[gps-projected-camera]" scale="20 20 20" gps-projected-entity-place="atitude: 1.277589; longitude: 103.847113"></a-image>';
-    }
-
-    if(document.getElementById('red')){
-        // Turning Red Off
-        document.getElementById('red').id = 'redOff';
-        var content = document.getElementById('redOff')
-        content.innerHTML = '<a-entity id="redOff"></a-entity>'
-    }
-
-    if(document.getElementById('green')){
-        // Turning Green Off
-        document.getElementById('green').id = 'greenOff';
-        var content = document.getElementById('greenOff')
-        content.innerHTML = '<a-entity id="greenOff"></a-entity>'
-    }
-
-    if(document.getElementById('yellow')){
-        // Turning yellow Off
-        document.getElementById('yellow').id = 'yellowOff';
-        var content = document.getElementById('yellowOff')
-        content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
-    }
-
-    if(document.getElementById('blue')){
-        // Turning blue Off
-        document.getElementById('blue').id = 'blueOff';
-        var content = document.getElementById('blueOff')
-        content.innerHTML = '<a-entity id="blueOff"></a-entity>'
-    }
-
-    if(document.getElementById('orange')){
-        // Turning orange Off
-        document.getElementById('orange').id = 'orangeOff';
-        var content = document.getElementById('orangeOff')
-        content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
-    }
 }
 
 
@@ -617,14 +529,13 @@ function runCalculation(event) {
                 break;
         }
     }
-    if (distance > 1) {
+    if (distance <= 20000) {
         // Display the actual distance
         distanceElement.innerHTML = Math.floor(distance) + "m to destination!";
+    } else {
+        // Display '0.00m' for distances above 20,000 meters
+        distanceElement.innerHTML = 'Please Select Destination!';
     }
-    // } else {
-    //     // Display '0.00m' for distances above 20,000 meters
-    //     distanceElement.innerHTML = 'Please Select Destination!';
-    // }
     }
 }   
 
@@ -1029,6 +940,5 @@ function updateUI() {
     arrow.style.transform = `translate(-50%, -50%) rotate(${direction}deg)`;
     requestAnimationFrame(updateUI);
 }
-
 
 init();
