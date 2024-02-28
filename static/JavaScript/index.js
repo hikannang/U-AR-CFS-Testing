@@ -32,8 +32,6 @@ function selectRed(){
     //Bicycle Crossing
     
      //My Office,
-
-
      startCompass()
      target.latitude = 1.401304;
      target.longitude = 103.749401;
