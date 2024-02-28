@@ -388,10 +388,9 @@ function runCalculation(event) {
     if (colour != 'black') {
         switch (colour) {
             case 'white':
-                if (distance = 0){
+                if (distance == 0 || distance >= 1000000) {
                     toggleEModal();
-                }
-                else{ 
+                } else {
                     toggleIModal();
                     colour = 'black';
                 }
