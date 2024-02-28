@@ -264,6 +264,25 @@ function selectBlue(){
 
 }
 
+function showBlue(){
+    if (document.getElementById('blueOff')){
+        // Turning Blue On
+        document.getElementById('blueOff').id = 'blue';
+        var content = document.getElementById('blue')
+        // content.innerHTML = '<a-entity id="blue" material="color: blue" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
+        content.innerHTML = '<a-image id="blue" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.281238; longitude: 103.850447"></a-image>';
+    }
+}
+
+function hideBlue(){
+    if(document.getElementById('blue')){
+        // Turning Blue Off
+        document.getElementById('blue').id = 'blueOff';
+        var content = document.getElementById('blueOff')
+        content.innerHTML = '<a-entity id="blueOff"></a-entity>'
+    }
+}
+
 function selectOrange(){
     //YellowBox
 
