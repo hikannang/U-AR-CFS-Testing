@@ -333,6 +333,24 @@ function selectOrange(){
 
 }
 
+function hideOrange(){
+    if(document.getElementById('orange')){
+        // Turning Orange Off
+        document.getElementById('orange').id = 'orangeOff';
+        var content = document.getElementById('orangeOff')
+        content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
+    }
+}
+
+function showOrange(){
+    if (document.getElementById('orangeOff')) {
+        // Turning Orange On
+        document.getElementById('orangeOff').id = 'orange';
+        var content = document.getElementById('orange');
+        content.innerHTML = '<a-image id="orange" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942"></a-image>';
+    }
+}
+
 
 
 
