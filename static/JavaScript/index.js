@@ -408,10 +408,18 @@ function runCalculation(event) {
 
         
 
-    if (colour != 'black') {
+    if (colour !== 'black') {
         switch (colour) {
             case 'white':
-                {
+                if (current.latitude == null || current.longitude == null) {
+                   toggleEModal(); 
+                } else if (
+                    parseFloat(current.latitude) >= 1.2916482 ||
+                    parseFloat(current.longitude) >= 103.8548341 ||
+                    parseFloat(current.latitude) <= 1.2775314 ||
+                    parseFloat(current.longitude) <= 103.8475522) {
+                    toggleOModal();
+                } else {
                     toggleIModal();
                     colour = 'black';
                 }
@@ -440,14 +448,9 @@ function runCalculation(event) {
                 }
                 break; 
             case 'red4':
-                if (distance <= 15){ 
+                if (distance < 15){ 
                     hideRed();
                     toggleModalRed15();
-                    showAllElements();
-                }else if(distance > 15){
-                    showRed();
-                    hideAllElements();
-                    toggleModalRed40(); //Picture Frame
                 }
                 break;
             case 'green':
@@ -539,9 +542,7 @@ function runCalculation(event) {
                 break;
         }
     }
-    if(){
-
-    }else if (distance <= 20000) {
+    if (distance <= 20000) {
         // Display the actual distance
         distanceElement.innerHTML = Math.floor(distance) + "m to destination!";
     } else {
@@ -550,6 +551,36 @@ function runCalculation(event) {
     }
     }
 }   
+function toggleEModal(){
+    //Get the modal
+    modalE = document.getElementById("modalE");
+    modalE.style.display="block";
+}
+
+function closeModalE(){
+    modalE = document.getElementById("modalE");
+    modalE.style.display='none';
+}
+
+document.getElementsByClassName("closeE")[0].onclick = function () {
+    modalE.style.display = "none";
+};
+
+function toggleOModal(){
+    //Get the modal
+    modalO = document.getElementById("modalO");
+    modalO.style.display="block";
+}
+
+function closeModalO(){
+    modalO = document.getElementById("modalO");
+    modalO.style.display='none';
+}
+
+document.getElementsByClassName("closeO")[0].onclick = function () {
+    modalO.style.display = "none";
+};
+
 
 function toggleWModal(){
     //Get the modal
