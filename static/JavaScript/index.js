@@ -193,24 +193,24 @@ function selectYellow(){
     }
 }
 
-function showYellow(){
-    if (document.getElementById('yellowOff')){
-        // Turning Yellow On
-        document.getElementById('yellowOff').id = 'yellow';
-        var content = document.getElementById('yellow')
-        // content.innerHTML = '<a-entity id="yellow" material="color: yellow" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-image id="yellow" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.281238; longitude: 103.850447"></a-image>';
-    }
-}
+// function showYellow(){
+//     if (document.getElementById('yellowOff')){
+//         // Turning Yellow On
+//         document.getElementById('yellowOff').id = 'yellow';
+//         var content = document.getElementById('yellow')
+//         // content.innerHTML = '<a-entity id="yellow" material="color: yellow" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
+//         content.innerHTML = '<a-image id="yellow" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.281238; longitude: 103.850447"></a-image>';
+//     }
+// }
 
-function hideYellow(){
-    if(document.getElementById('yellow')){
-        // Turning Yellow Off
-        document.getElementById('yellow').id = 'yellowOff';
-        var content = document.getElementById('yellowOff')
-        content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
-    }
-}
+// function hideYellow(){
+//     if(document.getElementById('yellow')){
+//         // Turning Yellow Off
+//         document.getElementById('yellow').id = 'yellowOff';
+//         var content = document.getElementById('yellowOff')
+//         content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
+//     }
+// }
 
 
 
@@ -659,29 +659,18 @@ function showRed(){
         modalGreen120.style.display = 'block';
     }
     
-    function toggleModalGreen80() {
+    function toggleModalGreen50() {
         var modalGreen120 = document.getElementById("modalGreen120");
         modalGreen120.style.display = 'none';
-        var modalGreen80 = document.getElementById("modalGreen80");
-        modalGreen80.style.display = 'block';
+        var modalGreen50 = document.getElementById("modalGreen50");
+        modalGreen50.style.display = 'block';
     }
     
-    function toggleModalGreen40() {
-        var modalGreen120 = document.getElementById("modalGreen120");
-        modalGreen120.style.display = 'none';
-        var modalGreen80 = document.getElementById("modalGreen80");
-        modalGreen80.style.display = 'none';
-        var modalGreen40 = document.getElementById("modalGreen40");
-        modalGreen40.style.display = 'block';
-    }
-
     function toggleModalGreen15() {
         var modalGreen120 = document.getElementById("modalGreen120");
         modalGreen120.style.display = 'none';
-        var modalGreen80 = document.getElementById("modalGreen80");
-        modalGreen80.style.display = 'none';
-        var modalGreen40 = document.getElementById("modalGreen40");
-        modalGreen40.style.display = 'none';
+        var modalGreen50 = document.getElementById("modalGreen50");
+        modalGreen50.style.display = 'none';
         var modalGreen15 = document.getElementById("modalGreen15");
         modalGreen15.style.display = 'block';
     }
@@ -698,27 +687,17 @@ function showRed(){
     };
     
     // Function to close the Green modal
-    function closeGreenModal80() {
-        var modalGreen80 = document.getElementById("modalGreen80");
-        modalGreen80.style.display = 'none';
+    function closeGreenModal50() {
+        var modalGreen50 = document.getElementById("modalGreen50");
+        modalGreen50.style.display = 'none';
     }
     
     // span.onclick for the Green modal
-    document.getElementById("modalGreenClose80").onclick = function () {
-        closeGreenModal80();
+    document.getElementById("modalGreenClose50").onclick = function () {
+        closeGreenModal50();
     };
     
     // Function to close the Green modal
-    function closeGreenModal40() {
-        var modalGreen40 = document.getElementById("modalGreen40");
-        modalGreen40.style.display = 'none';
-    }
-    
-    // span.onclick for the Green modal
-    document.getElementById("modalGreenClose40").onclick = function () {
-        closeGreenModal40();
-    };
-
     function closeGreenModal15() {
         var modalGreen15 = document.getElementById("modalGreen15");
         modalGreen15.style.display = 'none';
