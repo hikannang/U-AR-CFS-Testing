@@ -2,14 +2,6 @@ var loadingTimeout;
 var distance;
 var modal;
 var colour = 'white';
-var target = {
-    latitude: 0,
-    longitude: 0
-};
-var current = {
-    latitude: null,
-    longitude: null
-};
 
 
 // Add this function at the beginning of your script
@@ -496,8 +488,8 @@ function runCalculation(event) {
     distance = R * c; // Distance in km
     distance = distance * 1000; // Convert to meters
 
-    var distanceElement = document.getElementById("distanceFromTarget");
-    distanceElement.innerHTML = Math.floor(distance) + "m to destination!";
+    document.getElementById("distanceFromTarget").innerHTML =
+        distance + "m";
     
         
 
