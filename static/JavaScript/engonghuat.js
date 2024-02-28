@@ -403,13 +403,6 @@ function selectPurple(){
             var content = document.getElementById('orangeOff')
             content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
         }
-
-        if(document.getElementById('purple')){
-            // Turning purple Off
-            document.getElementById('purple').id = 'purpleOff';
-            var content = document.getElementById('purpleOff')
-            content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
-        }
 }
 
 // ##################################################################################################
