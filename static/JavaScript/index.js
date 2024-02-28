@@ -388,7 +388,10 @@ function runCalculation(event) {
     if (colour != 'black') {
         switch (colour) {
             case 'white':
-                { 
+                if (distance = 0){
+                    toggleEModal();
+                }
+                else{ 
                     toggleIModal();
                     colour = 'black';
                 }
@@ -508,6 +511,21 @@ function runCalculation(event) {
     // }
     }
 }   
+
+function toggleEModal(){
+    //Get the modal
+    modalE = document.getElementById("modalE");
+    modalE.style.display="block";
+}
+
+function closeModalE(){
+    modalE = document.getElementById("modalE");
+    modalE.style.display='none';
+}
+
+document.getElementsByClassName("closeE")[0].onclick = function () {
+    modalE.style.display = "none";
+};
 
 function toggleIModal(){
     //Get the modal
