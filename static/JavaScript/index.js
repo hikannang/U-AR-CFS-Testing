@@ -124,24 +124,24 @@ function selectGreen(){
     }
 }
 
-// function showGreen(){
-//     if (document.getElementById('greenOff')){
-//         // Turning Green On
-//         document.getElementById('greenOff').id = 'green';
-//         var content = document.getElementById('green')
-//         // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-//         content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="12 12 12" gps-projected-entity-place="latitude: 1.281238; longitude: 103.850447"></a-image>';
-//     }
-// }
+function showGreen(){
+    if (document.getElementById('greenOff')){
+        // Turning Green On
+        document.getElementById('greenOff').id = 'green';
+        var content = document.getElementById('green')
+        // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
+        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="12 12 12" gps-projected-entity-place="latitude: 1.281238; longitude: 103.850447"></a-image>';
+    }
+}
 
-// function hideGreen(){
-//     if(document.getElementById('green')){
-//         // Turning Green Off
-//         document.getElementById('green').id = 'greenOff';
-//         var content = document.getElementById('greenOff')
-//         content.innerHTML = '<a-entity id="greenOff"></a-entity>'
-//     }
-// }
+function hideGreen(){
+    if(document.getElementById('green')){
+        // Turning Green Off
+        document.getElementById('green').id = 'greenOff';
+        var content = document.getElementById('greenOff')
+        content.innerHTML = '<a-entity id="greenOff"></a-entity>'
+    }
+}
 
 
 
@@ -193,24 +193,24 @@ function selectYellow(){
     }
 }
 
-// function showYellow(){
-//     if (document.getElementById('yellowOff')){
-//         // Turning Yellow On
-//         document.getElementById('yellowOff').id = 'yellow';
-//         var content = document.getElementById('yellow')
-//         // content.innerHTML = '<a-entity id="yellow" material="color: yellow" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-//         content.innerHTML = '<a-image id="yellow" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.281238; longitude: 103.850447"></a-image>';
-//     }
-// }
+function showYellow(){
+    if (document.getElementById('yellowOff')){
+        // Turning Yellow On
+        document.getElementById('yellowOff').id = 'yellow';
+        var content = document.getElementById('yellow')
+        // content.innerHTML = '<a-entity id="yellow" material="color: yellow" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
+        content.innerHTML = '<a-image id="yellow" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.281238; longitude: 103.850447"></a-image>';
+    }
+}
 
-// function hideYellow(){
-//     if(document.getElementById('yellow')){
-//         // Turning Yellow Off
-//         document.getElementById('yellow').id = 'yellowOff';
-//         var content = document.getElementById('yellowOff')
-//         content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
-//     }
-// }
+function hideYellow(){
+    if(document.getElementById('yellow')){
+        // Turning Yellow Off
+        document.getElementById('yellow').id = 'yellowOff';
+        var content = document.getElementById('yellowOff')
+        content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
+    }
+}
 
 
 
@@ -471,21 +471,31 @@ function runCalculation(event) {
                 }
                 break;
             case 'yellow':
-                if (distance < 20000){ 
+                if (distance > 1000000){
+                    hideYellow();
+                    toggleEModal();
+                } else if (distance > 10000){
+                    hideYellow();
+                    toggleOModal();
+                }else if (distance <= 10000){
+                    showYellow();
                     toggleModalYellow120();
                     colour = 'yellow2';
                 }
                 break;
             case 'yellow2':
-                if (distance <= 80){ 
-                    toggleModalYellow80();
+                if (distance < 50){ 
+                    showYellow();
+                    toggleModalYellow50();
                     colour = 'yellow3';
                 }
                 break;
             case 'yellow3':
-                if (distance <= 40){ 
-                    toggleModalYellow40();
-                    colour = 'black';
+                if (distance < 15){ 
+                    hideYellow();
+                    toggleModalYellow15(); 
+                }else if(distance >= 15){
+                    showYellow();
                 }
                 break;
             case 'blue':
@@ -735,20 +745,20 @@ function showRed(){
         modalYellow120.style.display = 'block';
     }
     
-    function toggleModalYellow80() {
+    function toggleModalYellow50() {
         var modalYellow120 = document.getElementById("modalYellow120");
         modalYellow120.style.display = 'none';
-        var modalYellow80 = document.getElementById("modalYellow80");
-        modalYellow80.style.display = 'block';
+        var modalYellow50 = document.getElementById("modalYellow50");
+        modalYellow50.style.display = 'block';
     }
     
-    function toggleModalYellow40() {
+    function toggleModalYellow15() {
         var modalYellow120 = document.getElementById("modalYellow120");
         modalYellow120.style.display = 'none';
-        var modalYellow80 = document.getElementById("modalYellow80");
-        modalYellow80.style.display = 'none';
-        var modalYellow40 = document.getElementById("modalYellow40");
-        modalYellow40.style.display = 'block';
+        var modalYellow50 = document.getElementById("modalYellow50");
+        modalYellow50.style.display = 'none';
+        var modalYellow15 = document.getElementById("modalYellow15");
+        modalYellow15.style.display = 'block';
     }
     //Functions to close the Yellow modals
     function closeYellowModal120() {
@@ -762,26 +772,44 @@ function showRed(){
     };
     
     // Function to close the Yellow modal
-    function closeYellowModal80() {
-        var modalYellow80 = document.getElementById("modalYellow80");
-        modalYellow80.style.display = 'none';
+    function closeYellowModal50() {
+        var modalYellow50 = document.getElementById("modalYellow50");
+        modalYellow50.style.display = 'none';
     }
     
     // span.onclick for the Yellow modal
-    document.getElementById("modalYellowClose80").onclick = function () {
-        closeYellowModal80();
+    document.getElementById("modalYellowClose50").onclick = function () {
+        closeYellowModal50();
     };
     
     // Function to close the Yellow modal
-    function closeYellowModal40() {
-        var modalYellow40 = document.getElementById("modalYellow40");
-        modalYellow40.style.display = 'none';
+    function closeYellowModal15() {
+        var modalYellow15 = document.getElementById("modalYellow15");
+        modalYellow15.style.display = 'none';
     }
     
     // span.onclick for the Yellow modal
-    document.getElementById("modalYellowClose40").onclick = function () {
-        closeYellowModal40();
+    document.getElementById("modalYellowClose15").onclick = function () {
+        closeYellowModal15();
     };
+
+    function hideYellow(){
+        if(document.getElementById('yellow')){
+            // Turning Yellow Off
+            document.getElementById('yellow').id = 'yellowOff';
+            var content = document.getElementById('yellowOff')
+            content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
+        }
+    }
+    
+    function showYellow(){
+        if (document.getElementById('yellowOff')) {
+            // Turning Yellow On
+            document.getElementById('yellowOff').id = 'yellow';
+            var content = document.getElementById('yellow');
+            content.innerHTML = '<a-image id="yellow" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942"></a-image>';
+        }
+    }
     
     //Yellow Modal End
 
