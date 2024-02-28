@@ -365,9 +365,6 @@ function startCompass() {
 function setCurrentPosition(position) {
     current.latitude = position.coords.latitude;
     current.longitude = position.coords.longitude;
-    
-    console.log('Current Latitude:', current.latitude);
-    console.log('Current Longitude:', current.longitude);
 }
 
 // runs the calculation for getting the direction which the arrow needs to point
@@ -434,23 +431,18 @@ function runCalculation(event) {
                 }
                 break;
             case 'red2':
-                if (distance < 80){ 
-                    toggleModalRed80();
+                if (distance < 50){ 
+                    toggleModalRed50();
                     colour = 'red3';
                 }
                 break;
             case 'red3':
-                if (distance < 40){ 
-                    showRed();
-                    hideAllElements();
-                    toggleModalRed40(); //Picture Frame
-                    colour = 'red4';
-                }
-                break; 
-            case 'red4':
                 if (distance < 15){ 
                     hideRed();
-                    toggleModalRed15();
+                    hideAllElements();
+                    toggleModalRed15(); //Picture Frame
+                } else if (distance > 15){
+                    showRed();
                 }
                 break;
             case 'green':
@@ -461,25 +453,18 @@ function runCalculation(event) {
                 }
                 break;
             case 'green2':
-                if (distance <= 80){ 
-                    toggleModalGreen80();
+                if (distance <= 50){ 
+                    toggleModalGreen50();
                     colour = 'green3';
                 }
                 break;
             case 'green3':
-                if (distance > 15 && distance <= 40){ 
-                    showGreen();
-                    toggleModalGreen40(); //Picture Frame
-                    hideAllElements();
-                    colour = 'green4';
-                }
-                break;
-            case 'green4':
-                if (distance <= 15){ 
+                if (distance < 15){ 
                     hideGreen();
-                    toggleModalGreen15();
-                    showAllElements();
-                    colour = 'green3';
+                    hideAllElements();
+                    toggleModalGreen15(); //Picture Frame
+                } else if (distance > 15){
+                    showGreen();
                 }
                 break;
             case 'yellow':
@@ -489,14 +474,14 @@ function runCalculation(event) {
                 }
                 break;
             case 'yellow2':
-                if (distance <= 80){ 
-                    toggleModalYellow80();
+                if (distance <= 50){ 
+                    toggleModalYellow50();
                     colour = 'yellow3';
                 }
                 break;
             case 'yellow3':
-                if (distance <= 40){ 
-                    toggleModalYellow40();
+                if (distance <= 15){ 
+                    toggleModalYellow15();
                     colour = 'black';
                 }
                 break;
@@ -508,14 +493,14 @@ function runCalculation(event) {
                 }
                 break;
             case 'blue2':
-                if (distance <= 80){ 
-                    toggleModalBlue80();
+                if (distance <= 50){ 
+                    toggleModalBlue50();
                     colour = 'blue3';
                 }
                 break;
             case 'blue3':
-                if (distance <= 40){ 
-                    toggleModalBlue40();
+                if (distance <= 15){ 
+                    toggleModalBlue15();
                     colour = 'black';
                 }
                 break;
@@ -527,14 +512,33 @@ function runCalculation(event) {
                 }
                 break;
             case 'orange2':
-                if (distance <= 80){ 
-                    toggleModalOrange80();
+                if (distance <= 50){ 
+                    toggleModalOrange50();
                     colour = 'orange3';
                 }
                 break;
             case 'orange3':
-                if (distance <= 40){ 
-                    toggleModalOrange40();
+                if (distance <= 15){ 
+                    toggleModalOrange15();
+                    colour = 'black';
+                }
+                break;
+            case 'purple':
+                if (distance < 20000){ 
+                    toggleWModal();
+                    toggleModalPurple120();
+                    colour = 'P2';
+                }
+                break;
+            case 'purple2':
+                if (distance <= 50){ 
+                    toggleModalPurple50();
+                    colour = 'purple3';
+                }
+                break;
+            case 'purple3':
+                if (distance <= 15){ 
+                    toggleModalPurple15();
                     colour = 'black';
                 }
                 break;
@@ -629,35 +633,23 @@ document.getElementsByClassName("close")[0].onclick = function () {
 
 // Modals
     // Start Red Models
-    // Function to open the red modal
 function toggleModalRed120() {
     var modalRed120 = document.getElementById("modalRed120");
     modalRed120.style.display = 'block';
 }
 
-function toggleModalRed80() {
+function toggleModalRed50() {
     var modalRed120 = document.getElementById("modalRed120");
     modalRed120.style.display = 'none';
-    var modalRed80 = document.getElementById("modalRed80");
-    modalRed80.style.display = 'block';
-}
-
-function toggleModalRed40() {
-    var modalRed120 = document.getElementById("modalRed120");
-    modalRed120.style.display = 'none';
-    var modalRed80 = document.getElementById("modalRed80");
-    modalRed80.style.display = 'none';
-    var modalRed40 = document.getElementById("modalRed40");
-    modalRed40.style.display = 'block';
+    var modalRed50 = document.getElementById("modalRed50");
+    modalRed50.style.display = 'block';
 }
 
 function toggleModalRed15() {
     var modalRed120 = document.getElementById("modalRed120");
     modalRed120.style.display = 'none';
-    var modalRed80 = document.getElementById("modalRed80");
-    modalRed80.style.display = 'none';
-    var modalRed40 = document.getElementById("modalRed40");
-    modalRed40.style.display = 'none';
+    var modalRed50 = document.getElementById("modalRed50");
+    modalRed50.style.display = 'none';
     var modalRed15 = document.getElementById("modalRed15");
     modalRed15.style.display = 'block';
 }
@@ -674,25 +666,14 @@ document.getElementById("modalRedClose120").onclick = function () {
 };
 
 // Function to close the red modal
-function closeRedModal80() {
-    var modalRed80 = document.getElementById("modalRed80");
-    modalRed80.style.display = 'none';
+function closeRedModal50() {
+    var modalRed50 = document.getElementById("modalRed50");
+    modalRed50.style.display = 'none';
 }
 
 // span.onclick for the red modal
-document.getElementById("modalRedClose80").onclick = function () {
-    closeRedModal80();
-};
-
-// Function to close the red modal
-function closeRedModal40() {
-    var modalRed40 = document.getElementById("modalRed40");
-    modalRed40.style.display = 'none';
-}
-
-// span.onclick for the red modal
-document.getElementById("modalRedClose40").onclick = function () {
-    closeRedModal40();
+document.getElementById("modalRedClose50").onclick = function () {
+    closeRedModal50();
 };
 
 // Function to close the red modal
@@ -714,29 +695,18 @@ document.getElementById("modalRedClose15").onclick = function () {
         modalGreen120.style.display = 'block';
     }
     
-    function toggleModalGreen80() {
+    function toggleModalGreen50() {
         var modalGreen120 = document.getElementById("modalGreen120");
         modalGreen120.style.display = 'none';
-        var modalGreen80 = document.getElementById("modalGreen80");
-        modalGreen80.style.display = 'block';
-    }
-    
-    function toggleModalGreen40() {
-        var modalGreen120 = document.getElementById("modalGreen120");
-        modalGreen120.style.display = 'none';
-        var modalGreen80 = document.getElementById("modalGreen80");
-        modalGreen80.style.display = 'none';
-        var modalGreen40 = document.getElementById("modalGreen40");
-        modalGreen40.style.display = 'block';
+        var modalGreen50 = document.getElementById("modalGreen50");
+        modalGreen50.style.display = 'block';
     }
 
     function toggleModalGreen15() {
         var modalGreen120 = document.getElementById("modalGreen120");
         modalGreen120.style.display = 'none';
-        var modalGreen80 = document.getElementById("modalGreen80");
-        modalGreen80.style.display = 'none';
-        var modalGreen40 = document.getElementById("modalGreen40");
-        modalGreen40.style.display = 'none';
+        var modalGreen50 = document.getElementById("modalGreen50");
+        modalGreen50.style.display = 'none';
         var modalGreen15 = document.getElementById("modalGreen15");
         modalGreen15.style.display = 'block';
     }
@@ -753,27 +723,16 @@ document.getElementById("modalRedClose15").onclick = function () {
     };
     
     // Function to close the Green modal
-    function closeGreenModal80() {
-        var modalGreen80 = document.getElementById("modalGreen80");
-        modalGreen80.style.display = 'none';
+    function closeGreenModal50() {
+        var modalGreen50 = document.getElementById("modalGreen50");
+        modalGreen50.style.display = 'none';
     }
     
     // span.onclick for the Green modal
-    document.getElementById("modalGreenClose80").onclick = function () {
-        closeGreenModal80();
+    document.getElementById("modalGreenClose50").onclick = function () {
+        closeGreenModal50();
     };
     
-    // Function to close the Green modal
-    function closeGreenModal40() {
-        var modalGreen40 = document.getElementById("modalGreen40");
-        modalGreen40.style.display = 'none';
-    }
-    
-    // span.onclick for the Green modal
-    document.getElementById("modalGreenClose40").onclick = function () {
-        closeGreenModal40();
-    };
-
     function closeGreenModal15() {
         var modalGreen15 = document.getElementById("modalGreen15");
         modalGreen15.style.display = 'none';
@@ -793,20 +752,20 @@ document.getElementById("modalRedClose15").onclick = function () {
         modalYellow120.style.display = 'block';
     }
     
-    function toggleModalYellow80() {
+    function toggleModalYellow50() {
         var modalYellow120 = document.getElementById("modalYellow120");
         modalYellow120.style.display = 'none';
-        var modalYellow80 = document.getElementById("modalYellow80");
-        modalYellow80.style.display = 'block';
+        var modalYellow50 = document.getElementById("modalYellow50");
+        modalYellow50.style.display = 'block';
     }
     
-    function toggleModalYellow40() {
+    function toggleModalYellow15() {
         var modalYellow120 = document.getElementById("modalYellow120");
         modalYellow120.style.display = 'none';
-        var modalYellow80 = document.getElementById("modalYellow80");
-        modalYellow80.style.display = 'none';
-        var modalYellow40 = document.getElementById("modalYellow40");
-        modalYellow40.style.display = 'block';
+        var modalYellow50 = document.getElementById("modalYellow50");
+        modalYellow50.style.display = 'none';
+        var modalYellow15 = document.getElementById("modalYellow15");
+        modalYellow15.style.display = 'block';
     }
     //Functions to close the Yellow modals
     function closeYellowModal120() {
@@ -820,25 +779,25 @@ document.getElementById("modalRedClose15").onclick = function () {
     };
     
     // Function to close the Yellow modal
-    function closeYellowModal80() {
-        var modalYellow80 = document.getElementById("modalYellow80");
-        modalYellow80.style.display = 'none';
+    function closeYellowModal50() {
+        var modalYellow50 = document.getElementById("modalYellow50");
+        modalYellow50.style.display = 'none';
     }
     
     // span.onclick for the Yellow modal
-    document.getElementById("modalYellowClose80").onclick = function () {
-        closeYellowModal80();
+    document.getElementById("modalYellowClose50").onclick = function () {
+        closeYellowModal50();
     };
     
     // Function to close the Yellow modal
-    function closeYellowModal40() {
-        var modalYellow40 = document.getElementById("modalYellow40");
-        modalYellow40.style.display = 'none';
+    function closeYellowModal15() {
+        var modalYellow15 = document.getElementById("modalYellow15");
+        modalYellow15.style.display = 'none';
     }
     
     // span.onclick for the Yellow modal
-    document.getElementById("modalYellowClose40").onclick = function () {
-        closeYellowModal40();
+    document.getElementById("modalYellowClose15").onclick = function () {
+        closeYellowModal15();
     };
     
     //Yellow Modal End
@@ -850,20 +809,20 @@ document.getElementById("modalRedClose15").onclick = function () {
         modalBlue120.style.display = 'block';
     }
     
-    function toggleModalBlue80() {
+    function toggleModalBlue50() {
         var modalBlue120 = document.getElementById("modalBlue120");
         modalBlue120.style.display = 'none';
-        var modalBlue80 = document.getElementById("modalBlue80");
-        modalBlue80.style.display = 'block';
+        var modalBlue50 = document.getElementById("modalBlue50");
+        modalBlue50.style.display = 'block';
     }
     
-    function toggleModalBlue40() {
+    function toggleModalBlue15() {
         var modalBlue120 = document.getElementById("modalBlue120");
         modalBlue120.style.display = 'none';
-        var modalBlue80 = document.getElementById("modalBlue80");
-        modalBlue80.style.display = 'none';
-        var modalBlue40 = document.getElementById("modalBlue40");
-        modalBlue40.style.display = 'block';
+        var modalBlue50 = document.getElementById("modalBlue50");
+        modalBlue50.style.display = 'none';
+        var modalBlue15 = document.getElementById("modalBlue15");
+        modalBlue15.style.display = 'block';
     }
     //Functions to close the Blue modals
     function closeBlueModal120() {
@@ -877,25 +836,25 @@ document.getElementById("modalRedClose15").onclick = function () {
     };
     
     // Function to close the Blue modal
-    function closeBlueModal80() {
-        var modalBlue80 = document.getElementById("modalBlue80");
-        modalBlue80.style.display = 'none';
+    function closeBlueModal50() {
+        var modalBlue50 = document.getElementById("modalBlue50");
+        modalBlue50.style.display = 'none';
     }
     
     // span.onclick for the Blue modal
-    document.getElementById("modalBlueClose80").onclick = function () {
-        closeBlueModal80();
+    document.getElementById("modalBlueClose50").onclick = function () {
+        closeBlueModal50();
     };
     
     // Function to close the Blue modal
-    function closeBlueModal40() {
-        var modalBlue40 = document.getElementById("modalBlue40");
-        modalBlue40.style.display = 'none';
+    function closeBlueModal15() {
+        var modalBlue15 = document.getElementById("modalBlue15");
+        modalBlue15.style.display = 'none';
     }
     
     // span.onclick for the Blue modal
-    document.getElementById("modalBlueClose40").onclick = function () {
-        closeBlueModal40();
+    document.getElementById("modalBlueClose15").onclick = function () {
+        closeBlueModal15();
     };
     
     //Blue Modal End
@@ -907,20 +866,20 @@ document.getElementById("modalRedClose15").onclick = function () {
         modalOrange120.style.display = 'block';
     }
     
-    function toggleModalOrange80() {
+    function toggleModalOrange50() {
         var modalOrange120 = document.getElementById("modalOrange120");
         modalOrange120.style.display = 'none';
-        var modalOrange80 = document.getElementById("modalOrange80");
-        modalOrange80.style.display = 'block';
+        var modalOrange50 = document.getElementById("modalOrange50");
+        modalOrange50.style.display = 'block';
     }
     
-    function toggleModalOrange40() {
+    function toggleModalOrange15() {
         var modalOrange120 = document.getElementById("modalOrange120");
         modalOrange120.style.display = 'none';
-        var modalOrange80 = document.getElementById("modalOrange80");
-        modalOrange80.style.display = 'none';
-        var modalOrange40 = document.getElementById("modalOrange40");
-        modalOrange40.style.display = 'block';
+        var modalOrange50 = document.getElementById("modalOrange50");
+        modalOrange50.style.display = 'none';
+        var modalOrange15 = document.getElementById("modalOrange15");
+        modalOrange15.style.display = 'block';
     }
     //Functions to close the Orange modals
     function closeOrangeModal120() {
@@ -934,27 +893,83 @@ document.getElementById("modalRedClose15").onclick = function () {
     };
     
     // Function to close the Orange modal
-    function closeOrangeModal80() {
-        var modalOrange80 = document.getElementById("modalOrange80");
-        modalOrange80.style.display = 'none';
+    function closeOrangeModal50() {
+        var modalOrange50 = document.getElementById("modalOrange50");
+        modalOrange50.style.display = 'none';
     }
     
     // span.onclick for the Orange modal
-    document.getElementById("modalOrangeClose80").onclick = function () {
-        closeOrangeModal80();
+    document.getElementById("modalOrangeClose50").onclick = function () {
+        closeOrangeModal50();
     };
     
     // Function to close the Orange modal
-    function closeOrangeModal40() {
-        var modalOrange40 = document.getElementById("modalOrange40");
-        modalOrange40.style.display = 'none';
+    function closeOrangeModal15() {
+        var modalOrange15 = document.getElementById("modalOrange15");
+        modalOrange15.style.display = 'none';
     }
     
     // span.onclick for the Orange modal
-    document.getElementById("modalOrangeClose40").onclick = function () {
-        closeOrangeModal40();
+    document.getElementById("modalOrangeClose15").onclick = function () {
+        closeOrangeModal15();
     };
     //Orange Modal End
+
+    // Start Purple Models
+    function toggleModalPurple120() {
+        var modalPurple120 = document.getElementById("modalPurple120");
+        modalPurple120.style.display = 'block';
+    }
+
+    function toggleModalPurple50() {
+        var modalPurple120 = document.getElementById("modalPurple120");
+        modalPurple120.style.display = 'none';
+        var modalPurple50 = document.getElementById("modalPurple50");
+        modalPurple50.style.display = 'block';
+    }
+
+    function toggleModalPurple15() {
+        var modalPurple120 = document.getElementById("modalPurple120");
+        modalPurple120.style.display = 'none';
+        var modalPurple50 = document.getElementById("modalPurple50");
+        modalPurple50.style.display = 'none';
+        var modalPurple15 = document.getElementById("modalPurple15");
+        modalPurple15.style.display = 'block';
+    }
+
+    //Functions to close the Purple modals
+    function closePurpleModal120() {
+        var modalPurple120 = document.getElementById("modalPurple120");
+        modalPurple120.style.display = 'none';
+    }
+
+    // span.onclick for the Purple modal
+    document.getElementById("modalPurpleClose120").onclick = function () {
+        closePurpleModal120();
+    };
+
+    // Function to close the Purple modal
+    function closePurpleModal50() {
+        var modalPurple50 = document.getElementById("modalPurple50");
+        modalPurple50.style.display = 'none';
+    }
+
+    // span.onclick for the Purple modal
+    document.getElementById("modalPurpleClose50").onclick = function () {
+        closePurpleModal50();
+    };
+
+    // Function to close the Purple modal
+    function closePurpleModal15() {
+        var modalPurple15 = document.getElementById("modalPurple15");
+        modalPurple15.style.display = 'none';
+    }
+
+    // span.onclick for the Purple modal
+    document.getElementById("modalPurpleClose15").onclick = function () {
+        closePurpleModal15();
+    };
+    //Purple Modal End
 
     function showAllElements() {
         var compassDiv = document.getElementById('compassDiv');
