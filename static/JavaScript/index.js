@@ -6,6 +6,7 @@ var target = {
     latitude: 0,
     longitude: 0
 };
+var 
 
 
 // Add this function at the beginning of your script
@@ -365,6 +366,9 @@ function startCompass() {
 function setCurrentPosition(position) {
     current.latitude = position.coords.latitude;
     current.longitude = position.coords.longitude;
+    
+    console.log('Current Latitude:', current.latitude);
+    console.log('Current Longitude:', current.longitude);
 }
 
 // runs the calculation for getting the direction which the arrow needs to point
@@ -417,7 +421,7 @@ function runCalculation(event) {
                     toggleModalRed120();
                     colour = 'red2';
                 }else{
-                    
+
                 }
                 break;
             case 'red2':
