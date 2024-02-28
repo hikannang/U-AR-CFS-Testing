@@ -252,7 +252,7 @@ html{
     width: 10%; /* Set the desired width */
     height: 10%; /* Set the desired height */
     position: absolute;
-    top: 5vh;
+    top: 15vh;
     right: 10vw;
     z-index: 1000;
     cursor: pointer;
@@ -264,7 +264,7 @@ html{
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 5vh;
+    top: 15vh;
     right: 10vw;
     z-index: 3;
     cursor: pointer;
