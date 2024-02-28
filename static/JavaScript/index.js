@@ -502,10 +502,10 @@ function runCalculation(event) {
     if (distance > 0) {
         // Display the actual distance
         distanceElement.innerHTML = Math.floor(distance) + "m to destination!";
-    } else {
-        // Display '0.00m' for distances above 20,000 meters
-        distanceElement.innerHTML = 'Please Select Destination!';
-    }
+    } //else {
+    //     // Display '0.00m' for distances above 20,000 meters
+    //     distanceElement.innerHTML = 'Please Select Destination!';
+    // }
     }
 }   
 
