@@ -3,8 +3,8 @@ var distance; //Declaring this as a global Variable instead
 var modal;
 var colour = 'white';
 var target = {
-    latitude: 1.281238,
-    longitude: 103.850447
+    latitude: 0,
+    longitude: 0
 };
 
 
@@ -382,7 +382,12 @@ function runCalculation(event) {
     distance = distance * 1000; // Convert to meters
 
     var distanceElement = document.getElementById("distanceFromTarget");
-
+    if (distance > 10000) {
+        distanceElement.innerHTML = 'Please Select Destination!';
+    } else {
+    // Display the actual distance
+        distanceElement.innerHTML = Math.floor(distance) + "m to destination!";
+    }
         
 
     if (colour != 'black') {
@@ -395,11 +400,12 @@ function runCalculation(event) {
                 break;
             case 'red':
                 if (distance > 1000000){
-                    toggleEModal();
                     hideRed();
-                } else if (distance > 17000){
+                    toggleEModal();
+                } else if (distance > 10000){
+                    hideRed();
                     toggleOModal();
-                }else if (distance <= 17000){
+                }else if (distance <= 10000){
                     showRed();
                     toggleModalRed120();
                     colour = 'red2';
@@ -407,6 +413,7 @@ function runCalculation(event) {
                 break;
             case 'red2':
                 if (distance < 50){ 
+                    hideRed();
                     toggleModalRed50();
                     colour = 'red3';
                 }
@@ -504,13 +511,6 @@ function runCalculation(event) {
             default:
                 break;
         }
-    }
-    if (distance > 0) {
-        // Display the actual distance
-        distanceElement.innerHTML = Math.floor(distance) + "m to destination!";
-    } else {
-        // Display '0.00m' for distances above 20,000 meters
-        distanceElement.innerHTML = 'Please Select Destination!';
     }
     }
 }   
