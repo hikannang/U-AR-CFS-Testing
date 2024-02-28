@@ -471,8 +471,6 @@ function runCalculation(event) {
     if (alpha == null || Math.abs(alpha - lastAlpha) > 1) {
     var lat1 = current.latitude * (Math.PI / 180);
     var lon1 = current.longitude * (Math.PI / 180);
-    console.log('lat1:', lat1);
-    console.log('lon1:', lon1);
     var lat2 = target.latitude * (Math.PI / 180);
     var lon2 = target.longitude * (Math.PI / 180);
 
@@ -548,7 +546,6 @@ function runCalculation(event) {
             case 'green3':
                 if (distance < 15){ 
                     hideGreen();
-                    hideAllElements();
                     toggleModalGreen15(); //Picture Frame
                 } else if (distance > 15){
                     showGreen();
