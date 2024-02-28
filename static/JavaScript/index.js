@@ -577,29 +577,18 @@ function toggleModalRed120() {
     modalRed120.style.display = 'block';
 }
 
-function toggleModalRed80() {
+function toggleModalRed50() {
     var modalRed120 = document.getElementById("modalRed120");
     modalRed120.style.display = 'none';
-    var modalRed80 = document.getElementById("modalRed80");
-    modalRed80.style.display = 'block';
-}
-
-function toggleModalRed40() {
-    var modalRed120 = document.getElementById("modalRed120");
-    modalRed120.style.display = 'none';
-    var modalRed80 = document.getElementById("modalRed80");
-    modalRed80.style.display = 'none';
-    var modalRed40 = document.getElementById("modalRed40");
-    modalRed40.style.display = 'block';
+    var modalRed50 = document.getElementById("modalRed50");
+    modalRed50.style.display = 'block';
 }
 
 function toggleModalRed15() {
     var modalRed120 = document.getElementById("modalRed120");
     modalRed120.style.display = 'none';
-    var modalRed80 = document.getElementById("modalRed80");
-    modalRed80.style.display = 'none';
-    var modalRed40 = document.getElementById("modalRed40");
-    modalRed40.style.display = 'none';
+    var modalRed50 = document.getElementById("modalRed50");
+    modalRed50.style.display = 'none';
     var modalRed15 = document.getElementById("modalRed15");
     modalRed15.style.display = 'block';
 }
@@ -616,25 +605,14 @@ document.getElementById("modalRedClose120").onclick = function () {
 };
 
 // Function to close the red modal
-function closeRedModal80() {
-    var modalRed80 = document.getElementById("modalRed80");
-    modalRed80.style.display = 'none';
+function closeRedModal50() {
+    var modalRed50 = document.getElementById("modalRed50");
+    modalRed50.style.display = 'none';
 }
 
 // span.onclick for the red modal
-document.getElementById("modalRedClose80").onclick = function () {
-    closeRedModal80();
-};
-
-// Function to close the red modal
-function closeRedModal40() {
-    var modalRed40 = document.getElementById("modalRed40");
-    modalRed40.style.display = 'none';
-}
-
-// span.onclick for the red modal
-document.getElementById("modalRedClose40").onclick = function () {
-    closeRedModal40();
+document.getElementById("modalRedClose50").onclick = function () {
+    closeRedModal50();
 };
 
 // Function to close the red modal
