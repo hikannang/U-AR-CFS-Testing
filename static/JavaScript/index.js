@@ -407,13 +407,13 @@ function runCalculation(event) {
         switch (colour) {
             case 'white':
                 {
-                    
                     toggleIModal();
                     colour = 'black';
                 }
                 break;
             case 'red':
                 if (distance < 15000){
+                    toggleWModal();
                     toggleModalRed120();
                     colour = 'red2';
                 }
@@ -445,6 +445,7 @@ function runCalculation(event) {
                 break;
             case 'green':
                 if (distance < 20000){ 
+                    toggleWModal();
                     toggleModalGreen120();
                     colour = 'green2';
                 }
@@ -491,6 +492,7 @@ function runCalculation(event) {
                 break;
             case 'blue':
                 if (distance < 20000){ 
+                    toggleWModal();
                     toggleModalBlue120();
                     colour = 'blue2';
                 }
@@ -509,6 +511,7 @@ function runCalculation(event) {
                 break;
             case 'orange':
                 if (distance < 20000){ 
+                    toggleWModal();
                     toggleModalOrange120();
                     colour = 'orange2';
                 }
@@ -538,6 +541,21 @@ function runCalculation(event) {
     }
     }
 }   
+
+function toggleWModal(){
+    //Get the modal
+    modalW = document.getElementById("modalW");
+    modalW.style.display="block";
+}
+
+function closeModalW(){
+    modalW = document.getElementById("modalW");
+    modalW.style.display='none';
+}
+
+document.getElementsByClassName("closeW")[0].onclick = function () {
+    modalW.style.display = "none";
+};
 
 function toggleIModal(){
     //Get the modal
