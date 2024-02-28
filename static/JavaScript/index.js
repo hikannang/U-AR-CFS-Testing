@@ -377,6 +377,8 @@ function runCalculation(event) {
     if (alpha == null || Math.abs(alpha - lastAlpha) > 1) {
     var lat1 = current.latitude * (Math.PI / 180);
     var lon1 = current.longitude * (Math.PI / 180);
+    console.log('lat1:', lat1);
+    console.log('lon1:', lon1);
     var lat2 = target.latitude * (Math.PI / 180);
     var lon2 = target.longitude * (Math.PI / 180);
 
@@ -537,7 +539,9 @@ function runCalculation(event) {
                 break;
         }
     }
-    if (distance <= 20000) {
+    if(){
+
+    }else if (distance <= 20000) {
         // Display the actual distance
         distanceElement.innerHTML = Math.floor(distance) + "m to destination!";
     } else {
