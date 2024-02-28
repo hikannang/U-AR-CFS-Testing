@@ -1,10 +1,14 @@
 var loadingTimeout;
-var distance; //Declaring this as a global Variable instead
+var distance;
 var modal;
 var colour = 'white';
 var target = {
     latitude: 0,
     longitude: 0
+};
+var current = {
+    latitude: null,
+    longitude: null
 };
 
 
@@ -76,6 +80,13 @@ function selectRed(){
         var content = document.getElementById('orangeOff')
         content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
     }
+
+    if(document.getElementById('purple')){
+        // Turning purple Off
+        document.getElementById('purple').id = 'purpleOff';
+        var content = document.getElementById('purpleOff')
+        content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
+    }
 }
 
 function hideRed(){
@@ -94,6 +105,7 @@ function showRed(){
         var content = document.getElementById('red');
         content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942"></a-image>';
     }
+    
 }
 
 function selectGreen(){
@@ -143,6 +155,13 @@ function selectGreen(){
         document.getElementById('orange').id = 'orangeOff';
         var content = document.getElementById('orangeOff')
         content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
+    }
+
+    if(document.getElementById('purple')){
+        // Turning purple Off
+        document.getElementById('purple').id = 'purpleOff';
+        var content = document.getElementById('purpleOff')
+        content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
     }
 }
 
@@ -214,6 +233,13 @@ function selectYellow(){
         var content = document.getElementById('orangeOff')
         content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
     }
+
+    if(document.getElementById('purple')){
+        // Turning purple Off
+        document.getElementById('purple').id = 'purpleOff';
+        var content = document.getElementById('purpleOff')
+        content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
+    }
 }
 
 function selectBlue(){
@@ -262,6 +288,13 @@ function selectBlue(){
         document.getElementById('orange').id = 'orangeOff';
         var content = document.getElementById('orangeOff')
         content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
+    }
+
+    if(document.getElementById('purple')){
+        // Turning purple Off
+        document.getElementById('purple').id = 'purpleOff';
+        var content = document.getElementById('purpleOff')
+        content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
     }
 
 }
@@ -313,11 +346,75 @@ function selectOrange(){
         content.innerHTML = '<a-entity id="blueOff"></a-entity>'
     }
 
-
+    if(document.getElementById('purple')){
+        // Turning purple Off
+        document.getElementById('purple').id = 'purpleOff';
+        var content = document.getElementById('purpleOff')
+        content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
+    }
 }
 
+function selectPurple(){
+        //YellowBoxStanding
+    
+        //Near Capitol Tower
+        startCompass()
+        target.latitude = 1.277589;
+        target.longitude = 103.847113;
+    
+        showLoadingScreen();
+    
+        colour = 'purple';
+    
+        if (document.getElementById('purpleOff')){
+            // Turning purple On
+            document.getElementById('purpleOff').id = 'purple';
+            var content = document.getElementById('purple')
+            content.innerHTML = '<a-image  id="purple" src="./static/images/2D_Assets_low_res/yellowBox_standing.png" look-at="[gps-projected-camera]" scale="20 20 20" gps-projected-entity-place="atitude: 1.277589; longitude: 103.847113"></a-image>';
+        }
+    
+        if(document.getElementById('red')){
+            // Turning Red Off
+            document.getElementById('red').id = 'redOff';
+            var content = document.getElementById('redOff')
+            content.innerHTML = '<a-entity id="redOff"></a-entity>'
+        }
+    
+        if(document.getElementById('green')){
+            // Turning Green Off
+            document.getElementById('green').id = 'greenOff';
+            var content = document.getElementById('greenOff')
+            content.innerHTML = '<a-entity id="greenOff"></a-entity>'
+        }
+    
+        if(document.getElementById('yellow')){
+            // Turning yellow Off
+            document.getElementById('yellow').id = 'yellowOff';
+            var content = document.getElementById('yellowOff')
+            content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
+        }
+    
+        if(document.getElementById('blue')){
+            // Turning blue Off
+            document.getElementById('blue').id = 'blueOff';
+            var content = document.getElementById('blueOff')
+            content.innerHTML = '<a-entity id="blueOff"></a-entity>'
+        }
 
+        if(document.getElementById('orange')){
+            // Turning orange Off
+            document.getElementById('orange').id = 'orangeOff';
+            var content = document.getElementById('orangeOff')
+            content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
+        }
 
+        if(document.getElementById('purple')){
+            // Turning purple Off
+            document.getElementById('purple').id = 'purpleOff';
+            var content = document.getElementById('purpleOff')
+            content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
+        }
+}
 
 // ##################################################################################################
 var current = { latitude: null, longitude: null };
@@ -953,26 +1050,6 @@ document.getElementById("modalRedClose15").onclick = function () {
         closePurpleModal15();
     };
     //Purple Modal End
-
-    function showAllElements() {
-        var compassDiv = document.getElementById('compassDiv');
-        var topBox = document.querySelector('.translucent-box.top-box');
-        var bottomBox = document.querySelector('.translucent-box.bottom-box');
-    
-        compassDiv.style.display = 'block';
-        topBox.style.display = 'block';
-        bottomBox.style.display = 'block';
-    }
-    
-    function hideAllElements() {
-        var compassDiv = document.getElementById('compassDiv');
-        var topBox = document.querySelector('.translucent-box.top-box');
-        var bottomBox = document.querySelector('.translucent-box.bottom-box');
-    
-        compassDiv.style.display = 'none';
-        topBox.style.display = 'none';
-        bottomBox.style.display = 'none';
-    }
 
 function toggleCircles() {
     var additionalCircles = document.getElementById("additionalCircles");
