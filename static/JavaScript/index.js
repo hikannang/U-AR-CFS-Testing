@@ -499,21 +499,31 @@ function runCalculation(event) {
                 }
                 break;
             case 'blue':
-                if (distance < 20000){ 
+                if (distance > 1000000){
+                    hideBlue();
+                    toggleEModal();
+                } else if (distance > 10000){
+                    hideBlue();
+                    toggleOModal();
+                }else if (distance <= 10000){
+                    showBlue();
                     toggleModalBlue120();
                     colour = 'blue2';
                 }
                 break;
             case 'blue2':
-                if (distance <= 80){ 
-                    toggleModalBlue80();
+                if (distance < 50){ 
+                    showBlue();
+                    toggleModalBlue50();
                     colour = 'blue3';
                 }
                 break;
             case 'blue3':
-                if (distance <= 40){ 
-                    toggleModalBlue40();
-                    colour = 'black';
+                if (distance < 15){ 
+                    hideBlue();
+                    toggleModalBlue15(); 
+                }else if(distance >= 15){
+                    showBlue();
                 }
                 break;
             case 'orange':
@@ -820,20 +830,20 @@ function showRed(){
         modalBlue120.style.display = 'block';
     }
     
-    function toggleModalBlue80() {
+    function toggleModalBlue50() {
         var modalBlue120 = document.getElementById("modalBlue120");
         modalBlue120.style.display = 'none';
-        var modalBlue80 = document.getElementById("modalBlue80");
-        modalBlue80.style.display = 'block';
+        var modalBlue50 = document.getElementById("modalBlue50");
+        modalBlue50.style.display = 'block';
     }
     
-    function toggleModalBlue40() {
+    function toggleModalBlue15() {
         var modalBlue120 = document.getElementById("modalBlue120");
         modalBlue120.style.display = 'none';
-        var modalBlue80 = document.getElementById("modalBlue80");
-        modalBlue80.style.display = 'none';
-        var modalBlue40 = document.getElementById("modalBlue40");
-        modalBlue40.style.display = 'block';
+        var modalBlue50 = document.getElementById("modalBlue50");
+        modalBlue50.style.display = 'none';
+        var modalBlue15 = document.getElementById("modalBlue15");
+        modalBlue15.style.display = 'block';
     }
     //Functions to close the Blue modals
     function closeBlueModal120() {
@@ -847,26 +857,44 @@ function showRed(){
     };
     
     // Function to close the Blue modal
-    function closeBlueModal80() {
-        var modalBlue80 = document.getElementById("modalBlue80");
-        modalBlue80.style.display = 'none';
+    function closeBlueModal50() {
+        var modalBlue50 = document.getElementById("modalBlue50");
+        modalBlue50.style.display = 'none';
     }
     
     // span.onclick for the Blue modal
-    document.getElementById("modalBlueClose80").onclick = function () {
-        closeBlueModal80();
+    document.getElementById("modalBlueClose50").onclick = function () {
+        closeBlueModal50();
     };
     
     // Function to close the Blue modal
-    function closeBlueModal40() {
-        var modalBlue40 = document.getElementById("modalBlue40");
-        modalBlue40.style.display = 'none';
+    function closeBlueModal15() {
+        var modalBlue15 = document.getElementById("modalBlue15");
+        modalBlue15.style.display = 'none';
     }
     
     // span.onclick for the Blue modal
-    document.getElementById("modalBlueClose40").onclick = function () {
-        closeBlueModal40();
+    document.getElementById("modalBlueClose15").onclick = function () {
+        closeBlueModal15();
     };
+
+    function hideBlue(){
+        if(document.getElementById('blue')){
+            // Turning Blue Off
+            document.getElementById('blue').id = 'blueOff';
+            var content = document.getElementById('blueOff')
+            content.innerHTML = '<a-entity id="blueOff"></a-entity>'
+        }
+    }
+    
+    function showBlue(){
+        if (document.getElementById('blueOff')) {
+            // Turning Blue On
+            document.getElementById('blueOff').id = 'blue';
+            var content = document.getElementById('blue');
+            content.innerHTML = '<a-image id="blue" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942"></a-image>';
+        }
+    }
     
     //Blue Modal End
 
