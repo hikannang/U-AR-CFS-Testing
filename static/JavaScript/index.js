@@ -3,8 +3,8 @@ var distance; //Declaring this as a global Variable instead
 var modal;
 var colour = 'white';
 var target = {
-    latitude: 0,
-    longitude: 0
+    latitude: 1.281238,
+    longitude: 103.850447
 };
 
 
