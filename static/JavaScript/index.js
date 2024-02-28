@@ -76,6 +76,13 @@ function selectRed(){
         var content = document.getElementById('orangeOff')
         content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
     }
+
+    if(document.getElementById('purple')){
+        // Turning purple Off
+        document.getElementById('purple').id = 'purpleOff';
+        var content = document.getElementById('purpleOff')
+        content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
+    }
 }
 
 function selectGreen(){
@@ -89,14 +96,12 @@ function selectGreen(){
 
     colour = 'green';
 
-    if (document.getElementById('greenOff')){
-        
+    if (document.getElementById('greenOff')){ 
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
         // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="12 12 12" gps-projected-entity-place="latitude: 1.281238; longitude: 103.850447"></a-image>';
-        // Hide Loading Screen after 2 seconds
+        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.281238; longitude: 103.850447"></a-image>';
     }
 
     if(document.getElementById('red')){
@@ -126,6 +131,13 @@ function selectGreen(){
         var content = document.getElementById('orangeOff')
         content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
     }
+
+    if(document.getElementById('purple')){
+        // Turning purple Off
+        document.getElementById('purple').id = 'purpleOff';
+        var content = document.getElementById('purpleOff')
+        content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
+    }
 }
 
 function showGreen(){
@@ -135,7 +147,6 @@ function showGreen(){
         var content = document.getElementById('green')
         // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
         content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="12 12 12" gps-projected-entity-place="latitude: 1.281238; longitude: 103.850447"></a-image>';
-        // Hide Loading Screen after 2 seconds
     }
 }
 
@@ -413,7 +424,7 @@ function runCalculation(event) {
                 break;
             case 'red2':
                 if (distance < 50){ 
-                    hideRed();
+                    showRed();
                     toggleModalRed50();
                     colour = 'red3';
                 }
@@ -425,33 +436,33 @@ function runCalculation(event) {
                 }else if(distance >= 15){
                     showRed();
                 }
-                break; 
+                break;
             case 'green':
-                if (distance < 20000){ 
+                if (distance > 1000000){
+                    hideGreen();
+                    toggleEModal();
+                } else if (distance > 10000){
+                    hideGreen();
+                    toggleOModal();
+                }else if (distance <= 10000){
+                    showGreen();
                     toggleModalGreen120();
                     colour = 'green2';
                 }
                 break;
             case 'green2':
-                if (distance <= 80){ 
-                    toggleModalGreen80();
+                if (distance < 50){ 
+                    showGreen();
+                    toggleModalGreen50();
                     colour = 'green3';
                 }
                 break;
             case 'green3':
-                if (distance > 15 && distance <= 40){ 
-                    showGreen();
-                    toggleModalGreen40(); //Picture Frame
-                    hideAllElements();
-                    colour = 'green4';
-                }
-                break;
-            case 'green4':
-                if (distance <= 15){ 
+                if (distance < 15){ 
                     hideGreen();
-                    toggleModalGreen15();
-                    showAllElements();
-                    colour = 'green3';
+                    toggleModalGreen15(); 
+                }else if(distance >= 15){
+                    showGreen();
                 }
                 break;
             case 'yellow':
