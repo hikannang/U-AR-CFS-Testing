@@ -78,24 +78,6 @@ function selectRed(){
     }
 }
 
-function hideRed(){
-    if(document.getElementById('red')){
-        // Turning Red Off
-        document.getElementById('red').id = 'redOff';
-        var content = document.getElementById('redOff')
-        content.innerHTML = '<a-entity id="redOff"></a-entity>'
-    }
-}
-
-function showRed(){
-    if (document.getElementById('redOff')) {
-        // Turning Red On
-        document.getElementById('redOff').id = 'red';
-        var content = document.getElementById('red');
-        content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942"></a-image>';
-    }
-}
-
 function selectGreen(){
     
     //In front of lao pa sat ,
@@ -406,8 +388,7 @@ function runCalculation(event) {
     if (colour != 'black') {
         switch (colour) {
             case 'white':
-                {
-                    
+                { 
                     toggleIModal();
                     colour = 'black';
                 }
@@ -419,30 +400,19 @@ function runCalculation(event) {
                 }
                 break;
             case 'red2':
-                if (distance < 80){ 
-                    toggleModalRed80();
+                if (distance < 50){ 
+                    toggleModalRed50();
                     colour = 'red3';
                 }
                 break;
             case 'red3':
-                if (distance < 40){ 
+                if (distance < 15){ 
+                    hideRed();
+                    toggleModalRed15(); 
+                }else if(distance >= 15){
                     showRed();
-                    hideAllElements();
-                    toggleModalRed40(); //Picture Frame
-                    colour = 'red4';
                 }
                 break; 
-            case 'red4':
-                if (distance <= 15){ 
-                    hideRed();
-                    toggleModalRed15();
-                    showAllElements();
-                }else if(distance > 15){
-                    showRed();
-                    hideAllElements();
-                    toggleModalRed40(); //Picture Frame
-                }
-                break;
             case 'green':
                 if (distance < 20000){ 
                     toggleModalGreen120();
@@ -529,7 +499,7 @@ function runCalculation(event) {
                 break;
         }
     }
-    if (distance <= 20000) {
+    if (distance > 0) {
         // Display the actual distance
         distanceElement.innerHTML = Math.floor(distance) + "m to destination!";
     } else {
@@ -625,6 +595,24 @@ function closeRedModal15() {
 document.getElementById("modalRedClose15").onclick = function () {
     closeRedModal15();
 };
+
+function hideRed(){
+    if(document.getElementById('red')){
+        // Turning Red Off
+        document.getElementById('red').id = 'redOff';
+        var content = document.getElementById('redOff')
+        content.innerHTML = '<a-entity id="redOff"></a-entity>'
+    }
+}
+
+function showRed(){
+    if (document.getElementById('redOff')) {
+        // Turning Red On
+        document.getElementById('redOff').id = 'red';
+        var content = document.getElementById('red');
+        content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942"></a-image>';
+    }
+}
 //Red Modal End
 
 // Start Green Models
