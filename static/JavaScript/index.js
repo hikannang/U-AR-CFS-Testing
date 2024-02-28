@@ -402,21 +402,14 @@ function runCalculation(event) {
     distance = distance * 1000; // Convert to meters
 
     var distanceElement = document.getElementById("distanceFromTarget");
-
+    distanceElement.innerHTML = Math.floor(distance) + "m to destination!";
+    
         
 
     if (colour !== 'black') {
         switch (colour) {
             case 'white':
-                if (current.latitude == null || current.longitude == null) {
-                   toggleEModal(); 
-                } else if (
-                    parseFloat(current.latitude) >= 1.2916482 ||
-                    parseFloat(current.longitude) >= 103.8548341 ||
-                    parseFloat(current.latitude) <= 1.2775314 ||
-                    parseFloat(current.longitude) <= 103.8475522) {
-                    toggleOModal();
-                } else {
+                {
                     toggleIModal();
                     colour = 'black';
                 }
@@ -426,10 +419,7 @@ function runCalculation(event) {
                     toggleWModal();
                     toggleModalRed120();
                     colour = 'red2';
-                }else{
-
                 }
-                break;
             case 'red2':
                 if (distance < 50){ 
                     toggleModalRed50();
@@ -545,13 +535,6 @@ function runCalculation(event) {
             default:
                 break;
         }
-    }
-    if (distance <= 20000) {
-        // Display the actual distance
-        distanceElement.innerHTML = Math.floor(distance) + "m to destination!";
-    } else {
-        // Display '0.00m' for distances above 20,000 meters
-        distanceElement.innerHTML = 'Please Select Destination!';
     }
     }
 }   
