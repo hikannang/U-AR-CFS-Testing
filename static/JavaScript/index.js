@@ -76,13 +76,6 @@ function selectRed(){
         var content = document.getElementById('orangeOff')
         content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
     }
-
-    if(document.getElementById('purple')){
-        // Turning purple Off
-        document.getElementById('purple').id = 'purpleOff';
-        var content = document.getElementById('purpleOff')
-        content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
-    }
 }
 
 function selectGreen(){
@@ -130,13 +123,6 @@ function selectGreen(){
         document.getElementById('orange').id = 'orangeOff';
         var content = document.getElementById('orangeOff')
         content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
-    }
-
-    if(document.getElementById('purple')){
-        // Turning purple Off
-        document.getElementById('purple').id = 'purpleOff';
-        var content = document.getElementById('purpleOff')
-        content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
     }
 }
 
@@ -208,6 +194,8 @@ function selectYellow(){
         content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
     }
 }
+
+
 
 function selectBlue(){
     //Wayfinding
