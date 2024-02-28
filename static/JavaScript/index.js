@@ -396,9 +396,11 @@ function runCalculation(event) {
             case 'red':
                 if (distance > 1000000){
                     toggleEModal();
+                    hideRed();
                 } else if (distance > 17000){
                     toggleOModal();
                 }else if (distance <= 17000){
+                    showRed();
                     toggleModalRed120();
                     colour = 'red2';
                 }
