@@ -6,7 +6,6 @@ var target = {
     latitude: 0,
     longitude: 0
 };
-var 
 
 
 // Add this function at the beginning of your script

@@ -407,6 +407,7 @@ html{
 .top-image-container {
     text-align: center;
     width: 100%;
+    background-color: transparent;
 }
 
 .top-image-container img {
