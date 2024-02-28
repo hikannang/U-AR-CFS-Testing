@@ -546,21 +546,31 @@ function runCalculation(event) {
                 }
                 break;
             case 'orange':
-                if (distance < 20000){ 
+                if (distance > 1000000){
+                    hideOrange();
+                    toggleEModal();
+                } else if (distance > 10000){
+                    hideOrange();
+                    toggleOModal();
+                }else if (distance <= 10000){
+                    showOrange();
                     toggleModalOrange120();
                     colour = 'orange2';
                 }
                 break;
             case 'orange2':
-                if (distance <= 80){ 
-                    toggleModalOrange80();
+                if (distance < 50){ 
+                    showOrange();
+                    toggleModalOrange50();
                     colour = 'orange3';
                 }
                 break;
             case 'orange3':
-                if (distance <= 40){ 
-                    toggleModalOrange40();
-                    colour = 'black';
+                if (distance < 15){ 
+                    hideOrange();
+                    toggleModalOrange15(); 
+                }else if(distance >= 15){
+                    showOrange();
                 }
                 break;
             default:
@@ -918,27 +928,27 @@ function showRed(){
 //Blue Modal End
 
 
-// Start Orange Models
+// Start Blue Models
     // Function to open the Orange modal
     function toggleModalOrange120() {
         var modalOrange120 = document.getElementById("modalOrange120");
         modalOrange120.style.display = 'block';
     }
     
-    function toggleModalOrange80() {
+    function toggleModalOrange50() {
         var modalOrange120 = document.getElementById("modalOrange120");
         modalOrange120.style.display = 'none';
-        var modalOrange80 = document.getElementById("modalOrange80");
-        modalOrange80.style.display = 'block';
+        var modalOrange50 = document.getElementById("modalOrange50");
+        modalOrange50.style.display = 'block';
     }
     
-    function toggleModalOrange40() {
+    function toggleModalOrange15() {
         var modalOrange120 = document.getElementById("modalOrange120");
         modalOrange120.style.display = 'none';
-        var modalOrange80 = document.getElementById("modalOrange80");
-        modalOrange80.style.display = 'none';
-        var modalOrange40 = document.getElementById("modalOrange40");
-        modalOrange40.style.display = 'block';
+        var modalOrange50 = document.getElementById("modalOrange50");
+        modalOrange50.style.display = 'none';
+        var modalOrange15 = document.getElementById("modalOrange15");
+        modalOrange15.style.display = 'block';
     }
     //Functions to close the Orange modals
     function closeOrangeModal120() {
@@ -952,27 +962,46 @@ function showRed(){
     };
     
     // Function to close the Orange modal
-    function closeOrangeModal80() {
-        var modalOrange80 = document.getElementById("modalOrange80");
-        modalOrange80.style.display = 'none';
+    function closeOrangeModal50() {
+        var modalOrange50 = document.getElementById("modalOrange50");
+        modalOrange50.style.display = 'none';
     }
     
     // span.onclick for the Orange modal
-    document.getElementById("modalOrangeClose80").onclick = function () {
-        closeOrangeModal80();
+    document.getElementById("modalOrangeClose50").onclick = function () {
+        closeOrangeModal50();
     };
     
     // Function to close the Orange modal
-    function closeOrangeModal40() {
-        var modalOrange40 = document.getElementById("modalOrange40");
-        modalOrange40.style.display = 'none';
+    function closeOrangeModal15() {
+        var modalOrange15 = document.getElementById("modalOrange15");
+        modalOrange15.style.display = 'none';
     }
     
     // span.onclick for the Orange modal
-    document.getElementById("modalOrangeClose40").onclick = function () {
-        closeOrangeModal40();
+    document.getElementById("modalOrangeClose15").onclick = function () {
+        closeOrangeModal15();
     };
-    //Orange Modal End
+
+    function hideOrange(){
+        if(document.getElementById('orange')){
+            // Turning Orange Off
+            document.getElementById('orange').id = 'orangeOff';
+            var content = document.getElementById('orangeOff')
+            content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
+        }
+    }
+    
+    function showOrange(){
+        if (document.getElementById('orangeOff')) {
+            // Turning Orange On
+            document.getElementById('orangeOff').id = 'orange';
+            var content = document.getElementById('orange');
+            content.innerHTML = '<a-image id="orange" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.308544; longitude: 103.849942"></a-image>';
+        }
+    }
+    
+//Orange Modal End
 
     function showAllElements() {
         var compassDiv = document.getElementById('compassDiv');
