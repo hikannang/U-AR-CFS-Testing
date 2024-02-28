@@ -394,13 +394,25 @@ html{
 .image-container {
     display: flex;
     justify-content: space-between; /* Distribute images evenly */
-    margin-top: 5px; /* Adjust the margin between text and images as needed */
+    
 }
 
 .image-container img {
     width: 34%;
     height: auto;
     object-fit: contain; /* Maintain the original aspect ratio while fitting within the container */
+}
+
+/* Additional styles for the top image container */
+.top-image-container {
+    text-align: center;
+    width: 100%;
+}
+
+.top-image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .additional-text {
@@ -410,10 +422,10 @@ html{
 }
 
 #distanceFromTarget{
-    color: black;
+    color:rgba(0, 255, 0, 0.512);
     font-size: 1.5em;
     margin-top: 6vh;
-    background-color: rgba(0, 255, 0, 0.512);
+    background-color: black;
     /* border: 2px solid yellow;
     padding: 10px;
     display: inline-block; */

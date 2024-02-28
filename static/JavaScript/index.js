@@ -416,6 +416,8 @@ function runCalculation(event) {
                     toggleWModal();
                     toggleModalRed120();
                     colour = 'red2';
+                }else{
+                    
                 }
                 break;
             case 'red2':
