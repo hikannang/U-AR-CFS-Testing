@@ -108,11 +108,11 @@ function hideRed(){
 function selectGreen(){
     
     //0m
-    //Reimagine Active Mobility Zone 1.401318,103.749277
+    //Reimagine Active Mobility Zone 1.401505,103.749438
 
-    startCompass()
-    target.latitude = 1.401318;
-    target.longitude = 103.749277;
+    startCompass() 
+    target.latitude = 1.401505;
+    target.longitude = 103.749438;
 
     showLoadingScreen();
 
@@ -123,7 +123,7 @@ function selectGreen(){
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
         // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401318; longitude: 103.749277"></a-image>';
+        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401505; longitude: 103.749438"></a-image>';
     }
 
     if(document.getElementById('red')){
@@ -168,7 +168,7 @@ function showGreen(){
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
         // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401318; longitude: 103.749277"></a-image>';
+        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401505; longitude: 103.749438"></a-image>';
     }
 }
 
@@ -339,10 +339,10 @@ function hideBlue(){
 function selectOrange(){
     //YellowBox Sitting
 
-    //Bicycle Park (Reimagine Active Mobility Zone)
+    //Bicycle Park (Reimagine Active Mobility Zone) 1.401505,103.749438
     startCompass()
-    target.latitude = 1.289254;
-    target.longitude = 103.851201;
+    target.latitude = 1.401505;
+    target.longitude = 103.749438;
 
     showLoadingScreen();
 
@@ -352,7 +352,7 @@ function selectOrange(){
         // Turning orange On
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange')
-        content.innerHTML = '<a-image  id="orange" src="./static/images/2D_Assets_low_res/YellowBox_sitting.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="atitude: 1.289254; longitude: 103.851201"></a-image>';
+        content.innerHTML = '<a-image  id="orange" src="./static/images/2D_Assets_low_res/YellowBox_sitting.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="atitude: 1.401505; longitude: 103.749438"></a-image>';
     }
 
     if(document.getElementById('red')){
@@ -407,18 +407,18 @@ function showOrange(){
         // Turning Orange On
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange');
-        content.innerHTML = '<a-image  id="orange" src="./static/images/2D_Assets_low_res/YellowBox_sitting.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="atitude: 1.289254; longitude: 103.851201"></a-image>';
+        content.innerHTML = '<a-image  id="orange" src="./static/images/2D_Assets_low_res/YellowBox_sitting.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="atitude: 1.401505; longitude: 103.749438"></a-image>';
     }
 }
 
 function selectPurple(){
     //YellowBox Standing
 
-    //Bicycle Zone(Market Place)  
+    //Bicycle Zone(Market Place)  1.401505,103.749438
 
     startCompass()
-    target.latitude = 1.286627;
-    target.longitude = 103.853648;
+    target.latitude = 1.401505;
+    target.longitude = 103.749438;
 
     showLoadingScreen();
 
@@ -428,7 +428,7 @@ function selectPurple(){
         // Turning purple On
         document.getElementById('purpleOff').id = 'purple';
         var content = document.getElementById('purple')
-        content.innerHTML = '<a-image  id="purple" src="./static/images/2D_Assets_low_res/yellowBox_standing.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="atitude: 1.286627; longitude: 103.853648"></a-image>';
+        content.innerHTML = '<a-image  id="purple" src="./static/images/2D_Assets_low_res/yellowBox_standing.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="atitude: 1.401505; longitude: 103.749438"></a-image>';
     }
 
     if(document.getElementById('red')){
@@ -473,7 +473,7 @@ function hidePurple(){
         // Turning Purple Off
         document.getElementById('purple').id = 'purpleOff';
         var content = document.getElementById('purpleOff')
-        content.innerHTML = '<a-image  id="purple" src="./static/images/2D_Assets_low_res/yellowBox_standing.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="atitude: 1.286627; longitude: 103.853648"></a-image>';
+        content.innerHTML = '<a-image  id="purple" src="./static/images/2D_Assets_low_res/yellowBox_standing.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="atitude: 1.401505; longitude: 103.749438"></a-image>';
     }
 }
 
@@ -660,6 +660,7 @@ function runCalculation(event) {
                     showYellow();
                     toggleModalYellow120();
                     colour = 'yellow2';
+                    isView
                 }
                 break;
             case 'yellow2':
@@ -970,7 +971,7 @@ function showRed(){
             // Turning Green On
             document.getElementById('greenOff').id = 'green';
             var content = document.getElementById('green');
-            content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401318; longitude: 103.749277"></a-image>';
+            content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401505; longitude: 103.749438"></a-image>';
         }
     }
     
@@ -1196,7 +1197,7 @@ function showRed(){
             // Turning Orange On
             document.getElementById('orangeOff').id = 'orange';
             var content = document.getElementById('orange');
-            content.innerHTML = '<a-image  id="orange" src="./static/images/2D_Assets_low_res/YellowBox_sitting.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="atitude: 1.289254; longitude: 103.851201"></a-image>';
+            content.innerHTML = '<a-image  id="orange" src="./static/images/2D_Assets_low_res/YellowBox_sitting.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="atitude: 1.401505; longitude: 103.749438"></a-image>';
         }
     }
     
@@ -1271,7 +1272,7 @@ function showRed(){
             // Turning Purple On
             document.getElementById('purpleOff').id = 'purple';
             var content = document.getElementById('purple');
-            content.innerHTML = '<a-image  id="purple" src="./static/images/2D_Assets_low_res/yellowBox_standing.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="atitude: 1.286627; longitude: 103.853648"></a-image>';
+            content.innerHTML = '<a-image  id="purple" src="./static/images/2D_Assets_low_res/yellowBox_standing.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="atitude: 1.401505; longitude: 103.749438"></a-image>';
         }
     }
     
