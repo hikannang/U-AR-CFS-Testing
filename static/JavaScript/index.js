@@ -337,9 +337,9 @@ function hideBlue(){
 }
 
 function selectOrange(){
-    //YellowBox Sitting
-
-    //Bicycle Park (Reimagine Active Mobility Zone) 1.401505,103.749438
+    //Wayfinding
+    
+    //Active Play Zone
     startCompass()
     target.latitude = 1.401505;
     target.longitude = 103.749438;
@@ -347,13 +347,14 @@ function selectOrange(){
     showLoadingScreen();
 
     colour = 'orange';
-
+    
     if (document.getElementById('orangeOff')){
-        // Turning orange On
+        // Turning Orange On
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange')
-        content.innerHTML = '<a-image id="orange" src="./static/images/2D_Assets_low_res/YellowBox_Sitting.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="atitude: 1.401505; longitude: 103.749438"></a-image>';
+        content.innerHTML = '<a-image id="orange" src="./static/images/2D_Assets_low_res/YellowBox_Sitting.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401505; longitude: 103.749438"></a-image>';
     }
+    
 
     if(document.getElementById('red')){
         // Turning Red Off
@@ -390,7 +391,16 @@ function selectOrange(){
         content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
     }
 
+}
 
+function showOrange(){
+    if (document.getElementById('orangeOff')){
+        // Turning Orange On
+        document.getElementById('orangeOff').id = 'orange';
+        var content = document.getElementById('orange')
+        // content.innerHTML = '<a-entity id="orange" material="color: orange" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
+        content.innerHTML = '<a-image id="orange" src="./static/images/2D_Assets_low_res/YellowBox_Sitting.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401505; longitude: 103.749438"></a-image>';
+    }
 }
 
 function hideOrange(){
@@ -399,15 +409,6 @@ function hideOrange(){
         document.getElementById('orange').id = 'orangeOff';
         var content = document.getElementById('orangeOff')
         content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
-    }
-}
-
-function showOrange(){
-    if (document.getElementById('orangeOff')) {
-        // Turning Orange On
-        document.getElementById('orangeOff').id = 'orange';
-        var content = document.getElementById('orange');
-        content.innerHTML = '<a-image id="orange" src="./static/images/2D_Assets_low_res/YellowBox_Sitting.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="atitude: 1.401505; longitude: 103.749438"></a-image>';
     }
 }
 
@@ -900,24 +901,6 @@ function closeRedModal15() {
 document.getElementById("modalRedClose15").onclick = function () {
     closeRedModal15();
 };
-
-function hideRed(){
-    if(document.getElementById('red')){
-        // Turning Red Off
-        document.getElementById('red').id = 'redOff';
-        var content = document.getElementById('redOff')
-        content.innerHTML = '<a-entity id="redOff"></a-entity>'
-    }
-}
-
-function showRed(){
-    if (document.getElementById('redOff')) {
-        // Turning Red On
-        document.getElementById('redOff').id = 'red';
-        var content = document.getElementById('red');
-        content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401505; longitude: 103.749438"></a-image>';
-    }
-}
 //Red Modal End
 
 // Start Green Models
@@ -975,25 +958,6 @@ function showRed(){
     document.getElementById("modalGreenClose15").onclick = function () {
         closeGreenModal15();
     };
-
-    function hideGreen(){
-        if(document.getElementById('green')){
-            // Turning Green Off
-            document.getElementById('green').id = 'greenOff';
-            var content = document.getElementById('greenOff')
-            content.innerHTML = '<a-entity id="greenOff"></a-entity>'
-        }
-    }
-    
-    function showGreen(){
-        if (document.getElementById('greenOff')) {
-            // Turning Green On
-            document.getElementById('greenOff').id = 'green';
-            var content = document.getElementById('green');
-            content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401318; longitude: 103.749277"></a-image>';
-        }
-    }
-    
     //Green Modal End
 
 // Start Yellow Models
@@ -1051,25 +1015,7 @@ function showRed(){
         closeYellowModal15();
     };
 
-    function hideYellow(){
-        if(document.getElementById('yellow')){
-            // Turning Yellow Off
-            document.getElementById('yellow').id = 'yellowOff';
-            var content = document.getElementById('yellowOff')
-            content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
-        }
-    }
-    
-    function showYellow(){
-        if (document.getElementById('yellowOff')) {
-            // Turning Yellow On
-            document.getElementById('yellowOff').id = 'yellow';
-            var content = document.getElementById('yellow');
-            content.innerHTML = '<a-image  id="yellow" src="./static/images/2D_Assets_low_res/FootPath.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401505; longitude: 103.749438"></a-image>';
-        }
-    }
-    
-    //Yellow Modal End
+    //Yellow ends
 
 // Start Blue Models
     // Function to open the Blue modal
@@ -1124,26 +1070,7 @@ function showRed(){
     // span.onclick for the Blue modal
     document.getElementById("modalBlueClose15").onclick = function () {
         closeBlueModal15();
-    };
-
-    function hideBlue(){
-        if(document.getElementById('blue')){
-            // Turning Blue Off
-            document.getElementById('blue').id = 'blueOff';
-            var content = document.getElementById('blueOff')
-            content.innerHTML = '<a-entity id="blueOff"></a-entity>'
-        }
-    }
-    
-    function showBlue(){
-        if (document.getElementById('blueOff')) {
-            // Turning Blue On
-            document.getElementById('blueOff').id = 'blue';
-            var content = document.getElementById('blue');
-            content.innerHTML = '<a-image  id="blue" src="./static/images/2D_Assets_low_res/Wayfinding_grabbing.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401505; longitude: 103.749438"></a-image>';
-        }
-    }
-    
+    };    
 //Blue Modal End
 
 
@@ -1202,6 +1129,16 @@ function showRed(){
         closeOrangeModal15();
     };
 
+    function showOrange(){
+        if (document.getElementById('orangeOff')){
+            // Turning Orange On
+            document.getElementById('orangeOff').id = 'orange';
+            var content = document.getElementById('orange')
+            // content.innerHTML = '<a-entity id="orange" material="color: orange" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
+            content.innerHTML = '<a-image id="orange" src="./static/images/2D_Assets_low_res/YellowBox_Sitting.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401505; longitude: 103.749438"></a-image>';
+        }
+    }
+    
     function hideOrange(){
         if(document.getElementById('orange')){
             // Turning Orange Off
@@ -1209,17 +1146,7 @@ function showRed(){
             var content = document.getElementById('orangeOff')
             content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
         }
-    }
-    
-    function showOrange(){
-        if (document.getElementById('orangeOff')) {
-            // Turning Orange On
-            document.getElementById('orangeOff').id = 'orange';
-            var content = document.getElementById('orange');
-            content.innerHTML = '<a-image  id="orange" src="./static/images/2D_Assets_low_res/YellowBox_Sitting.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="atitude: 1.401505; longitude: 103.749438"></a-image>';
-        }
-    }
-    
+    }    
 //Orange Modal End
 
 // Start Purple Models
