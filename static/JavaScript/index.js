@@ -263,7 +263,7 @@ function hideYellow(){
 function selectBlue(){
     //Wayfinding
     
-    //Active Play Zone
+    //Active Play Zone 1.401505,103.749438
     startCompass()
     target.latitude = 1.401505;
     target.longitude = 103.749438;
@@ -339,7 +339,7 @@ function hideBlue(){
 function selectOrange(){
     //Wayfinding
     
-    //Active Play Zone
+    //Active Play Zone 1.401505,103.749438
     startCompass()
     target.latitude = 1.401505;
     target.longitude = 103.749438;
