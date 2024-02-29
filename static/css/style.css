@@ -24,9 +24,9 @@ html{
     top: 42.5%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: url("https://freesvg.org/img/Soeb-Plain-Arrows-6.png")
+    background: url("https://p9n2c8y2.rocketcdn.me/wp-content/uploads/2021/05/24.png.webp")
         center no-repeat;
-    background-size: 100% 100%;
+    background-size: 115% 115%;
     z-index: 2000;
     position: relative;
 }
@@ -138,8 +138,8 @@ html{
 .maps {
     /* Button */
     position: fixed;
-    width: 16vw;
-    height: 16vw;
+    width: 13vw;
+    height: 13vw;
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     top: 3vh;
@@ -154,8 +154,8 @@ html{
 .mapDot {
     /* Icon */
     position: absolute;
-    width: 12vw; /* Adjust the width and height as needed */
-    height: 12vw;
+    width: 10vw; /* Adjust the width and height as needed */
+    height: 10vw;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -380,26 +380,29 @@ html{
 .text-container {
     text-align: center;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.5); /* White with 50% transparency */
 }
 
 .black-text {
     color: black;
     font-size: 0.75em;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* White with 50% transparency */
     z-index: 5;
 }
 
 .image-container {
     display: flex;
-    justify-content: space-between; /* Distribute images evenly */
+    justify-content: space-around; /* Distribute images evenly */
+    align-items: center;
     background-color: rgba(255, 255, 255, 0.5); /* White with 50% transparency */
 }
 
 .image-container img {
-    width: 34%;
+    max-width: 45%;
     height: auto;
     object-fit: contain; /* Maintain the original aspect ratio while fitting within the container */
 }
+
 
 /* Additional styles for the top image container */
 .top-image-container {
@@ -424,7 +427,7 @@ html{
 #distanceFromTarget{
     color:rgba(0, 255, 0, 0.512);
     font-size: 1.5em;
-    margin-top: 6vh;
+    margin-top: 2.25vh;
     background-color: black;
     /* border: 2px solid yellow;
     padding: 10px;
