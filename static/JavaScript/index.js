@@ -352,7 +352,7 @@ function selectOrange(){
         // Turning Orange On
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange')
-        content.innerHTML = '<a-image id="orange" src="./static/images/2D_Assets_low_res/YellowBox.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401505; longitude: 103.749438"></a-image>';
+        content.innerHTML = '<a-image id="orange" src="./static/images/2D_Assets_low_res/YellowBox_sitting.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401505; longitude: 103.749438"></a-image>';
     }
     
 
@@ -399,7 +399,7 @@ function showOrange(){
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange')
         // content.innerHTML = '<a-entity id="orange" material="color: orange" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-image id="orange" src="./static/images/2D_Assets_low_res/yellowBox_Sitting.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401505; longitude: 103.749438"></a-image>';
+        content.innerHTML = '<a-image id="orange" src="./static/images/2D_Assets_low_res/YellowBox_sitting.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401505; longitude: 103.749438"></a-image>';
     }
 }
 
@@ -429,7 +429,7 @@ function selectPurple(){
         // Turning purple On
         document.getElementById('purpleOff').id = 'purple';
         var content = document.getElementById('purple')
-        content.innerHTML = '<a-image id="purple" src="./static/images/2D_Assets_low_res/yellowBox_Standing.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401505; longitude: 103.749438"></a-image>';
+        content.innerHTML = '<a-image id="purple" src="./static/images/2D_Assets_low_res/YellowBox.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401505; longitude: 103.749438"></a-image>';
     }
 
     if(document.getElementById('red')){
@@ -483,7 +483,7 @@ function showPurple(){
         // Turning Purple On
         document.getElementById('purpleOff').id = 'purple';
         var content = document.getElementById('purple');
-        content.innerHTML = '<a-image id="purple" src="./static/images/2D_Assets_low_res/yellowBox_Standing.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401505; longitude: 103.749438"></a-image>';
+        content.innerHTML = '<a-image id="purple" src="./static/images/2D_Assets_low_res/yellowBox.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401505; longitude: 103.749438"></a-image>';
     }
 }
 
