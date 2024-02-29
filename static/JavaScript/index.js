@@ -6,6 +6,7 @@ var target = {
     latitude: 0,
     longitude: 0
 };
+var isViewed = false;
 
 
 // Add this function at the beginning of your script
@@ -586,13 +587,12 @@ function runCalculation(event) {
                 break;
             case 'red':
                 if (distance > 1000000){
+                    isViewed = false;
                     hideRed();
                     toggleEModal();
-                    break;
                 } else if (distance > 10000){
                     hideRed();
                     toggleOModal();
-                    break;
                 }else if (distance <= 10000){
                     showRed();
                     toggleModalRed120();
@@ -609,8 +609,11 @@ function runCalculation(event) {
             case 'red3':
                 if (distance < 15){ 
                     hideRed();
-                    toggleModalRed15(); 
-                }else if(distance >= 15){
+                    if(isViewed == false){
+                        toggleModalRed15();
+                        isViewed = true;
+                    }
+                } else if (distance >= 15){
                     showRed();
                 }
                 break;
@@ -638,8 +641,7 @@ function runCalculation(event) {
                 if (distance < 15){ 
                     hideGreen();
                     toggleModalGreen15(); 
-                }else if(distance >= 15){
-                    showGreen();
+                    colour = 'black';
                 }
                 break;
             case 'yellow':
@@ -666,8 +668,7 @@ function runCalculation(event) {
                 if (distance < 15){ 
                     hideYellow();
                     toggleModalYellow15(); 
-                }else if(distance >= 15){
-                    showYellow();
+                    colour = 'black';
                 }
                 break;
             case 'blue':
@@ -694,8 +695,7 @@ function runCalculation(event) {
                 if (distance < 15){ 
                     hideBlue();
                     toggleModalBlue15(); 
-                }else if(distance >= 15){
-                    showBlue();
+                    colour = 'black';
                 }
                 break;
             case 'orange':
@@ -722,8 +722,7 @@ function runCalculation(event) {
                 if (distance < 15){ 
                     hideOrange();
                     toggleModalOrange15(); 
-                }else if(distance >= 15){
-                    showOrange();
+                    colour = 'black';
                 }
                 break;
             case 'purple':
@@ -749,9 +748,8 @@ function runCalculation(event) {
             case 'purple3':
                 if (distance < 15){ 
                     hidePurple();
-                    toggleModalPurple15(); 
-                }else if(distance >= 15){
-                    showPurple();
+                    toggleModalPurple15();
+                    colour = 'black';
                 }
                 break;
             default:
