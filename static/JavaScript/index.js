@@ -111,8 +111,8 @@ function selectGreen(){
     //Reimagine Active Mobility Zone 1.401505,103.749438
 
     startCompass() 
-    target.latitude = 1.401505;
-    target.longitude = 103.749438;
+    target.latitude = 1.401318;
+    target.longitude = 103.749277;
 
     showLoadingScreen();
 
@@ -123,7 +123,7 @@ function selectGreen(){
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
         // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401505; longitude: 103.749438"></a-image>';
+        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401318; longitude: 103.749277"></a-image>';
     }
 
     if(document.getElementById('red')){
@@ -168,7 +168,7 @@ function showGreen(){
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
         // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401505; longitude: 103.749438"></a-image>';
+        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401318; longitude: 103.749277"></a-image>';
     }
 }
 
@@ -660,7 +660,7 @@ function runCalculation(event) {
                     showYellow();
                     toggleModalYellow120();
                     colour = 'yellow2';
-                    isView
+                    isViewed = false;
                 }
                 break;
             case 'yellow2':
@@ -673,8 +673,12 @@ function runCalculation(event) {
             case 'yellow3':
                 if (distance < 15){ 
                     hideYellow();
-                    toggleModalYellow15(); 
-                    colour = 'black';
+                    if(isViewed == false){
+                        toggleModalYellow15();
+                        isViewed = true;
+                    }
+                }else if(distance >= 15){
+                    showYellow();
                 }
                 break;
             case 'blue':
@@ -688,6 +692,7 @@ function runCalculation(event) {
                     showBlue();
                     toggleModalBlue120();
                     colour = 'blue2';
+                    isViewed = false;
                 }
                 break;
             case 'blue2':
@@ -700,8 +705,12 @@ function runCalculation(event) {
             case 'blue3':
                 if (distance < 15){ 
                     hideBlue();
-                    toggleModalBlue15(); 
-                    colour = 'black';
+                    if(isViewed == false){
+                        toggleModalBlue15(); 
+                        isViewed = true;
+                    }
+                } else if (distance >= 15){
+                    showBlue();
                 }
                 break;
             case 'orange':
@@ -715,6 +724,7 @@ function runCalculation(event) {
                     showOrange();
                     toggleModalOrange120();
                     colour = 'orange2';
+                    isViewed = false;
                 }
                 break;
             case 'orange2':
@@ -727,8 +737,12 @@ function runCalculation(event) {
             case 'orange3':
                 if (distance < 15){ 
                     hideOrange();
-                    toggleModalOrange15(); 
-                    colour = 'black';
+                    if(isViewed == false){
+                       toggleModalOrange15(); 
+                        isViewed = true;
+                    }
+                }else if (distance >= 15){
+                    showOrange();
                 }
                 break;
             case 'purple':
@@ -742,6 +756,7 @@ function runCalculation(event) {
                     showPurple();
                     toggleModalPurple120();
                     colour = 'purple2';
+                    isViewed = false;
                 }
                 break;
             case 'purple2':
@@ -754,8 +769,12 @@ function runCalculation(event) {
             case 'purple3':
                 if (distance < 15){ 
                     hidePurple();
-                    toggleModalPurple15();
-                    colour = 'black';
+                    if(isViewed == false){
+                        toggleModalPurple15();
+                        isViewed = true;
+                    }
+                }else if (distance >= 15){
+                    showPurple();
                 }
                 break;
             default:
@@ -971,7 +990,7 @@ function showRed(){
             // Turning Green On
             document.getElementById('greenOff').id = 'green';
             var content = document.getElementById('green');
-            content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401505; longitude: 103.749438"></a-image>';
+            content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401318; longitude: 103.749277"></a-image>';
         }
     }
     
