@@ -587,13 +587,13 @@ function runCalculation(event) {
                 break;
             case 'red':
                 if (distance > 1000000){
-                    isViewed = false;
                     hideRed();
                     toggleEModal();
                 } else if (distance > 10000){
                     hideRed();
                     toggleOModal();
                 }else if (distance <= 10000){
+                    isViewed = false;
                     showRed();
                     toggleModalRed120();
                     colour = 'red2';
