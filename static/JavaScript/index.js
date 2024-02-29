@@ -627,6 +627,7 @@ function runCalculation(event) {
                 }else if (distance <= 10000){
                     showGreen();
                     toggleModalGreen120();
+                    isViewed = false;
                     colour = 'green2';
                 }
                 break;
@@ -640,8 +641,12 @@ function runCalculation(event) {
             case 'green3':
                 if (distance < 15){ 
                     hideGreen();
-                    toggleModalGreen15(); 
-                    colour = 'black';
+                    if(isViewed == false){
+                        toggleModalGreen15();
+                        isViewed = true; 
+                    }
+                } else if (distance >= 15){
+                    showGreen();
                 }
                 break;
             case 'yellow':
