@@ -337,7 +337,7 @@ function hideBlue(){
 }
 
 function selectOrange(){
-    //Wayfinding
+    //YellowBox_sitting
     
     //Active Play Zone 1.401505,103.749438
     startCompass()
@@ -352,7 +352,7 @@ function selectOrange(){
         // Turning Orange On
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange')
-        content.innerHTML = '<a-image id="orange" src="./static/images/2D_Assets_low_res/yellowBox_Sitting.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401505; longitude: 103.749438"></a-image>';
+        content.innerHTML = '<a-image id="orange" src="./static/images/2D_Assets_low_res/YellowBox.png" look-at="[gps-projected-camera]" scale="16 16 16" gps-projected-entity-place="latitude: 1.401505; longitude: 103.749438"></a-image>';
     }
     
 
