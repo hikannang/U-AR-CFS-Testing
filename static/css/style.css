@@ -380,13 +380,13 @@ html{
 .text-container {
     text-align: center;
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* White with 50% transparency */
 }
 
 .black-text {
     color: black;
     font-size: 0.75em;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.5); /* White with 50% transparency */
     z-index: 5;
 }
 
