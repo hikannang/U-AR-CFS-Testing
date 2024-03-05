@@ -594,6 +594,7 @@ function runCalculation(event) {
                     isViewed = false;
                     showRed();
                     toggleModalRed120();
+                    toggleWModal();
                     colour = 'red2';
                     break;
                 }
@@ -623,6 +624,7 @@ function runCalculation(event) {
                     hideGreen();
                     toggleOModal();
                 }else if (distance <= 10000){
+                    toggleWModal();
                     showGreen();
                     toggleModalGreen120();
                     isViewed = false;
@@ -655,6 +657,7 @@ function runCalculation(event) {
                     hideYellow();
                     toggleOModal();
                 }else if (distance <= 10000){
+                    toggleWModal();
                     showYellow();
                     toggleModalYellow120();
                     colour = 'yellow2';
@@ -687,6 +690,7 @@ function runCalculation(event) {
                     hideBlue();
                     toggleOModal();
                 }else if (distance <= 10000){
+                    toggleWModal();
                     showBlue();
                     toggleModalBlue120();
                     colour = 'blue2';
@@ -719,6 +723,7 @@ function runCalculation(event) {
                     hideOrange();
                     toggleOModal();
                 }else if (distance <= 10000){
+                    toggleWModal();
                     showOrange();
                     toggleModalOrange120();
                     colour = 'orange2';
@@ -751,6 +756,7 @@ function runCalculation(event) {
                     hidePurple();
                     toggleOModal();
                 }else if (distance <= 10000){
+                    toggleWModal();
                     showPurple();
                     toggleModalPurple120();
                     colour = 'purple2';
@@ -781,6 +787,26 @@ function runCalculation(event) {
     }
     }
 }   
+
+function toggleWModal(){
+    //Get the modal
+    modalW = document.getElementById("modalW");
+    modalW.style.zIndex = "6000";
+    modalW.style.display="block";
+}
+
+function closeModalW(){
+    modalW = document.getElementById("modalW");
+    modalW.style.display='none';
+}
+
+function closeOnClickInsideW() {
+    var modalW = document.getElementById("modalW");
+
+    modalW.addEventListener('click', function () {
+        closeModalW();
+    });
+}
 
 function toggleEModal(){
     //Get the modal
@@ -830,6 +856,7 @@ document.getElementsByClassName("closeI")[0].onclick = function () {
 function toggleLModal(){
     //Get the modal
     modalL = document.getElementById("modalL");
+    modalL.style.zIndex = "6000";
     modalL.style.display="block";
 }
 
@@ -842,11 +869,36 @@ document.getElementsByClassName("closeL")[0].onclick = function () {
     modalL.style.display = "none";
 };
 
+function toggleHTModal(){
+    //Get the modal
+    modalHT = document.getElementById("modalHT");
+    modalHT.style.display="block";
+}
+
+function closeModalHT(){
+    modalHT = document.getElementById("modalHT");
+    modalHT.style.display='none';
+}
+
+document.getElementsByClassName("closeHT")[0].onclick = function () {
+    modalHT.style.display = "none";
+};
+
 function toggleMModal(){
     //Get the modal
     modalMap = document.getElementById("modalMap");
     modalMap.style.display="block";
 }
+
+// Add an event listener to prevent the click event from propagating to the inner content
+    document.querySelector('.common-modal-content').addEventListener('click', function (event) {
+        event.stopPropagation();
+    });
+
+    // Add an event listener to close the modal when clicking anywhere outside of it
+    document.getElementById('modalMap').addEventListener('click', function () {
+        closeModal();
+    });
 
 function closeModal(){
     modalMap = document.getElementById("modalMap");
