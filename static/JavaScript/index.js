@@ -794,6 +794,13 @@ function runCalculation(event) {
     }
 }   
 
+function openApp(){
+    document.getElementById("startPage").style.display = "none"
+    toggleLModal();
+    toggleIModal();
+    colour = 'black';
+}
+
 function toggleWModal(){
     //Get the modal
     modalW = document.getElementById("modalW");
