@@ -28,6 +28,24 @@ function hideLoadingScreen() {
     clearTimeout(loadingTimeout);
 }
 
+function toggleStart()
+{
+    modalStart = document.getElementById("modalStart");
+    modalStart.style.display = "block";
+    document.getElementById("modalStart").style.display = "flex";
+}
+
+function openApp(){
+    document.getElementById("startPage").style.display = "none"
+    toggleLModal();
+    toggleIModal();
+    colour = 'black';
+}
+
+window.onload = function() {
+    toggleStart();
+};
+
 
 function selectRed(){
     //Bicycle Crossing
@@ -582,13 +600,6 @@ function runCalculation(event) {
 
     if (colour != 'black') {
         switch (colour) {
-            case 'white':
-                {
-                    toggleLModal();
-                    toggleIModal();
-                    colour = 'black';
-                }
-                break;
             case 'red':
                 if (distance > 1000000){
                     hideRed();
@@ -794,13 +805,6 @@ function runCalculation(event) {
     }
 }   
 
-function openApp(){
-    document.getElementById("startPage").style.display = "none"
-    toggleLModal();
-    toggleIModal();
-    colour = 'black';
-}
-
 function toggleWModal(){
     //Get the modal
     modalW = document.getElementById("modalW");
@@ -811,14 +815,6 @@ function toggleWModal(){
 function closeModalW(){
     modalW = document.getElementById("modalW");
     modalW.style.display='none';
-}
-
-function closeOnClickInsideW() {
-    var modalW = document.getElementById("modalW");
-
-    modalW.addEventListener('click', function () {
-        closeModalW();
-    });
 }
 
 function toggleEModal(){
