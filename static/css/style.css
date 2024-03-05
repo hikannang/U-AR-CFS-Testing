@@ -2,6 +2,31 @@ html{
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#startScreen, .modal {
+    display: none;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
 /* Compass */
 .compass {
     position: relative;
@@ -425,7 +450,7 @@ html{
 }
 
 #distanceFromTarget{
-    color:rgba(0, 255, 0, 0.512);
+    color: rgba(87, 255, 149, 0.993);
     font-size: 1.5em;
     margin-top: 2.25vh;
     background-color: black;

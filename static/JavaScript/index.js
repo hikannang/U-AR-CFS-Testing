@@ -483,6 +483,12 @@ function showPurple(){
     }
 }
 
+// Function to handle start button click
+function handleStartButtonClick() {
+    startCompass();
+    toggleLModal();
+    toggleIModal();
+}
 
 
 // ##################################################################################################
@@ -490,7 +496,7 @@ var current = { latitude: null, longitude: null };
 var target = { latitude: 0, longitude: 0 };
 var lastAlpha = 0;
 var direction = 0;
-const isIOS =
+var isIOS =
     navigator.userAgent.match(/(iPod|iPhone|iPad)/) &&
     navigator.userAgent.match(/AppleWebKit/);
 // const startBtn = document.querySelector(".start-btn");
