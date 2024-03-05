@@ -90,6 +90,28 @@
         </div>
     </div>
 
+    <!-- modalHT -->
+    <div id="modalHT" class="modal">
+        <!-- Modal content -->
+        <div class ="common-modal-content black-modal-content">
+            <span class="closeHT common-close-btn">
+                <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
+            </span>
+            <img src="./static/images/warningPages/highTrafficFrame.png" alt="HTModal">
+        </div>
+    </div>
+
+    <!-- modalW -->
+    <div id="modalW" class="modal">
+        <!-- Modal content -->
+        <div class ="common-modal-content black-modal-content">
+            <span class="closeW common-close-btn">
+                <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
+            </span>
+            <img src="./static/images/warningPages/warningFrame.png" alt="WModal">
+        </div>
+    </div>
+
 
     <div id="moreOptionsDiv" class="moreOptionsDiv">
         <div class="moreOptions" onclick="toggleCircles()">
@@ -340,7 +362,7 @@
 
         <a-scene 
             vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
-            <a-camera gps-projected-camera far='100' rotation-reader></a-camera>
+            <a-camera gps-projected-camera far='75' rotation-reader></a-camera>
 
             <a-entity id="redOff"></a-entity>
             <a-entity id="greenOff"></a-entity>
