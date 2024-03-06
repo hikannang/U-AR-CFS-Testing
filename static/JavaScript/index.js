@@ -1,7 +1,7 @@
 var loadingTimeout;
 var distance; //Declaring this as a global Variable instead
 var modal;
-var colour = 'white';
+var colour = 'black';
 var target = {
     latitude: 0,
     longitude: 0
