@@ -26,11 +26,19 @@
 
 <body>
 
-    <!-- modalStart -->
-    <div id="modalStart" class="modal">
+    <!-- modalL -->
+    <div id="modalL" class="modal">
         <!-- Modal content -->
-        <div class="common-modal-content black-modal-content" onclick="openApp()">
-            <img src="./static/images/instructionPage/backgroundLandingPage.jpg" alt="Big Image">
+        <div class ="common-modal-content black-modal-content" onclick="closeModalL()">
+            <img src="./static/images/instructionPage/introduction.png" alt="LModal">
+        </div>
+    </div>
+    
+    <!-- modalI -->
+    <div id="modalI" class="modal">
+        <!-- Modal content -->
+        <div class ="common-modal-content black-modal-content" onclick="closeModalI()">
+            <img src="./static\/images/instructionPage/Instructions.png" alt="IModal">
         </div>
     </div>
     
@@ -57,25 +65,11 @@
             <img src="./static/images/Minimap/map.png" alt="Big Image">
         </div>
     </div>
-
-    <!-- modalI -->
-    <div id="modalI" class="modal">
-        <!-- Modal content -->
-        <div class ="common-modal-content black-modal-content" onclick="closeModalI()">
-            <span class="closeI common-close-btn">
-                <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-            </span>
-            <img src="./static\images\instructionPage\Instructions.png" alt="IModal">
-        </div>
-    </div>
     
     <!-- modalE -->
     <div id="modalE" class="modal">
         <!-- Modal content -->
         <div class ="common-modal-content black-modal-content" onclick="closeModalE()">
-            <span class="closeE common-close-btn">
-                <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-            </span>
             <img src="./static/images/warningPages/locationFrame.png" alt="EModal">
         </div>
     </div>
@@ -84,21 +78,7 @@
     <div id="modalO" class="modal">
         <!-- Modal content -->
         <div class ="common-modal-content black-modal-content" onclick="closeModalO()">
-            <span class="closeO common-close-btn">
-                <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-            </span>
             <img src="./static/images/warningPages/outsideFrame.png" alt="OModal">
-        </div>
-    </div>
-
-    <!-- modalL -->
-    <div id="modalL" class="modal">
-        <!-- Modal content -->
-        <div class ="common-modal-content black-modal-content" onclick="closeModalL()">
-            <span class="closeL common-close-btn">
-                <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-            </span>
-            <img src="./static/images/warningPages/landingPage.png" alt="LModal">
         </div>
     </div>
 
@@ -106,9 +86,6 @@
     <div id="modalHT" class="modal">
         <!-- Modal content -->
         <div class ="common-modal-content black-modal-content" onclick="closeModalHT()">
-            <span class="closeHT common-close-btn">
-                <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-            </span>
             <img src="./static/images/warningPages/highTrafficFrame.png" alt="HTModal">
         </div>
     </div>
@@ -117,9 +94,6 @@
     <div id="modalW" class="modal">
         <!-- Modal content -->
         <div class ="common-modal-content black-modal-content" onclick="closeModalW()">
-            <span class="closeW common-close-btn">
-                <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-            </span>
             <img src="./static/images/warningPages/warningFrame.png" alt="WModal">
         </div>
     </div>
@@ -176,9 +150,6 @@
         <div id="modalRed120" class="modal">
             <!-- Modal content -->
             <div class ="common-modal-content" onclick="closeRedModal120()">
-                <span id = "modalRedClose120" class="close common-close-btn">
-                    <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-                </span>
                 <img src="./static/images/characterModals/bicycleCrossing120m.png" alt="RedModal">
             </div>
         </div>    
@@ -187,9 +158,6 @@
             <div id="modalRed50" class="modal">
                 <!-- Modal content -->
                 <div class ="common-modal-content" onclick="closeRedModal50()">
-                    <span id = "modalRedClose50" class="close common-close-btn">
-                        <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-                    </span>
                     <img src="./static/images/characterModals/bicycleCrossing50m.png" alt="RedModal">
                 </div>
             </div> 
@@ -198,9 +166,6 @@
             <div id="modalRed15" class="modal">
                 <!-- Modal content -->
                 <div class ="common-modal-content" onclick="closeRedModal15()">
-                    <span id = "modalRedClose15" class="close common-close-btn">
-                        <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-                    </span>
                     <img src="./static/images/characterModals/bicycleCrossing120m.png" alt="RedModal">
                 </div>
             </div>
@@ -209,9 +174,6 @@
             <div id="modalGreen120" class="modal">
                 <!-- Modal content -->
                 <div class ="common-modal-content" onclick="closeGreenModal120()">
-                    <span id = "modalGreenClose120" class="close common-close-btn">
-                        <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-                    </span>
                     <img src="./static/images/characterModals/cyclingPath120m.png" alt="GreenModal">
                 </div>
             </div>    
@@ -220,9 +182,6 @@
             <div id="modalGreen50" class="modal">
                 <!-- Modal content -->
                 <div class ="common-modal-content" onclick="closeGreenModal50()">
-                    <span id = "modalGreenClose50" class="close common-close-btn">
-                        <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-                    </span>
                     <img src="./static/images/characterModals/cyclingPath50m.png" alt="GreenModal">
                 </div>
             </div> 
@@ -231,9 +190,6 @@
             <div id="modalGreen15" class="modal">
                 <!-- Modal content -->
                 <div class ="common-modal-content" onclick="closeGreenModal15()">
-                    <span id = "modalGreenClose15" class="close common-close-btn">
-                        <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-                    </span>
                     <img src="./static/images/characterModals/cyclingPath15m.png" alt="GreenModal">
                 </div>
             </div> 
@@ -242,9 +198,6 @@
             <div id="modalYellow120" class="modal">
                 <!-- Modal content -->
                 <div class ="common-modal-content" onclick="closeYellowModal120()">
-                    <span id = "modalYellowClose120" class="close common-close-btn">
-                        <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-                    </span>
                     <img src="./static/images/characterModals/footPath120m.png" alt="YellowModal">
                 </div>
             </div>    
@@ -253,9 +206,6 @@
             <div id="modalYellow50" class="modal">
                 <!-- Modal content -->
                 <div class ="common-modal-content" onclick="closeYellowModal50()">
-                    <span id = "modalYellowClose50" class="close common-close-btn">
-                        <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-                    </span>
                     <img src="./static/images/characterModals/footPath50m.png" alt="YellowModal">
                 </div>
             </div> 
@@ -264,9 +214,6 @@
             <div id="modalYellow15" class="modal">
                 <!-- Modal content -->
                 <div class ="common-modal-content" onclick="closeYellowModal15()">
-                    <span id = "modalYellowClose15" class="close common-close-btn">
-                        <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-                    </span>
                     <img src="./static/images/characterModals/footPath15m.png" alt="YellowModal">
                 </div>
             </div> 
@@ -276,9 +223,6 @@
             <div id="modalBlue120" class="modal">
                 <!-- Modal content -->
                 <div class ="common-modal-content" onclick="closeBlueModal120()">
-                    <span id = "modalBlueClose120" class="close common-close-btn">
-                        <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-                    </span>
                     <img src="./static/images/characterModals/wayFinding120m.png" alt="BlueModal">
                 </div>
             </div>    
@@ -287,9 +231,6 @@
             <div id="modalBlue50" class="modal">
                 <!-- Modal content -->
                 <div class ="common-modal-content" onclick="closeBlueModal50()">
-                    <span id = "modalBlueClose50" class="close common-close-btn">
-                        <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-                    </span>
                     <img src="./static/images/characterModals/wayFinding50m.png" alt="BlueModal">
                 </div>
             </div> 
@@ -298,9 +239,6 @@
             <div id="modalBlue15" class="modal">
                 <!-- Modal content -->
                 <div class ="common-modal-content" onclick="closeBlueModal15()">
-                    <span id = "modalBlueClose15" class="close common-close-btn">
-                        <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-                    </span>
                     <img src="./static/images/characterModals/wayFinding15m.png" alt="BlueModal">
                 </div>
             </div> 
@@ -310,9 +248,6 @@
             <div id="modalOrange120" class="modal">
                 <!-- Modal content -->
                 <div class ="common-modal-content" onclick="closeOrangeModal120()">
-                    <span id = "modalOrangeClose120" class="close common-close-btn">
-                        <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-                    </span>
                     <img src="./static/images/characterModals/yellowBoxSitting120m.png" alt="OrangeModal">
                 </div>
             </div>    
@@ -321,9 +256,6 @@
             <div id="modalOrange50" class="modal">
                 <!-- Modal content -->
                 <div class ="common-modal-content" onclick="closeOrangeModal50()">
-                    <span id = "modalOrangeClose50" class="close common-close-btn">
-                        <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-                    </span>
                     <img src="./static/images/characterModals/yellowBoxSitting50m.png" alt="OrangeModal">
                 </div>
             </div> 
@@ -332,9 +264,6 @@
             <div id="modalOrange15" class="modal">
                 <!-- Modal content -->
                 <div class ="common-modal-content" onclick="closeOrangeModal15()">
-                    <span id = "modalOrangeClose15" class="close common-close-btn">
-                        <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-                    </span>
                     <img src="./static/images/characterModals/yellowBoxSitting15m.png" alt="OrangeModal">
                 </div>
             </div> 
@@ -343,9 +272,6 @@
             <div id="modalPurple120" class="modal">
                 <!-- Modal content -->
                 <div class ="common-modal-content" onclick="closePurpleModal120()">
-                    <span id = "modalPurpleClose120" class="close common-close-btn">
-                        <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-                    </span>
                     <img src="./static/images/characterModals/yellowBoxStanding120m.png" alt="PurpleModal">
                 </div>
             </div>    
@@ -354,9 +280,6 @@
             <div id="modalPurple50" class="modal">
                 <!-- Modal content -->
                 <div class ="common-modal-content" onclick="closePurpleModal50()">
-                    <span id = "modalPurpleClose50" class="close common-close-btn">
-                        <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-                    </span>
                     <img src="./static/images/characterModals/yellowBoxStanding50m.png" alt="PurpleModal">
                 </div>
             </div> 
@@ -365,9 +288,6 @@
             <div id="modalPurple15" class="modal">
                 <!-- Modal content -->
                 <div class ="common-modal-content" onclick="closePurpleModal15()">
-                    <span id = "modalPurpleClose15" class="close common-close-btn">
-                        <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-                    </span>
                     <img src="./static/images/characterModals/yellowBoxStanding15m.png" alt="PurpleModal">
                 </div>
             </div> 
