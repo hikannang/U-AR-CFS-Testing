@@ -1,7 +1,7 @@
 var loadingTimeout;
 var distance; //Declaring this as a global Variable instead
 var modal;
-var colour = 'white';
+var colour = 'black';
 var target = {
     latitude: 0,
     longitude: 0
@@ -28,24 +28,9 @@ function hideLoadingScreen() {
     clearTimeout(loadingTimeout);
 }
 
-function toggleStart()
-{
-    modalStart = document.getElementById("modalStart");
-    modalStart.style.display = "block";
-    document.getElementById("modalStart").style.display = "flex";
-}
-
-function openApp(){
-    document.getElementById("startPage").style.display = "none"
-    toggleLModal();
-    toggleIModal();
-    colour = 'black';
-}
-
 window.onload = function() {
     toggleLModal();
     toggleIModal();
-    colour = 'black';
 };
 
 
