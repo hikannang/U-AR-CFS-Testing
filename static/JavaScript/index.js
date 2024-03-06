@@ -28,10 +28,10 @@ function hideLoadingScreen() {
     clearTimeout(loadingTimeout);
 }
 
-window.onload = function() {
-    toggleLModal();
-    toggleIModal();
-};
+// window.onload = function() {
+//     toggleLModal();
+//     toggleIModal();
+// };
 
 
 function selectRed(){
