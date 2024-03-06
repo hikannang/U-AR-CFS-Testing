@@ -572,9 +572,11 @@ function runCalculation(event) {
     distance = distance * 1000; // Convert to meters
 
     var distanceElement = document.getElementById("distanceFromTarget");
-    if (distance > 20000) {
+    if (distance > 10000) {
         distanceElement.innerHTML = 'Please Select Destination!';
-    } else {
+    } else if (distance <= 15){
+        distanceElement.innerHTML = '';
+    }else{
     // Display the actual distance
         distanceElement.innerHTML = Math.floor(distance) + "m to destination!";
     }
@@ -586,10 +588,10 @@ function runCalculation(event) {
                 if (distance > 1000000){
                     hideRed();
                     toggleEModal();
-                } else if (distance > 10000){
+                } else if (distance > 3000){
                     hideRed();
                     toggleOModal();
-                }else if (distance <= 10000){
+                }else if (distance <= 3000){
                     isViewed = false;
                     showRed();
                     toggleModalRed120();
@@ -619,10 +621,10 @@ function runCalculation(event) {
                 if (distance > 1000000){
                     hideGreen();
                     toggleEModal();
-                } else if (distance > 10000){
+                } else if (distance > 3000){
                     hideGreen();
                     toggleOModal();
-                }else if (distance <= 10000){
+                }else if (distance <= 3000){
                     toggleWModal();
                     showGreen();
                     toggleModalGreen120();
@@ -652,10 +654,10 @@ function runCalculation(event) {
                 if (distance > 1000000){
                     hideYellow();
                     toggleEModal();
-                } else if (distance > 10000){
+                } else if (distance > 3000){
                     hideYellow();
                     toggleOModal();
-                }else if (distance <= 10000){
+                }else if (distance <= 3000){
                     toggleWModal();
                     showYellow();
                     toggleModalYellow120();
@@ -685,10 +687,10 @@ function runCalculation(event) {
                 if (distance > 1000000){
                     hideBlue();
                     toggleEModal();
-                } else if (distance > 10000){
+                } else if (distance > 3000){
                     hideBlue();
                     toggleOModal();
-                }else if (distance <= 10000){
+                }else if (distance <= 3000){
                     toggleWModal();
                     showBlue();
                     toggleModalBlue120();
@@ -718,10 +720,10 @@ function runCalculation(event) {
                 if (distance > 1000000){
                     hideOrange();
                     toggleEModal();
-                } else if (distance > 10000){
+                } else if (distance > 3000){
                     hideOrange();
                     toggleOModal();
-                }else if (distance <= 10000){
+                }else if (distance <= 3000){
                     toggleWModal();
                     showOrange();
                     toggleModalOrange120();
@@ -751,10 +753,10 @@ function runCalculation(event) {
                 if (distance > 1000000){
                     hidePurple();
                     toggleEModal();
-                } else if (distance > 10000){
+                } else if (distance > 3000){
                     hidePurple();
                     toggleOModal();
-                }else if (distance <= 10000){
+                }else if (distance <= 3000){
                     toggleWModal();
                     showPurple();
                     toggleModalPurple120();
