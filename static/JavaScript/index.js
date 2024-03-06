@@ -572,7 +572,7 @@ function runCalculation(event) {
     distance = distance * 1000; // Convert to meters
 
     var distanceElement = document.getElementById("distanceFromTarget");
-    if (distance > 30000) {
+    if (distance > 10000) {
         distanceElement.innerHTML = 'Please Select Destination!';
     } else if (distance <= 15){
         distanceElement.innerHTML = '';
