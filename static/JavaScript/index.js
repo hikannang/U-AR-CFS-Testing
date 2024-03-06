@@ -588,10 +588,10 @@ function runCalculation(event) {
                 if (distance > 1000000){
                     hideRed();
                     toggleEModal();
-                } else if (distance > 3000){
+                } else if (distance > 30000){
                     hideRed();
                     toggleOModal();
-                }else if (distance <= 3000){
+                }else if (distance <= 30000){
                     isViewed = false;
                     showRed();
                     toggleModalRed120();
