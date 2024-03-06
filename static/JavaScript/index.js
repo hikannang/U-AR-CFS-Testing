@@ -43,7 +43,9 @@ function openApp(){
 }
 
 window.onload = function() {
-    toggleStart();
+    toggleLModal();
+    toggleIModal();
+    colour = 'black';
 };
 
 
