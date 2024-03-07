@@ -595,7 +595,6 @@ function runCalculation(event) {
                     isViewed = false;
                     showRed();
                     toggleModalRed120();
-                    toggleWModal();
                     colour = 'red2';
                     break;
                 }
@@ -625,7 +624,6 @@ function runCalculation(event) {
                     hideGreen();
                     toggleOModal();
                 }else if (distance <= 3000){
-                    toggleWModal();
                     showGreen();
                     toggleModalGreen120();
                     isViewed = false;
@@ -658,7 +656,6 @@ function runCalculation(event) {
                     hideYellow();
                     toggleOModal();
                 }else if (distance <= 3000){
-                    toggleWModal();
                     showYellow();
                     toggleModalYellow120();
                     colour = 'yellow2';
@@ -691,7 +688,6 @@ function runCalculation(event) {
                     hideBlue();
                     toggleOModal();
                 }else if (distance <= 3000){
-                    toggleWModal();
                     showBlue();
                     toggleModalBlue120();
                     colour = 'blue2';
@@ -724,7 +720,6 @@ function runCalculation(event) {
                     hideOrange();
                     toggleOModal();
                 }else if (distance <= 3000){
-                    toggleWModal();
                     showOrange();
                     toggleModalOrange120();
                     colour = 'orange2';
@@ -757,7 +752,6 @@ function runCalculation(event) {
                     hidePurple();
                     toggleOModal();
                 }else if (distance <= 3000){
-                    toggleWModal();
                     showPurple();
                     toggleModalPurple120();
                     colour = 'purple2';
