@@ -572,7 +572,7 @@ function runCalculation(event) {
     distance = distance * 1000; // Convert to meters
 
     var distanceElement = document.getElementById("distanceFromTarget");
-    if (distance > 10000) {
+    if (distance > 20000) {
         distanceElement.innerHTML = 'Please Select Destination!';
     } else if (distance <= 15){
         distanceElement.innerHTML = '';
@@ -588,10 +588,10 @@ function runCalculation(event) {
                 if (distance > 1000000){
                     hideRed();
                     toggleEModal();
-                } else if (distance > 30000){
+                } else if (distance > 3000){
                     hideRed();
                     toggleOModal();
-                }else if (distance <= 30000){
+                }else if (distance <= 3000){
                     isViewed = false;
                     showRed();
                     toggleModalRed120();
