@@ -38,7 +38,7 @@
             width: 30px;
             height: 30px;
             position: absolute;
-            top: 15vh;
+            top: 19%;
             right: 2vh;
             z-index: 5;
             cursor: pointer;
@@ -65,7 +65,7 @@
     </style>
 
     <!-- Modal Toggling Script -->
-    <script defer>
+    <script async>
         document.addEventListener('DOMContentLoaded', function() {
             function toggleLModal() {
                 // Get the modal
@@ -174,39 +174,27 @@
         </div>
     </div>
 
-    <!-- modalW -->
-    <div id="modalW" class="modal">
-        <!-- Modal content -->
-        <div class ="common-modal-content black-modal-content" onclick="closeModalW()">
-            <span class="closeW common-close-btn">
-                <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-            </span>
-            <img src="./static/images/warningPages/warningFrame.png" alt="WModal">
-        </div>
-    </div>
-
-
     <div id="moreOptionsDiv" class="moreOptionsDiv">
         <div class="moreOptions" onclick="toggleCircles()">
             <div class="threeLines" id="threeLines" style="background: url('./static/images/icons/menu.png') center no-repeat; background-size: contain;"></div>
             <div id="additionalCircles" class="additionalCircles">
                 <div class="circle bicycleCrossing" onclick="selectRed()">
-                    <img src="./static/images/picture_Buttons/bicycleCrossings_edited.png" alt="Bicycle Crossing" style="width: 50%; height: 80%;">
+                    <img src="./static/images/picture_Buttons/bicycleCrossings_edited.png" alt="Bicycle Crossing" style="width: 80%; height: 95%; transform: translateX(-5%);">
                 </div>
                 <div class="circle cyclingPath" onclick="selectGreen()">
-                    <img src="./static/images/picture_Buttons/cyclingPath_edited.png" alt="Cycling Path" style="width: 70%; height: 90%;">
-                </div>
-                <div class="circle footPath" onclick="selectYellow()">
-                    <img src="./static/images/picture_Buttons/footPath_edited.png" alt="Foot Path" style="width: 100%; height: 100%;">
-                </div>
-                <div class="circle wayfindingSignage" onclick="selectBlue()">
-                    <img src="./static/images/picture_Buttons/wayfindingSignage_edited.png" alt="Wayfinding Signage" style="width: 100%; height: 100%;">
+                    <img src="./static/images/picture_Buttons/cyclingPath_edited.png" alt="Cycling Path" style="width: 70%; height: 100%; transform: translateX(-15%);">
                 </div>
                 <div class="circle yellowBoxSitting" onclick="selectOrange()">
-                    <img src="./static/images/picture_Buttons/yellowBox_Sitting.png" alt="Yellow Box Sitting" style="width: 90%; height: 90%;">
+                    <img src="./static/images/picture_Buttons/yellowBox_Sitting.png" alt="Yellow Box Sitting" style="width: 80%; height: 100%; transform: translateX(-10%);">
                 </div>
                 <div class="circle yellowBoxStanding" onclick="selectPurple()">
-                    <img src="./static/images/picture_Buttons/yellowBox_Standing.png" alt="Yellow Box Standing" style="width: 90%; height: 90%;">                
+                    <img src="./static/images/picture_Buttons/yellowBox_Standing.png" alt="Yellow Box Standing" style="width: 90%; height: 95%;">                
+                </div>
+                <div class="circle footPath" onclick="selectYellow()">
+                    <img src="./static/images/picture_Buttons/footPath_edited.png" alt="Foot Path" style="width: 75%; height: 95%; transform: translateX(-10%);">
+                </div>
+                <div class="circle wayfindingSignage" onclick="selectBlue()">
+                    <img src="./static/images/picture_Buttons/wayfindingSignage_edited.png" alt="Wayfinding Signage" style="width: 85%; height: 95%; transform: translateX(-5%);">
                 </div>
             </div>
         </div>
@@ -214,15 +202,15 @@
     
     <div class="translucent-box bottom-box">
         <div class="top-image-container">
-            <img src="static/images\logos\CFS Logo.png" alt="Top Image" style="width:100%; background-color: transparent;">
+            <img src="./static/images/logos/CFS Logo.png" alt="Top Image" style="width:100%; background-color: transparent;">
         </div>
         <div class="text-container">
             <p class="black-text">THIS GREEN EFFORT IS JOINTLY PRESENTED BY</p>
         </div>
         <div class="image-container">
-            <img src="static\images\logos\car-free-sunday logo.png" alt="Third Image" style= "width: 19%; transform: translateX(10%) translateY(-20%);">
-            <img src="static\images\logos\NYP_LOGO_2.png" alt="First Image" style=" transform: translateY(-15%);">
-            <img src="static\images\logos\NTU_Logo.png" alt="Second Image" style="width: 25%; transform: translateX(-10%) translateY(-17.5%);">
+            <img src="./static/images/logos/car-free-sunday logo.png" alt="Third Image" style= "width: 19%; transform: translateX(10%) translateY(-20%);">
+            <img src="./static/images/logos/NTU_Logo.png" alt="Second Image" style="height: 30%; width: 30%; transform: translateX(20%) translateY(-15%);">
+            <img src="./static/images/logos/NYP_LOGO_2.png" alt="First Image" style=" transform: translateX(15%) translateY(-15%); width: 30%; height: 30%;">
         </div>
     </div>
 
@@ -435,7 +423,7 @@
 
         <a-scene 
             vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true' device-orientation-permission-ui="enabled: false">
-            <a-camera gps-projected-camera far='75' rotation-reader></a-camera>
+            <a-camera gps-projected-camera far='100' rotation-reader></a-camera>
 
             <a-entity id="redOff"></a-entity>
             <a-entity id="greenOff"></a-entity>
