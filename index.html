@@ -17,83 +17,32 @@
     <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
 
-    <style>
-    /* Common Modal Content */
-    .common-modal-content {
-            width: 100vw;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: transparent;
-            overflow: auto;
-            box-sizing: border-box;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Common Modal Close Button Styles */
-        .common-close-btn {
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            top: 19%;
-            right: 2vh;
-            z-index: 5;
-            cursor: pointer;
-            opacity: 1;
-        }
-
-        /* Common Modal Close Image Styles */
-        .common-close-img {
-            width: 100%;
-            height: 100%;
-        }
-
-        /* Common Modal Image Styles */
-        .common-modal-content img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
-
-        /* Black Modal Content Styles */
-        .black-modal-content {
-            background-color: black;
-        }
-    </style>
-
-    <!-- Modal Toggling Script -->
-    <script async>
-        document.addEventListener('DOMContentLoaded', function() {
-            function toggleLModal() {
-                // Get the modal
-                var modalL = document.getElementById("modalL");
-                if (modalL) {
-                    modalL.style.zIndex = "6000";
-                    modalL.style.display = "block";
-                }
-            }
-
-            function toggleIModal() {
-                // Get the modal
-                var modalI = document.getElementById("modalI");
-                if (modalI) {
-                    modalI.style.display = "block";
-                }
-            }
-
-            // Call your toggle functions here
-            toggleLModal();
-            toggleIModal();
-        });
-    </script>
-
     <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
 </head>
 
-<body>    
+<body>
+    <!-- modalL -->
+    <div id="modalL" class="modal">
+        <!-- Modal content -->
+        <div class ="common-modal-content black-modal-content" onclick="closeModalL()">
+            <span class="closeL common-close-btn">
+                <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
+            </span>
+            <img src="./static/images/instructionPage/introduction.png" alt="LModal">
+        </div>
+    </div>
+    
+    <!-- modalI -->
+    <div id="modalI" class="modal">
+        <!-- Modal content -->
+        <div class ="common-modal-content black-modal-content" onclick="closeModalI()">
+            <span class="closeI common-close-btn">
+                <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
+            </span>
+            <img src="./static/images/instructionPage/instruction.png" alt="IModal">
+        </div>
+    </div>
+    
     <div id="compassDiv">
         <!-- Compass -->
         <div class="compass">
@@ -115,28 +64,6 @@
                 <img src="./static/images/icons/redCross.png" alt="Close Button" class="common-close-img">
             </span>
             <img src="./static/images/Minimap/map.png" alt="Big Image">
-        </div>
-    </div>
-
-    <!-- modalL -->
-    <div id="modalL" class="modal">
-        <!-- Modal content -->
-        <div class ="common-modal-content black-modal-content" onclick="closeModalL()">
-            <span class="closeL common-close-btn">
-                <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-            </span>
-            <img src="./static/images/instructionPage/introduction.png" alt="LModal">
-        </div>
-    </div>
-    
-    <!-- modalI -->
-    <div id="modalI" class="modal">
-        <!-- Modal content -->
-        <div class ="common-modal-content black-modal-content" onclick="closeModalI()">
-            <span class="closeI common-close-btn">
-                <img src="./static/images/icons/close-red-icon.png" alt="Close Button" class="common-close-img">
-            </span>
-            <img src="./static/images/instructionPage/instruction.png" alt="IModal">
         </div>
     </div>
     
@@ -433,6 +360,33 @@
             <a-entity id="purpleOff"></a-entity>
         </a-scene>
     </div>
+
+    <!-- Modal Toggling Script -->
+    <script defer>
+        document.addEventListener('DOMContentLoaded', function() {
+            function toggleLModal() {
+                // Get the modal
+                var modalL = document.getElementById("modalL");
+                if (modalL) {
+                    modalL.style.zIndex = "6000";
+                    modalL.style.display = "block";
+                }
+            }
+
+            function toggleIModal() {
+                // Get the modal
+                var modalI = document.getElementById("modalI");
+                if (modalI) {
+                    modalI.style.display = "block";
+                }
+            }
+
+            // Call your toggle functions here
+            toggleLModal();
+            toggleIModal();
+        });
+    </script>
+
     <script src="static/JavaScript/index.js"></script>
 </body>
 
