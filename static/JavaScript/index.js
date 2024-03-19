@@ -29,11 +29,11 @@ function hideLoadingScreen() {
 }
 
 function selectRed(){
-    //Bicycle Crossing, 1.308552, 103.849958
+    //Bicycle Crossing, 1.308489, 103.849958
     
      ///Healthy Living Zone, 1.333646, 103.957111
      startCompass()
-     target.latitude = 1.308552;
+     target.latitude = 1.308489;
      target.longitude = 103.849958;
 
     showLoadingScreen();
@@ -44,7 +44,7 @@ function selectRed(){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red');
-        content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.308552; longitude: 103.849958"></a-image>';
+        content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.308489; longitude: 103.849958"></a-image>';
     }
 
     if(document.getElementById('green')){
@@ -88,7 +88,7 @@ function showRed(){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red')
-        content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.308552; longitude: 103.849958"></a-image>';
+        content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.308489; longitude: 103.849958"></a-image>';
     }
 }
 
@@ -104,7 +104,7 @@ function hideRed(){
 function selectGreen(){
     //Dragon, 1.333167, 103.957219
     startCompass()
-    target.latitude = 1.308552;
+    target.latitude = 1.308489;
     target.longitude = 103.849958;
 
 
@@ -116,7 +116,7 @@ function selectGreen(){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
-        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/gITF/chinese_dragon_trimtest1.gltf" scale="0.2 0.2 0.2" gps-projected-entity-place="latitude: 1.308552; longitude: 103.849958" animation-mixer/>'    
+        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/gITF/chinese_dragon_trimtest1.gltf" scale="0.2 0.2 0.2" gps-projected-entity-place="latitude: 1.308489; longitude: 103.849958" animation-mixer/>'    
     }
 
     if(document.getElementById('red')){
@@ -160,7 +160,7 @@ function showGreen(){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
-        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/gITF/chinese_dragon_trimtest1.gltf" scale="0.2 0.2 0.2" gps-projected-entity-place="latitude: 1.308552; longitude: 103.849958" animation-mixer/>'    
+        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/gITF/chinese_dragon_trimtest1.gltf" scale="0.2 0.2 0.2" gps-projected-entity-place="latitude: 1.308489; longitude: 103.849958" animation-mixer/>'    
     }
 }
 
@@ -178,7 +178,7 @@ function selectOrange(){
     
     //Bicycle Park (Reimagine Active Mobility Zone)
     startCompass()
-    target.latitude = 1.308552;
+    target.latitude = 1.308489;
     target.longitude = 103.849958;
 
     showLoadingScreen();
@@ -189,7 +189,7 @@ function selectOrange(){
         // Turning Orange On
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange')
-        content.innerHTML = '<a-video id="orange" src="./static/videos/pigGIF.gif" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.308552; longitude: 103.849958"></a-image>';
+        content.innerHTML = '<a-video id="orange" src="./static/videos/pigGIF.gif" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.308489; longitude: 103.849958"></a-image>';
     }
     
 
@@ -235,7 +235,7 @@ function showOrange(){
         // Turning Orange On
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange')
-        content.innerHTML = '<a-video id="orange" src="./static/videos/pigGIF.gif" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.308552; longitude: 103.849958"></a-image>';
+        content.innerHTML = '<a-video id="orange" src="./static/videos/pigGIF.gif" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.308489; longitude: 103.849958"></a-image>';
     }
 }
 
@@ -255,7 +255,7 @@ function selectYellow(){
     //1.333099, 103.956604
     ///MarketPlace  
     startCompass()
-    target.latitude = 1.308552;
+    target.latitude = 1.308489;
     target.longitude = 103.849958;
 
 
@@ -267,7 +267,7 @@ function selectYellow(){
         // Turning Yellow On
         document.getElementById('yellowOff').id = 'yellow';
         var content = document.getElementById('yellow')
-        content.innerHTML = '<a-video id="yellow" src="./static/videos/pigGIF.gif" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.308552; longitude: 103.849958"></a-image>';
+        content.innerHTML = '<a-video id="yellow" src="./static/videos/pigGIF.gif" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.308489; longitude: 103.849958"></a-image>';
     }   
 
     if(document.getElementById('red')){
@@ -311,7 +311,7 @@ function showYellow(){
         // Turning Yellow On
         document.getElementById('yellowOff').id = 'yellow';
         var content = document.getElementById('yellow')
-        content.innerHTML = '<a-video id="yellow" src="./static/videos/pigGIF.gif" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.308552; longitude: 103.849958"></a-image>';
+        content.innerHTML = '<a-video id="yellow" src="./static/videos/pigGIF.gif" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.308489; longitude: 103.849958"></a-image>';
     }
 }
 
