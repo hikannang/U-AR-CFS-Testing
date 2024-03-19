@@ -116,7 +116,7 @@ function selectGreen(){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
-        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/gITF/chinese_dragon_trimtest1.gltf" scale="0.2 0.2 0.2" gps-projected-entity-place="latitude: 1.308489; longitude: 103.849958" animation-mixer/>'    
+        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/gITF/chinese_dragon_trim/test1.gltf" scale="0.001 0.001 0.001" gps-projected-entity-place="latitude: 1.308489; longitude: 103.849958" animation-mixer/>'
     }
 
     if(document.getElementById('red')){
@@ -160,7 +160,7 @@ function showGreen(){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
-        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/gITF/chinese_dragon_trimtest1.gltf" scale="0.2 0.2 0.2" gps-projected-entity-place="latitude: 1.308489; longitude: 103.849958" animation-mixer/>'    
+        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/gITF/chinese_dragon_trim/test1.gltf" scale="0.001 0.001 0.001" gps-projected-entity-place="latitude: 1.308489; longitude: 103.849958" animation-mixer/>'
     }
 }
 
