@@ -173,6 +173,81 @@ function hideGreen(){
     }
 }
 
+function selectOrange(){
+    //YellowBox_sitting
+    
+    //Bicycle Park (Reimagine Active Mobility Zone)
+    startCompass()
+    target.latitude = 1.308552;
+    target.longitude = 103.849958;
+
+    showLoadingScreen();
+
+    colour = 'orange';
+
+    if (document.getElementById('orangeOff')){
+        // Turning Orange On
+        document.getElementById('orangeOff').id = 'orange';
+        var content = document.getElementById('orange')
+        content.innerHTML = '<a-video id="orange" src="./static/videos/pigGIF.gif" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.308552; longitude: 103.849958"></a-image>';
+    }
+    
+
+    if(document.getElementById('red')){
+        // Turning Red Off
+        document.getElementById('red').id = 'redOff';
+        var content = document.getElementById('redOff')
+        content.innerHTML = '<a-entity id="redOff"></a-entity>'
+    }
+
+    if(document.getElementById('green')){
+        // Turning Green Off
+        document.getElementById('green').id = 'greenOff';
+        var content = document.getElementById('greenOff')
+        content.innerHTML = '<a-entity id="greenOff"></a-entity>'
+    }
+
+    if(document.getElementById('yellow')){
+        // Turning yellow Off
+        document.getElementById('yellow').id = 'yellowOff';
+        var content = document.getElementById('yellowOff')
+        content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
+    }
+
+    if(document.getElementById('blue')){
+        // Turning blue Off
+        document.getElementById('blue').id = 'blueOff';
+        var content = document.getElementById('blueOff')
+        content.innerHTML = '<a-entity id="blueOff"></a-entity>'
+    }
+
+    if(document.getElementById('purple')){
+        // Turning purple Off
+        document.getElementById('purple').id = 'purpleOff';
+        var content = document.getElementById('purpleOff')
+        content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
+    }
+
+}
+
+function showOrange(){
+    if (document.getElementById('orangeOff')){
+        // Turning Orange On
+        document.getElementById('orangeOff').id = 'orange';
+        var content = document.getElementById('orange')
+        content.innerHTML = '<a-video id="orange" src="./static/videos/pigGIF.gif" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.308552; longitude: 103.849958"></a-image>';
+    }
+}
+
+function hideOrange(){
+    if(document.getElementById('orange')){
+        // Turning Orange Off
+        document.getElementById('orange').id = 'orangeOff';
+        var content = document.getElementById('orangeOff')
+        content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
+    }
+}
+
 
 
 function selectYellow(){
@@ -324,82 +399,6 @@ function hideBlue(){
         document.getElementById('blue').id = 'blueOff';
         var content = document.getElementById('blueOff')
         content.innerHTML = '<a-entity id="blueOff"></a-entity>'
-    }
-}
-
-function selectOrange(){
-    //YellowBox_sitting
-    
-    //Bicycle Park (Reimagine Active Mobility Zone)
-    startCompass()
-     target.latitude = 1.434826;
-     target.longitude = 103.787000;
-
-    showLoadingScreen();
-
-    colour = 'orange';
-
-    if (document.getElementById('orangeOff')){
-        // Turning Orange On
-        document.getElementById('orangeOff').id = 'orange';
-        var content = document.getElementById('orange')
-        content.innerHTML = '<a-image id="orange" src="./static/images/2D_Assets_low_res/YellowBox_sitting.png" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.434826; longitude: 103.787000"></a-image>';
-    }
-    
-
-    if(document.getElementById('red')){
-        // Turning Red Off
-        document.getElementById('red').id = 'redOff';
-        var content = document.getElementById('redOff')
-        content.innerHTML = '<a-entity id="redOff"></a-entity>'
-    }
-
-    if(document.getElementById('green')){
-        // Turning Green Off
-        document.getElementById('green').id = 'greenOff';
-        var content = document.getElementById('greenOff')
-        content.innerHTML = '<a-entity id="greenOff"></a-entity>'
-    }
-
-    if(document.getElementById('yellow')){
-        // Turning yellow Off
-        document.getElementById('yellow').id = 'yellowOff';
-        var content = document.getElementById('yellowOff')
-        content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
-    }
-
-    if(document.getElementById('blue')){
-        // Turning blue Off
-        document.getElementById('blue').id = 'blueOff';
-        var content = document.getElementById('blueOff')
-        content.innerHTML = '<a-entity id="blueOff"></a-entity>'
-    }
-
-    if(document.getElementById('purple')){
-        // Turning purple Off
-        document.getElementById('purple').id = 'purpleOff';
-        var content = document.getElementById('purpleOff')
-        content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
-    }
-
-}
-
-function showOrange(){
-    if (document.getElementById('orangeOff')){
-        // Turning Orange On
-        document.getElementById('orangeOff').id = 'orange';
-        var content = document.getElementById('orange')
-        // content.innerHTML = '<a-entity id="orange" material="color: orange" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-image id="orange" src="./static/images/2D_Assets_low_res/YellowBox_sitting.png" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.434826; longitude: 103.787000"></a-image>';
-    }
-}
-
-function hideOrange(){
-    if(document.getElementById('orange')){
-        // Turning Orange Off
-        document.getElementById('orange').id = 'orangeOff';
-        var content = document.getElementById('orangeOff')
-        content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
     }
 }
 
