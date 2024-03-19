@@ -28,19 +28,13 @@ function hideLoadingScreen() {
     clearTimeout(loadingTimeout);
 }
 
-// window.onload = function() {
-//     toggleLModal();
-//     toggleIModal();
-// };
-
-
 function selectRed(){
-    //Bicycle Crossing
-
-     ///Healthy Living Zone , 1.434826,103.787000
+    //Bicycle Crossing, 1.308552, 103.849958
+    
+     ///Healthy Living Zone, 1.333646, 103.957111
      startCompass()
-     target.latitude = 1.434826;
-     target.longitude = 103.787000;
+     target.latitude = 1.308552;
+     target.longitude = 103.849958;
 
     showLoadingScreen();
 
@@ -50,7 +44,7 @@ function selectRed(){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red');
-        content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.434826; longitude: 103.787000"></a-image>';
+        content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.308552; longitude: 103.849958"></a-image>';
     }
 
     if(document.getElementById('green')){
@@ -94,8 +88,7 @@ function showRed(){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red')
-        // content.innerHTML = '<a-entity id="red" material="color: red" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.434826; longitude: 103.787000"></a-image>';
+        content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.308552; longitude: 103.849958"></a-image>';
     }
 }
 
@@ -109,10 +102,10 @@ function hideRed(){
 }
 
 function selectGreen(){
-    //Reimagine Active Mobility Zone
+    //Dragon, 1.333167, 103.957219
     startCompass()
-     target.latitude = 1.434826;
-     target.longitude = 103.787000;
+    target.latitude = 1.308552;
+    target.longitude = 103.849958;
 
 
     showLoadingScreen();
@@ -123,8 +116,7 @@ function selectGreen(){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
-        // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.434826; longitude: 103.787000"></a-image>';
+        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/gITF/chinese_dragon_trimtest1.gltf" scale="0.2 0.2 0.2" gps-projected-entity-place="latitude: 1.308552; longitude: 103.849958" animation-mixer/>'    
     }
 
     if(document.getElementById('red')){
@@ -168,8 +160,7 @@ function showGreen(){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
-        // content.innerHTML = '<a-entity id="green" material="color: green" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/CyclingPath_4k.png" look-at="[camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.434826; longitude: 103.787000"></a-image>';
+        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/gITF/chinese_dragon_trimtest1.gltf" scale="0.2 0.2 0.2" gps-projected-entity-place="latitude: 1.308552; longitude: 103.849958" animation-mixer/>'    
     }
 }
 
@@ -186,11 +177,11 @@ function hideGreen(){
 
 function selectYellow(){
     //Foot Path
-
+    //1.333099, 103.956604
     ///MarketPlace  
     startCompass()
-     target.latitude = 1.434826;
-     target.longitude = 103.787000;
+    target.latitude = 1.308552;
+    target.longitude = 103.849958;
 
 
     showLoadingScreen();
@@ -201,7 +192,7 @@ function selectYellow(){
         // Turning Yellow On
         document.getElementById('yellowOff').id = 'yellow';
         var content = document.getElementById('yellow')
-        content.innerHTML = '<a-image id="yellow" src="./static/images/2D_Assets_low_res/FootPath.png" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.434826; longitude: 103.787000"></a-image>';
+        content.innerHTML = '<a-video id="yellow" src="./static/videos/pigGIF.gif" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.308552; longitude: 103.849958"></a-image>';
     }   
 
     if(document.getElementById('red')){
@@ -245,8 +236,7 @@ function showYellow(){
         // Turning Yellow On
         document.getElementById('yellowOff').id = 'yellow';
         var content = document.getElementById('yellow')
-        // content.innerHTML = '<a-entity id="yellow" material="color: yellow" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
-        content.innerHTML = '<a-image id="yellow" src="./static/images/2D_Assets_low_res/FootPath.png" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.434826; longitude: 103.787000"></a-image>';
+        content.innerHTML = '<a-video id="yellow" src="./static/videos/pigGIF.gif" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.308552; longitude: 103.849958"></a-image>';
     }
 }
 
