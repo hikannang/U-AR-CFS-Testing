@@ -25,7 +25,7 @@ function hideLoadingScreen() {
     loadingScreen.style.display = 'none';
 
     // Clear the timeout if it hasn't been triggered yet
-    clearTimeout(loadingTimeout);
+    clearTimeout(loadingTimeout);  
 }
 
 function selectRed(){
