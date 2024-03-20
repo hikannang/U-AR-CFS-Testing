@@ -104,10 +104,10 @@ function hideRed(){
 }
 
 function selectGreen(){
-    //Dragon, 1.333167, 103.957219
+    //1.333457, 103.956814
     startCompass()
-    target.latitude = 1.308425;
-    target.longitude = 103.849851;
+    target.latitude = 1.333457;
+    target.longitude = 103.956814;
 
 
     showLoadingScreen();
@@ -118,7 +118,7 @@ function selectGreen(){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
-        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/gITF/chinese_dragon_trim/test1.gltf" scale="0.001 0.001 0.001" gps-projected-entity-place="latitude: 1.308425; longitude: 103.849851" animation-mixer/>'
+        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/gITF/chinese_dragon_trim/test1.gltf" scale="0.001 0.001 0.001" gps-projected-entity-place="latitude: 1.333457; longitude: 103.956814" animation-mixer/>'
     }
 
     if(document.getElementById('red')){
@@ -162,7 +162,7 @@ function showGreen(){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
-        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/gITF/chinese_dragon_trim/test1.gltf" scale="0.001 0.001 0.001" gps-projected-entity-place="latitude: 1.308425; longitude: 103.849851" animation-mixer/>'
+        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/gITF/chinese_dragon_trim/test1.gltf" scale="0.001 0.001 0.001" gps-projected-entity-place="latitude: 1.333457; longitude: 103.956814" animation-mixer/>'
     }
 }
 
