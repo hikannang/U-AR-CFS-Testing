@@ -187,11 +187,18 @@ function selectOrange(){
 
     colour = 'orange';
 
-    if (document.getElementById('orangeOff')){
+    if (document.getElementById('orangeOff')) {
         // Turning Orange On
         document.getElementById('orangeOff').id = 'orange';
-        var content = document.getElementById('orange')
-        content.innerHTML = '<a-video id="orange" src="./static/videos/pigGIF.gif" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.308425; longitude: 103.849851" autoplay></a-video>';
+        var content = document.getElementById('orange');
+        content.innerHTML = '<a-video id="orange" src="./static/videos/pigGIF.gif" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.309201; longitude: 103.848672"></a-video>';
+    
+        // Wait for video to be loaded
+        var video = document.getElementById('orange');
+        video.addEventListener('loadeddata', function() {
+            // Start playing the GIF once loaded
+            video.play();
+        });
     }
     
 
@@ -237,7 +244,7 @@ function showOrange(){
         // Turning Orange On
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange')
-        content.innerHTML = '<a-video id="orange" src="./static/videos/pigGIF.gif" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.308425; longitude: 103.849851"></a-image>';
+        content.innerHTML = '<a-video id="orange" src="./static/videos/pigGIF.gif" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.308425; longitude: 103.849851"></a-video>';
     }
 }
 
