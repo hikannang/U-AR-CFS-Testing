@@ -189,7 +189,7 @@ function selectOrange(){
         // Turning Orange On
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange')
-        content.innerHTML = '<a-video id="orange" src="./static/videos/pigGIF.gif" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.309201; longitude: 103.848672"></a-video>';
+        content.innerHTML = '<a-video id="orange" src="./static/videos/pigGIF.gif" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.309201; longitude: 103.848672" autoplay></a-video>';
     }
     
 
