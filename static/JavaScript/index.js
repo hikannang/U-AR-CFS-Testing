@@ -582,18 +582,10 @@ function runCalculation(event) {
                 }else if (distance <= 3000){
                     isViewed = false;
                     showRed();
-                    toggleModalRed120();
                     colour = 'red2';
                     break;
                 }
             case 'red2':
-                if (distance < 50){ 
-                    showRed();
-                    toggleModalRed50();
-                    colour = 'red3';
-                }
-                break;
-            case 'red3':
                 if (distance < 15){ 
                     hideRed();
                     if(isViewed == false){
@@ -613,19 +605,11 @@ function runCalculation(event) {
                     toggleOModal();
                 }else if (distance <= 3000){
                     showGreen();
-                    toggleModalGreen120();
                     isViewed = false;
                     colour = 'green2';
                 }
                 break;
             case 'green2':
-                if (distance < 50){ 
-                    showGreen();
-                    toggleModalGreen50();
-                    colour = 'green3';
-                }
-                break;
-            case 'green3':
                 if (distance < 15){ 
                     hideGreen();
                     if(isViewed == false){
@@ -645,19 +629,11 @@ function runCalculation(event) {
                     toggleOModal();
                 }else if (distance <= 3000){
                     showYellow();
-                    toggleModalYellow120();
                     colour = 'yellow2';
                     isViewed = false;
                 }
                 break;
             case 'yellow2':
-                if (distance < 50){ 
-                    showYellow();
-                    toggleModalYellow50();
-                    colour = 'yellow3';
-                }
-                break;
-            case 'yellow3':
                 if (distance < 15){ 
                     hideYellow();
                     if(isViewed == false){
