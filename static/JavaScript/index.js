@@ -45,7 +45,7 @@ function selectRed(){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red');
-        content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.3333318; longitude: 103.9575690"></a-image>';
+        content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/gITF/fireExtinguisher/scene.gltf" scale="0.01 0.01 0.01" gps-projected-entity-place="latitude: 1.3333318; longitude: 103.9575690" animation-mixer/>'
     }
 
     if(document.getElementById('green')){
@@ -89,7 +89,7 @@ function showRed(){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red')
-        content.innerHTML = '<a-image id="red" src="./static/images/2D_Assets_low_res/BicycleCrossing_hanging.png" look-at="[camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.3333318; longitude: 103.9575690"></a-image>';
+        content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/gITF/fireExtinguisher/scene.gltf" scale="0.01 0.01 0.01" gps-projected-entity-place="latitude: 1.3333318; longitude: 103.9575690" animation-mixer/>'
     }
 }
 
@@ -117,7 +117,7 @@ function selectGreen(){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
-        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/gITF/chinese_dragon_trim/test1.gltf" scale="0.01 0.01 0.01" gps-projected-entity-place="latitude: 1.3334206; longitude: 103.9572350" animation-mixer/>'
+        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/gITF/helmet/scene.gltf" scale="0.01 0.01 0.01" gps-projected-entity-place="latitude: 1.3334206; longitude: 103.9572350" animation-mixer/>'
     }
 
     if(document.getElementById('red')){
@@ -161,7 +161,7 @@ function showGreen(){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
-        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/gITF/chinese_dragon_trim/test1.gltf" scale="0.01 0.01 0.01" gps-projected-entity-place="latitude: 1.3334206; longitude: 103.9572350" animation-mixer/>'
+        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/gITF/helmet/scene.gltf" scale="0.01 0.01 0.01" gps-projected-entity-place="latitude: 1.3334206; longitude: 103.9572350" animation-mixer/>'
     }
 }
 
@@ -190,7 +190,7 @@ function selectOrange(){
         // Turning Orange On
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange');
-        content.innerHTML = '<a-video id="orange" src="./static/videos/pigGIF.gif" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.3335879; longitude: 103.9570899"></a-video>';
+        content.innerHTML = '<a-entity id="orange" gltf-model=".static/3dModels/gITF/trafficCone/scene.gltf" scale="0.01 0.01 0.01" gps-projected-entity-place="latitude: 1.3335879; longitude: 103.9570899" animation-mixer/>'
     }
     
 
@@ -236,7 +236,7 @@ function showOrange(){
         // Turning Orange On
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange')
-        content.innerHTML = '<a-video id="orange" src="./static/videos/pigGIF.gif" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.3335879; longitude: 103.9570899"></a-video>';
+        content.innerHTML = '<a-entity id="orange" gltf-model=".static/3dModels/gITF/trafficCone/scene.gltf" scale="0.01 0.01 0.01" gps-projected-entity-place="latitude: 1.3335879; longitude: 103.9570899" animation-mixer/>'
     }
 }
 
