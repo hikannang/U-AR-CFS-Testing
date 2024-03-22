@@ -47,7 +47,7 @@ function selectRed(){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red');
-        content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/gITF/fireExtinguisher/scene.gltf" scale="0.01 0.01 0.01" gps-projected-entity-place="latitude: 1.401514; longitude: 103.749411" animation-mixer/>'
+        content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/GLB/fireExtinguisher/fire_extinguisher.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.401514; longitude: 103.749411" animation-mixer/>'
     }
 
     if(document.getElementById('green')){
