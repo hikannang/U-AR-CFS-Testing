@@ -31,11 +31,13 @@ function hideLoadingScreen() {
 function selectRed(){
     //Bicycle Crossing, 
     // Expo, closer to road: 1.3335879, 103.9570899
-    
+    // My House: 1.401514, 103.749411
      ///Healthy Living Zone
-     startCompass()
-     target.latitude = 1.3333318;
-    target.longitude = 103.9575690;
+    startCompass()
+    // target.latitude = 1.3333318;
+    // target.longitude = 103.9575690;
+    target.latitude = 1.401514;
+    target.longitude = 103.749411;
 
     showLoadingScreen();
 
@@ -45,7 +47,7 @@ function selectRed(){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red');
-        content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/gITF/fireExtinguisher/scene.gltf" scale="0.01 0.01 0.01" gps-projected-entity-place="latitude: 1.3333318; longitude: 103.9575690" animation-mixer/>'
+        content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/gITF/fireExtinguisher/scene.gltf" scale="0.01 0.01 0.01" gps-projected-entity-place="latitude: 1.401514; longitude: 103.749411" animation-mixer/>'
     }
 
     if(document.getElementById('green')){
