@@ -31,12 +31,13 @@ function hideLoadingScreen() {
 function selectRed(){
     //Bicycle Crossing, 
     // Expo, closer to road: 1.3335879, 103.9570899
-     ///Healthy Living Zone , 1.308356, 103.849796
+    // My House: 1.401514, 103.749411
+     ///Healthy Living Zone
     startCompass()
     // target.latitude = 1.3333318;
     // target.longitude = 103.9575690;
-    target.latitude = 1.308356;
-    target.longitude = 103.849796;
+    target.latitude = 1.401514;
+    target.longitude = 103.749411;
 
     showLoadingScreen();
 
@@ -46,9 +47,7 @@ function selectRed(){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red');
-        // content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/GLB/fireExtinguisher/fire_extinguisher.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.3333318; longitude: 103.9575690" animation-mixer/>'
-        content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/GLB/fireExtinguisher/fire_extinguisher.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.308356; longitude: 103.849796" animation-mixer/>'
-
+        content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/GLB/fireExtinguisher/fire_extinguisher.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.401514; longitude: 103.749411" animation-mixer/>'
     }
 
     if(document.getElementById('green')){
@@ -58,11 +57,32 @@ function selectRed(){
         content.innerHTML = '<a-entity id="greenOff"></a-entity>'
     }
 
+    if(document.getElementById('yellow')){
+        // Turning Yellow Off
+        document.getElementById('yellow').id = 'yellowOff';
+        var content = document.getElementById('yellowOff')
+        content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
+    }
+
+    if(document.getElementById('blue')){
+        // Turning blue Off
+        document.getElementById('blue').id = 'blueOff';
+        var content = document.getElementById('blueOff')
+        content.innerHTML = '<a-entity id="blueOff"></a-entity>'
+    }
+
     if(document.getElementById('orange')){
         // Turning orange Off
         document.getElementById('orange').id = 'orangeOff';
         var content = document.getElementById('orangeOff')
         content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
+    }
+
+    if(document.getElementById('purple')){
+        // Turning purple Off
+        document.getElementById('purple').id = 'purpleOff';
+        var content = document.getElementById('purpleOff')
+        content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
     }
 }
 
@@ -71,9 +91,7 @@ function showRed(){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red')
-        // content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/GLB/fireExtinguisher/fire_extinguisher.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.401514; longitude: 103.749411" animation-mixer/>'
-        content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/GLB/fireExtinguisher/fire_extinguisher.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.308356; longitude: 103.849796" animation-mixer/>'
-
+        content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/GLB/fireExtinguisher/fire_extinguisher.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.401514; longitude: 103.749411" animation-mixer/>'
     }
 }
 
@@ -89,10 +107,8 @@ function hideRed(){
 function selectGreen(){
     // Expo, middle, aiming at esclators: 1.3334206, 103.9572350
     startCompass()
-    // target.latitude = 1.3334206;
-    // target.longitude = 103.9572350; 
-    target.latitude = 1.308356;
-    target.longitude = 103.849796;
+    target.latitude = 1.3334206;
+    target.longitude = 103.9572350; 
 
 
     showLoadingScreen();
@@ -103,9 +119,7 @@ function selectGreen(){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
-        // content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/GLB/helmet/construction_helmet.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.3334206; longitude: 103.9572350" animation-mixer/>'
-        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/GLB/helmet/construction_helmet.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.308356; longitude: 103.849796" animation-mixer/>'
-
+        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/GLB/helmet/construction_helmet.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.3334206; longitude: 103.9572350" animation-mixer/>'
     }
 
     if(document.getElementById('red')){
@@ -115,6 +129,20 @@ function selectGreen(){
         content.innerHTML = '<a-entity id="redOff"></a-entity>'
     }
 
+    if(document.getElementById('yellow')){
+        // Turning Yellow Off
+        document.getElementById('yellow').id = 'yellowOff';
+        var content = document.getElementById('yellowOff')
+        content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
+    }
+
+    if(document.getElementById('blue')){
+        // Turning blue Off
+        document.getElementById('blue').id = 'blueOff';
+        var content = document.getElementById('blueOff')
+        content.innerHTML = '<a-entity id="blueOff"></a-entity>'
+    }
+
     if(document.getElementById('orange')){
         // Turning orange Off
         document.getElementById('orange').id = 'orangeOff';
@@ -122,6 +150,12 @@ function selectGreen(){
         content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
     }
 
+    if(document.getElementById('purple')){
+        // Turning purple Off
+        document.getElementById('purple').id = 'purpleOff';
+        var content = document.getElementById('purpleOff')
+        content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
+    }
 }
 
 function showGreen(){
@@ -129,8 +163,7 @@ function showGreen(){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
-        // content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/GLB/helmet/construction_helmet.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.3334206; longitude: 103.9572350" animation-mixer/>'
-        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/GLB/helmet/construction_helmet.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.308356; longitude: 103.849796" animation-mixer/>'
+        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/GLB/helmet/construction_helmet.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.3334206; longitude: 103.9572350" animation-mixer/>'
     }
 }
 
@@ -147,10 +180,8 @@ function selectOrange(){
     // Closer to hall 1: 1.3333318, 103.9575690
     //Bicycle Park (Reimagine Active Mobility Zone)
     startCompass()
-    // target.latitude = 1.3335879;
-    // target.longitude = 103.9570899;
-    target.latitude = 1.308356;
-    target.longitude = 103.849796;
+    target.latitude = 1.3335879;
+     target.longitude = 103.9570899;
     
 
     showLoadingScreen();
@@ -161,9 +192,7 @@ function selectOrange(){
         // Turning Orange On
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange');
-        // content.innerHTML = '<a-entity id="orange" gltf-model="./static/3dModels/GLB/trafficCone/traffic_cone_game_ready.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.3335879; longitude: 103.9570899" animation-mixer/>'
-        content.innerHTML = '<a-entity id="orange" gltf-model="./static/3dModels/GLB/trafficCone/traffic_cone_game_ready.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.308356; longitude: 103.849796" animation-mixer/>'
-
+        content.innerHTML = '<a-entity id="orange" gltf-model="./static/3dModels/GLB/trafficCone/traffic_cone_game_ready.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.3335879; longitude: 103.9570899" animation-mixer/>'
     }
     
 
@@ -181,6 +210,27 @@ function selectOrange(){
         content.innerHTML = '<a-entity id="greenOff"></a-entity>'
     }
 
+    if(document.getElementById('yellow')){
+        // Turning yellow Off
+        document.getElementById('yellow').id = 'yellowOff';
+        var content = document.getElementById('yellowOff')
+        content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
+    }
+
+    if(document.getElementById('blue')){
+        // Turning blue Off
+        document.getElementById('blue').id = 'blueOff';
+        var content = document.getElementById('blueOff')
+        content.innerHTML = '<a-entity id="blueOff"></a-entity>'
+    }
+
+    if(document.getElementById('purple')){
+        // Turning purple Off
+        document.getElementById('purple').id = 'purpleOff';
+        var content = document.getElementById('purpleOff')
+        content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
+    }
+
 }
 
 function showOrange(){
@@ -188,8 +238,7 @@ function showOrange(){
         // Turning Orange On
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange')
-        // content.innerHTML = '<a-entity id="orange" gltf-model="./static/3dModels/GLB/trafficCone/traffic_cone_game_ready.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.3335879; longitude: 103.9570899" animation-mixer/>'
-        content.innerHTML = '<a-entity id="orange" gltf-model="./static/3dModels/GLB/trafficCone/traffic_cone_game_ready.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.308356; longitude: 103.849796" animation-mixer/>'
+        content.innerHTML = '<a-entity id="orange" gltf-model="./static/3dModels/GLB/trafficCone/traffic_cone_game_ready.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.3335879; longitude: 103.9570899" animation-mixer/>'
     }
 }
 
@@ -201,6 +250,236 @@ function hideOrange(){
         content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
     }
 }
+
+
+
+function selectYellow(){
+    //Foot Path
+    //1.333099, 103.956604
+    ///MarketPlace  
+    startCompass()
+    target.latitude = 1.308425;
+    target.longitude = 103.849851;
+
+
+    showLoadingScreen();
+
+    colour = 'yellow';
+
+    if (document.getElementById('yellowOff')){
+        // Turning Yellow On
+        document.getElementById('yellowOff').id = 'yellow';
+        var content = document.getElementById('yellow')
+        content.innerHTML = '<a-video id="yellow" src="./static/videos/pigGIF.gif" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.308425; longitude: 103.849851"></a-image>';
+    }   
+
+    if(document.getElementById('red')){
+        // Turning Red Off
+        document.getElementById('red').id = 'redOff';
+        var content = document.getElementById('redOff')
+        content.innerHTML = '<a-entity id="redOff"></a-entity>'
+    }
+
+    if(document.getElementById('green')){
+        // Turning Green Off
+        document.getElementById('green').id = 'greenOff';
+        var content = document.getElementById('greenOff')
+        content.innerHTML = '<a-entity id="greenOff"></a-entity>'
+    }
+
+    if(document.getElementById('blue')){
+        // Turning blue Off
+        document.getElementById('blue').id = 'blueOff';
+        var content = document.getElementById('blueOff')
+        content.innerHTML = '<a-entity id="blueOff"></a-entity>'
+    }
+
+    if(document.getElementById('orange')){
+        // Turning orange Off
+        document.getElementById('orange').id = 'orangeOff';
+        var content = document.getElementById('orangeOff')
+        content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
+    }
+
+    if(document.getElementById('purple')){
+        // Turning purple Off
+        document.getElementById('purple').id = 'purpleOff';
+        var content = document.getElementById('purpleOff')
+        content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
+    }
+}
+
+function showYellow(){
+    if (document.getElementById('yellowOff')){
+        // Turning Yellow On
+        document.getElementById('yellowOff').id = 'yellow';
+        var content = document.getElementById('yellow')
+        content.innerHTML = '<a-video id="yellow" src="./static/videos/pigGIF.gif" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.308425; longitude: 103.849851"></a-image>';
+    }
+}
+
+function hideYellow(){
+    if(document.getElementById('yellow')){
+        // Turning Yellow Off
+        document.getElementById('yellow').id = 'yellowOff';
+        var content = document.getElementById('yellowOff')
+        content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
+    }
+}
+
+
+
+function selectBlue(){
+    //Wayfinding
+    
+    //Active Play Zone 
+    startCompass()
+     target.latitude = 1.434826;
+     target.longitude = 103.787000;
+
+    showLoadingScreen();
+
+    colour = 'blue';
+    
+    if (document.getElementById('blueOff')){
+        // Turning Blue On
+        document.getElementById('blueOff').id = 'blue';
+        var content = document.getElementById('blue')
+        content.innerHTML = '<a-image id="blue" src="./static/images/2D_Assets_low_res/Wayfinding_grabbing.png" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.434826; longitude: 103.787000"></a-image>';
+    }
+    
+
+    if(document.getElementById('red')){
+        // Turning Red Off
+        document.getElementById('red').id = 'redOff';
+        var content = document.getElementById('redOff')
+        content.innerHTML = '<a-entity id="redOff"></a-entity>'
+    }
+
+    if(document.getElementById('green')){
+        // Turning Green Off
+        document.getElementById('green').id = 'greenOff';
+        var content = document.getElementById('greenOff')
+        content.innerHTML = '<a-entity id="greenOff"></a-entity>'
+    }
+
+    if(document.getElementById('yellow')){
+        // Turning yellow Off
+        document.getElementById('yellow').id = 'yellowOff';
+        var content = document.getElementById('yellowOff')
+        content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
+    }
+
+    if(document.getElementById('orange')){
+        // Turning orange Off
+        document.getElementById('orange').id = 'orangeOff';
+        var content = document.getElementById('orangeOff')
+        content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
+    }
+
+    if(document.getElementById('purple')){
+        // Turning purple Off
+        document.getElementById('purple').id = 'purpleOff';
+        var content = document.getElementById('purpleOff')
+        content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
+    }
+
+}
+
+function showBlue(){
+    if (document.getElementById('blueOff')){
+        // Turning Blue On
+        document.getElementById('blueOff').id = 'blue';
+        var content = document.getElementById('blue')
+        // content.innerHTML = '<a-entity id="blue" material="color: blue" geometry="primitive: box" gps-projected-entity-place="latitude: 1.3082540241124714; longitude: 103.84929645038089" scale="10 10 10"></a-entity>'
+        content.innerHTML = '<a-image id="blue" src="./static/images/2D_Assets_low_res/Wayfinding_grabbing.png" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.434826; longitude: 103.787000"></a-image>';
+    }
+}
+
+function hideBlue(){
+    if(document.getElementById('blue')){
+        // Turning Blue Off
+        document.getElementById('blue').id = 'blueOff';
+        var content = document.getElementById('blueOff')
+        content.innerHTML = '<a-entity id="blueOff"></a-entity>'
+    }
+}
+
+function selectPurple(){
+    //YellowBox Standing
+
+    //Bicycle Zone(Market Place)  
+    startCompass()
+     target.latitude = 1.434826;
+     target.longitude = 103.787000;
+
+    showLoadingScreen();
+
+    colour = 'purple';
+
+    if (document.getElementById('purpleOff')){
+        // Turning purple On
+        document.getElementById('purpleOff').id = 'purple';
+        var content = document.getElementById('purple')
+        content.innerHTML = '<a-image id="purple" src="./static/images/2D_Assets_low_res/YellowBox.png" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.434826; longitude: 103.787000"></a-image>';
+    }
+
+    if(document.getElementById('red')){
+        // Turning Red Off
+        document.getElementById('red').id = 'redOff';
+        var content = document.getElementById('redOff')
+        content.innerHTML = '<a-entity id="redOff"></a-entity>'
+    }
+
+    if(document.getElementById('green')){
+        // Turning Green Off
+        document.getElementById('green').id = 'greenOff';
+        var content = document.getElementById('greenOff')
+        content.innerHTML = '<a-entity id="greenOff"></a-entity>'
+    }
+
+    if(document.getElementById('yellow')){
+        // Turning yellow Off
+        document.getElementById('yellow').id = 'yellowOff';
+        var content = document.getElementById('yellowOff')
+        content.innerHTML = '<a-entity id="yellowOff"></a-entity>'
+    }
+
+    if(document.getElementById('blue')){
+        // Turning blue Off
+        document.getElementById('blue').id = 'blueOff';
+        var content = document.getElementById('blueOff')
+        content.innerHTML = '<a-entity id="blueOff"></a-entity>'
+    }
+
+    if(document.getElementById('orange')){
+        // Turning orange Off
+        document.getElementById('orange').id = 'orangeOff';
+        var content = document.getElementById('orangeOff')
+        content.innerHTML = '<a-entity id="orangeOff"></a-entity>'
+    }
+
+}
+
+function hidePurple(){
+    if(document.getElementById('purple')){
+        // Turning Purple Off
+        document.getElementById('purple').id = 'purpleOff';
+        var content = document.getElementById('purpleOff')
+        content.innerHTML = '<a-entity id="purpleOff"></a-entity>'
+    }
+}
+
+function showPurple(){
+    if (document.getElementById('purpleOff')) {
+        // Turning Purple On
+        document.getElementById('purpleOff').id = 'purple';
+        var content = document.getElementById('purple');
+        content.innerHTML = '<a-image id="purple" src="./static/images/2D_Assets_low_res/YellowBox.png" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.434826; longitude: 103.787000"></a-image>';
+    }
+}
+
+
 
 // ##################################################################################################
 var current = { latitude: null, longitude: null };
@@ -309,13 +588,13 @@ function runCalculation(event) {
                     break;
                 }
             case 'red2':
-                if (distance < 10){ 
+                if (distance < 15){ 
                     hideRed();
                     if(isViewed == false){
                         toggleModalRed15();
                         isViewed = true;
                     }
-                } else if (distance >= 10){
+                } else if (distance >= 15){
                     showRed();
                 }
                 break;
@@ -333,13 +612,70 @@ function runCalculation(event) {
                 }
                 break;
             case 'green2':
-                if (distance < 10){ 
+                if (distance < 15){ 
                     hideGreen();
                     if(isViewed == false){
+                        toggleModalGreen15();
                         isViewed = true; 
                     }
-                } else if (distance >= 10){
+                } else if (distance >= 15){
                     showGreen();
+                }
+                break;
+            case 'yellow':
+                if (distance > 1000000){
+                    hideYellow();
+                    toggleEModal();
+                } else if (distance > 3000){
+                    hideYellow();
+                    toggleOModal();
+                }else if (distance <= 3000){
+                    showYellow();
+                    colour = 'yellow2';
+                    isViewed = false;
+                }
+                break;
+            case 'yellow2':
+                if (distance < 15){ 
+                    hideYellow();
+                    if(isViewed == false){
+                        toggleModalYellow15();
+                        isViewed = true;
+                    }
+                }else if(distance >= 15){
+                    showYellow();
+                }
+                break;
+            case 'blue':
+                if (distance > 1000000){
+                    hideBlue();
+                    toggleEModal();
+                } else if (distance > 3000){
+                    hideBlue();
+                    toggleOModal();
+                }else if (distance <= 3000){
+                    showBlue();
+                    toggleModalBlue120();
+                    colour = 'blue2';
+                    isViewed = false;
+                }
+                break;
+            case 'blue2':
+                if (distance < 50){ 
+                    showBlue();
+                    toggleModalBlue50();
+                    colour = 'blue3';
+                }
+                break;
+            case 'blue3':
+                if (distance < 15){ 
+                    hideBlue();
+                    if(isViewed == false){
+                        toggleModalBlue15(); 
+                        isViewed = true;
+                    }
+                } else if (distance >= 15){
+                    showBlue();
                 }
                 break;
             case 'orange':
@@ -351,18 +687,59 @@ function runCalculation(event) {
                     toggleOModal();
                 }else if (distance <= 3000){
                     showOrange();
+                    toggleModalOrange120();
                     colour = 'orange2';
                     isViewed = false;
                 }
                 break;
             case 'orange2':
-                if (distance < 10){ 
+                if (distance < 50){ 
+                    showOrange();
+                    toggleModalOrange50();
+                    colour = 'orange3';
+                }
+                break;
+            case 'orange3':
+                if (distance < 15){ 
                     hideOrange();
                     if(isViewed == false){
+                       toggleModalOrange15(); 
                         isViewed = true;
                     }
-                }else if (distance >= 10){
+                }else if (distance >= 15){
                     showOrange();
+                }
+                break;
+            case 'purple':
+                if (distance > 1000000){
+                    hidePurple();
+                    toggleEModal();
+                } else if (distance > 3000){
+                    hidePurple();
+                    toggleOModal();
+                }else if (distance <= 3000){
+                    showPurple();
+                    toggleModalPurple120();
+                    colour = 'purple2';
+                    isViewed = false;
+                }
+                break;
+            case 'purple2':
+                if (distance < 50){ 
+                    showPurple();
+                    toggleModalPurple50();
+                    colour = 'purple3';
+                }
+                break;
+            case 'purple3':
+                if (distance < 15){ 
+                    hidePurple();
+                    if(isViewed == false){
+                        toggleModalPurple15();
+                        isViewed = true;
+                    }
+                }else if (distance >= 15){
+                    showPurple();
                 }
                 break;
             default:
@@ -578,6 +955,120 @@ document.getElementById("modalRedClose15").onclick = function () {
     };
     //Green Modal End
 
+// Start Yellow Models
+    // Function to open the Yellow modal
+    function toggleModalYellow120() {
+        var modalYellow120 = document.getElementById("modalYellow120");
+        modalYellow120.style.display = 'block';
+    }
+    
+    function toggleModalYellow50() {
+        var modalYellow120 = document.getElementById("modalYellow120");
+        modalYellow120.style.display = 'none';
+        var modalYellow50 = document.getElementById("modalYellow50");
+        modalYellow50.style.display = 'block';
+    }
+    
+    function toggleModalYellow15() {
+        var modalYellow120 = document.getElementById("modalYellow120");
+        modalYellow120.style.display = 'none';
+        var modalYellow50 = document.getElementById("modalYellow50");
+        modalYellow50.style.display = 'none';
+        var modalYellow15 = document.getElementById("modalYellow15");
+        modalYellow15.style.display = 'block';
+    }
+    //Functions to close the Yellow modals
+    function closeYellowModal120() {
+        var modalYellow120 = document.getElementById("modalYellow120");
+        modalYellow120.style.display = 'none';
+    }
+    
+    // span.onclick for the Yellow modal
+    document.getElementById("modalYellowClose120").onclick = function () {
+        closeYellowModal120();
+    };
+    
+    // Function to close the Yellow modal
+    function closeYellowModal50() {
+        var modalYellow50 = document.getElementById("modalYellow50");
+        modalYellow50.style.display = 'none';
+    }
+    
+    // span.onclick for the Yellow modal
+    document.getElementById("modalYellowClose50").onclick = function () {
+        closeYellowModal50();
+    };
+    
+    // Function to close the Yellow modal
+    function closeYellowModal15() {
+        var modalYellow15 = document.getElementById("modalYellow15");
+        modalYellow15.style.display = 'none';
+    }
+    
+    // span.onclick for the Yellow modal
+    document.getElementById("modalYellowClose15").onclick = function () {
+        closeYellowModal15();
+    };
+
+    //Yellow ends
+
+// Start Blue Models
+    // Function to open the Blue modal
+    function toggleModalBlue120() {
+        var modalBlue120 = document.getElementById("modalBlue120");
+        modalBlue120.style.display = 'block';
+    }
+    
+    function toggleModalBlue50() {
+        var modalBlue120 = document.getElementById("modalBlue120");
+        modalBlue120.style.display = 'none';
+        var modalBlue50 = document.getElementById("modalBlue50");
+        modalBlue50.style.display = 'block';
+    }
+    
+    function toggleModalBlue15() {
+        var modalBlue120 = document.getElementById("modalBlue120");
+        modalBlue120.style.display = 'none';
+        var modalBlue50 = document.getElementById("modalBlue50");
+        modalBlue50.style.display = 'none';
+        var modalBlue15 = document.getElementById("modalBlue15");
+        modalBlue15.style.display = 'block';
+    }
+    //Functions to close the Blue modals
+    function closeBlueModal120() {
+        var modalBlue120 = document.getElementById("modalBlue120");
+        modalBlue120.style.display = 'none';
+    }
+    
+    // span.onclick for the Blue modal
+    document.getElementById("modalBlueClose120").onclick = function () {
+        closeBlueModal120();
+    };
+    
+    // Function to close the Blue modal
+    function closeBlueModal50() {
+        var modalBlue50 = document.getElementById("modalBlue50");
+        modalBlue50.style.display = 'none';
+    }
+    
+    // span.onclick for the Blue modal
+    document.getElementById("modalBlueClose50").onclick = function () {
+        closeBlueModal50();
+    };
+    
+    // Function to close the Blue modal
+    function closeBlueModal15() {
+        var modalBlue15 = document.getElementById("modalBlue15");
+        modalBlue15.style.display = 'none';
+    }
+    
+    // span.onclick for the Blue modal
+    document.getElementById("modalBlueClose15").onclick = function () {
+        closeBlueModal15();
+    };    
+//Blue Modal End
+
+
 // Start Orange Models
     // Function to open the Orange modal
     function toggleModalOrange120() {
@@ -633,6 +1124,62 @@ document.getElementById("modalRedClose15").onclick = function () {
         closeOrangeModal15();
     };
 //Orange Modal End
+
+// Start Purple Models
+    // Function to open the Purple modal
+    function toggleModalPurple120() {
+        var modalPurple120 = document.getElementById("modalPurple120");
+        modalPurple120.style.display = 'block';
+    }
+    
+    function toggleModalPurple50() {
+        var modalPurple120 = document.getElementById("modalPurple120");
+        modalPurple120.style.display = 'none';
+        var modalPurple50 = document.getElementById("modalPurple50");
+        modalPurple50.style.display = 'block';
+    }
+    
+    function toggleModalPurple15() {
+        var modalPurple120 = document.getElementById("modalPurple120");
+        modalPurple120.style.display = 'none';
+        var modalPurple50 = document.getElementById("modalPurple50");
+        modalPurple50.style.display = 'none';
+        var modalPurple15 = document.getElementById("modalPurple15");
+        modalPurple15.style.display = 'block';
+    }
+    //Functions to close the Purple modals
+    function closePurpleModal120() {
+        var modalPurple120 = document.getElementById("modalPurple120");
+        modalPurple120.style.display = 'none';
+    }
+    
+    // span.onclick for the Purple modal
+    document.getElementById("modalPurpleClose120").onclick = function () {
+        closePurpleModal120();
+    };
+    
+    // Function to close the Purple modal
+    function closePurpleModal50() {
+        var modalPurple50 = document.getElementById("modalPurple50");
+        modalPurple50.style.display = 'none';
+    }
+    
+    // span.onclick for the Purple modal
+    document.getElementById("modalPurpleClose50").onclick = function () {
+        closePurpleModal50();
+    };
+    
+    // Function to close the Purple modal
+    function closePurpleModal15() {
+        var modalPurple15 = document.getElementById("modalPurple15");
+        modalPurple15.style.display = 'none';
+    }
+    
+    // span.onclick for the Purple modal
+    document.getElementById("modalPurpleClose15").onclick = function () {
+        closePurpleModal15();
+    };
+//Purple Modal End
 
 
 function toggleCircles() {
