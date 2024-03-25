@@ -588,13 +588,13 @@ function runCalculation(event) {
                     break;
                 }
             case 'red2':
-                if (distance < 15){ 
+                if (distance < 10){ 
                     hideRed();
                     if(isViewed == false){
                         toggleModalRed15();
                         isViewed = true;
                     }
-                } else if (distance >= 15){
+                } else if (distance >= 10){
                     showRed();
                 }
                 break;
@@ -620,62 +620,6 @@ function runCalculation(event) {
                     }
                 } else if (distance >= 15){
                     showGreen();
-                }
-                break;
-            case 'yellow':
-                if (distance > 1000000){
-                    hideYellow();
-                    toggleEModal();
-                } else if (distance > 3000){
-                    hideYellow();
-                    toggleOModal();
-                }else if (distance <= 3000){
-                    showYellow();
-                    colour = 'yellow2';
-                    isViewed = false;
-                }
-                break;
-            case 'yellow2':
-                if (distance < 15){ 
-                    hideYellow();
-                    if(isViewed == false){
-                        toggleModalYellow15();
-                        isViewed = true;
-                    }
-                }else if(distance >= 15){
-                    showYellow();
-                }
-                break;
-            case 'blue':
-                if (distance > 1000000){
-                    hideBlue();
-                    toggleEModal();
-                } else if (distance > 3000){
-                    hideBlue();
-                    toggleOModal();
-                }else if (distance <= 3000){
-                    showBlue();
-                    toggleModalBlue120();
-                    colour = 'blue2';
-                    isViewed = false;
-                }
-                break;
-            case 'blue2':
-                if (distance < 50){ 
-                    showBlue();
-                    toggleModalBlue50();
-                    colour = 'blue3';
-                }
-                break;
-            case 'blue3':
-                if (distance < 15){ 
-                    hideBlue();
-                    if(isViewed == false){
-                        toggleModalBlue15(); 
-                        isViewed = true;
-                    }
-                } else if (distance >= 15){
-                    showBlue();
                 }
                 break;
             case 'orange':
@@ -708,38 +652,6 @@ function runCalculation(event) {
                     }
                 }else if (distance >= 15){
                     showOrange();
-                }
-                break;
-            case 'purple':
-                if (distance > 1000000){
-                    hidePurple();
-                    toggleEModal();
-                } else if (distance > 3000){
-                    hidePurple();
-                    toggleOModal();
-                }else if (distance <= 3000){
-                    showPurple();
-                    toggleModalPurple120();
-                    colour = 'purple2';
-                    isViewed = false;
-                }
-                break;
-            case 'purple2':
-                if (distance < 50){ 
-                    showPurple();
-                    toggleModalPurple50();
-                    colour = 'purple3';
-                }
-                break;
-            case 'purple3':
-                if (distance < 15){ 
-                    hidePurple();
-                    if(isViewed == false){
-                        toggleModalPurple15();
-                        isViewed = true;
-                    }
-                }else if (distance >= 15){
-                    showPurple();
                 }
                 break;
             default:
