@@ -31,12 +31,12 @@ function hideLoadingScreen() {
 function selectRed(){
     //Bicycle Crossing, 
     // Expo, closer to road: 1.3335879, 103.9570899
-     ///Healthy Living Zone
+     ///Healthy Living Zone , 1.308356, 103.849796
     startCompass()
     // target.latitude = 1.3333318;
     // target.longitude = 103.9575690;
-    target.latitude = 1.401514;
-    target.longitude = 103.749411;
+    target.latitude = 1.308356;
+    target.longitude = 103.849796;
 
     showLoadingScreen();
 
@@ -46,7 +46,9 @@ function selectRed(){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red');
-        content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/GLB/fireExtinguisher/fire_extinguisher.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.401514; longitude: 103.749411" animation-mixer/>'
+        // content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/GLB/fireExtinguisher/fire_extinguisher.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.3333318; longitude: 103.9575690" animation-mixer/>'
+        content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/GLB/fireExtinguisher/fire_extinguisher.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.308356; longitude: 103.849796" animation-mixer/>'
+
     }
 
     if(document.getElementById('green')){
@@ -69,7 +71,9 @@ function showRed(){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red')
-        content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/GLB/fireExtinguisher/fire_extinguisher.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.401514; longitude: 103.749411" animation-mixer/>'
+        // content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/GLB/fireExtinguisher/fire_extinguisher.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.401514; longitude: 103.749411" animation-mixer/>'
+        content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/GLB/fireExtinguisher/fire_extinguisher.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.308356; longitude: 103.849796" animation-mixer/>'
+
     }
 }
 
@@ -85,8 +89,10 @@ function hideRed(){
 function selectGreen(){
     // Expo, middle, aiming at esclators: 1.3334206, 103.9572350
     startCompass()
-    target.latitude = 1.3334206;
-    target.longitude = 103.9572350; 
+    // target.latitude = 1.3334206;
+    // target.longitude = 103.9572350; 
+    target.latitude = 1.308356;
+    target.longitude = 103.849796;
 
 
     showLoadingScreen();
@@ -97,7 +103,9 @@ function selectGreen(){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
-        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/GLB/helmet/construction_helmet.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.3334206; longitude: 103.9572350" animation-mixer/>'
+        // content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/GLB/helmet/construction_helmet.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.3334206; longitude: 103.9572350" animation-mixer/>'
+        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/GLB/helmet/construction_helmet.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.308356; longitude: 103.849796" animation-mixer/>'
+
     }
 
     if(document.getElementById('red')){
@@ -121,7 +129,8 @@ function showGreen(){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
-        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/GLB/helmet/construction_helmet.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.3334206; longitude: 103.9572350" animation-mixer/>'
+        // content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/GLB/helmet/construction_helmet.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.3334206; longitude: 103.9572350" animation-mixer/>'
+        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/GLB/helmet/construction_helmet.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.308356; longitude: 103.849796" animation-mixer/>'
     }
 }
 
@@ -138,8 +147,10 @@ function selectOrange(){
     // Closer to hall 1: 1.3333318, 103.9575690
     //Bicycle Park (Reimagine Active Mobility Zone)
     startCompass()
-    target.latitude = 1.3335879;
-    target.longitude = 103.9570899;
+    // target.latitude = 1.3335879;
+    // target.longitude = 103.9570899;
+    target.latitude = 1.308356;
+    target.longitude = 103.849796;
     
 
     showLoadingScreen();
@@ -150,7 +161,9 @@ function selectOrange(){
         // Turning Orange On
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange');
-        content.innerHTML = '<a-entity id="orange" gltf-model="./static/3dModels/GLB/trafficCone/traffic_cone_game_ready.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.3335879; longitude: 103.9570899" animation-mixer/>'
+        // content.innerHTML = '<a-entity id="orange" gltf-model="./static/3dModels/GLB/trafficCone/traffic_cone_game_ready.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.3335879; longitude: 103.9570899" animation-mixer/>'
+        content.innerHTML = '<a-entity id="orange" gltf-model="./static/3dModels/GLB/trafficCone/traffic_cone_game_ready.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.308356; longitude: 103.849796" animation-mixer/>'
+
     }
     
 
@@ -175,7 +188,8 @@ function showOrange(){
         // Turning Orange On
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange')
-        content.innerHTML = '<a-entity id="orange" gltf-model="./static/3dModels/GLB/trafficCone/traffic_cone_game_ready.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.3335879; longitude: 103.9570899" animation-mixer/>'
+        // content.innerHTML = '<a-entity id="orange" gltf-model="./static/3dModels/GLB/trafficCone/traffic_cone_game_ready.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.3335879; longitude: 103.9570899" animation-mixer/>'
+        content.innerHTML = '<a-entity id="orange" gltf-model="./static/3dModels/GLB/trafficCone/traffic_cone_game_ready.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.308356; longitude: 103.849796" animation-mixer/>'
     }
 }
 
@@ -295,13 +309,13 @@ function runCalculation(event) {
                     break;
                 }
             case 'red2':
-                if (distance < 15){ 
+                if (distance < 10){ 
                     hideRed();
                     if(isViewed == false){
                         toggleModalRed15();
                         isViewed = true;
                     }
-                } else if (distance >= 15){
+                } else if (distance >= 10){
                     showRed();
                 }
                 break;
@@ -319,12 +333,12 @@ function runCalculation(event) {
                 }
                 break;
             case 'green2':
-                if (distance < 15){ 
+                if (distance < 10){ 
                     hideGreen();
                     if(isViewed == false){
                         isViewed = true; 
                     }
-                } else if (distance >= 15){
+                } else if (distance >= 10){
                     showGreen();
                 }
                 break;
@@ -342,12 +356,12 @@ function runCalculation(event) {
                 }
                 break;
             case 'orange2':
-                if (distance < 15){ 
+                if (distance < 10){ 
                     hideOrange();
                     if(isViewed == false){
                         isViewed = true;
                     }
-                }else if (distance >= 15){
+                }else if (distance >= 10){
                     showOrange();
                 }
                 break;
@@ -564,120 +578,6 @@ document.getElementById("modalRedClose15").onclick = function () {
     };
     //Green Modal End
 
-// Start Yellow Models
-    // Function to open the Yellow modal
-    function toggleModalYellow120() {
-        var modalYellow120 = document.getElementById("modalYellow120");
-        modalYellow120.style.display = 'block';
-    }
-    
-    function toggleModalYellow50() {
-        var modalYellow120 = document.getElementById("modalYellow120");
-        modalYellow120.style.display = 'none';
-        var modalYellow50 = document.getElementById("modalYellow50");
-        modalYellow50.style.display = 'block';
-    }
-    
-    function toggleModalYellow15() {
-        var modalYellow120 = document.getElementById("modalYellow120");
-        modalYellow120.style.display = 'none';
-        var modalYellow50 = document.getElementById("modalYellow50");
-        modalYellow50.style.display = 'none';
-        var modalYellow15 = document.getElementById("modalYellow15");
-        modalYellow15.style.display = 'block';
-    }
-    //Functions to close the Yellow modals
-    function closeYellowModal120() {
-        var modalYellow120 = document.getElementById("modalYellow120");
-        modalYellow120.style.display = 'none';
-    }
-    
-    // span.onclick for the Yellow modal
-    document.getElementById("modalYellowClose120").onclick = function () {
-        closeYellowModal120();
-    };
-    
-    // Function to close the Yellow modal
-    function closeYellowModal50() {
-        var modalYellow50 = document.getElementById("modalYellow50");
-        modalYellow50.style.display = 'none';
-    }
-    
-    // span.onclick for the Yellow modal
-    document.getElementById("modalYellowClose50").onclick = function () {
-        closeYellowModal50();
-    };
-    
-    // Function to close the Yellow modal
-    function closeYellowModal15() {
-        var modalYellow15 = document.getElementById("modalYellow15");
-        modalYellow15.style.display = 'none';
-    }
-    
-    // span.onclick for the Yellow modal
-    document.getElementById("modalYellowClose15").onclick = function () {
-        closeYellowModal15();
-    };
-
-    //Yellow ends
-
-// Start Blue Models
-    // Function to open the Blue modal
-    function toggleModalBlue120() {
-        var modalBlue120 = document.getElementById("modalBlue120");
-        modalBlue120.style.display = 'block';
-    }
-    
-    function toggleModalBlue50() {
-        var modalBlue120 = document.getElementById("modalBlue120");
-        modalBlue120.style.display = 'none';
-        var modalBlue50 = document.getElementById("modalBlue50");
-        modalBlue50.style.display = 'block';
-    }
-    
-    function toggleModalBlue15() {
-        var modalBlue120 = document.getElementById("modalBlue120");
-        modalBlue120.style.display = 'none';
-        var modalBlue50 = document.getElementById("modalBlue50");
-        modalBlue50.style.display = 'none';
-        var modalBlue15 = document.getElementById("modalBlue15");
-        modalBlue15.style.display = 'block';
-    }
-    //Functions to close the Blue modals
-    function closeBlueModal120() {
-        var modalBlue120 = document.getElementById("modalBlue120");
-        modalBlue120.style.display = 'none';
-    }
-    
-    // span.onclick for the Blue modal
-    document.getElementById("modalBlueClose120").onclick = function () {
-        closeBlueModal120();
-    };
-    
-    // Function to close the Blue modal
-    function closeBlueModal50() {
-        var modalBlue50 = document.getElementById("modalBlue50");
-        modalBlue50.style.display = 'none';
-    }
-    
-    // span.onclick for the Blue modal
-    document.getElementById("modalBlueClose50").onclick = function () {
-        closeBlueModal50();
-    };
-    
-    // Function to close the Blue modal
-    function closeBlueModal15() {
-        var modalBlue15 = document.getElementById("modalBlue15");
-        modalBlue15.style.display = 'none';
-    }
-    
-    // span.onclick for the Blue modal
-    document.getElementById("modalBlueClose15").onclick = function () {
-        closeBlueModal15();
-    };    
-//Blue Modal End
-
-
 // Start Orange Models
     // Function to open the Orange modal
     function toggleModalOrange120() {
@@ -733,62 +633,6 @@ document.getElementById("modalRedClose15").onclick = function () {
         closeOrangeModal15();
     };
 //Orange Modal End
-
-// Start Purple Models
-    // Function to open the Purple modal
-    function toggleModalPurple120() {
-        var modalPurple120 = document.getElementById("modalPurple120");
-        modalPurple120.style.display = 'block';
-    }
-    
-    function toggleModalPurple50() {
-        var modalPurple120 = document.getElementById("modalPurple120");
-        modalPurple120.style.display = 'none';
-        var modalPurple50 = document.getElementById("modalPurple50");
-        modalPurple50.style.display = 'block';
-    }
-    
-    function toggleModalPurple15() {
-        var modalPurple120 = document.getElementById("modalPurple120");
-        modalPurple120.style.display = 'none';
-        var modalPurple50 = document.getElementById("modalPurple50");
-        modalPurple50.style.display = 'none';
-        var modalPurple15 = document.getElementById("modalPurple15");
-        modalPurple15.style.display = 'block';
-    }
-    //Functions to close the Purple modals
-    function closePurpleModal120() {
-        var modalPurple120 = document.getElementById("modalPurple120");
-        modalPurple120.style.display = 'none';
-    }
-    
-    // span.onclick for the Purple modal
-    document.getElementById("modalPurpleClose120").onclick = function () {
-        closePurpleModal120();
-    };
-    
-    // Function to close the Purple modal
-    function closePurpleModal50() {
-        var modalPurple50 = document.getElementById("modalPurple50");
-        modalPurple50.style.display = 'none';
-    }
-    
-    // span.onclick for the Purple modal
-    document.getElementById("modalPurpleClose50").onclick = function () {
-        closePurpleModal50();
-    };
-    
-    // Function to close the Purple modal
-    function closePurpleModal15() {
-        var modalPurple15 = document.getElementById("modalPurple15");
-        modalPurple15.style.display = 'none';
-    }
-    
-    // span.onclick for the Purple modal
-    document.getElementById("modalPurpleClose15").onclick = function () {
-        closePurpleModal15();
-    };
-//Purple Modal End
 
 
 function toggleCircles() {
