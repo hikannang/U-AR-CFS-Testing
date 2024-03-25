@@ -31,13 +31,13 @@ function hideLoadingScreen() {
 function selectRed(){
     //Bicycle Crossing, 
     // Expo, closer to road: 1.3335879, 103.9570899
-    // My House: 1.401514, 103.749411
-     ///Healthy Living Zone
+    // Office: 1.308356, 103.849796
+    // Healthy Living Zone
     startCompass()
     // target.latitude = 1.3333318;
     // target.longitude = 103.9575690;
-    target.latitude = 1.401514;
-    target.longitude = 103.749411;
+    target.latitude = 1.308356;
+    target.longitude = 103.849796;
 
     showLoadingScreen();
 
@@ -47,7 +47,8 @@ function selectRed(){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red');
-        content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/GLB/fireExtinguisher/fire_extinguisher.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.401514; longitude: 103.749411" animation-mixer/>'
+        // content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/GLB/fireExtinguisher/fire_extinguisher.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.401514; longitude: 103.749411" animation-mixer/>'
+        content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/GLB/fireExtinguisher/fire_extinguisher.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.308356; longitude: 103.849796" animation-mixer/>'
     }
 
     if(document.getElementById('green')){
@@ -631,19 +632,11 @@ function runCalculation(event) {
                     toggleOModal();
                 }else if (distance <= 3000){
                     showOrange();
-                    toggleModalOrange120();
                     colour = 'orange2';
                     isViewed = false;
                 }
                 break;
             case 'orange2':
-                if (distance < 50){ 
-                    showOrange();
-                    toggleModalOrange50();
-                    colour = 'orange3';
-                }
-                break;
-            case 'orange3':
                 if (distance < 15){ 
                     hideOrange();
                     if(isViewed == false){
