@@ -123,7 +123,7 @@ function selectGreen(){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
-        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/signageGB.png" look-at="[gps-projected-camera]" scale="6 6 6" gps-projected-entity-place="latitude: 1.3335403; longitude: 103.9571217"></a-image>';
+        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/signageGB.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.3335403; longitude: 103.9571217"></a-image>';
     }
 
     if(document.getElementById('red')){
