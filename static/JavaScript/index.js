@@ -201,7 +201,7 @@ function selectOrange(){
         // Turning Orange On
         document.getElementById('orangeOff').id = 'orange';
         var content = document.getElementById('orange');
-        // content.innerHTML = '<a-entity id="orange" gltf-model="./static/3dModels/GLB/trafficCone/traffic_cone_game_ready.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.3335879; longitude: 103.9570899" animation-mixer/>'
+        // content.innerHTML = '<a-entity id="orange" gltf-model="./static/3dModels/GLB/trafficCone/traffic_cone_game_ready.glb" scale="0.1 0.1 0.1" gps-projected-entity-place="latitude: 1.3335879; longitude: 103.9570899" animation-mixer/>'
         content.innerHTML = '<a-entity id="orange" gltf-model="./static/3dModels/GLB/trafficCone/traffic_cone_game_ready.glb" scale="0.1 0.1 0.1" gps-projected-entity-place="latitude: 1.308356; longitude: 103.849796" animation-mixer/>'
     }
     
@@ -623,13 +623,13 @@ function runCalculation(event) {
                 }
                 break;
             case 'green2':
-                if (distance < 15){ 
+                if (distance < 10){ 
                     hideGreen();
                     if(isViewed == false){
                         toggleModalGreen15();
                         isViewed = true; 
                     }
-                } else if (distance >= 15){
+                } else if (distance >= 10){
                     showGreen();
                 }
                 break;
@@ -647,13 +647,13 @@ function runCalculation(event) {
                 }
                 break;
             case 'orange2':
-                if (distance < 15){ 
+                if (distance < 10){ 
                     hideOrange();
                     if(isViewed == false){
                        toggleModalOrange15(); 
                         isViewed = true;
                     }
-                }else if (distance >= 15){
+                }else if (distance >= 10){
                     showOrange();
                 }
                 break;
