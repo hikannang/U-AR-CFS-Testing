@@ -92,7 +92,8 @@ function showRed(){
         // Turning Red On
         document.getElementById('redOff').id = 'red';
         var content = document.getElementById('red')
-        content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/GLB/fireExtinguisher/fire_extinguisher.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.401514; longitude: 103.749411" animation-mixer/>'
+        // content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/GLB/fireExtinguisher/fire_extinguisher.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.401514; longitude: 103.749411" animation-mixer/>'
+        content.innerHTML = '<a-entity id="red" gltf-model="./static/3dModels/GLB/fireExtinguisher/fire_extinguisher.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.308356; longitude: 103.849796" animation-mixer/>'
     }
 }
 
@@ -108,8 +109,10 @@ function hideRed(){
 function selectGreen(){
     // Expo, middle, aiming at esclators: 1.3334206, 103.9572350
     startCompass()
-    target.latitude = 1.3334206;
-    target.longitude = 103.9572350; 
+    // target.latitude = 1.3334206;
+    // target.longitude = 103.9572350;
+    target.latitude = 1.308356;
+    target.longitude = 103.849796; 
 
 
     showLoadingScreen();
@@ -120,7 +123,9 @@ function selectGreen(){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
-        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/GLB/helmet/construction_helmet.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.3334206; longitude: 103.9572350" animation-mixer/>'
+        // content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/GLB/helmet/construction_helmet.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.3334206; longitude: 103.9572350" animation-mixer/>'
+        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/GLB/helmet/construction_helmet.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.308356; longitude: 103.849796" animation-mixer/>'
+
     }
 
     if(document.getElementById('red')){
@@ -164,7 +169,8 @@ function showGreen(){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
-        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/GLB/helmet/construction_helmet.glb" scale="1 1 1" gps-projected-entity-place="latitude: 1.3334206; longitude: 103.9572350" animation-mixer/>'
+        // content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/GLB/helmet/construction_helmet.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.3334206; longitude: 103.9572350" animation-mixer/>'
+        content.innerHTML = '<a-entity id="green" gltf-model="./static/3dModels/GLB/helmet/construction_helmet.glb" scale="2 2 2" gps-projected-entity-place="latitude: 1.308356; longitude: 103.849796" animation-mixer/>'
     }
 }
 
