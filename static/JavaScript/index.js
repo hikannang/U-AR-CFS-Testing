@@ -107,10 +107,10 @@ function hideRed(){
 }
 
 function selectGreen(){
-    // Expo, middle, aiming at esclators: 1.3335403, 103.9571217
+    // Expo, middle, aiming at esclators: 1.3336073, 103.9567472
     startCompass()
-    target.latitude = 1.3334562;
-    target.longitude = 103.9569608;
+    target.latitude = 1.3336073;
+    target.longitude = 103.9567472;
     // target.latitude = 1.308356;
     // target.longitude = 103.849796; 
 
@@ -123,7 +123,7 @@ function selectGreen(){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
-        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/signageGB.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.3334562; longitude: 103.9569608"></a-image>';
+        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/signageGB.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.3336073; longitude: 103.9567472"></a-image>';
     }
 
     if(document.getElementById('red')){
@@ -167,7 +167,7 @@ function showGreen(){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
-        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/signageGB.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.3334562; longitude: 103.9569608"></a-image>';
+        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/signageGB.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.3336073; longitude: 103.9567472"></a-image>';
     }
 }
 
