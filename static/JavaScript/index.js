@@ -109,8 +109,8 @@ function hideRed(){
 function selectGreen(){
     // Expo, middle, aiming at esclators: 1.3336073, 103.9567472
     startCompass()
-    target.latitude = 1.3336073;
-    target.longitude = 103.9567472;
+    target.latitude = 1.3335021;
+    target.longitude = 103.9568984;
     // target.latitude = 1.308356;
     // target.longitude = 103.849796; 
 
@@ -123,7 +123,7 @@ function selectGreen(){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
-        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/signageGB.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.3336073; longitude: 103.9567472"></a-image>';
+        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/signageGB.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.3335021; longitude: 103.9568984"></a-image>';
     }
 
     if(document.getElementById('red')){
@@ -167,7 +167,7 @@ function showGreen(){
         // Turning Green On
         document.getElementById('greenOff').id = 'green';
         var content = document.getElementById('green')
-        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/signageGB.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.3336073; longitude: 103.9567472"></a-image>';
+        content.innerHTML = '<a-image id="green" src="./static/images/2D_Assets_low_res/signageGB.png" look-at="[gps-projected-camera]" scale="10 10 10" gps-projected-entity-place="latitude: 1.3335021; longitude: 103.9568984"></a-image>';
     }
 }
 
@@ -596,13 +596,13 @@ function runCalculation(event) {
                     break;
                 }
             case 'red2':
-                if (distance < 10){ 
+                if (distance < 15){ 
                     hideRed();
                     if(isViewed == false){
                         toggleModalRed15();
                         isViewed = true;
                     }
-                } else if (distance >= 10){
+                } else if (distance >= 15){
                     showRed();
                 }
                 break;
@@ -620,13 +620,13 @@ function runCalculation(event) {
                 }
                 break;
             case 'green2':
-                if (distance < 10){ 
+                if (distance < 15){ 
                     hideGreen();
                     if(isViewed == false){
                         toggleModalGreen15();
                         isViewed = true; 
                     }
-                } else if (distance >= 10){
+                } else if (distance >= 15){
                     showGreen();
                 }
                 break;
@@ -644,13 +644,13 @@ function runCalculation(event) {
                 }
                 break;
             case 'orange2':
-                if (distance < 10){ 
+                if (distance < 15){ 
                     hideOrange();
                     if(isViewed == false){
                        toggleModalOrange15(); 
                         isViewed = true;
                     }
-                }else if (distance >= 10){
+                }else if (distance >= 15){
                     showOrange();
                 }
                 break;
